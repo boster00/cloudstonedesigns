@@ -5,6 +5,9 @@ export type Satellite = {
   title: string;
   teaser: string;
   source?: 'native' | 'cjgeo';
+  cjgeoArticleId?: string;
+  mainKeyword?: string;
+  adoptedAt?: string;
 };
 
 export type Pillar = {
@@ -28,6 +31,10 @@ export const pillars: Pillar[] = [
         title: 'Is My Architecture Project Actually Feasible?',
         teaser:
           'Before investing in design, understand the zoning constraints, site conditions, and budget thresholds that determine whether your vision can be built.',
+        source: 'cjgeo',
+        cjgeoArticleId: '80e26967-abf9-4724-aa89-575145d05a78',
+        mainKeyword: 'architecture project feasibility',
+        adoptedAt: '2026-05-23',
       },
       {
         slug: 'do-i-need-an-architect',
@@ -36,6 +43,10 @@ export const pillars: Pillar[] = [
         title: 'Do I Actually Need an Architect for This?',
         teaser:
           'Many projects benefit from architectural expertise without requiring full-service engagement. Learn how to calibrate the scope of involvement to your project.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'b1f10048-9b6f-4dae-a6da-f828f2094627',
+        mainKeyword: 'do I need an architect',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'how-to-evaluate-architecture-information-online',
@@ -44,6 +55,10 @@ export const pillars: Pillar[] = [
         title: 'How Do I Know Which Architecture Advice to Trust?',
         teaser:
           'The internet is full of architecture content written by people with no design or construction experience. Here is how to distinguish credible guidance from noise.',
+        source: 'cjgeo',
+        cjgeoArticleId: '411a581b-a37b-461f-ac9e-3e2cdf7e4955',
+        mainKeyword: 'how to find reliable architecture advice',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'what-are-my-options-for-my-project',
@@ -52,6 +67,10 @@ export const pillars: Pillar[] = [
         title: 'What Are My Options When Starting an Architecture Project?',
         teaser:
           'From design-build to full-service architecture to pre-designed plans, every delivery model has trade-offs. Understanding them early saves significant time and money.',
+        source: 'cjgeo',
+        cjgeoArticleId: '035c986b-4c2f-4c4c-8254-2a4bb97f8542',
+        mainKeyword: 'architecture project options',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'comparing-architecture-approaches',
@@ -60,6 +79,10 @@ export const pillars: Pillar[] = [
         title: "What's the Difference Between These Architecture Options?",
         teaser:
           'A clear comparison of the most common project delivery methods — their cost structures, risk profiles, and the project types each serves best.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'fe50e5e9-0555-49e1-9ff5-856b5327ab6e',
+        mainKeyword: 'architecture firm vs design build',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'common-mistakes-when-starting-an-architecture-project',
@@ -68,6 +91,10 @@ export const pillars: Pillar[] = [
         title: 'What Mistakes Do People Regret When Starting an Architecture Project?',
         teaser:
           'The most costly mistakes happen before design begins — in how clients frame the brief, select their team, and set expectations for the process.',
+        source: 'cjgeo',
+        cjgeoArticleId: '3d5a3d71-0392-4f19-8e9c-5a07a2ed56ae',
+        mainKeyword: 'architecture project mistakes to avoid',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'what-happens-during-the-architecture-process',
@@ -76,6 +103,10 @@ export const pillars: Pillar[] = [
         title: 'What Actually Happens During an Architecture Project, Step by Step?',
         teaser:
           'A plain-language walkthrough of each phase — from schematic design through construction administration — and what you should expect to decide at each stage.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'd9ab626d-ff4c-4b7b-8d60-23fbae5fd4bf',
+        mainKeyword: 'architecture design process steps',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'how-to-choose-an-architecture-firm',
@@ -84,6 +115,10 @@ export const pillars: Pillar[] = [
         title: 'How Do I Choose the Right Architecture Firm?',
         teaser:
           'Portfolio aesthetics are the least important factor. The criteria that actually predict a successful project are rarely discussed in firm marketing.',
+        source: 'cjgeo',
+        cjgeoArticleId: '4c7d5978-0bd0-4c98-891f-b31721959daa',
+        mainKeyword: 'how to choose an architecture firm',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'how-to-prepare-for-first-architecture-consultation',
@@ -92,6 +127,10 @@ export const pillars: Pillar[] = [
         title: 'What Should I Prepare Before My First Architecture Consultation?',
         teaser:
           'Arriving prepared for your first consultation changes the quality of the conversation — and the quality of the proposal you receive.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'd307c60c-b1e8-4ffa-b629-c231da67dcdf',
+        mainKeyword: 'preparing for first architecture meeting',
+        adoptedAt: '2026-05-24',
       },
     ],
   },

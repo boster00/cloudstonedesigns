@@ -1,0 +1,1503 @@
+﻿<style data-draft-styles="true">
+/* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ============================================================
+       DESIGN TOKENS
+       Palette: Parchment (bg), Charcoal (primary text),
+                Sandstone (accent/mid), Warm Stone (borders),
+                Slate (secondary text)
+    ============================================================ */
+    :host {
+      --color-bg:        #F5F1EB;
+      --color-surface:   #EDE8E0;
+      --color-border:    #C9BFB0;
+      --color-text:      #2A2622;
+      --color-muted:     #6B6257;
+      --color-accent:    #8A6F55;
+      --color-accent-lt: #B89D87;
+      --color-white:     #FDFAF6;
+
+      --font-serif:  Georgia, 'Times New Roman', serif;
+      --font-sans:   'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      --max-prose:   680px;
+      --max-wide:    1080px;
+      --max-layout:  1200px;
+    }
+
+    html {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    :host > .editorContent {
+      background-color: var(--color-bg);
+    }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-text);
+      text-wrap: balance;
+    }
+
+    p, li {
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--color-text);
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================================
+       LAYOUT HELPERS
+    ============================================================ */
+    .container {
+      width: 100%;
+      max-width: var(--max-layout);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .prose {
+      max-width: var(--max-prose);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .wide {
+      max-width: var(--max-wide);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ============================================================
+       SITE HEADER / NAV
+    ============================================================ */
+    .site-header {
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-header__inner {
+      max-width: var(--max-layout);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      text-decoration: none;
+    }
+
+    .site-logo__mark {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .site-logo__text {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      color: var(--color-text);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .site-logo__sub {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-top: 1px;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .site-nav a {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .site-nav a:hover { color: var(--color-text); }
+
+    .site-nav .btn-nav {
+      border: 1px solid var(--color-accent);
+      padding: 0.4rem 1rem;
+      color: var(--color-accent);
+      border-radius: 2px;
+    }
+    .site-nav .btn-nav:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .site-nav .nav-hide-mobile { display: none; }
+    }
+
+    /* ============================================================
+       ARTICLE HERO
+    ============================================================ */
+    .article-hero {
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    .article-hero__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .article-hero__eyebrow::before,
+    .article-hero__eyebrow::after {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background: var(--color-accent-lt);
+    }
+
+    .article-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.25rem, 5vw, 4rem);
+      line-height: 1.12;
+      max-width: 820px;
+      margin: 0 auto 1.5rem;
+      color: var(--color-text);
+    }
+
+    .article-hero__subtitle {
+      font-family: var(--font-sans);
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--color-muted);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .article-hero__meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+      text-transform: uppercase;
+    }
+    .article-hero__meta span::before {
+      content: 'Â·';
+      margin-right: 1.5rem;
+    }
+    .article-hero__meta span:first-child::before { display: none; }
+
+    /* ============================================================
+       HERO IMAGE PLACEHOLDER
+    ============================================================ */
+    .hero-image {
+      width: 100%;
+      max-width: var(--max-wide);
+      margin: 0 auto 5rem;
+      padding: 0 1.5rem;
+    }
+
+    .hero-image__frame {
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image__frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 59px,
+          var(--color-border) 59px,
+          var(--color-border) 60px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 59px,
+          var(--color-border) 59px,
+          var(--color-border) 60px
+        );
+      opacity: 0.35;
+    }
+
+    .hero-image__icon {
+      position: relative;
+      z-index: 1;
+      color: var(--color-accent-lt);
+    }
+
+    .hero-image__caption {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent-lt);
+    }
+
+    /* ============================================================
+       ARTICLE DIVIDER
+    ============================================================ */
+    .divider {
+      max-width: var(--max-prose);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+    .divider__line {
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
+    .divider__diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--color-accent-lt);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       ARTICLE SECTIONS (shared)
+    ============================================================ */
+    .article-section {
+      padding: 0 1.5rem 5rem;
+    }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+    }
+
+    .section-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.625rem, 3vw, 2.375rem);
+      margin-bottom: 1.5rem;
+      color: var(--color-text);
+    }
+
+    .section-lede {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .body-text {
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: var(--color-text);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ============================================================
+       SECTION 1: INTRO / OPENING
+    ============================================================ */
+    .intro-section {
+      padding: 0 1.5rem 5rem;
+    }
+
+    .intro-pull-quote {
+      max-width: var(--max-prose);
+      margin: 2.5rem auto;
+      padding: 2rem 2.5rem;
+      border-left: 3px solid var(--color-accent);
+      background-color: var(--color-surface);
+    }
+
+    .intro-pull-quote p {
+      font-family: var(--font-serif);
+      font-size: 1.375rem;
+      line-height: 1.55;
+      color: var(--color-text);
+      font-style: italic;
+    }
+
+    /* ============================================================
+       SECTION 2: WHAT FEASIBILITY MEANS
+    ============================================================ */
+    .feasibility-grid {
+      max-width: var(--max-wide);
+      margin: 2.5rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background-color: var(--color-border);
+      border: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 768px) {
+      .feasibility-grid { grid-template-columns: 1fr; }
+    }
+
+    .feasibility-card {
+      background-color: var(--color-bg);
+      padding: 2.25rem 2rem;
+    }
+
+    .feasibility-card__number {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--color-accent-lt);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .feasibility-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text);
+    }
+
+    .feasibility-card__text {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+    }
+
+    /* ============================================================
+       SECTION 3: BARRIERS â SPLIT LAYOUT
+    ============================================================ */
+    .barriers-layout {
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 800px) {
+      .barriers-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .barrier-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .barrier-item:last-child { margin-bottom: 0; }
+
+    .barrier-item__icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .barrier-item__title {
+      font-family: var(--font-serif);
+      font-size: 1.0625rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .barrier-item__text {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+    }
+
+    .barriers-visual {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      aspect-ratio: 4 / 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      position: sticky;
+      top: 84px;
+    }
+    .barriers-visual__label {
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-accent-lt);
+    }
+
+    /* ============================================================
+       SECTION 4: HOW ARCHITECTS ASSESS â PROCESS STEPS
+    ============================================================ */
+    .process-steps {
+      max-width: var(--max-prose);
+      margin: 2.5rem auto 0;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 1.5rem;
+      padding-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .process-step::after {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 23px;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--color-border);
+    }
+    .process-step:last-child::after { display: none; }
+
+    .process-step__num {
+      width: 48px;
+      height: 48px;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      color: var(--color-accent);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-step__title {
+      font-family: var(--font-serif);
+      font-size: 1.1875rem;
+      margin-bottom: 0.5rem;
+      padding-top: 0.75rem;
+    }
+
+    .process-step__text {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--color-muted);
+    }
+
+    /* ============================================================
+       SECTION 5: WHAT AFFECTS FEASIBILITY â TABLE
+    ============================================================ */
+    .factors-table-wrap {
+      max-width: var(--max-wide);
+      margin: 2.5rem auto 0;
+      overflow-x: auto;
+    }
+
+    table.factors-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+
+    table.factors-table thead tr {
+      background-color: var(--color-text);
+    }
+    table.factors-table thead th {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-bg);
+      font-weight: 400;
+    }
+
+    table.factors-table tbody tr {
+      border-bottom: 1px solid var(--color-border);
+    }
+    table.factors-table tbody tr:nth-child(even) {
+      background-color: var(--color-surface);
+    }
+    table.factors-table tbody td {
+      padding: 1rem 1.25rem;
+      color: var(--color-text);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+    table.factors-table tbody td:first-child {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.625rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 1px;
+      font-family: var(--font-sans);
+    }
+    .badge--high {
+      background-color: #3B3028;
+      color: var(--color-bg);
+    }
+    .badge--med {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+    .badge--low {
+      background-color: var(--color-surface);
+      color: var(--color-muted);
+      border: 1px solid var(--color-border);
+    }
+
+    /* ============================================================
+       SECTION 6: WHAT TO BRING â CHECKLIST
+    ============================================================ */
+    .checklist-grid {
+      max-width: var(--max-wide);
+      margin: 2.5rem auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .checklist-grid { grid-template-columns: 1fr; }
+    }
+
+    .checklist-group__title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text);
+    }
+
+    .checklist-group ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .checklist-group li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      color: var(--color-text);
+    }
+
+    .checklist-group li .check-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-accent-lt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .checklist-note {
+      max-width: var(--max-prose);
+      margin: 2.5rem auto 0;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+    }
+    .checklist-note strong {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       SECTION 7: HONEST TRUTHS â CALLOUT ROW
+    ============================================================ */
+    .truths-row {
+      max-width: var(--max-wide);
+      margin: 2.5rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background-color: var(--color-border);
+      border: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 640px) {
+      .truths-row { grid-template-columns: 1fr; }
+    }
+
+    .truth-card {
+      background-color: var(--color-bg);
+      padding: 2rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .truth-card__icon-wrap {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--color-accent-lt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .truth-card__body {}
+    .truth-card__title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .truth-card__text {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+    }
+
+    /* ============================================================
+       SECTION 8 / CTA
+    ============================================================ */
+    .cta-section {
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 6rem 1.5rem;
+      text-align: center;
+    }
+
+    .cta-section__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-section__heading {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      max-width: 640px;
+      margin: 0 auto 1.25rem;
+      line-height: 1.2;
+    }
+
+    .cta-section__body {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: var(--color-muted);
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      background-color: var(--color-text);
+      color: var(--color-bg);
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      transition: background-color 0.2s, color 0.2s;
+      border: 1px solid var(--color-text);
+    }
+    .cta-btn:hover {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    .cta-assurance {
+      margin-top: 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--color-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .cta-assurance svg {
+      display: inline;
+      vertical-align: middle;
+      margin-right: 0.3rem;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .site-footer {
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .site-footer__inner {
+      max-width: var(--max-layout);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .site-footer__brand {
+      font-family: var(--font-serif);
+      font-size: 0.875rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text);
+    }
+
+    .site-footer__copy {
+      font-size: 0.75rem;
+      color: var(--color-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .site-footer__links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .site-footer__links a {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      text-decoration: none;
+    }
+    .site-footer__links a:hover { color: var(--color-text); }
+
+    /* ============================================================
+       READING PROGRESS BAR
+    ============================================================ */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background-color: var(--color-accent);
+      z-index: 200;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    /* ============================================================
+       FLOATING TOC (desktop only)
+    ============================================================ */
+    .toc-float {
+      position: fixed;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    @media (max-width: 1300px) {
+      .toc-float { display: none; }
+    }
+
+    .toc-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-border);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+    .toc-dot:hover,
+    .toc-dot.active {
+      background-color: var(--color-accent);
+      transform: scale(1.5);
+    }
+    .toc-dot[data-label]:hover::after {
+      content: attr(data-label);
+      position: absolute;
+      right: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-text);
+      color: var(--color-bg);
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.6rem;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .text-accent { color: var(--color-accent); }
+    .mb-0 { margin-bottom: 0 !important; }
+
+    /* ============================================================
+       RESPONSIVE SECTION SPACING
+    ============================================================ */
+    @media (max-width: 640px) {
+      .article-hero { padding: 3rem 1.25rem 3rem; }
+      .article-section { padding-bottom: 3.5rem; }
+      .cta-section { padding: 4rem 1.25rem; }
+    }
+</style>
+<section class="article-hero" id="intro" aria-labelledby="article-title">
+      <p class="article-hero__eyebrow">Cloudstone Insights</p>
+      <h1 class="article-hero__title" id="article-title">
+        Is My Project Actually Feasible? An Honest Guide for First-Time Clients
+      </h1>
+      <p class="article-hero__subtitle">
+        Before budgets, drawings, or decisions â here is how a senior architect thinks about whether a project can, and should, go forward.
+      </p>
+      <div class="article-hero__meta">
+        <span>Cloudstone Designs</span>
+        <span>10 min read</span>
+        <span>Residential &amp; Commercial</span>
+      </div>
+    </section>
+
+    <!-- Hero image placeholder -->
+    <div class="hero-image" role="img" aria-label="Hero image placeholder: architect reviewing site drawings at a stone-topped table">
+      <div class="hero-image__frame">
+        <!-- Inline SVG: blueprint/plan icon -->
+        <svg class="hero-image__icon" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="8"  y="8"  width="36" height="36" stroke="#B89D87" stroke-width="1.5"/>
+          <rect x="14" y="14" width="12" height="10" stroke="#B89D87" stroke-width="1"/>
+          <rect x="14" y="28" width="24" height="8"  stroke="#B89D87" stroke-width="1"/>
+          <line x1="30" y1="14" x2="30" y2="24" stroke="#B89D87" stroke-width="1"/>
+          <line x1="38" y1="14" x2="38" y2="24" stroke="#B89D87" stroke-width="1"/>
+          <line x1="8"  y1="44" x2="44" y2="44" stroke="#8A6F55" stroke-width="1.5"/>
+        </svg>
+        <p class="hero-image__caption">Hero Image Placeholder &mdash; Architect reviewing site drawings</p>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         SECTION 1: INTRODUCTION
+    ============================================================ -->
+    <article>
+
+    <section class="intro-section article-section" id="intro-body" aria-labelledby="intro-heading">
+      <div class="prose">
+        <p class="section-label">Introduction</p>
+        <h2 class="section-heading" id="intro-heading">You have an idea. Now what?</h2>
+        <p class="section-lede">
+          You have a piece of land, or a house that needs transforming, or a business space that no longer fits how you work. You have been searching online, reading forum threads, getting conflicting numbers from friends who &ldquo;built something once.&rdquo; And now you are sitting with a question that is harder to answer than it first looks: <em>Can this actually happen?</em>
+        </p>
+        <p class="body-text">
+          The honest answer is: often yes, but not always exactly as you imagined. Feasibility is not a binary yes-or-no. It is a spectrum, and it changes as you learn more about your site, your program, and your budget. What an architect does in those early weeks is not design your building &mdash; it is help you understand where you actually stand, so you can make a genuinely informed decision about whether to proceed, and how.
+        </p>
+        <p class="body-text">
+          This guide is not a sales pitch. It is the kind of conversation we have with new clients over the first cup of coffee &mdash; before any drawings are out and before anyone has committed to anything. We have tried to be as direct as the situation deserves.
+        </p>
+      </div>
+
+      <blockquote class="intro-pull-quote" aria-label="Key insight">
+        <p>"Feasibility is not about whether a building is possible. It is about whether <em>this</em> building, on <em>this</em> site, for <em>this</em> budget and this program, is possible &mdash; and that distinction matters enormously."</p>
+      </blockquote>
+
+      <div class="prose">
+        <p class="body-text">
+          The clients who come to us most prepared are not the ones with the most money or the clearest brief. They are the ones who have allowed themselves to hold uncertainty lightly &mdash; to say &ldquo;I think I want this&rdquo; rather than &ldquo;I have decided on this.&rdquo; Feasibility is where that openness has the most value.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"><div class="divider__line"></div><div class="divider__diamond"></div><div class="divider__line"></div></div>
+
+    <!-- ============================================================
+         SECTION 2: WHAT FEASIBILITY MEANS
+    ============================================================ -->
+    <section class="article-section" id="what-feasibility-means" aria-labelledby="feasibility-heading">
+      <div class="prose">
+        <p class="section-label">What Feasibility Actually Means</p>
+        <h2 class="section-heading" id="feasibility-heading">Three things have to align</h2>
+        <p class="section-lede">
+          Most people think about feasibility as a single question. In practice, it has three distinct dimensions &mdash; and a project can be feasible in two and not the third. Understanding this changes how you approach the early stages.
+        </p>
+        <p class="body-text">
+          A project that is technically achievable (the structure can be built), regulatorily permissible (the planning rules allow it), and financially viable (the numbers hold up) is genuinely feasible. The difficulty is that these three things are not always in alignment &mdash; and they rarely become clear at the same time.
+        </p>
+      </div>
+
+      <div class="feasibility-grid" role="list">
+        <div class="feasibility-card" role="listitem">
+          <div class="feasibility-card__number" aria-hidden="true">01</div>
+          <h3 class="feasibility-card__title">Technical Feasibility</h3>
+          <p class="feasibility-card__text">Can the building actually be constructed? This covers ground conditions, structural requirements, services access, and whether your site can physically accommodate what you want to do.</p>
+        </div>
+        <div class="feasibility-card" role="listitem">
+          <div class="feasibility-card__number" aria-hidden="true">02</div>
+          <h3 class="feasibility-card__title">Regulatory Feasibility</h3>
+          <p class="feasibility-card__text">Does planning law, zoning, heritage overlay, or council policy permit what you have in mind? Regulatory constraints are often the least visible and the most fixed &mdash; you cannot negotiate with a setback rule.</p>
+        </div>
+        <div class="feasibility-card" role="listitem">
+          <div class="feasibility-card__number" aria-hidden="true">03</div>
+          <h3 class="feasibility-card__title">Financial Feasibility</h3>
+          <p class="feasibility-card__text">Does your project make financial sense? For homeowners, this means build cost versus property value. For developers, it means development yield, sale rates, and margin. For businesses, it means fit-out cost relative to long-term operating benefit.</p>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top: 2.5rem;">
+        <p class="body-text">
+          Good architects hold all three of these in mind simultaneously. Early in a project, we are less concerned with what you <em>want</em> than with helping you understand what the site and context will reasonably allow &mdash; and then finding the most ambitious version of your project that lives within those constraints.
+        </p>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"><div class="divider__line"></div><div class="divider__diamond"></div><div class="divider__line"></div></div>
+
+    <!-- ============================================================
+         SECTION 3: COMMON BARRIERS
+    ============================================================ -->
+    <section class="article-section" id="barriers" aria-labelledby="barriers-heading">
+      <div class="wide" style="padding: 0;">
+        <div style="max-width: var(--max-prose); margin: 0 auto 2rem; padding: 0 1.5rem;">
+          <p class="section-label">Common Feasibility Barriers</p>
+          <h2 class="section-heading" id="barriers-heading">What most often gets in the way</h2>
+          <p class="section-lede">
+            In our experience, most feasibility problems fall into four categories. None of them are deal-breakers by default &mdash; but each requires honest attention.
+          </p>
+        </div>
+        <div class="barriers-layout" style="padding: 0 1.5rem;">
+          <div>
+            <!-- Barrier 1 -->
+            <div class="barrier-item">
+              <div class="barrier-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="14" width="16" height="2" fill="#8A6F55"/>
+                  <path d="M4 14 L10 4 L16 14" stroke="#8A6F55" stroke-width="1.5" fill="none"/>
+                  <line x1="10" y1="4" x2="10" y2="14" stroke="#C9BFB0" stroke-width="1"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="barrier-item__title">Site Constraints</h3>
+                <p class="barrier-item__text">Slope, flood risk, contaminated land, easements, protected trees, poor ground conditions, and access limitations are among the most common site-level issues. Each can be worked around &mdash; but each carries a cost and a timeline implication that should be understood before you commit to a design direction.</p>
+              </div>
+            </div>
+            <!-- Barrier 2 -->
+            <div class="barrier-item">
+              <div class="barrier-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="16" height="16" stroke="#8A6F55" stroke-width="1.5"/>
+                  <line x1="2" y1="8" x2="18" y2="8" stroke="#C9BFB0" stroke-width="1"/>
+                  <line x1="8" y1="8" x2="8" y2="18" stroke="#C9BFB0" stroke-width="1"/>
+                  <rect x="5" y="11" width="2" height="3" fill="#8A6F55"/>
+                  <rect x="11" y="11" width="6" height="3" fill="#8A6F55"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="barrier-item__title">Zoning &amp; Planning Rules</h3>
+                <p class="barrier-item__text">Local planning schemes set out what can and cannot be built on any given parcel of land. Height limits, setbacks, site coverage, car parking requirements, heritage overlays, and neighbourhood character provisions all shape what is possible. Many clients are surprised by how much room for interpretation exists within these rules &mdash; and how much difference an experienced architect can make in navigating them.</p>
+              </div>
+            </div>
+            <!-- Barrier 3 -->
+            <div class="barrier-item">
+              <div class="barrier-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="7" stroke="#8A6F55" stroke-width="1.5"/>
+                  <line x1="10" y1="5" x2="10" y2="10" stroke="#8A6F55" stroke-width="1.5"/>
+                  <line x1="10" y1="10" x2="13" y2="13" stroke="#C9BFB0" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="barrier-item__title">Budget Versus Scope</h3>
+                <p class="barrier-item__text">The most common source of project pain is a gap between what a client expects to build and what their budget will actually deliver. Construction costs vary significantly by building type, material specification, site difficulty, and contractor availability. An honest early conversation about this is not a luxury &mdash; it is the only way to protect your investment of time, money, and hope.</p>
+              </div>
+            </div>
+            <!-- Barrier 4 -->
+            <div class="barrier-item">
+              <div class="barrier-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3"  y="5"  width="14" height="11" stroke="#8A6F55" stroke-width="1.5"/>
+                  <line x1="3" y1="9" x2="17" y2="9" stroke="#C9BFB0" stroke-width="1"/>
+                  <line x1="8" y1="5" x2="8" y2="9" stroke="#8A6F55" stroke-width="1.5"/>
+                  <line x1="12" y1="5" x2="12" y2="9" stroke="#8A6F55" stroke-width="1.5"/>
+                  <rect x="6"  y="12" width="4"  height="4" fill="#C9BFB0"/>
+                  <rect x="12" y="12" width="2"  height="2" fill="#8A6F55"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="barrier-item__title">Program &amp; Brief Clarity</h3>
+                <p class="barrier-item__text">Sometimes the barrier is not external at all. It is that the project itself has not yet been defined clearly enough to assess. A vague brief &mdash; &ldquo;a house with a separate studio,&rdquo; &ldquo;an office that also functions as a showroom&rdquo; &mdash; needs to be sharpened before feasibility can be meaningfully tested. This is part of what a pre-design session helps achieve.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual placeholder -->
+          <div>
+            <div class="barriers-visual" role="img" aria-label="Diagram placeholder: site constraints overlay diagram showing zoning, topography and access">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="4"  y="4"  width="40" height="40" stroke="#B89D87" stroke-width="1.5"/>
+                <path d="M4 36 Q16 20 24 28 Q32 36 44 12" stroke="#8A6F55" stroke-width="1.5" fill="none"/>
+                <circle cx="24" cy="24" r="6" stroke="#B89D87" stroke-width="1" stroke-dasharray="2 2"/>
+                <line x1="4"  y1="44" x2="44" y2="44" stroke="#8A6F55" stroke-width="1.5"/>
+                <line x1="4"  y1="4"  x2="4"  y2="44" stroke="#8A6F55" stroke-width="1.5"/>
+              </svg>
+              <p class="barriers-visual__label">Diagram Placeholder &mdash; Site Constraints Overlay</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"><div class="divider__line"></div><div class="divider__diamond"></div><div class="divider__line"></div></div>
+
+    <!-- ============================================================
+         SECTION 4: HOW AN ARCHITECT ASSESSES FEASIBILITY
+    ============================================================ -->
+    <section class="article-section" id="how-architects-assess" aria-labelledby="process-heading">
+      <div class="prose">
+        <p class="section-label">How an Architect Assesses Feasibility</p>
+        <h2 class="section-heading" id="process-heading">What we actually do in the early stages</h2>
+        <p class="section-lede">
+          Feasibility assessment is not guesswork. It follows a structured, iterative process &mdash; one that moves from information gathering to analysis to a considered opinion. Here is how we approach it at Cloudstone Designs.
+        </p>
+      </div>
+
+      <div class="process-steps" role="list">
+        <div class="process-step" role="listitem">
+          <div class="process-step__num" aria-hidden="true">1</div>
+          <div>
+            <h3 class="process-step__title">Site &amp; Context Analysis</h3>
+            <p class="process-step__text">We start by understanding the physical and regulatory context of your site. That means reviewing planning certificates, checking zoning overlays, inspecting the land in person, and understanding what neighbouring buildings and infrastructure already exist. We are looking for constraints, but also for opportunities that clients often miss.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <div class="process-step__num" aria-hidden="true">2</div>
+          <div>
+            <h3 class="process-step__title">Brief Development</h3>
+            <p class="process-step__text">We work with you to translate your ideas into a spatial brief: how many rooms, what relationships between spaces, what functional requirements, what flexibility might be needed in five or ten years. The brief is the foundation everything else is tested against. Ambiguity at this stage becomes cost and delay later.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <div class="process-step__num" aria-hidden="true">3</div>
+          <div>
+            <h3 class="process-step__title">Preliminary Cost Assessment</h3>
+            <p class="process-step__text">Before any detailed design happens, we compare your brief and your site against current construction cost benchmarks. This is a high-level estimate, not a quote &mdash; but it is enough to tell you whether the conversation should continue, and what levers you have if the numbers need to move.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <div class="process-step__num" aria-hidden="true">4</div>
+          <div>
+            <h3 class="process-step__title">Options Testing</h3>
+            <p class="process-step__text">Rather than committing immediately to a single design approach, a good feasibility process tests more than one option. What if we built less and built it better? What if we staged the project? What if the program were reorganised to reduce construction complexity? These are design questions, but they are answered at the feasibility stage.</p>
+          </div>
+        </div>
+        <div class="process-step" role="listitem">
+          <div class="process-step__num" aria-hidden="true">5</div>
+          <div>
+            <h3 class="process-step__title">Feasibility Report &amp; Recommendation</h3>
+            <p class="process-step__text">The output of this process is a clear, written summary of what is feasible, what is conditional, and what would require a significant change of direction. It is the document that lets you decide, with real information in hand, whether to proceed &mdash; and gives you something solid to take to your bank, your family, or your business partners.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline process diagram placeholder -->
+      <div style="max-width: var(--max-prose); margin: 3rem auto 0; padding: 0 1.5rem;" role="img" aria-label="Process flow diagram placeholder: five stages from site analysis through to feasibility report">
+        <div style="background: var(--color-surface); border: 1px solid var(--color-border); padding: 2rem; text-align: center; display: flex; flex-direction: column; gap: 0.625rem; align-items: center;">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="22" cy="22" r="18" stroke="#B89D87" stroke-width="1.5"/>
+            <polyline points="8,22 22,8 36,22 22,36 8,22" stroke="#8A6F55" stroke-width="1" fill="none"/>
+            <circle cx="22" cy="22" r="4" fill="#8A6F55"/>
+          </svg>
+          <p style="font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent-lt);">Process Flow Diagram Placeholder &mdash; Five-Stage Feasibility Method</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"><div class="divider__line"></div><div class="divider__diamond"></div><div class="divider__line"></div></div>
+
+    <!-- ============================================================
+         SECTION 5: KEY FACTORS TABLE
+    ============================================================ -->
+    <section class="article-section" id="factors" aria-labelledby="factors-heading">
+      <div class="prose">
+        <p class="section-label">Key Factors at a Glance</p>
+        <h2 class="section-heading" id="factors-heading">What we examine and why it matters</h2>
+        <p class="section-lede">
+          Not every factor carries the same weight. Some constraints are hard limits; others are soft and negotiable. This table summarises the most common factors we assess and how much bearing each typically has on whether a project proceeds.
+        </p>
+      </div>
+
+      <div class="factors-table-wrap">
+        <table class="factors-table" aria-label="Feasibility factors reference table">
+          <thead>
+            <tr>
+              <th scope="col">Factor</th>
+              <th scope="col">What We Look At</th>
+              <th scope="col">Typical Impact</th>
+              <th scope="col">Can It Be Worked Around?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Zoning &amp; Land Use</td>
+              <td>Permitted use, height limits, setbacks, site coverage, car parking</td>
+              <td><span class="badge badge--high">High</span></td>
+              <td>Sometimes &mdash; through design, variance applications, or rezoning</td>
+            </tr>
+            <tr>
+              <td>Heritage Overlay</td>
+              <td>Whether the site or streetscape is protected; degree of intervention permitted</td>
+              <td><span class="badge badge--high">High</span></td>
+              <td>Partially &mdash; sensitive additions are often possible; demolition rarely</td>
+            </tr>
+            <tr>
+              <td>Ground Conditions</td>
+              <td>Soil type, bearing capacity, fill material, groundwater level</td>
+              <td><span class="badge badge--med">Medium</span></td>
+              <td>Yes &mdash; engineering solutions exist, though they add cost</td>
+            </tr>
+            <tr>
+              <td>Slope &amp; Topography</td>
+              <td>Site gradient, cut-and-fill requirements, retaining structures needed</td>
+              <td><span class="badge badge--med">Medium</span></td>
+              <td>Yes &mdash; slope can become a design asset with the right approach</td>
+            </tr>
+            <tr>
+              <td>Services &amp; Infrastructure</td>
+              <td>Connection to water, sewer, power, NBN; capacity of existing services</td>
+              <td><span class="badge badge--med">Medium</span></td>
+              <td>Usually &mdash; upgrades may be required at client cost</td>
+            </tr>
+            <tr>
+              <td>Flood &amp; Bushfire Risk</td>
+              <td>Overlay mapping, construction standard requirements, insurance implications</td>
+              <td><span class="badge badge--high">High</span></td>
+              <td>Partially &mdash; design can mitigate, but cannot eliminate risk classification</td>
+            </tr>
+            <tr>
+              <td>Easements &amp; Covenants</td>
+              <td>Registered encumbrances that restrict building over or near them</td>
+              <td><span class="badge badge--high">High</span></td>
+              <td>Rarely &mdash; these are fixed legal constraints in most circumstances</td>
+            </tr>
+            <tr>
+              <td>Budget</td>
+              <td>Alignment between project scope, quality level, and construction market costs</td>
+              <td><span class="badge badge--high">High</span></td>
+              <td>Yes &mdash; scope and specification can almost always be adjusted to fit</td>
+            </tr>
+            <tr>
+              <td>Brief Complexity</td>
+              <td>Number of spaces, special requirements, sustainability targets, staging</td>
+              <td><span class="badge badge--low">Variable</span></td>
+              <td>Yes &mdash; simplification and phasing are powerful tools</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="divider" role="separator"><div class="divider__line"></div><div class="divider__diamond"></div><div class="divider__line"></div></div>
+
+    <!-- ============================================================
+         SECTION 6: WHAT TO BRING TO A FIRST MEETING
+    ============================================================ -->
+    <section class="article-section" id="first-meeting" aria-labelledby="meeting-heading">
+      <div class="prose">
+        <p class="section-label">Preparing for Your First Meeting</p>
+        <h2 class="section-heading" id="meeting-heading">What to bring &mdash; and what to leave at home</h2>
+        <p class="section-lede">
+          A good first meeting does not require a polished brief. In fact, clients who arrive with too fixed an idea of what they want sometimes leave less prepared than those who arrive with questions. What matters is that you bring enough information for an honest conversation.
+        </p>
+        <p class="body-text">
+          You do not need architectural drawings, a construction budget, or a resolved design concept. What you need is information about your site, a sense of what you are trying to achieve, and a rough sense of what you can spend. The rest is our job.
+        </p>
+      </div>
+
+      <div class="checklist-grid">
+        <div class="checklist-group">
+          <h3 class="checklist-group__title">Useful to bring</h3>
+          <ul>
+            <li>
+              <span class="check-icon" aria-hidden="true">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Title documents or certificate of title for the land
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Any existing plans, surveys, or structural reports
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              A rough description of what you want to achieve (even a list of rooms)
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Your approximate budget range &mdash; even a wide range is helpful
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Photos of the site and surroundings (even phone photos are fine)
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              Any images of projects or spaces you find compelling (as reference only)
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              A rough timeline &mdash; is there a driver for when you need to start or finish?
+            </li>
+          </ul>
+        </div>
+
+        <div class="checklist-group">
+          <h3 class="checklist-group__title">What you do not need yet</h3>
+          <ul>
+            <li>
+              <span class="check-icon" aria-hidden="true" style="border-color: var(--color-border);">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="2" y1="2" x2="8" y2="8" stroke="#C9BFB0" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="#C9BFB0" stroke-width="1.5"/></svg>
+              </span>
+              A finalised or fixed design concept
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true" style="border-color: var(--color-border);">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="2" y1="2" x2="8" y2="8" stroke="#C9BFB0" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="#C9BFB0" stroke-width="1.5"/></svg>
+              </span>
+              A precise, confirmed construction budget
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true" style="border-color: var(--color-border);">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="2" y1="2" x2="8" y2="8" stroke="#C9BFB0" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="#C9BFB0" stroke-width="1.5"/></svg>
+              </span>
+              Expert knowledge of planning or building regulations
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true" style="border-color: var(--color-border);">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="2" y1="2" x2="8" y2="8" stroke="#C9BFB0" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="#C9BFB0" stroke-width="1.5"/></svg>
+              </span>
+              Pre-commissioned drawings or reports
+            </li>
+            <li>
+              <span class="check-icon" aria-hidden="true" style="border-color: var(--color-border);">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><line x1="2" y1="2" x2="8" y2="8" stroke="#C9BFB0" stroke-width="1.5"/><line x1="8" y1="2" x2="2" y2="8" stroke="#C9BFB0" stroke-width="1.5"/></svg>
+              </span>
+              Answers &mdash; questions are more useful than assumptions at this stage
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="checklist-note">
+        <strong>A note on budget conversations:</strong> Many clients are reluctant to share budget figures early, worried it will anchor the architect&rsquo;s thinking or be used against them. In practice, the opposite is true. Without a budget range, we cannot give you an honest feasibility assessment. We need to know what envelope we are working within &mdash; even a wide range like &ldquo;somewhere between $400,000 and $650,000&rdquo; gives us enough to work with. You can always revisit the number later.
+      </div>
+    </section>
+
+    <div class="divider" role="separator"><div class="divider__line"></div><div class="divider__diamond"></div><div class="divider__line"></div></div>
+
+    <!-- ============================================================
+         SECTION 7: HONEST TRUTHS
+    ============================================================ -->
+    <section class="article-section" id="honest-truths" aria-labelledby="truths-heading">
+      <div class="prose">
+        <p class="section-label">Things Worth Knowing</p>
+        <h2 class="section-heading" id="truths-heading">What we will always tell you straight</h2>
+        <p class="section-lede">
+          We have found that the most useful thing an architect can do in the early stages is not inspire confidence &mdash; it is provide clarity. Here are the things we commit to saying plainly, even when they are not what clients want to hear.
+        </p>
+      </div>
+
+      <div class="truths-row wide" role="list">
+        <div class="truth-card" role="listitem">
+          <div class="truth-card__icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="7" stroke="#8A6F55" stroke-width="1.5"/>
+              <line x1="9" y1="5" x2="9" y2="9.5" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="9" cy="12.5" r="0.75" fill="#8A6F55"/>
+            </svg>
+          </div>
+          <div class="truth-card__body">
+            <h3 class="truth-card__title">If your budget does not fit your brief, we will tell you</h3>
+            <p class="truth-card__text">We will not take on a project we cannot deliver within a reasonable scope of what you want. If there is a fundamental mismatch, the most useful thing we can do is tell you clearly &mdash; and help you understand your options.</p>
+          </div>
+        </div>
+
+        <div class="truth-card" role="listitem">
+          <div class="truth-card__icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect x="3" y="3" width="12" height="12" stroke="#8A6F55" stroke-width="1.5"/>
+              <polyline points="6,9 8,11 12,7" stroke="#8A6F55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="truth-card__body">
+            <h3 class="truth-card__title">Not every project is feasible &mdash; and that is useful information</h3>
+            <p class="truth-card__text">Sometimes a site genuinely cannot support what a client needs, or the numbers do not stack up regardless of how the design is configured. Knowing this early &mdash; before significant investment &mdash; is one of the most valuable outcomes of a good feasibility process.</p>
+          </div>
+        </div>
+
+        <div class="truth-card" role="listitem">
+          <div class="truth-card__icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M4 14 L9 4 L14 14" stroke="#8A6F55" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="6.5" y1="11" x2="11.5" y2="11" stroke="#8A6F55" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="truth-card__body">
+            <h3 class="truth-card__title">Costs go up as projects go forward, not down</h3>
+            <p class="truth-card__text">Early estimates are deliberately conservative because later surprises are expensive. If we give you a number at feasibility stage, we are building in contingency. That is not pessimism &mdash; it is professional responsibility.</p>
+          </div>
+        </div>
+
+        <div class="truth-card" role="listitem">
+          <div class="truth-card__icon-wrap" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="7" stroke="#8A6F55" stroke-width="1.5"/>
+              <path d="M7 7 Q9 5 11 7 Q13 9 9 11" stroke="#8A6F55" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <circle cx="9" cy="13" r="0.75" fill="#8A6F55"/>
+            </svg>
+          </div>
+          <div class="truth-card__body">
+            <h3 class="truth-card__title">Planning is uncertain, but it is not random</h3>
+            <p class="truth-card__text">We cannot guarantee a planning outcome &mdash; no architect can. But an experienced studio will have a grounded view of what is likely to be supportable and what is not, and will advise you accordingly before you spend on detailed design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </article>
+
+    <!-- ============================================================
+         CTA SECTION
+    ============================================================ -->
+    <section class="cta-section" id="cta" aria-labelledby="cta-heading">
+      <p class="cta-section__eyebrow">Cloudstone Designs</p>
+      <h2 class="cta-section__heading" id="cta-heading">
+        Still wondering if your project is possible?
+      </h2>
+      <p class="cta-section__body">
+        We offer a free, no-obligation feasibility conversation for new clients. Bring your site, your idea, and your questions. We will tell you honestly what we see, what we do not know yet, and how we would go about finding out.
+      </p>
+      <a href="#" class="cta-btn" aria-label="Book your free feasibility conversation with Cloudstone Designs">
+        <!-- Arrow icon -->
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+          <line x1="0" y1="5" x2="12" y2="5" stroke="currentColor" stroke-width="1.5"/>
+          <polyline points="8,1 13,5 8,9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        Book a Free Feasibility Conversation
+      </a>
+      <p class="cta-assurance">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5" stroke="#6B6257" stroke-width="1"/><polyline points="3.5,6 5,7.5 8.5,4" stroke="#6B6257" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        No cost. No obligation. No drawings required.
+      </p>
+    </section>

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cloudstonedesigns",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:cloudstone"],
+      "port": 3005
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { promises as fs } from 'fs';
+import path from 'path';
 import { notFound } from "next/navigation";
 import ArticleShell from "@/components/ArticleShell";
 import Cta from "@/components/Cta";
@@ -19,21 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return { title: satellite.title, description: satellite.teaser };
 }
 
-export default async function StartingYourProjectSatellitePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const satellite = getSatellite(PILLAR_SLUG, slug);
-  if (!satellite) notFound();
-
-  const related = relatedFor(PILLAR_SLUG, slug, 3);
-
+function NativeSatelliteContent() {
   return (
-    <ArticleShell eyebrow={satellite.pillar} title={satellite.title}>
-      <p>{satellite.teaser}</p>
-
+    <>
       <p>
         The question deserves a direct answer, and the answer depends on variables that are specific
         to your project — its scale, its site, its program, and the jurisdiction where it will be
@@ -77,11 +67,52 @@ export default async function StartingYourProjectSatellitePage({
         firm understands your project — and whether you understand what a well-structured
         engagement would look like.
       </p>
+    </>
+  );
+}
+
+export default async function StartingYourProjectSatellitePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const satellite = getSatellite(PILLAR_SLUG, slug);
+  if (!satellite) notFound();
+
+  const related = relatedFor(PILLAR_SLUG, slug, 3);
+
+  let bodyHtml: string | null = null;
+  let sections: { id: string; label: string }[] = [];
+
+  if (satellite.source === 'cjgeo') {
+    const filePath = path.join(
+      process.cwd(),
+      'content',
+      satellite.pillarSlug,
+      `${slug}.html`
+    );
+    bodyHtml = await fs.readFile(filePath, 'utf8');
+    sections = Array.from(bodyHtml.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)).map(
+      ([, id, text]) => ({ id, label: text.replace(/&mdash;/g, '—').replace(/&ndash;/g, '–').replace(/&amp;/g, '&').replace(/&rsquo;/g, "'").replace(/&lsquo;/g, "'").replace(/&rdquo;/g, '"').replace(/&ldquo;/g, '"').replace(/&hellip;/g, '…').replace(/&nbsp;/g, ' ') })
+    );
+  }
+
+  return (
+    <ArticleShell eyebrow={satellite.pillar} title={satellite.title} sections={sections}>
+      {bodyHtml ? (
+        <div className="prose-article" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+      ) : (
+        <>
+          <p>{satellite.teaser}</p>
+          <NativeSatelliteContent />
+        </>
+      )}
 
       <Cta
-        heading="Ready to talk through your project?"
-        body="We offer a complimentary initial consultation for projects that are a good fit for our practice. Tell us about yours."
-        button={{ label: "Start a Conversation", href: "/contact" }}
+        heading="Tell us about your project"
+        body="A 30-minute conversation to explore your vision and constraints — no commitment required."
+        button={{ label: "Start the conversation", href: "/contact" }}
       />
 
       <RelatedArticles articles={related} />
