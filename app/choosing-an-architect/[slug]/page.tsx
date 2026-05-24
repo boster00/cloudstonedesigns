@@ -1,3 +1,5 @@
+import { promises as fs } from 'fs';
+import path from 'path';
 import { notFound } from "next/navigation";
 import ArticleShell from "@/components/ArticleShell";
 import Cta from "@/components/Cta";
@@ -19,21 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return { title: satellite.title, description: satellite.teaser };
 }
 
-export default async function ChoosingAnArchitectSatellitePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const satellite = getSatellite(PILLAR_SLUG, slug);
-  if (!satellite) notFound();
-
-  const related = relatedFor(PILLAR_SLUG, slug, 3);
-
+function NativeSatelliteContent() {
   return (
-    <ArticleShell eyebrow={satellite.pillar} title={satellite.title}>
-      <p>{satellite.teaser}</p>
-
+    <>
       <p>
         The selection decision is rarely as difficult as it feels in the moment — but it requires
         a different kind of information than most clients seek. The information that is readily
@@ -53,31 +43,67 @@ export default async function ChoosingAnArchitectSatellitePage({
         References from completed projects are the most direct evidence available. The most useful
         reference conversations are not about whether the client liked the result — most clients
         like their completed projects — but about how the firm handled difficult moments: budget
-        pressure, field conditions, contractor disputes, owner changes of scope. Those conversations
-        reveal the firm's actual character under stress.
+        pressure, field conditions, contractor disputes, owner changes of scope.
       </p>
 
-      <h2>The Questions Most Clients Don't Ask</h2>
+      <h2>The Questions Most Clients Don&rsquo;t Ask</h2>
       <p>
-        Who will actually work on my project, and at what stages? What is the firm's current
-        workload, and how does that affect capacity? What happens if the project goes over budget
-        in design — does the fee increase? What does the construction administration scope actually
-        include, and how many site visits does that represent?
+        Who will actually work on my project, and at what stages? What is the firm&rsquo;s current
+        workload? What happens if the project goes over budget in design? What does the construction
+        administration scope actually include?
       </p>
       <p>
         These are not adversarial questions. They are reasonable due diligence that any confident
-        firm should be able to answer without hesitation. Answers that are vague, deflected, or
-        qualified in ways that create ambiguity are information.
+        firm should be able to answer without hesitation.
       </p>
 
       <h2>Making the Final Decision</h2>
       <p>
         If you have done thorough due diligence and more than one firm looks genuinely qualified,
         the remaining decision is about working relationship. You will be in regular communication
-        with this team for the duration of the project — potentially years. The question of whether
-        you trust them, and whether they understand what you are trying to accomplish, matters at
-        least as much as their technical credentials.
+        with this team for the duration of the project — potentially years.
       </p>
+    </>
+  );
+}
+
+export default async function ChoosingAnArchitectSatellitePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const satellite = getSatellite(PILLAR_SLUG, slug);
+  if (!satellite) notFound();
+
+  const related = relatedFor(PILLAR_SLUG, slug, 3);
+
+  let bodyHtml: string | null = null;
+  let sections: { id: string; label: string }[] = [];
+
+  if (satellite.source === 'cjgeo') {
+    const filePath = path.join(
+      process.cwd(),
+      'content',
+      satellite.pillarSlug,
+      `${slug}.html`
+    );
+    bodyHtml = await fs.readFile(filePath, 'utf8');
+    sections = Array.from(bodyHtml.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)).map(
+      ([, id, text]) => ({ id, label: text.replace(/&mdash;/g, '—').replace(/&ndash;/g, '–').replace(/&amp;/g, '&').replace(/&rsquo;/g, "'").replace(/&lsquo;/g, "'").replace(/&rdquo;/g, '"').replace(/&ldquo;/g, '"').replace(/&hellip;/g, '…').replace(/&nbsp;/g, ' ') })
+    );
+  }
+
+  return (
+    <ArticleShell eyebrow={satellite.pillar} title={satellite.title} sections={sections}>
+      {bodyHtml ? (
+        <div className="prose-article" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+      ) : (
+        <>
+          <p>{satellite.teaser}</p>
+          <NativeSatelliteContent />
+        </>
+      )}
 
       <Cta
         heading="Considering Cloudstone for your project?"
