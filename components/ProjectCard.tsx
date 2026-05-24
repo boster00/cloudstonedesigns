@@ -8,11 +8,17 @@ type ProjectCardProps = {
   year: number;
 };
 
-export default function ProjectCard({ slug, title, category, year }: ProjectCardProps) {
+export default function ProjectCard({ slug, title, category, year, imageSrc }: ProjectCardProps) {
   return (
     <Link href={`/portfolio/${slug}`} className="group block">
-      {/* Placeholder image area */}
       <div className="relative w-full aspect-video bg-[var(--color-surface)] overflow-hidden">
+        {imageSrc && (
+          <img
+            src={imageSrc}
+            alt={title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-[var(--color-primary)] opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -16,7 +16,7 @@ export const projects: Project[] = [
     year: 2024,
     location: 'San Francisco, CA',
     teaser: 'A 3,200 sq ft hillside residence emphasizing material honesty and passive solar design.',
-    imageSrc: '/images/placeholder-project.jpg',
+    imageSrc: '/images/projects/meridian-house.jpg',
   },
   {
     slug: 'vale-studio',
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     year: 2023,
     location: 'Portland, OR',
     teaser: 'Creative workspace for a film production company — adaptive reuse of a 1940s warehouse.',
-    imageSrc: '/images/placeholder-project.jpg',
+    imageSrc: '/images/projects/vale-studio.jpg',
   },
   {
     slug: 'thornfield-renovation',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     year: 2024,
     location: 'Seattle, WA',
     teaser: 'Whole-home renovation of a 1960s mid-century split-level. Structural and envelope improvements throughout.',
-    imageSrc: '/images/placeholder-project.jpg',
+    imageSrc: '/images/projects/thornfield-renovation.jpg',
   },
   {
     slug: 'atlas-pavilion',
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     year: 2022,
     location: 'Austin, TX',
     teaser: 'Open-air event pavilion for a private vineyard estate. Net-zero energy target.',
-    imageSrc: '/images/placeholder-project.jpg',
+    imageSrc: '/images/projects/atlas-pavilion.jpg',
   },
   {
     slug: 'sable-residence',
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     year: 2023,
     location: 'Marin County, CA',
     teaser: 'New construction single-family home on a constrained hillside lot with bay views.',
-    imageSrc: '/images/placeholder-project.jpg',
+    imageSrc: '/images/projects/sable-residence.jpg',
   },
   {
     slug: 'quill-interiors',
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     year: 2024,
     location: 'Los Angeles, CA',
     teaser: 'Interior architecture scope for a boutique hotel conversion — 24 guest rooms + common spaces.',
-    imageSrc: '/images/placeholder-project.jpg',
+    imageSrc: '/images/projects/quill-interiors.jpg',
   },
 ];
 

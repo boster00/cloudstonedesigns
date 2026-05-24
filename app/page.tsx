@@ -9,17 +9,25 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="min-h-[80vh] flex flex-col items-start justify-end px-6 md:px-16 pb-20 bg-[var(--color-surface)]">
-        <div className="max-w-3xl">
+      <section className="min-h-[80vh] relative flex flex-col items-start justify-end px-6 md:px-16 pb-20 bg-[var(--color-surface)]">
+        {/* Hero background image */}
+        <img
+          src="/images/hero.jpg"
+          alt="Contemporary residential architecture"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Overlay so text stays legible */}
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative max-w-3xl">
           <h1
-            className="text-6xl md:text-8xl font-light leading-none mb-8 text-[var(--color-primary)]"
+            className="text-6xl md:text-8xl font-light leading-none mb-8 text-white"
             style={{ fontFamily: "var(--font-serif)" }}
           >
             Architecture
             <br />
             That Endures.
           </h1>
-          <p className="text-lg text-[var(--color-neutral-mid)] max-w-xl mb-10 leading-relaxed">
+          <p className="text-lg text-white/85 max-w-xl mb-10 leading-relaxed">
             We design buildings and interiors that respond honestly to their site, program, and
             materials — work that improves with time rather than dating with it.
           </p>
