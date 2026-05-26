@@ -147,6 +147,10 @@ export const pillars: Pillar[] = [
         title: 'What Do I Do If My Architecture Project Failed?',
         teaser:
           'A project failure does not mean the vision is unachievable. Understanding what went wrong is the first step toward a viable second attempt.',
+        source: 'cjgeo',
+        cjgeoArticleId: '149e1822-722c-45b2-ac78-5b08dccff2df',
+        mainKeyword: 'failed architecture project what to do',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'why-architecture-projects-fail',
@@ -155,6 +159,10 @@ export const pillars: Pillar[] = [
         title: 'Why Do Architecture Projects Usually Fail?',
         teaser:
           'Most failures share a small set of root causes — misaligned expectations, inadequate documentation, and communication breakdowns that compound over time.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'c72012eb-9ad5-4240-ac30-74073d0f5802',
+        mainKeyword: 'architecture project failure causes',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'can-my-stalled-project-be-saved',
@@ -163,6 +171,10 @@ export const pillars: Pillar[] = [
         title: 'Can My Stalled Architecture Project Still Be Saved?',
         teaser:
           'A stalled project is not necessarily a failed one. The diagnostic questions that determine whether rescue is viable — and what it typically requires.',
+        source: 'cjgeo',
+        cjgeoArticleId: '16d1d5fc-624b-4168-b18c-56a3640a94f4',
+        mainKeyword: 'architecture project stalled can it be saved',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'should-i-switch-architects',
@@ -171,6 +183,10 @@ export const pillars: Pillar[] = [
         title: 'Should I Switch Architects Mid-Project?',
         teaser:
           'Changing architects mid-project carries real costs and risks. Here is how to evaluate whether the situation warrants it — and how to do it without losing momentum.',
+        source: 'cjgeo',
+        cjgeoArticleId: '271487de-b169-468a-ac77-1477737b186f',
+        mainKeyword: 'should I fire my architect',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'finding-trustworthy-architect-after-bad-experience',
@@ -179,6 +195,10 @@ export const pillars: Pillar[] = [
         title: 'How Do I Find a Trustworthy Architect After a Bad Experience?',
         teaser:
           'A difficult prior experience sharpens your instincts but can also create blind spots. How to channel that experience into a more rigorous selection process.',
+        source: 'cjgeo',
+        cjgeoArticleId: '59d4315d-29ec-46bd-b5dc-cd8883ed3360',
+        mainKeyword: 'hiring new architect after project failure',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'expensive-mistakes-in-architecture-projects',
@@ -187,6 +207,10 @@ export const pillars: Pillar[] = [
         title: 'What Are the Most Expensive Mistakes in Architecture Projects?',
         teaser:
           'Some errors cost time. Others cost money. A handful cost both and damage the relationships needed to complete the work. Know them before they find you.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'a6a84853-3d2c-4203-853c-0f98cd23ca50',
+        mainKeyword: 'costly mistakes architecture project',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'what-project-transparency-should-look-like',
@@ -195,6 +219,10 @@ export const pillars: Pillar[] = [
         title: 'What Should Good Communication Look Like on an Architecture Project?',
         teaser:
           'Healthy project communication follows predictable rhythms. If your project lacks these structures, that absence is itself a risk signal.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'ba76a585-fa2d-4972-98b0-6347f8329ebb',
+        mainKeyword: 'good architect client communication',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'comparing-architecture-firms-after-bad-experience',
@@ -203,6 +231,10 @@ export const pillars: Pillar[] = [
         title: "How Do I Compare Architecture Firms When I'm Skeptical?",
         teaser:
           'Skepticism is an asset when it is applied systematically. The evaluation criteria that help you distinguish genuinely different firms from firms that market differently.',
+        source: 'cjgeo',
+        cjgeoArticleId: '4cb832bc-85c4-4d5f-a89c-26de1ab61faa',
+        mainKeyword: 'evaluating architecture firms after bad experience',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'getting-second-opinion-on-architecture-project',
@@ -211,6 +243,10 @@ export const pillars: Pillar[] = [
         title: 'How Do I Get a Second Opinion on My Architecture Project?',
         teaser:
           'A second opinion on a troubled project can clarify whether the problems are fixable, how much it will cost, and whether you have any contractual recourse.',
+        source: 'cjgeo',
+        cjgeoArticleId: '321c3d39-63b9-4a96-b64e-513419b518f5',
+        mainKeyword: 'architecture project review second opinion',
+        adoptedAt: '2026-05-26',
       },
     ],
   },
@@ -227,6 +263,10 @@ export const pillars: Pillar[] = [
         title: 'How Do Most People Choose an Architect?',
         teaser:
           'Most selection processes rely on portfolio and referrals. Both are useful but insufficient — and both are easily gamed by firms that market well.',
+        source: 'cjgeo',
+        cjgeoArticleId: '8110a4fb-cc26-47a1-8817-b26ad8f769b0',
+        mainKeyword: 'how to choose an architect',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'how-to-compare-architecture-firms-fairly',
