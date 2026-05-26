@@ -78,10 +78,10 @@ export default function Footer() {
               studio@cloudstonedesigns.com
             </a>
             <Link href="/privacy" className="hover:text-[var(--color-accent)] transition-colors">
-              Privacy
+              Privacy <span className="text-[var(--color-neutral-mid)]">(draft outline)</span>
             </Link>
             <Link href="/design-guide" className="hover:text-[var(--color-accent)] transition-colors">
-              Design Guide
+              Design Guide <span className="text-[var(--color-neutral-mid)]">(draft outline)</span>
             </Link>
             <span>© {year}</span>
           </div>
