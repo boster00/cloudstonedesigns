@@ -2,12 +2,586 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: 411a581b-a37b-461f-ac9e-3e2cdf7e4955
   main_keyword: how to find reliable architecture advice
-  adopted_at: 2026-05-26T19:23:07.509Z
+  adopted_at: 2026-05-26T21:20:05.855Z
 -->
-<div class="container">
+<style data-cjgeo-scoped="article-how-to-evaluate-architecture-information-online">.article-how-to-evaluate-architecture-information-online /* ============================================================
+       DESIGN TOKENS & RESET
+       Color palette:
+         --stone:    #f5f2ee  (warm off-white background)
+         --ink:      #1a1714  (near-black body text)
+         --slate:    #5a5652  (muted secondary text)
+         --clay:     #8b6f5e  (warm accent / headings accent)
+         --rule:     #d9d3cc  (dividers / borders)
+    ============================================================ */
+    * {  box-sizing: border-box; margin: 0; padding: 0;  }
+.article-how-to-evaluate-architecture-information-online { 
+      --stone:  #f5f2ee;
+      --ink:    #1a1714;
+      --slate:  #5a5652;
+      --clay:   #8b6f5e;
+      --rule:   #d9d3cc;
+
+      --font-serif: Georgia, 'Times New Roman', Times, serif;
+      --font-sans:  'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+      --max-w: 860px;
+      --max-w-wide: 1100px;
+      --section-pad: 5rem 1.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online { 
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      background-color: var(--stone);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+     }
+.article-how-to-evaluate-architecture-information-online img {  display: block; max-width: 100%;  }
+.article-how-to-evaluate-architecture-information-online a {  color: inherit; text-decoration: none;  }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    .serif {  font-family: var(--font-serif);  }
+.article-how-to-evaluate-architecture-information-online h1, .article-how-to-evaluate-architecture-information-online h2, .article-how-to-evaluate-architecture-information-online h3, .article-how-to-evaluate-architecture-information-online h4 { 
+      font-family: var(--font-serif);
+      font-weight: normal;
+      line-height: 1.22;
+      color: var(--ink);
+     }
+.article-how-to-evaluate-architecture-information-online h1 {  font-size: clamp(2.25rem, 5vw, 3.75rem); letter-spacing: -0.02em;  }
+.article-how-to-evaluate-architecture-information-online h2 {  font-size: clamp(1.75rem, 3.5vw, 2.5rem); letter-spacing: -0.015em;  }
+.article-how-to-evaluate-architecture-information-online h3 {  font-size: clamp(1.25rem, 2.5vw, 1.6rem);  }
+.article-how-to-evaluate-architecture-information-online h4 {  font-size: 1.05rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: 0.02em;  }
+.article-how-to-evaluate-architecture-information-online p {  color: var(--slate);  }
+.article-how-to-evaluate-architecture-information-online p + p {  margin-top: 1.1rem;  }
+.article-how-to-evaluate-architecture-information-online strong {  color: var(--ink); font-weight: 600;  }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       LAYOUT UTILITIES
+    ============================================================ */
+    .container { 
+      max-width: var(--max-w);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online .container-wide { 
+      max-width: var(--max-w-wide);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online .section {  padding: var(--section-pad);  }
+.article-how-to-evaluate-architecture-information-online .rule {  border: none; border-top: 1px solid var(--rule);  }
+.article-how-to-evaluate-architecture-information-online .eyebrow { 
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 1.25rem;
+     }
+.article-how-to-evaluate-architecture-information-online .text-center {  text-align: center;  }
+.article-how-to-evaluate-architecture-information-online .text-muted {  color: var(--slate);  }
+.article-how-to-evaluate-architecture-information-online .site-nav__inner { 
+      max-width: var(--max-w-wide);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     }
+.article-how-to-evaluate-architecture-information-online .site-nav__logo { 
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+     }
+.article-how-to-evaluate-architecture-information-online .site-nav__logo span { 
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clay);
+      display: block;
+      margin-top: 1px;
+     }
+.article-how-to-evaluate-architecture-information-online .site-nav__cta { 
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 0.5rem 1.1rem;
+      border-radius: 2px;
+      transition: background-color 0.18s, color 0.18s;
+     }
+.article-how-to-evaluate-architecture-information-online .site-nav__cta:hover { 
+      background-color: var(--ink);
+      color: var(--stone);
+     }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 1: HERO
+    ============================================================ */
+    .hero { 
+      padding: 5rem 1.5rem 4rem;
+      border-bottom: 1px solid var(--rule);
+     }
+.article-how-to-evaluate-architecture-information-online .hero__inner { 
+      max-width: var(--max-w);
+      margin: 0 auto;
+     }
+.article-how-to-evaluate-architecture-information-online .hero__kicker { 
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 1.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online .hero__headline { 
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+      max-width: 780px;
+     }
+.article-how-to-evaluate-architecture-information-online .hero__sub { 
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--slate);
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online /* Hero media placeholder */
+    .hero__media { 
+      margin-top: 3.5rem;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: var(--rule);
+      position: relative;
+      aspect-ratio: 16 / 7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     }
+.article-how-to-evaluate-architecture-information-online .hero__media-label { 
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+     }
+.article-how-to-evaluate-architecture-information-online /* Decorative horizontal rule inside hero media */
+    .hero__media::before { 
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 6%;
+      right: 6%;
+      height: 1px;
+      background-color: var(--rule);
+      opacity: 0.6;
+     }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 2: THE PROBLEM
+    ============================================================ */
+    .problem {  padding: var(--section-pad); border-bottom: 1px solid var(--rule);  }
+.article-how-to-evaluate-architecture-information-online .problem__grid { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem 4rem;
+      margin-top: 3rem;
+     }
+@media (max-width: 640px) { .article-how-to-evaluate-architecture-information-online .problem__grid {  grid-template-columns: 1fr; gap: 2.5rem;  } }
+.article-how-to-evaluate-architecture-information-online .problem__item-num { 
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--rule);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+     }
+.article-how-to-evaluate-architecture-information-online .problem__item h4 { 
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+     }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 3: SOURCE EVALUATION
+    ============================================================ */
+    .sources {  padding: var(--section-pad); border-bottom: 1px solid var(--rule); background-color: #f0ebe5;  }
+.article-how-to-evaluate-architecture-information-online .sources__intro { 
+      max-width: var(--max-w);
+      margin: 0 auto 3.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online .sources__table { 
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+      border-collapse: collapse;
+     }
+.article-how-to-evaluate-architecture-information-online .sources__table thead tr { 
+      border-bottom: 2px solid var(--ink);
+     }
+.article-how-to-evaluate-architecture-information-online .sources__table th { 
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding: 0.75rem 1rem 0.75rem 0;
+      text-align: left;
+     }
+.article-how-to-evaluate-architecture-information-online .sources__table tbody tr { 
+      border-bottom: 1px solid var(--rule);
+     }
+.article-how-to-evaluate-architecture-information-online .sources__table td { 
+      padding: 1.1rem 1rem 1.1rem 0;
+      font-size: 0.95rem;
+      color: var(--slate);
+      vertical-align: top;
+     }
+.article-how-to-evaluate-architecture-information-online .sources__table td:first-child { 
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+     }
+.article-how-to-evaluate-architecture-information-online .tag { 
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+     }
+.article-how-to-evaluate-architecture-information-online .tag--ok {  background-color: #dde8dc; color: #2e5c34;  }
+.article-how-to-evaluate-architecture-information-online .tag--warn {  background-color: #f0e5d0; color: #7a4f1a;  }
+.article-how-to-evaluate-architecture-information-online .tag--risk {  background-color: #f0d9d9; color: #7a2020;  }
+@media (max-width: 640px) { .article-how-to-evaluate-architecture-information-online .sources__table {  display: block; overflow-x: auto;  } }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 4: DIAGRAM — SOURCE RELIABILITY
+    ============================================================ */
+    .diagram {  padding: var(--section-pad); border-bottom: 1px solid var(--rule);  }
+.article-how-to-evaluate-architecture-information-online .diagram__inner {  max-width: var(--max-w); margin: 0 auto;  }
+.article-how-to-evaluate-architecture-information-online .diagram__vis { 
+      margin-top: 3rem;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+     }
+.article-how-to-evaluate-architecture-information-online .spectrum-row { 
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+     }
+.article-how-to-evaluate-architecture-information-online .spectrum-label { 
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: var(--ink);
+      font-weight: 600;
+      width: 160px;
+      flex-shrink: 0;
+     }
+.article-how-to-evaluate-architecture-information-online .spectrum-bar { 
+      height: 10px;
+      border-radius: 6px;
+      flex: 1;
+     }
+.article-how-to-evaluate-architecture-information-online .spectrum-end { 
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: var(--slate);
+      width: 120px;
+      text-align: right;
+      flex-shrink: 0;
+     }
+.article-how-to-evaluate-architecture-information-online .bar--high {  background-color: #7aad81; width: 90%;  }
+.article-how-to-evaluate-architecture-information-online .bar--mid {  background-color: #c4a96a; width: 55%;  }
+.article-how-to-evaluate-architecture-information-online .bar--low {  background-color: #c97a6a; width: 25%;  }
+.article-how-to-evaluate-architecture-information-online .diagram__caption { 
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: var(--slate);
+      font-style: italic;
+     }
+@media (max-width: 540px) { .article-how-to-evaluate-architecture-information-online .spectrum-label {  width: 110px; font-size: 0.72rem;  }
+.article-how-to-evaluate-architecture-information-online .spectrum-end {  width: 80px; font-size: 0.68rem;  } }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 5: RED FLAGS
+    ============================================================ */
+    .redflags {  padding: var(--section-pad); border-bottom: 1px solid var(--rule); background-color: #f0ebe5;  }
+.article-how-to-evaluate-architecture-information-online .redflags__inner {  max-width: var(--max-w); margin: 0 auto;  }
+.article-how-to-evaluate-architecture-information-online .redflags__list { 
+      margin-top: 2.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+     }
+.article-how-to-evaluate-architecture-information-online .redflag-item { 
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: 0 1.25rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--rule);
+     }
+.article-how-to-evaluate-architecture-information-online .redflag-item:last-child {  border-bottom: none;  }
+.article-how-to-evaluate-architecture-information-online .redflag-item__icon { 
+      display: flex;
+      align-items: flex-start;
+      padding-top: 0.15rem;
+     }
+.article-how-to-evaluate-architecture-information-online .redflag-item__body h4 {  margin-bottom: 0.35rem;  }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 6: WHAT ONLY AN ARCHITECT CAN ANSWER
+    ============================================================ */
+    .architect-only {  padding: var(--section-pad); border-bottom: 1px solid var(--rule);  }
+.article-how-to-evaluate-architecture-information-online .architect-only__inner {  max-width: var(--max-w); margin: 0 auto;  }
+.article-how-to-evaluate-architecture-information-online .questions-grid { 
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+     }
+@media (max-width: 600px) { .article-how-to-evaluate-architecture-information-online .questions-grid {  grid-template-columns: 1fr;  } }
+.article-how-to-evaluate-architecture-information-online .question-card { 
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 1.5rem;
+      background-color: var(--stone);
+     }
+.article-how-to-evaluate-architecture-information-online .question-card__q { 
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+     }
+.article-how-to-evaluate-architecture-information-online .question-card__a { 
+      font-size: 0.88rem;
+      color: var(--slate);
+      line-height: 1.6;
+     }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 7: PROOF / TESTIMONIAL PULL QUOTE
+    ============================================================ */
+    .pullquote { 
+      padding: 5.5rem 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      text-align: center;
+     }
+.article-how-to-evaluate-architecture-information-online .pullquote__mark { 
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      color: var(--rule);
+      line-height: 0.5;
+      margin-bottom: 1.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online .pullquote__text { 
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      color: var(--ink);
+      line-height: 1.4;
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+     }
+.article-how-to-evaluate-architecture-information-online .pullquote__source { 
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--clay);
+     }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 8: HOW TO EVALUATE ANY ADVICE
+    ============================================================ */
+    .evaluate {  padding: var(--section-pad); border-bottom: 1px solid var(--rule);  }
+.article-how-to-evaluate-architecture-information-online .evaluate__inner {  max-width: var(--max-w); margin: 0 auto;  }
+.article-how-to-evaluate-architecture-information-online .checklist { 
+      margin-top: 2.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+     }
+.article-how-to-evaluate-architecture-information-online .checklist-item { 
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 1.25rem;
+      border-left: 3px solid var(--rule);
+      background-color: #f0ebe5;
+      border-radius: 0 4px 4px 0;
+     }
+.article-how-to-evaluate-architecture-information-online .checklist-item__num { 
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--clay);
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+     }
+.article-how-to-evaluate-architecture-information-online .checklist-item__body h4 {  margin-bottom: 0.2rem; font-size: 0.95rem;  }
+.article-how-to-evaluate-architecture-information-online .checklist-item__body p {  font-size: 0.88rem;  }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       SECTION 9: SOFT CTA
+    ============================================================ */
+    .cta-section { 
+      padding: 6rem 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      text-align: center;
+     }
+.article-how-to-evaluate-architecture-information-online .cta-section__inner {  max-width: 600px; margin: 0 auto;  }
+.article-how-to-evaluate-architecture-information-online .cta-section h2 {  margin-bottom: 1rem;  }
+.article-how-to-evaluate-architecture-information-online .cta-section p {  margin-bottom: 2rem;  }
+.article-how-to-evaluate-architecture-information-online .btn-primary { 
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--stone);
+      background-color: var(--ink);
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      border: 1px solid var(--ink);
+      transition: background-color 0.18s, color 0.18s;
+      cursor: pointer;
+     }
+.article-how-to-evaluate-architecture-information-online .btn-primary:hover { 
+      background-color: var(--clay);
+      border-color: var(--clay);
+     }
+.article-how-to-evaluate-architecture-information-online .btn-ghost { 
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      background-color: transparent;
+      padding: 0.85rem 2rem;
+      border-radius: 2px;
+      border: 1px solid var(--ink);
+      margin-left: 0.75rem;
+      transition: background-color 0.18s, color 0.18s;
+      cursor: pointer;
+     }
+.article-how-to-evaluate-architecture-information-online .btn-ghost:hover { 
+      background-color: var(--ink);
+      color: var(--stone);
+     }
+@media (max-width: 480px) { .article-how-to-evaluate-architecture-information-online .btn-ghost {  margin-left: 0; margin-top: 0.75rem; display: block;  }
+.article-how-to-evaluate-architecture-information-online .btn-primary {  display: block;  } }
+.article-how-to-evaluate-architecture-information-online .site-footer__inner { 
+      max-width: var(--max-w-wide);
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+     }
+.article-how-to-evaluate-architecture-information-online .site-footer__brand { 
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--ink);
+     }
+.article-how-to-evaluate-architecture-information-online .site-footer__brand small { 
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-top: 3px;
+     }
+.article-how-to-evaluate-architecture-information-online .site-footer__links { 
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+     }
+.article-how-to-evaluate-architecture-information-online .site-footer__links a { 
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: var(--slate);
+      transition: color 0.15s;
+     }
+.article-how-to-evaluate-architecture-information-online .site-footer__links a:hover {  color: var(--ink);  }
+.article-how-to-evaluate-architecture-information-online .site-footer__copy { 
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--slate);
+      margin-top: 2rem;
+      max-width: var(--max-w-wide);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1.5rem;
+      border-top: 1px solid var(--rule);
+      padding-top: 1.25rem;
+     }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       STICKY READING PROGRESS BAR
+    ============================================================ */
+    .progress-bar { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background-color: var(--clay);
+      z-index: 200;
+      transition: width 0.1s linear;
+     }
+.article-how-to-evaluate-architecture-information-online /* ============================================================
+       RESPONSIVE OVERRIDES
+    ============================================================ */
+    @media (max-width: 480px) { 
+      :host { --section-pad: 3.5rem 1.25rem; }
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .site-footer__inner { flex-direction: column; }
+     }</style>
+<div class="article-how-to-evaluate-architecture-information-online">
+<section class="hero" aria-labelledby="hero-headline">
+      <div class="hero__inner">
+        <p class="hero__kicker" aria-label="Article category">Architecture Guidance &mdash; For Homeowners</p>
+        <h1 class="hero__headline" id="hero-headline">
+          You Have Done the Research.<br>
+          Now You Have Twenty Contradictory Answers.
+        </h1>
+        <p class="hero__sub">
+          Pinterest boards, Reddit threads, contractor walkthroughs, and YouTube deep-dives are useful starting points. But when they disagree with each other &mdash; and they always do &mdash; you need a framework for knowing whose advice to actually trust.
+        </p>
+        <p class="hero__sub" style="margin-top: 0;">
+          This guide explains why so much architecture advice online lacks the context that makes it safe to act on, and how a licensed architect thinks about the questions that matter most.
+        </p>
+
+        <!-- Hero media placeholder -->
+        <div class="hero__media" role="img" aria-label="Hero image placeholder: homeowner reviewing architectural drawings at a table">
+          <span class="hero__media-label">[ Hero image: homeowner reviewing plans, calm interior setting ]</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2: THE PROBLEM — Why Online Advice Fails
+    ============================================================ -->
+    <section class="problem section" aria-labelledby="problem-heading">
+      <div class="container">
         <span class="eyebrow">The Core Problem</span>
-        <h2 id="good-advice-requires-context-the-internet-has-almost-none">Good Advice Requires Context. The Internet Has Almost None.</h2>
-        <p>
+        <h2 id="problem-heading">Good Advice Requires Context. The Internet Has Almost None.</h2>
+        <p style="margin-top: 1rem; max-width: 640px;">
           Most online architecture and home design content is produced without knowledge of your specific site, your local building codes, your soil conditions, your climate zone, or your structural realities. That is not a minor gap &mdash; it is the entire gap.
         </p>
 
@@ -34,25 +608,27 @@
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 3: SOURCE EVALUATION TABLE
+    ============================================================ -->
+    <section class="sources section" aria-labelledby="sources-heading">
       <div class="sources__intro">
         <span class="eyebrow">Evaluating Your Sources</span>
-        <h2 id="not-all-information-is-equal-mdash-here-is-how-to-read-the-r">Not All Information Is Equal &mdash; Here Is How to Read the Room</h2>
-        <p>
+        <h2 id="sources-heading">Not All Information Is Equal &mdash; Here Is How to Read the Room</h2>
+        <p style="margin-top: 1rem;">
           Before acting on design advice, ask where it came from and who it was written for. The table below summarizes how to interpret common homeowner information sources.
         </p>
       </div>
 
-      <table class="sources__table">
+      <table class="sources__table" aria-label="Architecture information source reliability guide">
         <thead>
           <tr>
-            <th>Source</th>
-            <th>Good For</th>
-            <th>Not Reliable For</th>
-            <th>Reliability</th>
+            <th scope="col">Source</th>
+            <th scope="col">Good For</th>
+            <th scope="col">Not Reliable For</th>
+            <th scope="col">Reliability</th>
           </tr>
         </thead>
         <tbody>
@@ -100,67 +676,71 @@
           </tr>
         </tbody>
       </table>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 4: DIAGRAM — ADVICE RELIABILITY SPECTRUM
+    ============================================================ -->
+    <section class="diagram section" aria-labelledby="diagram-heading">
       <div class="diagram__inner">
         <span class="eyebrow">Visual Reference</span>
-        <h2 id="the-reliability-spectrum-for-architecture-advice">The Reliability Spectrum for Architecture Advice</h2>
-        <p>
+        <h2 id="diagram-heading">The Reliability Spectrum for Architecture Advice</h2>
+        <p style="margin-top: 1rem;">
           This diagram maps common advice sources by contextual accuracy &mdash; how well the information accounts for your specific site, code environment, and structural conditions.
         </p>
 
-        <div class="diagram__vis">
+        <div class="diagram__vis" role="img" aria-label="Bar chart showing relative reliability of architecture advice sources from low to high">
           <div class="spectrum-row">
             <div class="spectrum-label">Licensed Architect</div>
-            <div class="spectrum-bar bar--high"></div>
-            <div class="spectrum-end">Highest context</div>
+            <div class="spectrum-bar bar--high" style="width:90%;" aria-hidden="true"></div>
+            <div class="spectrum-end" style="color: #2e5c34; font-weight:600;">Highest context</div>
           </div>
           <div class="spectrum-row">
             <div class="spectrum-label">Local Building Dept.</div>
-            <div class="spectrum-bar bar--high"></div>
-            <div class="spectrum-end">High context</div>
+            <div class="spectrum-bar bar--high" style="width:82%;" aria-hidden="true"></div>
+            <div class="spectrum-end" style="color: #2e5c34; font-weight:600;">High context</div>
           </div>
           <div class="spectrum-row">
             <div class="spectrum-label">Experienced Contractor</div>
-            <div class="spectrum-bar bar--mid"></div>
-            <div class="spectrum-end">Moderate context</div>
+            <div class="spectrum-bar bar--mid" style="width:55%;" aria-hidden="true"></div>
+            <div class="spectrum-end" style="color: #7a4f1a; font-weight:600;">Moderate context</div>
           </div>
           <div class="spectrum-row">
             <div class="spectrum-label">Manufacturer Docs</div>
-            <div class="spectrum-bar bar--mid"></div>
-            <div class="spectrum-end">Partial context</div>
+            <div class="spectrum-bar bar--mid" style="width:42%;" aria-hidden="true"></div>
+            <div class="spectrum-end" style="color: #7a4f1a; font-weight:600;">Partial context</div>
           </div>
           <div class="spectrum-row">
             <div class="spectrum-label">Pinterest / Houzz</div>
-            <div class="spectrum-bar bar--low"></div>
-            <div class="spectrum-end">No context</div>
+            <div class="spectrum-bar bar--low" style="width:20%;" aria-hidden="true"></div>
+            <div class="spectrum-end" style="color: #7a2020; font-weight:600;">No context</div>
           </div>
           <div class="spectrum-row">
             <div class="spectrum-label">Reddit / Forums</div>
-            <div class="spectrum-bar bar--low"></div>
-            <div class="spectrum-end">No context</div>
+            <div class="spectrum-bar bar--low" style="width:14%;" aria-hidden="true"></div>
+            <div class="spectrum-end" style="color: #7a2020; font-weight:600;">No context</div>
           </div>
         </div>
-        <p>Contextual accuracy = how well a source accounts for your specific site, jurisdiction, and structural conditions. Higher is better.</p>
+        <p class="diagram__caption">Contextual accuracy = how well a source accounts for your specific site, jurisdiction, and structural conditions. Higher is better.</p>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 5: RED FLAGS IN CONTRACTOR-SOURCED DESIGN ADVICE
+    ============================================================ -->
+    <section class="redflags section" aria-labelledby="redflags-heading">
       <div class="redflags__inner">
         <span class="eyebrow">Red Flags to Watch For</span>
-        <h2 id="when-contractor-design-advice-should-give-you-pause">When Contractor Design Advice Should Give You Pause</h2>
-        <p>
+        <h2 id="redflags-heading">When Contractor Design Advice Should Give You Pause</h2>
+        <p style="margin-top: 1rem; max-width: 640px;">
           Most contractors are skilled and honest professionals. But their design input has inherent limits that are worth understanding before you make decisions based on it. These are the patterns that warrant a second opinion.
         </p>
 
-        <ul class="redflags__list">
+        <ul class="redflags__list" role="list">
           <li class="redflag-item">
-            <div class="redflag-item__icon">
-              
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <div class="redflag-item__icon" aria-hidden="true">
+              <!-- Warning triangle SVG icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                 <line x1="12" y1="9" x2="12" y2="13"/>
                 <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -172,8 +752,8 @@
             </div>
           </li>
           <li class="redflag-item">
-            <div class="redflag-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <div class="redflag-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                 <line x1="12" y1="9" x2="12" y2="13"/>
                 <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -185,8 +765,8 @@
             </div>
           </li>
           <li class="redflag-item">
-            <div class="redflag-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <div class="redflag-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                 <line x1="12" y1="9" x2="12" y2="13"/>
                 <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -198,8 +778,8 @@
             </div>
           </li>
           <li class="redflag-item">
-            <div class="redflag-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <div class="redflag-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                 <line x1="12" y1="9" x2="12" y2="13"/>
                 <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -211,8 +791,8 @@
             </div>
           </li>
           <li class="redflag-item">
-            <div class="redflag-item__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <div class="redflag-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c97a6a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
                 <line x1="12" y1="9" x2="12" y2="13"/>
                 <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -225,101 +805,109 @@
           </li>
         </ul>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 6: WHAT ONLY AN ARCHITECT CAN ANSWER
+    ============================================================ -->
+    <section class="architect-only section" aria-labelledby="architect-heading">
       <div class="architect-only__inner">
         <span class="eyebrow">The Architect&rsquo;s Role</span>
-        <h2 id="questions-that-require-a-licensed-architect-mdash-not-a-foru">Questions That Require a Licensed Architect &mdash; Not a Forum Thread</h2>
-        <p>
+        <h2 id="architect-heading">Questions That Require a Licensed Architect &mdash; Not a Forum Thread</h2>
+        <p style="margin-top: 1rem; max-width: 640px;">
           A licensed architect carries legal accountability for their professional opinions &mdash; something no online source does. These are the categories of questions where that distinction matters most.
         </p>
 
         <div class="questions-grid">
           <div class="question-card">
-            <p>"Is this wall structural, and what happens if we move it?"</p>
-            <p>Requires review of original construction drawings, a site assessment, and structural engineering knowledge. A forum guess carries no accountability if it is wrong.</p>
+            <p class="question-card__q">"Is this wall structural, and what happens if we move it?"</p>
+            <p class="question-card__a">Requires review of original construction drawings, a site assessment, and structural engineering knowledge. A forum guess carries no accountability if it is wrong.</p>
           </div>
           <div class="question-card">
-            <p>"Will this addition affect my home&rsquo;s flood zone rating or insurance classification?"</p>
-            <p>Involves zoning overlays, FEMA maps, and local ordinance interpretation. Only a licensed professional can give you an opinion you can rely on legally.</p>
+            <p class="question-card__q">"Will this addition affect my home&rsquo;s flood zone rating or insurance classification?"</p>
+            <p class="question-card__a">Involves zoning overlays, FEMA maps, and local ordinance interpretation. Only a licensed professional can give you an opinion you can rely on legally.</p>
           </div>
           <div class="question-card">
-            <p>"Can I add a second story to my existing foundation?"</p>
-            <p>Depends on your current foundation type, soil bearing capacity, age of construction, and local seismic or wind load requirements. Not something general rules can answer.</p>
+            <p class="question-card__q">"Can I add a second story to my existing foundation?"</p>
+            <p class="question-card__a">Depends on your current foundation type, soil bearing capacity, age of construction, and local seismic or wind load requirements. Not something general rules can answer.</p>
           </div>
           <div class="question-card">
-            <p>"Does my design plan comply with local setback and height restrictions?"</p>
-            <p>Zoning rules are hyperlocal and change. An architect familiar with your jurisdiction reviews current codes as part of their standard process, not as an afterthought.</p>
+            <p class="question-card__q">"Does my design plan comply with local setback and height restrictions?"</p>
+            <p class="question-card__a">Zoning rules are hyperlocal and change. An architect familiar with your jurisdiction reviews current codes as part of their standard process, not as an afterthought.</p>
           </div>
           <div class="question-card">
-            <p>"What is a realistic budget range for what I am actually describing?"</p>
-            <p>Contractor estimates reflect their scope and suppliers. An architect can scope a project from first principles, providing a baseline before contractor pricing enters the conversation.</p>
+            <p class="question-card__q">"What is a realistic budget range for what I am actually describing?"</p>
+            <p class="question-card__a">Contractor estimates reflect their scope and suppliers. An architect can scope a project from first principles, providing a baseline before contractor pricing enters the conversation.</p>
           </div>
           <div class="question-card">
-            <p>"What will this look like in ten years &mdash; maintenance, resale, performance?"</p>
-            <p>Material selection has long-term consequences that are rarely discussed in trend-focused online content. An architect thinks across a building&rsquo;s lifecycle, not just its construction phase.</p>
+            <p class="question-card__q">"What will this look like in ten years &mdash; maintenance, resale, performance?"</p>
+            <p class="question-card__a">Material selection has long-term consequences that are rarely discussed in trend-focused online content. An architect thinks across a building&rsquo;s lifecycle, not just its construction phase.</p>
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
-      <div class="pullquote__mark">&ldquo;</div>
+    <!-- ============================================================
+         SECTION 7: PULL QUOTE / PROOF
+    ============================================================ -->
+    <section class="pullquote" aria-label="Client perspective">
+      <div class="pullquote__mark" aria-hidden="true">&ldquo;</div>
       <blockquote>
-        <p>
+        <p class="pullquote__text">
           I had spent three months collecting information before I realized I was comparing answers to questions that were not actually about my house. The conversation with an architect took two hours and resolved things I had been stuck on for weeks.
         </p>
-        
+        <footer>
+          <cite class="pullquote__source">Homeowner, whole-home renovation &mdash; Pacific Northwest</cite>
+        </footer>
       </blockquote>
-      
-      <div>
+      <!-- Proof visual placeholder -->
+      <div style="margin-top: 2.5rem; display:inline-block; border: 1px solid var(--rule); border-radius: 4px; padding: 1rem 1.75rem; font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate);">
         [ Optional: before / after project photo pair ]
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 8: HOW TO EVALUATE ANY ADVICE — CHECKLIST
+    ============================================================ -->
+    <section class="evaluate section" aria-labelledby="evaluate-heading">
       <div class="evaluate__inner">
         <span class="eyebrow">A Practical Framework</span>
-        <h2 id="five-questions-to-ask-before-acting-on-any-architecture-advi">Five Questions to Ask Before Acting on Any Architecture Advice</h2>
-        <p>
+        <h2 id="evaluate-heading">Five Questions to Ask Before Acting on Any Architecture Advice</h2>
+        <p style="margin-top: 1rem; max-width: 620px;">
           You do not need to become an expert to make better decisions. You need a repeatable filter. Apply these questions to any recommendation &mdash; online, contractor-sourced, or otherwise &mdash; before it shapes your project.
         </p>
 
-        <div class="checklist">
-          <div class="checklist-item">
-            <div class="checklist-item__num">1</div>
+        <div class="checklist" role="list">
+          <div class="checklist-item" role="listitem">
+            <div class="checklist-item__num" aria-hidden="true">1</div>
             <div class="checklist-item__body">
               <h4>Does this advice know anything about my site?</h4>
               <p>Generic advice is useful for orientation. Site-specific decisions require site-specific knowledge. If the person giving advice has not assessed your property, treat their recommendation as a starting point, not a conclusion.</p>
             </div>
           </div>
-          <div class="checklist-item">
-            <div class="checklist-item__num">2</div>
+          <div class="checklist-item" role="listitem">
+            <div class="checklist-item__num" aria-hidden="true">2</div>
             <div class="checklist-item__body">
               <h4>What is the incentive structure of this source?</h4>
               <p>A contractor profits from the scope they build. A product site profits from purchases. An architect is professionally and legally accountable for their recommendations. Understanding who benefits from your agreement helps you weigh the advice appropriately.</p>
             </div>
           </div>
-          <div class="checklist-item">
-            <div class="checklist-item__num">3</div>
+          <div class="checklist-item" role="listitem">
+            <div class="checklist-item__num" aria-hidden="true">3</div>
             <div class="checklist-item__body">
               <h4>Does this touch structure, code, or safety?</h4>
               <p>If the answer to any of these is yes, the decision belongs in the hands of a licensed professional &mdash; either a structural engineer or a licensed architect. This is not excessive caution; it is what the licensing system exists to protect you from.</p>
             </div>
           </div>
-          <div class="checklist-item">
-            <div class="checklist-item__num">4</div>
+          <div class="checklist-item" role="listitem">
+            <div class="checklist-item__num" aria-hidden="true">4</div>
             <div class="checklist-item__body">
               <h4>Can I trace this recommendation to a primary source?</h4>
               <p>Forum consensus and blog repetition are not evidence. Try to find the original source of the claim. If you cannot, that does not mean the advice is wrong &mdash; but it does mean you cannot assess how strong the basis for it is.</p>
             </div>
           </div>
-          <div class="checklist-item">
-            <div class="checklist-item__num">5</div>
+          <div class="checklist-item" role="listitem">
+            <div class="checklist-item__num" aria-hidden="true">5</div>
             <div class="checklist-item__body">
               <h4>What is the cost of being wrong here?</h4>
               <p>Choosing the wrong paint color costs an afternoon. Choosing the wrong structural approach can cost tens of thousands and affect your home&rsquo;s safety. Weight the threshold for professional input against the magnitude of the consequence, not just the complexity of the question.</p>
@@ -327,3 +915,28 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 9: SOFT CTA
+    ============================================================ -->
+    <section class="cta-section" id="talk" aria-labelledby="cta-heading">
+      <div class="cta-section__inner">
+        <span class="eyebrow">Cloudstone Designs</span>
+        <h2 id="cta-heading">When You Are Ready to Trade Research for Clarity</h2>
+        <p>
+          We work with homeowners at exactly this stage &mdash; when you have done the reading, collected the opinions, and now want a professional to look at your specific situation and tell you what is actually true for your home.
+        </p>
+        <p>
+          A discovery conversation with one of our licensed architects costs nothing and commits you to nothing. It is simply a conversation.
+        </p>
+        <div>
+          <a href="#" class="btn-primary">Schedule a Discovery Call</a>
+          <a href="#" class="btn-ghost">See Our Work</a>
+        </div>
+        <!-- CTA visual placeholder -->
+        <div style="margin-top: 3rem; border: 1px dashed var(--rule); border-radius: 4px; padding: 2rem; color: var(--slate); font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;">
+          [ Optional: short video embed or project gallery preview ]
+        </div>
+      </div>
+    </section></div>

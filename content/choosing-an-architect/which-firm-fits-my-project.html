@@ -2,24 +2,847 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: 4152f0df-b634-4a25-8a5f-ff28e2df6138
   main_keyword: which architecture firm is right for me
-  adopted_at: 2026-05-26T19:23:46.343Z
+  adopted_at: 2026-05-26T21:20:20.260Z
 -->
-<hr>
+<style data-cjgeo-scoped="article-which-firm-fits-my-project">/* ============================================================
+       DESIGN TOKENS & RESET
+    ============================================================ */
+    .article-which-firm-fits-my-project { 
+      --color-bg:         #F5F1EB;
+      --color-surface:    #EDEAE3;
+      --color-border:     #D8D3C9;
+      --color-ink:        #1E1C18;
+      --color-ink-muted:  #6B6659;
+      --color-accent:     #7A6A4F;
+      --color-accent-lt:  #C4B49A;
+      --color-white:      #FAFAF8;
 
-    
-    
+      --font-serif: Georgia, "Times New Roman", serif;
+      --font-sans:  "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+      --max-w:    760px;
+      --max-w-lg: 1060px;
+      --gutter:   clamp(1.25rem, 5vw, 3rem);
+
+      --radius-sm: 3px;
+      --radius-md: 6px;
+     }
+.article-which-firm-fits-my-project * {  box-sizing: border-box; margin: 0; padding: 0;  }
+.article-which-firm-fits-my-project { 
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      background: var(--color-bg);
+     }
+.article-which-firm-fits-my-project img, .article-which-firm-fits-my-project svg {  display: block; max-width: 100%;  }
+.article-which-firm-fits-my-project a { 
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+     }
+.article-which-firm-fits-my-project a:hover {  color: var(--color-ink);  }
+.article-which-firm-fits-my-project /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    .serif {  font-family: var(--font-serif);  }
+.article-which-firm-fits-my-project h1, .article-which-firm-fits-my-project h2, .article-which-firm-fits-my-project h3, .article-which-firm-fits-my-project h4 { 
+      font-family: var(--font-serif);
+      font-weight: normal;
+      line-height: 1.2;
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project h1 {  font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.01em;  }
+.article-which-firm-fits-my-project h2 {  font-size: clamp(1.4rem, 3vw, 1.9rem); letter-spacing: -0.01em;  }
+.article-which-firm-fits-my-project h3 {  font-size: clamp(1.1rem, 2vw, 1.35rem);  }
+.article-which-firm-fits-my-project h4 {  font-size: 1rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;  }
+.article-which-firm-fits-my-project p { 
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .lead { 
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      line-height: 1.6;
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .label { 
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       LAYOUT HELPERS
+    ============================================================ */
+    .container { 
+      width: 100%;
+      max-width: var(--max-w);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+     }
+.article-which-firm-fits-my-project .container--wide { 
+      max-width: var(--max-w-lg);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+     }
+.article-which-firm-fits-my-project .section { 
+      padding-top: clamp(3.5rem, 8vw, 6rem);
+      padding-bottom: clamp(3.5rem, 8vw, 6rem);
+     }
+.article-which-firm-fits-my-project .section--sm { 
+      padding-top: clamp(2rem, 5vw, 3.5rem);
+      padding-bottom: clamp(2rem, 5vw, 3.5rem);
+     }
+.article-which-firm-fits-my-project .divider { 
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 0;
+     }
+.article-which-firm-fits-my-project .site-header__inner { 
+      max-width: var(--max-w-lg);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+     }
+.article-which-firm-fits-my-project .site-logo { 
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      color: var(--color-ink);
+      text-decoration: none;
+      white-space: nowrap;
+     }
+.article-which-firm-fits-my-project .site-logo span { 
+      color: var(--color-accent);
+     }
+.article-which-firm-fits-my-project .btn { 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.25rem;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: background 0.18s ease, color 0.18s ease;
+      cursor: pointer;
+      border: none;
+     }
+.article-which-firm-fits-my-project .btn--primary { 
+      background: var(--color-accent);
+      color: var(--color-white);
+     }
+.article-which-firm-fits-my-project .btn--primary:hover {  background: var(--color-ink); color: var(--color-white);  }
+.article-which-firm-fits-my-project .btn--outline { 
+      background: transparent;
+      color: var(--color-accent);
+      border: 1px solid var(--color-accent);
+     }
+.article-which-firm-fits-my-project .btn--outline:hover {  background: var(--color-accent); color: var(--color-white);  }
+@media (max-width: 600px) {  }
+.article-which-firm-fits-my-project /* ============================================================
+       HERO
+    ============================================================ */
+    .hero { 
+      padding-top: clamp(3rem, 8vw, 5.5rem);
+      padding-bottom: 0;
+     }
+.article-which-firm-fits-my-project .hero__eyebrow { 
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+     }
+.article-which-firm-fits-my-project .hero__eyebrow-line { 
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--color-accent-lt);
+     }
+.article-which-firm-fits-my-project .hero__title { 
+      max-width: 680px;
+      margin-bottom: 1.5rem;
+     }
+.article-which-firm-fits-my-project .hero__lead { 
+      max-width: 560px;
+      margin-bottom: 2.25rem;
+     }
+.article-which-firm-fits-my-project .hero__meta { 
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding-bottom: 2.5rem;
+     }
+.article-which-firm-fits-my-project .hero__meta-item { 
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+     }
+.article-which-firm-fits-my-project /* Hero image placeholder */
+    .hero__media { 
+      margin-top: 2.5rem;
+      width: 100%;
+      max-width: var(--max-w-lg);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+     }
+.article-which-firm-fits-my-project .hero__image-placeholder { 
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--color-ink-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      overflow: hidden;
+      position: relative;
+     }
+.article-which-firm-fits-my-project .hero__image-placeholder::before { 
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 18px,
+        rgba(0,0,0,0.025) 18px,
+        rgba(0,0,0,0.025) 19px
+      );
+     }
+.article-which-firm-fits-my-project .placeholder-icon { 
+      opacity: 0.35;
+     }
+.article-which-firm-fits-my-project .hero__image-caption { 
+      font-size: 0.75rem;
+      color: var(--color-ink-muted);
+      margin-top: 0.6rem;
+      font-style: italic;
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       INTRO / SETUP
+    ============================================================ */
+    .intro__cols { 
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+     }
+.article-which-firm-fits-my-project .intro__main {  flex: 1 1 0;  }
+.article-which-firm-fits-my-project .intro__aside { 
+      flex: 0 0 220px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.4rem;
+     }
+.article-which-firm-fits-my-project .intro__aside-title { 
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.75rem;
+     }
+.article-which-firm-fits-my-project .intro__aside ul { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+     }
+.article-which-firm-fits-my-project .intro__aside ul li { 
+      font-size: 0.82rem;
+      color: var(--color-ink-muted);
+      padding-left: 0.9rem;
+      position: relative;
+      line-height: 1.45;
+     }
+.article-which-firm-fits-my-project .intro__aside ul li::before { 
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--color-accent-lt);
+     }
+@media (max-width: 700px) { .article-which-firm-fits-my-project .intro__cols {  flex-direction: column;  }
+.article-which-firm-fits-my-project .intro__aside {  flex: none; width: 100%;  } }
+.article-which-firm-fits-my-project /* ============================================================
+       FIT DIMENSIONS — icon-row section
+    ============================================================ */
+    .fit-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem 2rem;
+      margin-top: 2.5rem;
+     }
+.article-which-firm-fits-my-project .fit-card { 
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.4rem;
+     }
+.article-which-firm-fits-my-project .fit-card__icon { 
+      width: 36px;
+      height: 36px;
+      margin-bottom: 1rem;
+      color: var(--color-accent);
+     }
+.article-which-firm-fits-my-project .fit-card__title { 
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.02em;
+      color: var(--color-ink);
+      margin-bottom: 0.5rem;
+     }
+.article-which-firm-fits-my-project .fit-card__body { 
+      font-size: 0.83rem;
+      color: var(--color-ink-muted);
+      line-height: 1.6;
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       SECTION HEADER
+    ============================================================ */
+    .section-header { 
+      margin-bottom: 2.25rem;
+     }
+.article-which-firm-fits-my-project .section-header .label { 
+      display: block;
+      margin-bottom: 0.6rem;
+     }
+.article-which-firm-fits-my-project .section-header h2 { 
+      margin-bottom: 0.75rem;
+     }
+.article-which-firm-fits-my-project .section-header .lead { 
+      max-width: 560px;
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       CALLOUT BLOCK
+    ============================================================ */
+    .callout { 
+      background: var(--color-white);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+     }
+.article-which-firm-fits-my-project .callout p { 
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .callout__source { 
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      margin-top: 0.5rem;
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       DIAGRAM PLACEHOLDER
+    ============================================================ */
+    .diagram-placeholder { 
+      width: 100%;
+      background: var(--color-white);
+      border: 1px dashed var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      color: var(--color-ink-muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+      margin: 2rem 0;
+     }
+.article-which-firm-fits-my-project .diagram-placeholder svg {  opacity: 0.3; margin-bottom: 0.25rem;  }
+.article-which-firm-fits-my-project /* ============================================================
+       AESTHETIC RANGE — split layout
+    ============================================================ */
+    .aesthetic-split { 
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+     }
+.article-which-firm-fits-my-project .aesthetic-split__text {  flex: 1 1 0;  }
+.article-which-firm-fits-my-project .aesthetic-split__visual { 
+      flex: 0 0 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+     }
+.article-which-firm-fits-my-project .style-swatch { 
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+     }
+.article-which-firm-fits-my-project .style-swatch__dot { 
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+     }
+.article-which-firm-fits-my-project .style-swatch__label { 
+      font-size: 0.8rem;
+      color: var(--color-ink-muted);
+      line-height: 1.3;
+     }
+@media (max-width: 700px) { .article-which-firm-fits-my-project .aesthetic-split {  flex-direction: column-reverse;  }
+.article-which-firm-fits-my-project .aesthetic-split__visual {  flex: none; width: 100%;  } }
+.article-which-firm-fits-my-project /* ============================================================
+       FEE TRUTH — contrast table
+    ============================================================ */
+    .compare-table { 
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      font-size: 0.88rem;
+     }
+.article-which-firm-fits-my-project .compare-table thead th { 
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      border-bottom: 2px solid var(--color-border);
+      background: var(--color-white);
+     }
+.article-which-firm-fits-my-project .compare-table thead th:first-child { 
+      border-radius: var(--radius-sm) 0 0 0;
+     }
+.article-which-firm-fits-my-project .compare-table thead th:last-child { 
+      border-radius: 0 var(--radius-sm) 0 0;
+     }
+.article-which-firm-fits-my-project .compare-table tbody tr { 
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-which-firm-fits-my-project .compare-table tbody tr:last-child { 
+      border-bottom: none;
+     }
+.article-which-firm-fits-my-project .compare-table tbody td { 
+      padding: 0.85rem 1rem;
+      vertical-align: top;
+      line-height: 1.5;
+      color: var(--color-ink);
+      background: var(--color-white);
+     }
+.article-which-firm-fits-my-project .compare-table tbody td:first-child { 
+      font-weight: 600;
+      color: var(--color-ink-muted);
+      white-space: nowrap;
+      font-size: 0.8rem;
+     }
+.article-which-firm-fits-my-project .tag { 
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+     }
+.article-which-firm-fits-my-project .tag--risk {  background: #F5E6D8; color: #9A5A30;  }
+.article-which-firm-fits-my-project .tag--ok {  background: #E3EDDE; color: #3A6B30;  }
+@media (max-width: 640px) { .article-which-firm-fits-my-project .compare-table, .article-which-firm-fits-my-project .compare-table thead, .article-which-firm-fits-my-project .compare-table tbody, .article-which-firm-fits-my-project .compare-table th, .article-which-firm-fits-my-project .compare-table td, .article-which-firm-fits-my-project .compare-table tr { 
+        display: block;
+       }
+.article-which-firm-fits-my-project .compare-table thead tr { 
+        display: none;
+       }
+.article-which-firm-fits-my-project .compare-table tbody td { 
+        padding: 0.6rem 0.9rem;
+       }
+.article-which-firm-fits-my-project .compare-table tbody tr { 
+        margin-bottom: 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+       }
+.article-which-firm-fits-my-project .compare-table tbody td:first-child { 
+        background: var(--color-surface);
+        font-size: 0.7rem;
+       } }
+.article-which-firm-fits-my-project /* ============================================================
+       PROCESS STEPS
+    ============================================================ */
+    .steps { 
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 2rem;
+      counter-reset: steps;
+     }
+.article-which-firm-fits-my-project .step { 
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      position: relative;
+      padding-bottom: 2rem;
+     }
+.article-which-firm-fits-my-project .step:last-child {  padding-bottom: 0;  }
+.article-which-firm-fits-my-project .step__num-wrap { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      width: 36px;
+     }
+.article-which-firm-fits-my-project .step__num { 
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: var(--color-white);
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+     }
+.article-which-firm-fits-my-project .step__connector { 
+      flex: 1;
+      width: 1px;
+      background: var(--color-border);
+      min-height: 24px;
+      margin-top: 4px;
+     }
+.article-which-firm-fits-my-project .step:last-child .step__connector { 
+      display: none;
+     }
+.article-which-firm-fits-my-project .step__content {  padding-top: 0.35rem;  }
+.article-which-firm-fits-my-project .step__title {  font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;  }
+.article-which-firm-fits-my-project .step__body {  font-size: 0.85rem; color: var(--color-ink-muted); line-height: 1.6;  }
+.article-which-firm-fits-my-project /* ============================================================
+       PROOF / QUOTE BLOCK
+    ============================================================ */
+    .proof-section { 
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-which-firm-fits-my-project .proof-inner { 
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 4rem) var(--gutter);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+     }
+.article-which-firm-fits-my-project blockquote { 
+      font-family: var(--font-serif);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      line-height: 1.55;
+      color: var(--color-ink);
+      position: relative;
+      padding-left: 1.5rem;
+     }
+.article-which-firm-fits-my-project blockquote::before { 
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.15em;
+      bottom: 0.15em;
+      width: 2px;
+      background: var(--color-accent);
+      border-radius: 1px;
+     }
+.article-which-firm-fits-my-project .proof-attr { 
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+     }
+.article-which-firm-fits-my-project .proof-attr__avatar { 
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+     }
+.article-which-firm-fits-my-project .proof-attr__name { 
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .proof-attr__role { 
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       CHECKLIST
+    ============================================================ */
+    .checklist { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+     }
+.article-which-firm-fits-my-project .checklist li { 
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .checklist__icon { 
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 0.1em;
+      color: var(--color-accent);
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       CTA SECTION
+    ============================================================ */
+    .cta-section { 
+      background: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .cta-inner { 
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 5rem) var(--gutter);
+      text-align: center;
+     }
+.article-which-firm-fits-my-project .cta-inner .label {  color: var(--color-accent-lt); margin-bottom: 0.75rem; display: block;  }
+.article-which-firm-fits-my-project .cta-inner h2 { 
+      color: var(--color-white);
+      margin-bottom: 1rem;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+     }
+.article-which-firm-fits-my-project .cta-inner p { 
+      color: rgba(250,250,248,0.68);
+      max-width: 480px;
+      margin: 0 auto 2rem;
+      font-size: 0.95rem;
+     }
+.article-which-firm-fits-my-project .cta-actions { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+     }
+.article-which-firm-fits-my-project .btn--light { 
+      background: var(--color-white);
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .btn--light:hover {  background: var(--color-accent-lt); color: var(--color-ink);  }
+.article-which-firm-fits-my-project .btn--ghost { 
+      background: transparent;
+      color: rgba(250,250,248,0.7);
+      border: 1px solid rgba(250,250,248,0.25);
+     }
+.article-which-firm-fits-my-project .btn--ghost:hover {  background: rgba(250,250,248,0.1); color: var(--color-white);  }
+.article-which-firm-fits-my-project .footer-inner { 
+      max-width: var(--max-w-lg);
+      margin: 0 auto;
+      padding: 2.5rem var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+     }
+.article-which-firm-fits-my-project .footer-brand { 
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--color-ink);
+     }
+.article-which-firm-fits-my-project .footer-brand span {  color: var(--color-accent);  }
+.article-which-firm-fits-my-project .footer-links { 
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+     }
+.article-which-firm-fits-my-project .footer-links a { 
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+     }
+.article-which-firm-fits-my-project .footer-links a:hover {  color: var(--color-ink);  }
+.article-which-firm-fits-my-project .footer-copy { 
+      font-size: 0.74rem;
+      color: var(--color-ink-muted);
+      margin-top: 1rem;
+      padding: 0 var(--gutter) 1.75rem;
+      text-align: center;
+      max-width: var(--max-w-lg);
+      margin-left: auto;
+      margin-right: auto;
+     }
+.article-which-firm-fits-my-project /* ============================================================
+       PROGRESS INDICATOR (visual "stage" bar)
+    ============================================================ */
+    .stage-bar { 
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 1.75rem 0 0;
+     }
+.article-which-firm-fits-my-project .stage-bar__item { 
+      flex: 1;
+      padding: 0.55rem 0.75rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+      background: var(--color-surface);
+      color: var(--color-ink-muted);
+      border-right: 1px solid var(--color-border);
+     }
+.article-which-firm-fits-my-project .stage-bar__item:last-child {  border-right: none;  }
+.article-which-firm-fits-my-project .stage-bar__item--active { 
+      background: var(--color-accent);
+      color: var(--color-white);
+     }
+@media (max-width: 500px) { .article-which-firm-fits-my-project .stage-bar {  flex-direction: column;  }
+.article-which-firm-fits-my-project .stage-bar__item {  border-right: none; border-bottom: 1px solid var(--color-border);  }
+.article-which-firm-fits-my-project .stage-bar__item:last-child {  border-bottom: none;  } }
+.article-which-firm-fits-my-project /* ============================================================
+       MISC UTILITIES
+    ============================================================ */
+    .mt-sm {  margin-top: 0.75rem;  }
+.article-which-firm-fits-my-project .mt-md {  margin-top: 1.5rem;  }
+.article-which-firm-fits-my-project .mt-lg {  margin-top: 2.5rem;  }
+.article-which-firm-fits-my-project .mb-sm {  margin-bottom: 0.75rem;  }
+.article-which-firm-fits-my-project .mb-md {  margin-bottom: 1.5rem;  }
+.article-which-firm-fits-my-project .text-muted {  color: var(--color-ink-muted);  }
+.article-which-firm-fits-my-project .text-serif {  font-family: var(--font-serif);  }
+.article-which-firm-fits-my-project .bold {  font-weight: 700;  }
+.article-which-firm-fits-my-project /* ============================================================
+       SKIP LINK (accessibility)
+    ============================================================ */
+    .skip-link { 
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+     }
+.article-which-firm-fits-my-project .skip-link:focus { 
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      width: auto;
+      height: auto;
+      padding: 0.5rem 1rem;
+      background: var(--color-accent);
+      color: var(--color-white);
+      font-size: 0.85rem;
+      z-index: 9999;
+      border-radius: var(--radius-sm);
+     }</style>
+<div class="article-which-firm-fits-my-project">
+<section class="hero section" aria-labelledby="hero-heading">
+      <div class="container">
+
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-line" aria-hidden="true"></span>
+          <span class="label">Hiring Guide &mdash; Stage 3 of 3</span>
+        </div>
+
+        <!-- Stage progress bar -->
+        <div class="stage-bar" role="img" aria-label="Hiring journey: Stage 3 of 3, Fit Evaluation">
+          <div class="stage-bar__item">Stage 1: Discovery</div>
+          <div class="stage-bar__item">Stage 2: Shortlisting</div>
+          <div class="stage-bar__item stage-bar__item--active">Stage 3: Fit Evaluation</div>
+        </div>
+
+        <h1 class="hero__title mt-lg" id="hero-heading">
+          You Have a Shortlist.<br>Now the Harder Question Begins.
+        </h1>
+
+        <p class="lead hero__lead">
+          Most hiring guides tell you how to find a good landscape design firm. This one is different. It is written for the moment after the shortlist is made &mdash; when the real question becomes which firm is right for <em>this</em> project, this site, this budget, and this working relationship.
+        </p>
+
+        <div class="hero__meta">
+          <span class="hero__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            12-minute read
+          </span>
+          <span class="hero__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            For homeowners in final selection
+          </span>
+          <span class="hero__meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Cloudstone Designs Editorial
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero visual placeholder -->
+      <div class="hero__media">
+        <div class="hero__image-placeholder" role="img" aria-label="Placeholder: wide-angle photograph of a finished residential garden project showing layered planting design and stone pathways">
+          <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Hero image &mdash; finished residential project, wide format (recommend 1600 &times; 600)</span>
+        </div>
+        <p class="hero__image-caption">A Cloudstone project in the Montecito foothills. Photo placeholder.</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ============================================================
+         SECTION 2 — WHY FIT IS HARDER TO EVALUATE THAN QUALITY
+    ============================================================ -->
+    <section class="section" aria-labelledby="fit-intro-heading">
       <div class="container">
 
         <div class="section-header">
           <span class="label">The Core Problem</span>
-          <h2 id="quality-is-table-stakes-fit-is-what-actually-determines-the-">Quality Is Table Stakes. Fit Is What Actually Determines the Outcome.</h2>
+          <h2 id="fit-intro-heading">Quality Is Table Stakes. Fit Is What Actually Determines the Outcome.</h2>
         </div>
 
         <div class="intro__cols">
           <div class="intro__main">
             <p>By the time you reach a final shortlist, every firm on it is probably capable of producing good work. Credentials, portfolios, and references have been reviewed. The question is no longer whether they are qualified &mdash; it is whether they are right for you.</p>
 
-            <p>Fit is a composite of several distinct variables: project type experience, scale alignment, process compatibility, communication cadence, and aesthetic range. Misalign on any one of these and a technically excellent firm can still deliver a frustrating or misaligned project.</p>
+            <p class="mt-md">Fit is a composite of several distinct variables: project type experience, scale alignment, process compatibility, communication cadence, and aesthetic range. Misalign on any one of these and a technically excellent firm can still deliver a frustrating or misaligned project.</p>
 
             <div class="callout">
               <p>"The most expensive landscape project is the one that ends in a dispute, a redesign, or a relationship that stops communicating mid-construction. None of these outcomes correlate with the firm's fee level."</p>
@@ -28,23 +851,36 @@
             <p>This guide walks through each dimension of fit systematically, so you can complete your evaluation with clarity rather than instinct.</p>
           </div>
 
-          
+          <aside class="intro__aside" aria-label="What this guide covers">
+            <p class="intro__aside-title">In this guide</p>
+            <ul>
+              <li>Defining the 4 dimensions of firm-project fit</li>
+              <li>How to assess project type and scale match</li>
+              <li>Process and communication compatibility</li>
+              <li>Evaluating a firm's true aesthetic range</li>
+              <li>Why the lowest-fee firm is often the worst fit</li>
+              <li>A practical checklist for final selection</li>
+              <li>When and how to schedule a fit conversation</li>
+            </ul>
+          </aside>
         </div>
 
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="divider" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 3 — THE 4 DIMENSIONS OF FIT
+    ============================================================ -->
+    <section class="section" aria-labelledby="dimensions-heading">
       <div class="container--wide">
 
-        <div class="container">
+        <div class="container" style="padding-left: 0; padding-right: 0;">
           <div class="section-header">
             <span class="label">Dimension Framework</span>
-            <h2 id="four-variables-that-determine-whether-a-firm-is-the-right-fi">Four Variables That Determine Whether a Firm Is the Right Fit</h2>
-            <p>Most homeowners evaluate one or two of these. A complete evaluation requires all four.</p>
+            <h2 id="dimensions-heading">Four Variables That Determine Whether a Firm Is the Right Fit</h2>
+            <p class="lead">Most homeowners evaluate one or two of these. A complete evaluation requires all four.</p>
           </div>
         </div>
 
@@ -55,8 +891,8 @@
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
               <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
-            <p>Project Type Experience</p>
-            <p>Has the firm completed projects of this specific type &mdash; hillside, coastal, high-privacy residential, pool integration, native habitat &mdash; within the past three years? Generalist capability is not the same as recent, deep type experience.</p>
+            <p class="fit-card__title">Project Type Experience</p>
+            <p class="fit-card__body">Has the firm completed projects of this specific type &mdash; hillside, coastal, high-privacy residential, pool integration, native habitat &mdash; within the past three years? Generalist capability is not the same as recent, deep type experience.</p>
           </div>
 
           <div class="fit-card">
@@ -65,59 +901,61 @@
               <line x1="2" y1="12" x2="22" y2="12"/>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
             </svg>
-            <p>Scale Match</p>
-            <p>A firm that primarily manages $80,000 projects will experience a $400,000 project differently than a firm for whom that is a typical engagement. Scale affects team allocation, documentation depth, and how much attention your project actually receives.</p>
+            <p class="fit-card__title">Scale Match</p>
+            <p class="fit-card__body">A firm that primarily manages $80,000 projects will experience a $400,000 project differently than a firm for whom that is a typical engagement. Scale affects team allocation, documentation depth, and how much attention your project actually receives.</p>
           </div>
 
           <div class="fit-card">
             <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
             </svg>
-            <p>Process Compatibility</p>
-            <p>Does the firm's workflow match how you prefer to make decisions? Some clients want weekly check-ins and collaborative design sessions. Others want to review a complete concept and respond. Neither is wrong, but mismatching process styles creates friction throughout the project.</p>
+            <p class="fit-card__title">Process Compatibility</p>
+            <p class="fit-card__body">Does the firm's workflow match how you prefer to make decisions? Some clients want weekly check-ins and collaborative design sessions. Others want to review a complete concept and respond. Neither is wrong, but mismatching process styles creates friction throughout the project.</p>
           </div>
 
           <div class="fit-card">
             <svg class="fit-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
-            <p>Communication Style Alignment</p>
-            <p>Some principals communicate with brevity and precision. Others are expansive and relational. Neither is better, but after a twelve-month project you will know the difference. Assess this early, before contracts are signed, not midway through design development.</p>
+            <p class="fit-card__title">Communication Style Alignment</p>
+            <p class="fit-card__body">Some principals communicate with brevity and precision. Others are expansive and relational. Neither is better, but after a twelve-month project you will know the difference. Assess this early, before contracts are signed, not midway through design development.</p>
           </div>
 
         </div>
 
-        
-        <div class="diagram-placeholder">
+        <!-- Diagram placeholder -->
+        <div class="diagram-placeholder" role="img" aria-label="Placeholder: quadrant diagram showing four fit dimensions overlaid on project outcome axis">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
           <span>Recommended visual: 2&times;2 fit-dimension matrix with example client outcomes per quadrant</span>
         </div>
 
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="divider" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 4 — PROJECT TYPE & SCALE IN DEPTH
+    ============================================================ -->
+    <section class="section" aria-labelledby="type-scale-heading">
       <div class="container">
 
         <div class="section-header">
           <span class="label">Dimension 1 &amp; 2</span>
-          <h2 id="project-type-experience-and-scale-what-to-actually-ask">Project Type Experience and Scale: What to Actually Ask</h2>
+          <h2 id="type-scale-heading">Project Type Experience and Scale: What to Actually Ask</h2>
         </div>
 
         <p>Most portfolio reviews surface beautiful finished images. What they rarely show is the firm's depth of <em>process knowledge</em> for a specific project type &mdash; the ability to anticipate grading complications on a hillside, to select plant material with realistic survival rates for a coastal exposure, or to coordinate with a pool contractor mid-design without scope erosion.</p>
 
-        <p>The most useful question to ask at this stage is not "have you done a project like this?" It is: <strong>"What were the two or three hardest problems you solved on your most recent project of this type, and how did you solve them?"</strong> A firm with genuine type experience answers this with immediacy and specificity. A generalist answers it with principles.</p>
+        <p class="mt-md">The most useful question to ask at this stage is not "have you done a project like this?" It is: <strong class="bold">"What were the two or three hardest problems you solved on your most recent project of this type, and how did you solve them?"</strong> A firm with genuine type experience answers this with immediacy and specificity. A generalist answers it with principles.</p>
 
         <div class="callout mt-md">
           <p>Scale mismatch is more common and more consequential than type mismatch. A boutique firm that typically executes $60,000 &ndash; $150,000 residential projects is structurally different from one whose residential work averages $400,000 &ndash; $900,000. Ask directly: "What is the typical budget range of the residential projects you completed last year?"</p>
         </div>
 
-        <p>If your project sits significantly above a firm's typical range, ask who will be leading design. Many firms attract larger projects with the principal's portfolio but staff them primarily with junior designers. If your project sits significantly below, ask about minimum engagement commitments and whether the firm takes on a limited number of smaller projects to maintain variety in the studio.</p>
+        <p class="mt-md">If your project sits significantly above a firm's typical range, ask who will be leading design. Many firms attract larger projects with the principal's portfolio but staff them primarily with junior designers. If your project sits significantly below, ask about minimum engagement commitments and whether the firm takes on a limited number of smaller projects to maintain variety in the studio.</p>
 
-        <h3>Questions to Ask at This Stage</h3>
+        <h3 class="mt-lg">Questions to Ask at This Stage</h3>
 
         <ul class="checklist mt-sm">
           <li>
@@ -139,44 +977,46 @@
         </ul>
 
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="divider" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 5 — PROCESS & COMMUNICATION
+    ============================================================ -->
+    <section class="section" aria-labelledby="process-heading">
       <div class="container">
 
         <div class="section-header">
           <span class="label">Dimension 3 &amp; 4</span>
-          <h2 id="process-and-communication-the-variables-most-homeowners-skip">Process and Communication: The Variables Most Homeowners Skip</h2>
+          <h2 id="process-heading">Process and Communication: The Variables Most Homeowners Skip</h2>
         </div>
 
         <p>Process and communication compatibility are the most consistently underweighted factors in final firm selection &mdash; and the ones most responsible for projects that are technically successful but personally draining. A firm can deliver extraordinary built work while also being a source of sustained frustration if the working relationship is poorly matched.</p>
 
-        <p>Process compatibility begins with decision architecture. Some firms present a single integrated concept and seek a global response. Others use an iterative reveal model &mdash; sharing early massing studies, then plant palettes, then material selections in sequence. Neither method is superior, but clients who prefer to see everything before deciding anything will conflict with the iterative firm, and clients who process information incrementally will feel overwhelmed by the concept-first firm.</p>
+        <p class="mt-md">Process compatibility begins with decision architecture. Some firms present a single integrated concept and seek a global response. Others use an iterative reveal model &mdash; sharing early massing studies, then plant palettes, then material selections in sequence. Neither method is superior, but clients who prefer to see everything before deciding anything will conflict with the iterative firm, and clients who process information incrementally will feel overwhelmed by the concept-first firm.</p>
 
-        <h3>How Firms Differ in Working Process</h3>
+        <h3 class="mt-lg">How Firms Differ in Working Process</h3>
 
         <div class="steps mt-md">
           <div class="step">
             <div class="step__num-wrap">
               <div class="step__num">A</div>
-              <div class="step__connector"></div>
+              <div class="step__connector" aria-hidden="true"></div>
             </div>
             <div class="step__content">
-              <p>Concept-First Firms</p>
-              <p>Present a complete integrated design concept at a single milestone. Client reviews holistically and provides unified feedback. Well-suited to clients who want to see the vision fully before commenting, and who trust the firm's integrative judgment.</p>
+              <p class="step__title">Concept-First Firms</p>
+              <p class="step__body">Present a complete integrated design concept at a single milestone. Client reviews holistically and provides unified feedback. Well-suited to clients who want to see the vision fully before commenting, and who trust the firm's integrative judgment.</p>
             </div>
           </div>
           <div class="step">
             <div class="step__num-wrap">
               <div class="step__num">B</div>
-              <div class="step__connector"></div>
+              <div class="step__connector" aria-hidden="true"></div>
             </div>
             <div class="step__content">
-              <p>Iterative-Reveal Firms</p>
-              <p>Share design components in a defined sequence, gathering incremental approval before advancing. More check-ins, smaller decision sets at each stage. Suited to clients who want to participate closely and feel ownership over each layer of the design.</p>
+              <p class="step__title">Iterative-Reveal Firms</p>
+              <p class="step__body">Share design components in a defined sequence, gathering incremental approval before advancing. More check-ins, smaller decision sets at each stage. Suited to clients who want to participate closely and feel ownership over each layer of the design.</p>
             </div>
           </div>
           <div class="step">
@@ -184,139 +1024,174 @@
               <div class="step__num">C</div>
             </div>
             <div class="step__content">
-              <p>Collaborative-Session Firms</p>
-              <p>Work interactively with clients in design sessions, often using pin-up reviews or shared digital tools. Suited to clients who want to co-design rather than commission. Requires more of the client's time but can produce stronger alignment. Mismatched if the client simply wants to delegate.</p>
+              <p class="step__title">Collaborative-Session Firms</p>
+              <p class="step__body">Work interactively with clients in design sessions, often using pin-up reviews or shared digital tools. Suited to clients who want to co-design rather than commission. Requires more of the client's time but can produce stronger alignment. Mismatched if the client simply wants to delegate.</p>
             </div>
           </div>
         </div>
 
-        <p>Communication style is related but distinct. Ask the principal how they prefer to communicate between meetings. Do they send written summaries? Are they responsive to email or do they prefer scheduled calls? How do they handle client anxiety mid-project? A brief, observational conversation on this topic reveals more than any portfolio review.</p>
+        <p class="mt-lg">Communication style is related but distinct. Ask the principal how they prefer to communicate between meetings. Do they send written summaries? Are they responsive to email or do they prefer scheduled calls? How do they handle client anxiety mid-project? A brief, observational conversation on this topic reveals more than any portfolio review.</p>
 
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="divider" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 6 — AESTHETIC RANGE
+    ============================================================ -->
+    <section class="section" aria-labelledby="aesthetic-heading">
       <div class="container">
 
         <div class="section-header">
           <span class="label">Aesthetic Fit</span>
-          <h2 id="does-the-firm-s-aesthetic-range-cover-your-vision-mdash-or-j">Does the Firm's Aesthetic Range Cover Your Vision &mdash; or Just Part of It?</h2>
+          <h2 id="aesthetic-heading">Does the Firm's Aesthetic Range Cover Your Vision &mdash; or Just Part of It?</h2>
         </div>
 
         <div class="aesthetic-split">
           <div class="aesthetic-split__text">
             <p>Every firm has a recognizable aesthetic signature. This is not a flaw &mdash; it is a signal of expertise and point of view. The risk arises when a client's vision diverges significantly from a firm's native range, and neither party acknowledges it during the selection process.</p>
 
-            <p>A firm celebrated for Mediterranean-influenced, stone-heavy formal design may be technically capable of producing a refined native meadow garden, but it is unlikely to be their strongest work. The inverse is equally true. A studio whose portfolio is built around ecological planting design and wild-edged naturalism may struggle to produce the crisp geometric formality that a modernist architecture client expects.</p>
+            <p class="mt-md">A firm celebrated for Mediterranean-influenced, stone-heavy formal design may be technically capable of producing a refined native meadow garden, but it is unlikely to be their strongest work. The inverse is equally true. A studio whose portfolio is built around ecological planting design and wild-edged naturalism may struggle to produce the crisp geometric formality that a modernist architecture client expects.</p>
 
-            <p>The practical test is not whether a firm claims to do everything. It is whether their portfolio contains completed examples &mdash; not renderings, not concepts &mdash; in the aesthetic territory your project requires. Ask them to pull two or three projects from their completed work that are closest to your intended aesthetic direction.</p>
+            <p class="mt-md">The practical test is not whether a firm claims to do everything. It is whether their portfolio contains completed examples &mdash; not renderings, not concepts &mdash; in the aesthetic territory your project requires. Ask them to pull two or three projects from their completed work that are closest to your intended aesthetic direction.</p>
 
             <div class="callout mt-md">
               <p>"A firm that shows you inspirational images from other designers as part of their presentation is telling you something. What they are showing you is aspirational, not demonstrated."</p>
             </div>
 
-            <p>Breadth of aesthetic range also matters if your vision is genuinely hybrid &mdash; for instance, a formally structured entry court with a wild, ecological back garden. Ask: "Have you completed a project that required this kind of tonal range within a single site?" If the answer is yes, ask to see it.</p>
+            <p class="mt-md">Breadth of aesthetic range also matters if your vision is genuinely hybrid &mdash; for instance, a formally structured entry court with a wild, ecological back garden. Ask: "Have you completed a project that required this kind of tonal range within a single site?" If the answer is yes, ask to see it.</p>
           </div>
 
-          
+          <aside class="aesthetic-split__visual" aria-label="Common landscape aesthetic directions">
+            <p class="label mb-sm">Common aesthetic territories</p>
+
+            <div class="style-swatch">
+              <span class="style-swatch__dot" style="background:#A8B89A;" aria-hidden="true"></span>
+              <span class="style-swatch__label">Naturalistic &mdash; ecological planting, native species, wild edge</span>
+            </div>
+            <div class="style-swatch">
+              <span class="style-swatch__dot" style="background:#C4A882;" aria-hidden="true"></span>
+              <span class="style-swatch__label">Mediterranean formal &mdash; structured hedging, stone, symmetry</span>
+            </div>
+            <div class="style-swatch">
+              <span class="style-swatch__dot" style="background:#8FA8C0;" aria-hidden="true"></span>
+              <span class="style-swatch__label">Contemporary minimal &mdash; architectural planes, restrained palette</span>
+            </div>
+            <div class="style-swatch">
+              <span class="style-swatch__dot" style="background:#B8A09A;" aria-hidden="true"></span>
+              <span class="style-swatch__label">Cottage / romantic &mdash; layered perennials, soft enclosure, seasonal drift</span>
+            </div>
+            <div class="style-swatch">
+              <span class="style-swatch__dot" style="background:#6B8C7A;" aria-hidden="true"></span>
+              <span class="style-swatch__label">Hybrid / site-led &mdash; derived from site context, not style preset</span>
+            </div>
+
+            <p style="font-size:0.74rem; color:var(--color-ink-muted); margin-top:0.75rem; line-height:1.5;">
+              Visual placeholder: replace each swatch with a small project image from the matching aesthetic territory.
+            </p>
+          </aside>
         </div>
 
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         PROOF QUOTE
+    ============================================================ -->
+    <section class="proof-section" aria-labelledby="proof-heading">
       <div class="proof-inner">
-        <p>From a completed project</p>
+        <p class="label" id="proof-heading">From a completed project</p>
         <blockquote>
           "We had three firms on our shortlist who all had beautiful portfolios. What differentiated Cloudstone was that they had actually built projects with this exact combination of constraints &mdash; coastal exposure, a challenging grade, and an architect who had strong opinions about the relationship between the building and the garden. That specificity was what made the decision."
         </blockquote>
         <div class="proof-attr">
-          <div class="proof-attr__avatar">
+          <div class="proof-attr__avatar" aria-hidden="true">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9A9185" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <div>
-            <p>Client placeholder &mdash; Marin County residential</p>
-            <p>$480,000 hillside garden and pool surround</p>
+            <p class="proof-attr__name">Client placeholder &mdash; Marin County residential</p>
+            <p class="proof-attr__role">$480,000 hillside garden and pool surround</p>
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 7 — THE FEE FALLACY
+    ============================================================ -->
+    <section class="section" aria-labelledby="fee-heading">
       <div class="container">
 
         <div class="section-header">
           <span class="label">The Fee Fallacy</span>
-          <h2 id="why-the-lowest-fee-firm-is-often-the-worst-fit">Why the Lowest-Fee Firm Is Often the Worst Fit</h2>
+          <h2 id="fee-heading">Why the Lowest-Fee Firm Is Often the Worst Fit</h2>
         </div>
 
         <p>It is reasonable to want competitive pricing. It is a mistake to use fee level as the primary selection criterion, or to interpret the lowest fee as the best value. Design fees and project outcomes are not inversely correlated. They are, however, structurally connected to project quality in ways that are worth understanding before you make a final decision.</p>
 
-        <p>A lower design fee typically reflects one or more of the following: less time budgeted per deliverable, a less experienced design lead, heavier reliance on generic specifications and standard plant palettes, or an expectation that scope will expand through change orders once the project is underway. None of these are absolute &mdash; but they are patterns worth investigating.</p>
+        <p class="mt-md">A lower design fee typically reflects one or more of the following: less time budgeted per deliverable, a less experienced design lead, heavier reliance on generic specifications and standard plant palettes, or an expectation that scope will expand through change orders once the project is underway. None of these are absolute &mdash; but they are patterns worth investigating.</p>
 
-        <table class="compare-table mt-lg">
+        <table class="compare-table mt-lg" aria-label="Comparing what lower and appropriate fee structures typically indicate">
           <thead>
             <tr>
-              <th>Variable</th>
-              <th>Lower Fee Structure</th>
-              <th>Appropriately Priced Firm</th>
+              <th scope="col">Variable</th>
+              <th scope="col">Lower Fee Structure</th>
+              <th scope="col">Appropriately Priced Firm</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Time per deliverable</td>
-              <td><span class="tag tag--risk">Often compressed</span><br><span>Fewer design iterations; faster handoff to construction docs</span></td>
-              <td><span class="tag tag--ok">Budgeted fully</span><br><span>Design development and revision cycles are built into the fee</span></td>
+              <td><span class="tag tag--risk">Often compressed</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Fewer design iterations; faster handoff to construction docs</span></td>
+              <td><span class="tag tag--ok">Budgeted fully</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Design development and revision cycles are built into the fee</span></td>
             </tr>
             <tr>
               <td>Principal involvement</td>
-              <td><span class="tag tag--risk">Often reduced mid-project</span><br><span>Principal leads the pitch; junior staff leads the execution</span></td>
-              <td><span class="tag tag--ok">Clearly defined</span><br><span>Ask directly and confirm in contract; structure is transparent</span></td>
+              <td><span class="tag tag--risk">Often reduced mid-project</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Principal leads the pitch; junior staff leads the execution</span></td>
+              <td><span class="tag tag--ok">Clearly defined</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Ask directly and confirm in contract; structure is transparent</span></td>
             </tr>
             <tr>
               <td>Specification depth</td>
-              <td><span class="tag tag--risk">May use standard palettes</span><br><span>Site-specific plant sourcing takes time that low fees don't cover</span></td>
-              <td><span class="tag tag--ok">Site-specific</span><br><span>Materials and plant selection are researched for this specific site</span></td>
+              <td><span class="tag tag--risk">May use standard palettes</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Site-specific plant sourcing takes time that low fees don't cover</span></td>
+              <td><span class="tag tag--ok">Site-specific</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Materials and plant selection are researched for this specific site</span></td>
             </tr>
             <tr>
               <td>Change order risk</td>
-              <td><span class="tag tag--risk">Higher</span><br><span>Low upfront fee is sometimes recovered through downstream scope additions</span></td>
-              <td><span class="tag tag--ok">Clearly scoped</span><br><span>What is included in the fee is explicit; changes are defined in writing</span></td>
+              <td><span class="tag tag--risk">Higher</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Low upfront fee is sometimes recovered through downstream scope additions</span></td>
+              <td><span class="tag tag--ok">Clearly scoped</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">What is included in the fee is explicit; changes are defined in writing</span></td>
             </tr>
             <tr>
               <td>Construction administration</td>
-              <td><span class="tag tag--risk">Often minimal or excluded</span><br><span>Site visits and contractor coordination may be billed additionally or absent</span></td>
-              <td><span class="tag tag--ok">Included and defined</span><br><span>CA scope is specified; the design is actively stewarded through construction</span></td>
+              <td><span class="tag tag--risk">Often minimal or excluded</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">Site visits and contractor coordination may be billed additionally or absent</span></td>
+              <td><span class="tag tag--ok">Included and defined</span><br><span style="font-size:0.8rem; color:var(--color-ink-muted);">CA scope is specified; the design is actively stewarded through construction</span></td>
             </tr>
           </tbody>
         </table>
 
-        <p>The right question to ask is not "why is your fee higher?" It is "what specifically does this fee include, and what specifically does it not include?" A firm that answers this with clarity and without defensiveness is demonstrating the professionalism that their fee reflects.</p>
+        <p class="mt-lg text-muted" style="font-size:0.85rem;">The right question to ask is not "why is your fee higher?" It is "what specifically does this fee include, and what specifically does it not include?" A firm that answers this with clarity and without defensiveness is demonstrating the professionalism that their fee reflects.</p>
 
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="divider" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 8 — FINAL EVALUATION CHECKLIST
+    ============================================================ -->
+    <section class="section" aria-labelledby="checklist-heading">
       <div class="container">
 
         <div class="section-header">
           <span class="label">Before You Decide</span>
-          <h2 id="a-practical-checklist-for-your-final-evaluation">A Practical Checklist for Your Final Evaluation</h2>
-          <p>Work through each item for every firm remaining on your shortlist. Gaps or uncertain answers are signals worth investigating before you sign.</p>
+          <h2 id="checklist-heading">A Practical Checklist for Your Final Evaluation</h2>
+          <p class="lead">Work through each item for every firm remaining on your shortlist. Gaps or uncertain answers are signals worth investigating before you sign.</p>
         </div>
 
-        <div>
+        <div style="display: flex; gap: 2.5rem; flex-wrap: wrap; align-items: flex-start;">
 
-          <div>
-            <h3>Project Type &amp; Scale</h3>
+          <div style="flex: 1 1 280px;">
+            <h3 style="font-size: 0.88rem; font-weight: 700; font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-ink-muted); margin-bottom: 0.75rem;">Project Type &amp; Scale</h3>
             <ul class="checklist">
               <li>
                 <svg class="checklist__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
@@ -333,8 +1208,8 @@
             </ul>
           </div>
 
-          <div>
-            <h3>Process &amp; Communication</h3>
+          <div style="flex: 1 1 280px;">
+            <h3 style="font-size: 0.88rem; font-weight: 700; font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-ink-muted); margin-bottom: 0.75rem;">Process &amp; Communication</h3>
             <ul class="checklist">
               <li>
                 <svg class="checklist__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
@@ -351,8 +1226,8 @@
             </ul>
           </div>
 
-          <div>
-            <h3>Aesthetic &amp; Fee</h3>
+          <div style="flex: 1 1 280px;">
+            <h3 style="font-size: 0.88rem; font-weight: 700; font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-ink-muted); margin-bottom: 0.75rem;">Aesthetic &amp; Fee</h3>
             <ul class="checklist">
               <li>
                 <svg class="checklist__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
@@ -371,60 +1246,78 @@
 
         </div>
 
-        
-        <div class="diagram-placeholder mt-lg">
+        <!-- Diagram placeholder -->
+        <div class="diagram-placeholder mt-lg" role="img" aria-label="Placeholder: scoring matrix showing how to rate each firm across the three evaluation categories">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
           <span>Recommended visual: printable shortlist scoring matrix (3 firms &times; 9 criteria, 1&ndash;5 scale)</span>
         </div>
 
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="divider" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 9 — HOW CLOUDSTONE APPROACHES FIT
+    ============================================================ -->
+    <section class="section" aria-labelledby="cloudstone-heading" style="background: var(--color-white);">
       <div class="container">
 
         <div class="section-header">
           <span class="label">How We Work</span>
-          <h2 id="how-cloudstone-designs-evaluates-fit-before-accepting-a-proj">How Cloudstone Designs Evaluates Fit Before Accepting a Project</h2>
+          <h2 id="cloudstone-heading">How Cloudstone Designs Evaluates Fit Before Accepting a Project</h2>
         </div>
 
         <p>We use this same framework in reverse. Before we commit to a new project, we spend time understanding whether we are genuinely the right firm for it &mdash; not in general, but for this site, this brief, and this client. We turn down work that is a poor fit, even when the budget is attractive, because a mismatched project does not produce the work we want to produce or the outcome the client deserves.</p>
 
-        <p>Our typical residential work ranges from $150,000 to $800,000. Our strongest type experience is in hillside residential, coastal exposure gardens, and complex native-integrated planting on constrained sites. Our aesthetic range is genuinely broad, but our native strengths lie in work that is simultaneously structured and ecologically considered &mdash; not wild in appearance, but wild in intelligence.</p>
+        <p class="mt-md">Our typical residential work ranges from $150,000 to $800,000. Our strongest type experience is in hillside residential, coastal exposure gardens, and complex native-integrated planting on constrained sites. Our aesthetic range is genuinely broad, but our native strengths lie in work that is simultaneously structured and ecologically considered &mdash; not wild in appearance, but wild in intelligence.</p>
 
-        <p>If you are at the shortlist stage and want to understand whether Cloudstone is the right fit for your specific project, the most useful next step is a 30-minute fit conversation &mdash; not a sales call, but a structured exchange of the information needed to answer that question honestly on both sides.</p>
+        <p class="mt-md">If you are at the shortlist stage and want to understand whether Cloudstone is the right fit for your specific project, the most useful next step is a 30-minute fit conversation &mdash; not a sales call, but a structured exchange of the information needed to answer that question honestly on both sides.</p>
 
-        <div>
-          <h3>What a fit conversation typically covers</h3>
-          <div>
-            <div>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <div style="margin-top: 2rem; padding: 1.75rem; background: var(--color-surface); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+          <h3 style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-ink-muted); margin-bottom: 1rem;">What a fit conversation typically covers</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div style="display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.83rem; color: var(--color-ink-muted); line-height: 1.5;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" style="flex-shrink:0; margin-top:0.15em;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Site and project brief overview (15 min)
             </div>
-            <div>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div style="display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.83rem; color: var(--color-ink-muted); line-height: 1.5;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" style="flex-shrink:0; margin-top:0.15em;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Our relevant experience, honestly characterized
             </div>
-            <div>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div style="display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.83rem; color: var(--color-ink-muted); line-height: 1.5;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" style="flex-shrink:0; margin-top:0.15em;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Process and communication preferences
             </div>
-            <div>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div style="display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.83rem; color: var(--color-ink-muted); line-height: 1.5;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" style="flex-shrink:0; margin-top:0.15em;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Fee structure and scope expectations
             </div>
-            <div>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div style="display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.83rem; color: var(--color-ink-muted); line-height: 1.5;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" style="flex-shrink:0; margin-top:0.15em;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Timeline and current availability
             </div>
-            <div>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <div style="display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.83rem; color: var(--color-ink-muted); line-height: 1.5;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" style="flex-shrink:0; margin-top:0.15em;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Honest mutual assessment of fit
             </div>
           </div>
         </div>
 
       </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 10 — CTA
+    ============================================================ -->
+    <section class="cta-section section" id="schedule" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <span class="label">Next Step</span>
+        <h2 id="cta-heading">Ready to Evaluate Fit for Your Specific Project?</h2>
+        <p>A 30-minute conversation is enough to determine whether Cloudstone is the right firm for your project. No pressure, no pitch &mdash; a structured exchange of information on both sides.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn--light">Schedule a Fit Conversation</a>
+          <a href="#" class="btn btn--ghost">View Our Portfolio</a>
+        </div>
+      </div>
+    </section></div>

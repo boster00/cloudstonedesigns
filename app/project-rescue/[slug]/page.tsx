@@ -92,23 +92,37 @@ export default async function ProjectRescueSatellitePage({
   }
 
   return (
-    <ArticleShell eyebrow={satellite.pillar} title={satellite.title} sections={sections}>
-      {bodyHtml ? (
-        <div className="prose-article" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+    <>
+      {bodyHtml && satellite.source === 'cjgeo' ? (
+        <div className="cjgeo-article">
+          <div className="prose-article cjgeo-full" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+          <div className="max-w-7xl mx-auto px-6">
+            <Cta
+              heading="Concerned about your project?"
+              body="We offer confidential second-opinion consultations for clients navigating difficult project situations. No obligation."
+              button={{ label: "Request a Consultation", href: "/contact" }}
+            />
+            <RelatedArticles articles={related} />
+          </div>
+        </div>
       ) : (
-        <>
-          <p>{satellite.teaser}</p>
-          <NativeSatelliteContent />
-        </>
+        <ArticleShell eyebrow={satellite.pillar} title={satellite.title} sections={sections}>
+          {bodyHtml ? (
+            <div className="prose-article" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+          ) : (
+            <>
+              <p>{satellite.teaser}</p>
+              <NativeSatelliteContent />
+            </>
+          )}
+          <Cta
+            heading="Concerned about your project?"
+            body="We offer confidential second-opinion consultations for clients navigating difficult project situations. No obligation."
+            button={{ label: "Request a Consultation", href: "/contact" }}
+          />
+          <RelatedArticles articles={related} />
+        </ArticleShell>
       )}
-
-      <Cta
-        heading="Concerned about your project?"
-        body="We offer confidential second-opinion consultations for clients navigating difficult project situations. No obligation."
-        button={{ label: "Request a Consultation", href: "/contact" }}
-      />
-
-      <RelatedArticles articles={related} />
-    </ArticleShell>
+    </>
   );
 }

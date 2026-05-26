@@ -16,8 +16,10 @@ import { sanitizeCJGEO } from "@/lib/sanitize-cjgeo.mjs";
 
 const CJGEO_BASE = "https://cjgeoai.com";
 
-export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> }) {
+export async function GET(req: Request, ctx: { params: Promise<{ id: string }> }) {
   const { id } = await ctx.params;
+  const url = new URL(req.url);
+  const rawMode = url.searchParams.get("raw") === "1";
   const apiKey = process.env.CJGEO_API_KEY;
   if (!apiKey) return NextResponse.json({ ok: false, error: "CJGEO_API_KEY not set" }, { status: 500 });
 
@@ -51,12 +53,81 @@ export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> 
     return NextResponse.json({ ok: false, error: `content_html too short (${raw.length})`, rawLen: raw.length }, { status: 422 });
   }
 
-  // Sanitize
+  // Sanitize (skipped in raw mode — raw mode preserves CJGEO's hero/section chrome
+  // AND scopes CJGEO's <style> block per-article so each carries its own design.
   let sanitized: { html: string; headings: { id: string; text: string }[]; wordCount: number };
-  try {
-    sanitized = sanitizeCJGEO(raw, { strictAnchors: false });
-  } catch (e: any) {
-    return NextResponse.json({ ok: false, error: `sanitize failed: ${e.message}` }, { status: 500 });
+  if (rawMode) {
+    const scopeCls = `article-${meta.slug}`;
+    const scopePrefix = `.${scopeCls}`;
+    // Extract style block
+    const styleMatch = raw.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
+    const styleSrc = styleMatch ? styleMatch[1] : "";
+    const htmlNoStyle = raw.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "");
+    // Transform style: scope every selector under scopePrefix
+    function scopeCss(css: string): string {
+      // Drop site-chrome rules (selectors involving html, body, .site-header, .site-footer, header, footer, nav at root)
+      // Naive: split rules by closing brace
+      const out: string[] = [];
+      let i = 0;
+      while (i < css.length) {
+        // Find next opening brace
+        const openIdx = css.indexOf("{", i);
+        if (openIdx < 0) break;
+        // Find matching closing brace (handles nested @media etc.)
+        let depth = 1; let j = openIdx + 1;
+        while (j < css.length && depth > 0) {
+          if (css[j] === "{") depth++;
+          else if (css[j] === "}") depth--;
+          j++;
+        }
+        const sel = css.slice(i, openIdx).trim();
+        const body = css.slice(openIdx + 1, j - 1);
+        i = j;
+        if (!sel) continue;
+        // @-rules: @media / @keyframes / @font-face etc — recurse for @media
+        if (sel.startsWith("@")) {
+          if (sel.startsWith("@media") || sel.startsWith("@supports")) {
+            out.push(`${sel} { ${scopeCss(body)} }`);
+          } else {
+            // @keyframes / @font-face / @import — keep as-is (these are global by design)
+            out.push(`${sel} { ${body} }`);
+          }
+          continue;
+        }
+        // Drop chrome selectors
+        const selectors = sel.split(",").map(s => s.trim()).filter(Boolean);
+        const kept: string[] = [];
+        for (const s of selectors) {
+          const lower = s.toLowerCase();
+          // Drop top-level html/body/site-chrome rules
+          if (/^(html|body|:root|\*|\s*\*::?(before|after))\b/.test(lower)) continue;
+          if (/\.(site-header|site-footer|site-nav|site-wrap)\b/.test(lower)) continue;
+          // Replace :host > .editorContent and :host with scope
+          let scoped = s.replace(/:host\s*>\s*\.editorContent/g, scopePrefix)
+                        .replace(/:host\b/g, scopePrefix);
+          // If selector still doesn't contain the scope, prefix it
+          if (!scoped.includes(scopePrefix)) {
+            scoped = `${scopePrefix} ${scoped}`;
+          }
+          kept.push(scoped);
+        }
+        if (kept.length === 0) continue;
+        out.push(`${kept.join(", ")} { ${body} }`);
+      }
+      return out.join("\n");
+    }
+    const scopedStyle = styleSrc ? `<style data-cjgeo-scoped="${scopeCls}">${scopeCss(styleSrc)}</style>\n` : "";
+    // Wrap the body in a scoped wrapper class so the styles apply (added via wrapper, not via DOM mutation)
+    const wrappedHtml = `${scopedStyle}<div class="${scopeCls}">${htmlNoStyle}</div>`;
+    const headings = Array.from(wrappedHtml.matchAll(/<h2[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g))
+      .map(([, hid, text]) => ({ id: hid, text: text.replace(/<[^>]+>/g, "").trim() }));
+    sanitized = { html: wrappedHtml, headings, wordCount: htmlNoStyle.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length };
+  } else {
+    try {
+      sanitized = sanitizeCJGEO(raw, { strictAnchors: false });
+    } catch (e: any) {
+      return NextResponse.json({ ok: false, error: `sanitize failed: ${e.message}` }, { status: 500 });
+    }
   }
 
   // Post-sanitize fixup: if zero h2s but h3s exist, promote h3→h2 + inject ids.

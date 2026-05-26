@@ -2,38 +2,738 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: a6a84853-3d2c-4203-853c-0f98cd23ca50
   main_keyword: costly mistakes architecture project
-  adopted_at: 2026-05-26T19:23:33.876Z
+  adopted_at: 2026-05-26T21:20:15.567Z
 -->
-<div class="container-prose">
-        <blockquote>
+<style data-cjgeo-scoped="article-expensive-mistakes-in-architecture-projects">/* ============================================================
+       DESIGN TOKENS
+    ============================================================ */
+    .article-expensive-mistakes-in-architecture-projects { 
+      --color-parchment:   #f5f1eb;
+      --color-ink:         #1a1713;
+      --color-ink-muted:   #4a4540;
+      --color-rule:        #d9d2c7;
+      --color-accent:      #8b3a2a;   /* deep terracotta — danger signal */
+      --color-accent-pale: #f2e6e3;
+      --color-highlight:   #2c3e35;   /* dark forest — trust / architecture */
+      --color-card-bg:     #eeeae3;
+
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      --max-prose: 720px;
+      --max-wide:  1100px;
+      --section-pad: 80px 24px;
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    * {  box-sizing: border-box; margin: 0; padding: 0;  }
+.article-expensive-mistakes-in-architecture-projects { 
+      background-color: var(--color-parchment);
+      color: var(--color-ink);
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+     }
+.article-expensive-mistakes-in-architecture-projects img {  display: block; max-width: 100%; height: auto;  }
+.article-expensive-mistakes-in-architecture-projects a {  color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px;  }
+.article-expensive-mistakes-in-architecture-projects a:hover {  color: var(--color-ink);  }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       TYPOGRAPHY SCALE
+    ============================================================ */
+    .t-label { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects .t-eyebrow { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+     }
+.article-expensive-mistakes-in-architecture-projects .t-display { 
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 5.5vw, 68px);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--color-ink);
+     }
+.article-expensive-mistakes-in-architecture-projects .t-h2 { 
+      font-family: var(--font-serif);
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-ink);
+     }
+.article-expensive-mistakes-in-architecture-projects .t-h3 { 
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--color-ink);
+     }
+.article-expensive-mistakes-in-architecture-projects .t-body { 
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects .t-body-sm { 
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       LAYOUT UTILITIES
+    ============================================================ */
+    .container-prose { 
+      max-width: var(--max-prose);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+     }
+.article-expensive-mistakes-in-architecture-projects .container-wide { 
+      max-width: var(--max-wide);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+     }
+.article-expensive-mistakes-in-architecture-projects .rule {  border: none; border-top: 1px solid var(--color-rule);  }
+.article-expensive-mistakes-in-architecture-projects .site-nav__inner { 
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+     }
+.article-expensive-mistakes-in-architecture-projects .site-nav__logo { 
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--color-ink);
+     }
+.article-expensive-mistakes-in-architecture-projects .site-nav__logo-mark { 
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+     }
+.article-expensive-mistakes-in-architecture-projects .site-nav__logo-text { 
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-ink);
+     }
+.article-expensive-mistakes-in-architecture-projects .site-nav__cta { 
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--color-parchment);
+      background-color: var(--color-ink);
+      border: none;
+      padding: 9px 20px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s;
+     }
+.article-expensive-mistakes-in-architecture-projects .site-nav__cta:hover {  background-color: var(--color-highlight); color: var(--color-parchment);  }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       HERO
+    ============================================================ */
+    .hero { 
+      padding: 80px 24px 64px;
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__inner { 
+      max-width: var(--max-prose);
+      margin: 0 auto;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__meta { 
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__tag { 
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-parchment);
+      background-color: var(--color-accent);
+      padding: 4px 10px;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__series { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__title { 
+      font-family: var(--font-serif);
+      font-size: clamp(34px, 5vw, 60px);
+      font-weight: 400;
+      line-height: 1.07;
+      letter-spacing: -0.015em;
+      color: var(--color-ink);
+      margin-bottom: 28px;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__subtitle { 
+      font-family: var(--font-sans);
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--color-ink-muted);
+      margin-bottom: 36px;
+      max-width: 600px;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__byline { 
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-rule);
+      flex-wrap: wrap;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__byline-name { 
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-ink);
+     }
+.article-expensive-mistakes-in-architecture-projects .hero__byline-detail { 
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       HERO VISUAL PLACEHOLDER
+    ============================================================ */
+    .hero-media { 
+      margin: 48px auto 0;
+      max-width: var(--max-wide);
+      padding: 0 24px;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero-media__frame { 
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+     }
+.article-expensive-mistakes-in-architecture-projects .hero-media__frame::before { 
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 20px,
+        rgba(0,0,0,0.025) 20px,
+        rgba(0,0,0,0.025) 21px
+      );
+     }
+.article-expensive-mistakes-in-architecture-projects .hero-media__icon { 
+      position: relative;
+      color: var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .hero-media__caption { 
+      position: relative;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: var(--color-ink-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       INTRO / CONTEXT
+    ============================================================ */
+    .section-intro { 
+      padding: var(--section-pad);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .intro-pull { 
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.5vw, 26px);
+      line-height: 1.45;
+      color: var(--color-ink);
+      border-left: 3px solid var(--color-accent);
+      padding-left: 24px;
+      margin-bottom: 32px;
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       RISK INDEX / OVERVIEW TABLE
+    ============================================================ */
+    .section-risk-index { 
+      background-color: var(--color-card-bg);
+      padding: var(--section-pad);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .risk-index-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1px;
+      background-color: var(--color-rule);
+      border: 1px solid var(--color-rule);
+      margin-top: 40px;
+     }
+.article-expensive-mistakes-in-architecture-projects .risk-index-item { 
+      background-color: var(--color-card-bg);
+      padding: 24px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+     }
+.article-expensive-mistakes-in-architecture-projects .risk-index-item__number { 
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--color-rule);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 36px;
+      text-align: right;
+     }
+.article-expensive-mistakes-in-architecture-projects .risk-index-item__body {  }
+.article-expensive-mistakes-in-architecture-projects .risk-index-item__name { 
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 4px;
+      line-height: 1.3;
+     }
+.article-expensive-mistakes-in-architecture-projects .risk-index-item__cost { 
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-top: 6px;
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       MISTAKE SECTIONS
+    ============================================================ */
+    .mistakes-list { 
+      padding: var(--section-pad);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .section-label-row { 
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 56px;
+     }
+.article-expensive-mistakes-in-architecture-projects .section-label-row hr { 
+      flex: 1;
+      border: none;
+      border-top: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake { 
+      padding-top: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake:last-child {  border-bottom: none;  }
+.article-expensive-mistakes-in-architecture-projects .mistake__header { 
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 28px;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__num { 
+      font-family: var(--font-serif);
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 0.85;
+      color: var(--color-rule);
+      flex-shrink: 0;
+      width: 56px;
+      text-align: right;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__head-text {  }
+.article-expensive-mistakes-in-architecture-projects .mistake__eyebrow { 
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__title { 
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-ink);
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__content { 
+      padding-left: 80px;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__lead { 
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--color-ink-muted);
+      margin-bottom: 20px;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__detail { 
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--color-ink-muted);
+      margin-bottom: 20px;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__cost-box { 
+      background-color: var(--color-accent-pale);
+      border-left: 3px solid var(--color-accent);
+      padding: 16px 20px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__cost-label { 
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 4px;
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__cost-text { 
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--color-ink);
+      line-height: 1.4;
+     }
+.article-expensive-mistakes-in-architecture-projects /* Visual placeholder inside mistake */
+    .mistake__visual { 
+      margin-top: 28px;
+      background-color: var(--color-card-bg);
+      border: 1px dashed var(--color-rule);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      padding: 32px;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects .mistake__visual-label { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      text-align: center;
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       COST SUMMARY / DIAGRAM SECTION
+    ============================================================ */
+    .section-summary { 
+      background-color: var(--color-highlight);
+      padding: var(--section-pad);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .section-summary .t-eyebrow {  color: rgba(255,255,255,0.5);  }
+.article-expensive-mistakes-in-architecture-projects .section-summary .t-h2 {  color: #fff; margin-bottom: 12px;  }
+.article-expensive-mistakes-in-architecture-projects .section-summary .t-body {  color: rgba(255,255,255,0.72);  }
+.article-expensive-mistakes-in-architecture-projects .summary-stat-row { 
+      display: flex;
+      gap: 1px;
+      background-color: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.12);
+      margin-top: 40px;
+      flex-wrap: wrap;
+     }
+.article-expensive-mistakes-in-architecture-projects .summary-stat { 
+      flex: 1;
+      min-width: 200px;
+      background-color: var(--color-highlight);
+      padding: 28px 24px;
+     }
+.article-expensive-mistakes-in-architecture-projects .summary-stat__value { 
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 8px;
+     }
+.article-expensive-mistakes-in-architecture-projects .summary-stat__label { 
+      font-family: var(--font-sans);
+      font-size: 13px;
+      line-height: 1.4;
+      color: rgba(255,255,255,0.6);
+     }
+.article-expensive-mistakes-in-architecture-projects .summary-diagram { 
+      margin-top: 48px;
+      background-color: rgba(255,255,255,0.06);
+      border: 1px dashed rgba(255,255,255,0.2);
+      padding: 40px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+     }
+.article-expensive-mistakes-in-architecture-projects .summary-diagram-label { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       HOW TO READ THESE RISKS (editorial interlude)
+    ============================================================ */
+    .section-interlude { 
+      padding: var(--section-pad);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .interlude-columns { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      margin-top: 40px;
+     }
+.article-expensive-mistakes-in-architecture-projects .interlude-col__head { 
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--color-ink);
+      display: inline-block;
+     }
+.article-expensive-mistakes-in-architecture-projects .interlude-col p { 
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--color-ink-muted);
+      margin-bottom: 16px;
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       PROOF / PATTERN CALLOUTS
+    ============================================================ */
+    .section-proof { 
+      background-color: var(--color-card-bg);
+      padding: var(--section-pad);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .proof-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+     }
+.article-expensive-mistakes-in-architecture-projects .proof-card { 
+      background-color: var(--color-parchment);
+      border: 1px solid var(--color-rule);
+      padding: 28px 24px;
+     }
+.article-expensive-mistakes-in-architecture-projects .proof-card__icon { 
+      margin-bottom: 16px;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects .proof-card__head { 
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+      line-height: 1.3;
+     }
+.article-expensive-mistakes-in-architecture-projects .proof-card__body { 
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       CTA SECTION
+    ============================================================ */
+    .section-cta { 
+      padding: 96px 24px;
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-expensive-mistakes-in-architecture-projects .cta-inner { 
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+     }
+.article-expensive-mistakes-in-architecture-projects .cta-inner .t-eyebrow {  margin-bottom: 16px;  }
+.article-expensive-mistakes-in-architecture-projects .cta-inner .t-h2 {  margin-bottom: 20px;  }
+.article-expensive-mistakes-in-architecture-projects .cta-inner .t-body {  margin-bottom: 36px;  }
+.article-expensive-mistakes-in-architecture-projects .cta-form { 
+      display: flex;
+      gap: 0;
+      max-width: 460px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+     }
+.article-expensive-mistakes-in-architecture-projects .cta-form input[type="email"] { 
+      flex: 1;
+      min-width: 200px;
+      padding: 13px 16px;
+      border: 1px solid var(--color-ink);
+      background: transparent;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--color-ink);
+      outline: none;
+      border-right: none;
+     }
+.article-expensive-mistakes-in-architecture-projects .cta-form input[type="email"]:focus {  border-color: var(--color-accent); border-right: none;  }
+.article-expensive-mistakes-in-architecture-projects .cta-form input[type="email"]::placeholder {  color: var(--color-ink-muted);  }
+.article-expensive-mistakes-in-architecture-projects .cta-form button { 
+      padding: 13px 24px;
+      background-color: var(--color-ink);
+      color: var(--color-parchment);
+      border: 1px solid var(--color-ink);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      white-space: nowrap;
+     }
+.article-expensive-mistakes-in-architecture-projects .cta-form button:hover {  background-color: var(--color-highlight); border-color: var(--color-highlight);  }
+.article-expensive-mistakes-in-architecture-projects .cta-disclaimer { 
+      margin-top: 16px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects .site-footer__inner { 
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+     }
+.article-expensive-mistakes-in-architecture-projects .site-footer__copy { 
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: var(--color-ink-muted);
+     }
+.article-expensive-mistakes-in-architecture-projects .site-footer__links { 
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+     }
+.article-expensive-mistakes-in-architecture-projects .site-footer__links a { 
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: var(--color-ink-muted);
+      text-decoration: none;
+     }
+.article-expensive-mistakes-in-architecture-projects .site-footer__links a:hover {  color: var(--color-ink);  }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       PROGRESS BAR
+    ============================================================ */
+    .progress-bar { 
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background-color: var(--color-accent);
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s linear;
+     }
+.article-expensive-mistakes-in-architecture-projects /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 700px) { 
+      :host { --section-pad: 56px 20px; }
+
+      .mistake__content { padding-left: 0; }
+      .mistake__header { flex-direction: column; gap: 8px; }
+      .mistake__num { font-size: 40px; width: auto; text-align: left; }
+
+      .interlude-columns { grid-template-columns: 1fr; gap: 32px; }
+
+      .cta-form input[type="email"] { border-right: 1px solid var(--color-ink); border-bottom: none; }
+      .cta-form { flex-direction: column; }
+      .cta-form input[type="email"] { border-right: 1px solid var(--color-ink); }
+
+      .hero-media__frame { aspect-ratio: 16 / 9; }
+     }
+@media (max-width: 480px) { .article-expensive-mistakes-in-architecture-projects .hero {  padding: 48px 20px 40px;  }
+.article-expensive-mistakes-in-architecture-projects .hero__title {  font-size: 32px;  } }</style>
+<div class="article-expensive-mistakes-in-architecture-projects">
+<section class="section-intro" aria-labelledby="intro-head">
+      <div class="container-prose">
+        <blockquote class="intro-pull" id="intro-head">
           Construction cost overruns are rarely random. They cluster around a small set of decisions &mdash; most of them made in the first third of a project, and most of them involving paperwork someone chose not to do.
         </blockquote>
 
-        <p>
+        <p class="t-body" style="margin-bottom:20px;">
           This guide is for owners who have either absorbed a painful overrun and want to understand what happened, or who are about to commit significant capital to a new project and want to know where the real exposure sits before they sign anything.
         </p>
-        <p>
+        <p class="t-body" style="margin-bottom:20px;">
           The mistakes below are drawn from a consistent pattern across residential, commercial, and mixed-use projects. They are ranked not by how often they occur, but by the financial damage they produce when they do. The dollar figures are not estimates of what things cost to fix in the abstract &mdash; they are what these specific decisions typically add to a final project cost.
         </p>
-        <p>
+        <p class="t-body">
           Read through the full list before your next project starts. If you are already in construction and one of these sounds familiar, the last section covers how to assess where you stand and what to do next.
         </p>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 3: RISK INDEX OVERVIEW
+    ============================================================ -->
+    <section class="section-risk-index" aria-labelledby="risk-index-head">
       <div class="container-wide">
-        <p>At a Glance</p>
-        <h2 id="the-8-high-damage-zones">The 8 High-Damage Zones</h2>
-        <p>
+        <p class="t-eyebrow" style="margin-bottom:12px;">At a Glance</p>
+        <h2 class="t-h2" id="risk-index-head">The 8 High-Damage Zones</h2>
+        <p class="t-body" style="margin-top:12px;max-width:580px;">
           Each zone below represents a decision category where financial damage is disproportionately large relative to the decision&rsquo;s apparent size at the time it is made.
         </p>
 
-        <div class="risk-index-grid">
+        <div class="risk-index-grid" role="list" aria-label="List of 8 high-damage risk zones">
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">1</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">1</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">Scope changes in construction documents</div>
               <span class="risk-index-item__cost">
@@ -43,8 +743,8 @@
             </div>
           </div>
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">2</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">2</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">Undocumented contractor agreements</div>
               <span class="risk-index-item__cost">
@@ -54,8 +754,8 @@
             </div>
           </div>
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">3</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">3</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">Design errors discovered post-permit</div>
               <span class="risk-index-item__cost">
@@ -65,8 +765,8 @@
             </div>
           </div>
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">4</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">4</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">Skipping geotechnical investigation</div>
               <span class="risk-index-item__cost">
@@ -76,8 +776,8 @@
             </div>
           </div>
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">5</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">5</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">Inadequate contingency allocation</div>
               <span class="risk-index-item__cost">
@@ -87,8 +787,8 @@
             </div>
           </div>
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">6</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">6</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">Changing the design during construction</div>
               <span class="risk-index-item__cost">
@@ -98,8 +798,8 @@
             </div>
           </div>
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">7</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">7</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">No Construction Administration services</div>
               <span class="risk-index-item__cost">
@@ -109,8 +809,8 @@
             </div>
           </div>
 
-          <div class="risk-index-item">
-            <span class="risk-index-item__number">8</span>
+          <div class="risk-index-item" role="listitem">
+            <span class="risk-index-item__number" aria-hidden="true">8</span>
             <div class="risk-index-item__body">
               <div class="risk-index-item__name">Selecting the lowest-fee architect</div>
               <span class="risk-index-item__cost">
@@ -122,218 +822,220 @@
 
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 4: THE 8 MISTAKES IN DETAIL
+    ============================================================ -->
+    <section class="mistakes-list" aria-labelledby="mistakes-head">
       <div class="container-prose">
 
         <div class="section-label-row">
           <span class="t-label">The Detail</span>
-          <hr>
+          <hr aria-hidden="true" />
         </div>
 
-        <h2 id="each-mistake-examined">Each mistake examined</h2>
-        <p>Where the damage comes from, how it compounds, and what it would have cost to prevent.</p>
+        <h2 class="t-h2" id="mistakes-head" style="margin-bottom:8px;">Each mistake examined</h2>
+        <p class="t-body" style="margin-bottom:0;">Where the damage comes from, how it compounds, and what it would have cost to prevent.</p>
 
-        
-        
+        <!-- MISTAKE 1 -->
+        <article class="mistake" aria-labelledby="m1-title">
           <div class="mistake__header">
-            <span class="mistake__num">1</span>
+            <span class="mistake__num" aria-hidden="true">1</span>
             <div class="mistake__head-text">
-              <p>Highest Cumulative Exposure</p>
-              <h3>Scope changes in the construction documents phase</h3>
+              <p class="mistake__eyebrow">Highest Cumulative Exposure</p>
+              <h3 class="mistake__title" id="m1-title">Scope changes in the construction documents phase</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               Construction documents are a priced commitment. When scope changes after the CD set is issued &mdash; and especially after a contractor has bid against it &mdash; you are not simply revising a drawing. You are triggering a repricing event in the most expensive part of the project lifecycle.
             </p>
-            <p>
+            <p class="mistake__detail">
               Contractors price change orders at a premium over their bid rates, typically 15&ndash;30% above the unit costs in the original bid. Subcontractors who have already mobilized charge for demobilization, restocking, and re-sequencing. The design team charges for redesign hours. Meanwhile, schedule slippage translates directly into extended general conditions costs &mdash; superintendents, site trailers, equipment rental &mdash; all of which run on a daily clock.
             </p>
-            <p>
+            <p class="mistake__detail">
               The underlying cause is almost always that the program was not fully resolved during schematic or design development. Owners who spend generously on the front-end design phases and arrive at CDs with a frozen scope consistently outperform those who use CDs as the phase where they &ldquo;figure it out.&rdquo;
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>5&ndash;18% of total construction cost added via change orders, in addition to extended general conditions and design fees for revision work.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">5&ndash;18% of total construction cost added via change orders, in addition to extended general conditions and design fees for revision work.</p>
             </div>
-            
-            <figure>
+            <!-- Diagram placeholder -->
+            <figure class="mistake__visual" aria-label="Diagram placeholder: cost curve showing how change order premiums escalate as a function of project phase">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M4 26L10 18L16 20L22 10L28 6" stroke="#d9d2c7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <circle cx="28" cy="6" r="2" fill="#8b3a2a"/>
               </svg>
-              <img src="/diagrams/expensive-mistakes-1.png" alt="Change order cost curve by project phase: Schematic → DD → CD → Construction" loading="lazy" style="width:100%;height:auto;border-radius:4px;" />
+              <p class="mistake__visual-label">[Diagram Placeholder &mdash; Recommended: Change order cost curve by project phase (Schematic &rarr; DD &rarr; CD &rarr; Construction)]</p>
             </figure>
           </div>
-        
+        </article>
 
-        
-        
+        <!-- MISTAKE 2 -->
+        <article class="mistake" aria-labelledby="m2-title">
           <div class="mistake__header">
-            <span class="mistake__num">2</span>
+            <span class="mistake__num" aria-hidden="true">2</span>
             <div class="mistake__head-text">
-              <p>High Dispute Frequency</p>
-              <h3>Undocumented contractor agreements</h3>
+              <p class="mistake__eyebrow">High Dispute Frequency</p>
+              <h3 class="mistake__title" id="m2-title">Undocumented contractor agreements</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               When a verbal agreement, a text message, or an email thread stands in place of a signed contract or executed change order, the owner has transferred all risk to themselves. The contractor has a legal and practical advantage in any dispute because the ambiguity in scope and price defaults in their favor.
             </p>
-            <p>
+            <p class="mistake__detail">
               This failure takes two common forms. The first is starting construction before a contract is executed &mdash; often because the schedule pressure feels real and the relationship feels solid. The second is authorizing additional work verbally during construction and settling up &ldquo;at the end.&rdquo; Both produce the same outcome: a final billing that bears no systematic relationship to what the owner believed they had agreed to.
             </p>
-            <p>
+            <p class="mistake__detail">
               Proper documentation is not a sign of distrust in a contractor. It is the mechanism by which you both know what was agreed. Contractors who resist written change orders before proceeding with extra work are providing information about how disputes will be handled when they arise.
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>Disputed final invoices range from 8&ndash;25% above contracted amounts. Litigation to resolve undocumented disputes frequently exceeds the disputed amount in legal fees alone.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">Disputed final invoices range from 8&ndash;25% above contracted amounts. Litigation to resolve undocumented disputes frequently exceeds the disputed amount in legal fees alone.</p>
             </div>
           </div>
-        
+        </article>
 
-        
-        
+        <!-- MISTAKE 3 -->
+        <article class="mistake" aria-labelledby="m3-title">
           <div class="mistake__header">
-            <span class="mistake__num">3</span>
+            <span class="mistake__num" aria-hidden="true">3</span>
             <div class="mistake__head-text">
-              <p>High Remediation Cost</p>
-              <h3>Design errors discovered after permit issuance</h3>
+              <p class="mistake__eyebrow">High Remediation Cost</p>
+              <h3 class="mistake__title" id="m3-title">Design errors discovered after permit issuance</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               A design error caught in schematic design costs a few hours to resolve. The same error caught after building permit approval can cost ten to fifty times more &mdash; not because the error is more complex, but because the correction requires re-submitting for permit review, revising issued drawings, recoordinating engineering disciplines, and potentially demolishing and rebuilding work already in place.
             </p>
-            <p>
+            <p class="mistake__detail">
               The most common post-permit discoveries involve structural elements that do not align with architectural drawings, mechanical and electrical routing that was never fully coordinated, and egress or accessibility provisions that fail to meet code once field conditions are measured. Each of these represents a coordination failure that thorough plan review and interdisciplinary checking would have caught.
             </p>
-            <p>
+            <p class="mistake__detail">
               Permit resubmittals add weeks in jurisdictions with backlogged review queues. General conditions continue to accrue. Subcontractors already mobilized charge waiting time. The remediation cost of a design error in construction is primarily a scheduling problem, not a construction problem.
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>Permit resubmittal delays of 4&ndash;12 weeks add $15,000&ndash;$60,000 in general conditions alone on mid-size projects, before accounting for rework and consultant revision fees.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">Permit resubmittal delays of 4&ndash;12 weeks add $15,000&ndash;$60,000 in general conditions alone on mid-size projects, before accounting for rework and consultant revision fees.</p>
             </div>
-            
-            <figure>
+            <!-- Diagram placeholder -->
+            <figure class="mistake__visual" aria-label="Timeline diagram placeholder showing cost of error discovery at each project phase">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <rect x="4" y="14" width="6" height="12" rx="1" fill="#d9d2c7"/>
                 <rect x="13" y="10" width="6" height="16" rx="1" fill="#d9d2c7"/>
                 <rect x="22" y="4" width="6" height="22" rx="1" fill="#8b3a2a" opacity="0.6"/>
               </svg>
-              <img src="/diagrams/expensive-mistakes-3.png" alt="Cost-of-correction multiplier by phase: SD / DD / CD / Permit / Construction" loading="lazy" style="width:100%;height:auto;border-radius:4px;" />
+              <p class="mistake__visual-label">[Diagram Placeholder &mdash; Recommended: Bar chart showing cost-of-correction multiplier by phase (SD / DD / CD / Permit / Construction)]</p>
             </figure>
           </div>
-        
+        </article>
 
-        
-        
+        <!-- MISTAKE 4 -->
+        <article class="mistake" aria-labelledby="m4-title">
           <div class="mistake__header">
-            <span class="mistake__num">4</span>
+            <span class="mistake__num" aria-hidden="true">4</span>
             <div class="mistake__head-text">
-              <p>Catastrophic Tail Risk</p>
-              <h3>Skipping geotechnical investigation</h3>
+              <p class="mistake__eyebrow">Catastrophic Tail Risk</p>
+              <h3 class="mistake__title" id="m4-title">Skipping geotechnical investigation</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               A geotechnical report for a typical residential or small commercial project costs between $3,000 and $8,000. Foundation redesign required because soil conditions differ from assumptions costs between $40,000 and $400,000, and sometimes more. The ratio is not a coincidence &mdash; it is the cost structure of working below grade, where errors cannot be patched from the outside.
             </p>
-            <p>
+            <p class="mistake__detail">
               Owners skip geotechnical investigation for a predictable reason: the project looks straightforward, and the soil investigation fee feels like an unnecessary line item on a budget that is already under pressure. What they are purchasing with that fee is the right to design a foundation from verified data rather than from regional averages or the engineer&rsquo;s best guess.
             </p>
-            <p>
+            <p class="mistake__detail">
               The scenarios that produce catastrophic outcomes &mdash; expansive soils, fill over former structures, high water tables, unstable bedding layers &mdash; are invisible until excavation. By then, the contractor has mobilized, the schedule is committed, and the owner has no leverage to renegotiate. They will pay whatever remediation costs.
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>Foundation remediation for unknown subsurface conditions: $40,000 on the low end. Projects on sloped sites, with fill, or near water have recorded overruns of $200,000&ndash;$600,000 attributable entirely to skipped geotechnical work.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">Foundation remediation for unknown subsurface conditions: $40,000 on the low end. Projects on sloped sites, with fill, or near water have recorded overruns of $200,000&ndash;$600,000 attributable entirely to skipped geotechnical work.</p>
             </div>
           </div>
-        
+        </article>
 
-        
-        
+        <!-- MISTAKE 5 -->
+        <article class="mistake" aria-labelledby="m5-title">
           <div class="mistake__header">
-            <span class="mistake__num">5</span>
+            <span class="mistake__num" aria-hidden="true">5</span>
             <div class="mistake__head-text">
-              <p>Financing Cascade Risk</p>
-              <h3>Inadequate contingency allocation</h3>
+              <p class="mistake__eyebrow">Financing Cascade Risk</p>
+              <h3 class="mistake__title" id="m5-title">Inadequate contingency allocation</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               A contingency budget exists for the known-unknown: conditions, decisions, and circumstances that are predictable in aggregate even when not predictable in specific. The industry standard for new construction is 10&ndash;15% of construction cost. Renovation and adaptive reuse projects start at 15&ndash;20%. Owners who budget 5% are not being disciplined &mdash; they are borrowing from an account that will eventually overdraw.
             </p>
-            <p>
+            <p class="mistake__detail">
               The financial danger is not the overrun itself &mdash; it is the cascade. When contingency is exhausted, the owner faces a choice between halting the project, seeking additional financing under duress, or cutting scope in a way that compromises the finished building. Lenders who see contingency exhausted mid-project often trigger covenant reviews. Projects that stop mid-construction accrue carrying costs on a non-performing asset.
             </p>
-            <p>
+            <p class="mistake__detail">
               Adequate contingency is not pessimism. It is the mechanism by which unexpected events remain manageable rather than becoming structural threats to the project.
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>Projects with under-budgeted contingency are 3x more likely to require emergency financing or scope cuts. The cost of a mid-project funding crisis typically exceeds the contingency shortfall by 40&ndash;80% when financing costs and scope restoration are included.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">Projects with under-budgeted contingency are 3x more likely to require emergency financing or scope cuts. The cost of a mid-project funding crisis typically exceeds the contingency shortfall by 40&ndash;80% when financing costs and scope restoration are included.</p>
             </div>
           </div>
-        
+        </article>
 
-        
-        
+        <!-- MISTAKE 6 -->
+        <article class="mistake" aria-labelledby="m6-title">
           <div class="mistake__header">
-            <span class="mistake__num">6</span>
+            <span class="mistake__num" aria-hidden="true">6</span>
             <div class="mistake__head-text">
-              <p>3&ndash;7x Cost Multiplier</p>
-              <h3>Changing the design during active construction</h3>
+              <p class="mistake__eyebrow">3&ndash;7x Cost Multiplier</p>
+              <h3 class="mistake__title" id="m6-title">Changing the design during active construction</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               Design changes during construction are the single highest-cost category on a per-decision basis. A decision that would have cost $2,000 to make during design development costs $6,000 to $14,000 during construction &mdash; not because the work itself is more expensive, but because construction sequencing means that something already done must be undone.
             </p>
-            <p>
+            <p class="mistake__detail">
               The multiplier exists because construction is a sequence, not a stockpile. Moving a structural wall after framing means removing completed work, adjusting the load path, reordering materials, recoordinating electrical and mechanical trades, and repatching finishes. Each of those is a separate line item. The original design decision, made at the wrong time, costs a fraction of its construction-phase correction.
             </p>
-            <p>
+            <p class="mistake__detail">
               The psychological dynamic is also worth naming: owners frequently make design changes during construction because they are, for the first time, standing in the actual space. The drawing did not feel wrong. The space feels wrong. This is a design process failure &mdash; specifically, a failure to adequately verify spatial decisions before the project was permitted. Rendering, physical models, and site visits during design exist precisely to prevent this category of late-stage regret.
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>Construction-phase design changes carry a 3&ndash;7x cost premium versus equivalent changes made during the design development phase. On projects where owners make 5 or more significant construction-phase changes, total overrun from this category alone averages 12&ndash;22% of the original construction contract.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">Construction-phase design changes carry a 3&ndash;7x cost premium versus equivalent changes made during the design development phase. On projects where owners make 5 or more significant construction-phase changes, total overrun from this category alone averages 12&ndash;22% of the original construction contract.</p>
             </div>
           </div>
-        
+        </article>
 
-        
-        
+        <!-- MISTAKE 7 -->
+        <article class="mistake" aria-labelledby="m7-title">
           <div class="mistake__header">
-            <span class="mistake__num">7</span>
+            <span class="mistake__num" aria-hidden="true">7</span>
             <div class="mistake__head-text">
-              <p>Undetected Deviation Risk</p>
-              <h3>Proceeding without Construction Administration services</h3>
+              <p class="mistake__eyebrow">Undetected Deviation Risk</p>
+              <h3 class="mistake__title" id="m7-title">Proceeding without Construction Administration services</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               Construction Administration is the phase in which the architect of record visits the site, reviews submittals, responds to RFIs, and verifies that the contractor is building what the drawings specify. Owners who omit CA services to reduce fees are removing the one professional in the process whose job is to protect the design intent &mdash; and the owner&rsquo;s financial interests &mdash; during construction.
             </p>
-            <p>
+            <p class="mistake__detail">
               Without CA oversight, deviation from the documents goes undetected until completion &mdash; or until a problem forces the deviation to the surface. Common discoveries include structural members installed at the wrong dimension, waterproofing systems applied incorrectly, mechanical equipment substituted for non-equivalent alternatives, and finish work that does not match specified materials. All of these are easier and cheaper to correct before work is enclosed.
             </p>
-            <p>
+            <p class="mistake__detail">
               CA fees typically run 2&ndash;4% of construction cost. The remediation cost of a single significant undetected deviation found at closeout commonly exceeds the entire CA fee that would have caught it. The math is straightforward. The resistance is psychological: owners see CA as an overhead cost rather than a quality-control mechanism with a measurable return.
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>Closeout remediation on projects without architect CA oversight averages 4&ndash;9% of construction cost. A portion of this is unrecoverable &mdash; work that was correct to specification cannot be reconstructed once it has been superseded.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">Closeout remediation on projects without architect CA oversight averages 4&ndash;9% of construction cost. A portion of this is unrecoverable &mdash; work that was correct to specification cannot be reconstructed once it has been superseded.</p>
             </div>
-            
-            <figure>
+            <!-- Diagram placeholder -->
+            <figure class="mistake__visual" aria-label="Process diagram placeholder showing CA oversight touchpoints during construction">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="6" cy="16" r="3" stroke="#d9d2c7" stroke-width="1.5"/>
                 <circle cx="16" cy="16" r="3" stroke="#d9d2c7" stroke-width="1.5"/>
@@ -341,70 +1043,72 @@
                 <path d="M9 16h4M19 16h4" stroke="#d9d2c7" stroke-width="1.5" stroke-linecap="round"/>
                 <path d="M26 19v4" stroke="#8b3a2a" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
-              <img src="/diagrams/expensive-mistakes-7.png" alt="Timeline of CA oversight touchpoints: submittal review, site observations, RFI responses, substantial completion" loading="lazy" style="width:100%;height:auto;border-radius:4px;" />
+              <p class="mistake__visual-label">[Diagram Placeholder &mdash; Recommended: Timeline showing CA oversight touchpoints (submittal review, site observations, RFI responses, substantial completion)]</p>
             </figure>
           </div>
-        
+        </article>
 
-        
-        
+        <!-- MISTAKE 8 -->
+        <article class="mistake" aria-labelledby="m8-title">
           <div class="mistake__header">
-            <span class="mistake__num">8</span>
+            <span class="mistake__num" aria-hidden="true">8</span>
             <div class="mistake__head-text">
-              <p>Systemic Downstream Cost</p>
-              <h3>Selecting the architect with the lowest fee</h3>
+              <p class="mistake__eyebrow">Systemic Downstream Cost</p>
+              <h3 class="mistake__title" id="m8-title">Selecting the architect with the lowest fee</h3>
             </div>
           </div>
           <div class="mistake__content">
-            <p>
+            <p class="mistake__lead">
               Architect fees on a well-run project are the most leverage-producing line item in the entire budget. The documents produced by the design team determine every other cost: what the contractor bids, what the contingency needs to cover, how efficiently the building performs over its life, and whether post-occupancy changes are cheap or expensive. A fee reduction of $20,000 at the top can produce $80,000 to $200,000 in downstream costs through under-documented drawings, inadequate coordination, and insufficient field oversight.
             </p>
-            <p>
+            <p class="mistake__detail">
               The mechanism is this: low-fee architects reduce cost by reducing hours. Fewer hours means less thorough drawings, less interdisciplinary coordination, fewer site visits, and shorter response times to contractor questions. Each of these omissions transfers risk and cost downstream &mdash; to the contractor, who prices ambiguity into their bid, and to the owner, who pays for coordination failures via change orders and field conditions.
             </p>
-            <p>
+            <p class="mistake__detail">
               This does not mean the highest-fee architect is always the right choice. It means that fee should be evaluated relative to scope of services, not treated as an optimization target in isolation. Owners who evaluate architecture proposals on fee alone are measuring the wrong variable. The correct measure is the cost per unit of project risk managed.
             </p>
             <div class="mistake__cost-box">
-              <p>Typical Financial Impact</p>
-              <p>Under-documented projects produce contractor bid premiums of 6&ndash;12% above market as contractors price drawing ambiguity. Change order frequency is 2&ndash;4x higher on projects with inadequate documentation. A $20,000 fee reduction routinely produces $80,000&ndash;$200,000 in additional project cost.</p>
+              <p class="mistake__cost-label">Typical Financial Impact</p>
+              <p class="mistake__cost-text">Under-documented projects produce contractor bid premiums of 6&ndash;12% above market as contractors price drawing ambiguity. Change order frequency is 2&ndash;4x higher on projects with inadequate documentation. A $20,000 fee reduction routinely produces $80,000&ndash;$200,000 in additional project cost.</p>
             </div>
           </div>
-        
+        </article>
 
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 5: COST SUMMARY / DIAGRAM
+    ============================================================ -->
+    <section class="section-summary" aria-labelledby="summary-head">
       <div class="container-wide">
-        <p>The Aggregate Picture</p>
-        <h2 id="these-risks-compound-they-do-not-simply-add">These risks compound, they do not simply add</h2>
-        <p>
+        <p class="t-eyebrow" style="margin-bottom:12px;">The Aggregate Picture</p>
+        <h2 class="t-h2" id="summary-head">These risks compound, they do not simply add</h2>
+        <p class="t-body" style="margin-top:12px;max-width:600px;">
           Projects that exhibit multiple risk factors from this list do not experience proportionally larger overruns &mdash; they experience exponentially larger ones. Each unresolved risk degrades the buffer that would have contained the next one.
         </p>
 
-        <div class="summary-stat-row">
-          <div class="summary-stat">
+        <div class="summary-stat-row" role="list" aria-label="Summary statistics">
+          <div class="summary-stat" role="listitem">
             <div class="summary-stat__value">+18%</div>
             <div class="summary-stat__label">Average overrun on projects with 3 or more of these risk factors present</div>
           </div>
-          <div class="summary-stat">
+          <div class="summary-stat" role="listitem">
             <div class="summary-stat__value">72%</div>
             <div class="summary-stat__label">Of significant overruns are traceable to decisions made before construction began</div>
           </div>
-          <div class="summary-stat">
+          <div class="summary-stat" role="listitem">
             <div class="summary-stat__value">4x</div>
             <div class="summary-stat__label">Return ratio: every $1 spent on thorough pre-construction services saves $4 or more in construction-phase cost</div>
           </div>
-          <div class="summary-stat">
+          <div class="summary-stat" role="listitem">
             <div class="summary-stat__value">83%</div>
             <div class="summary-stat__label">Of the risks on this list are preventable with correct process in the pre-construction phase</div>
           </div>
         </div>
 
-        
-        <figure>
+        <!-- Summary diagram placeholder -->
+        <figure class="summary-diagram" aria-label="Risk compounding diagram placeholder">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect x="2" y="28" width="7" height="10" rx="1" fill="rgba(255,255,255,0.15)"/>
             <rect x="12" y="20" width="7" height="18" rx="1" fill="rgba(255,255,255,0.15)"/>
@@ -412,16 +1116,18 @@
             <rect x="32" y="2" width="7" height="36" rx="1" fill="rgba(255,255,255,0.35)"/>
             <path d="M4 34L14 24L24 16L36 6" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 3"/>
           </svg>
-          <img src="/diagrams/expensive-mistakes-4.png" alt="Compounding risk waterfall: stacked risk factors interact to produce exponential overrun" loading="lazy" style="width:100%;height:auto;border-radius:4px;" />
+          <p class="summary-diagram-label">[Diagram Placeholder &mdash; Recommended: Compounding risk waterfall chart showing how stacked risk factors interact to produce exponential overrun]</p>
         </figure>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 6: HOW TO USE THIS (Editorial Interlude)
+    ============================================================ -->
+    <section class="section-interlude" aria-labelledby="interlude-head">
       <div class="container-wide">
-        <p>How to Apply This</p>
-        <h2 id="two-readings-of-this-list">Two readings of this list</h2>
+        <p class="t-eyebrow" style="margin-bottom:12px;">How to Apply This</p>
+        <h2 class="t-h2" id="interlude-head">Two readings of this list</h2>
 
         <div class="interlude-columns">
           <div class="interlude-col">
@@ -438,82 +1144,87 @@
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 7: PATTERN PROOF CARDS
+    ============================================================ -->
+    <section class="section-proof" aria-labelledby="proof-head">
       <div class="container-wide">
-        <p>What the Pattern Shows</p>
-        <h2 id="three-consistent-findings-across-project-types">Three consistent findings across project types</h2>
-        <p>
+        <p class="t-eyebrow" style="margin-bottom:12px;">What the Pattern Shows</p>
+        <h2 class="t-h2" id="proof-head">Three consistent findings across project types</h2>
+        <p class="t-body" style="margin-top:12px;max-width:580px;">
           These observations hold across residential custom builds, commercial tenant improvements, and ground-up mixed-use projects.
         </p>
 
         <div class="proof-grid">
 
           <div class="proof-card">
-            <div class="proof-card__icon">
-              
+            <div class="proof-card__icon" aria-hidden="true">
+              <!-- Timeline icon -->
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 14h20M4 8h10M4 20h14" stroke="#4a4540" stroke-width="1.4" stroke-linecap="round"/>
                 <circle cx="20" cy="8" r="2.5" stroke="#8b3a2a" stroke-width="1.2" fill="none"/>
                 <circle cx="24" cy="20" r="2.5" stroke="#8b3a2a" stroke-width="1.2" fill="none"/>
               </svg>
             </div>
-            <h3>Front-loaded decisions determine back-end cost</h3>
-            <p>
+            <h3 class="proof-card__head">Front-loaded decisions determine back-end cost</h3>
+            <p class="proof-card__body">
               The majority of a project&rsquo;s total cost is locked in by the end of design development. Decisions made in the first 20% of the project timeline determine 60&ndash;80% of final cost. This is not a theory &mdash; it is the arithmetic of construction sequencing. It is why thorough pre-construction services have the highest return of any investment in the project.
             </p>
           </div>
 
           <div class="proof-card">
-            <div class="proof-card__icon">
-              
+            <div class="proof-card__icon" aria-hidden="true">
+              <!-- Document icon -->
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="5" y="3" width="18" height="22" rx="1" stroke="#4a4540" stroke-width="1.4"/>
                 <path d="M9 9h10M9 13h10M9 17h6" stroke="#4a4540" stroke-width="1.2" stroke-linecap="round"/>
                 <path d="M17 17l4 4" stroke="#8b3a2a" stroke-width="1.4" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Documentation gaps are not paperwork failures &mdash; they are financial exposures</h3>
-            <p>
+            <h3 class="proof-card__head">Documentation gaps are not paperwork failures &mdash; they are financial exposures</h3>
+            <p class="proof-card__body">
               Every undocumented agreement, informal authorization, or verbal scope change is a financial liability waiting to be activated. The documentation is not bureaucratic overhead. It is the mechanism by which the owner maintains contractual standing in every possible dispute scenario. Projects with rigorous documentation consistently settle disputes faster and at lower cost.
             </p>
           </div>
 
           <div class="proof-card">
-            <div class="proof-card__icon">
-              
+            <div class="proof-card__icon" aria-hidden="true">
+              <!-- Shield / protection icon -->
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 3L5 7v8c0 5 4 9 9 10 5-1 9-5 9-10V7L14 3z" stroke="#4a4540" stroke-width="1.4" fill="none"/>
                 <path d="M9 13.5l3.5 3.5 6.5-7" stroke="#8b3a2a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3>The fee you pay for risk management is not a cost &mdash; it is the cheapest insurance available</h3>
-            <p>
+            <h3 class="proof-card__head">The fee you pay for risk management is not a cost &mdash; it is the cheapest insurance available</h3>
+            <p class="proof-card__body">
               Geotechnical reports, construction administration, thorough documentation, and adequate contingency are all forms of purchased certainty. In each case, the cost of certainty is a fraction of the cost of the uncertainty it replaces. The owners who systematically underinvest in these areas are not building cheaper projects &mdash; they are building the same projects with more financial exposure.
             </p>
           </div>
 
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ============================================================
+         SECTION 8: SOFT CTA
+    ============================================================ -->
+    <section class="section-cta" id="cta" aria-labelledby="cta-head">
       <div class="cta-inner">
-        <p>Work with Cloudstone Designs</p>
-        <h2 id="if-one-of-these-sounds-like-your-project-it-is-worth-a-conve">If one of these sounds like your project, it is worth a conversation</h2>
-        <p>
+        <p class="t-eyebrow">Work with Cloudstone Designs</p>
+        <h2 class="t-h2" id="cta-head">If one of these sounds like your project, it is worth a conversation</h2>
+        <p class="t-body">
           We work with owners who want to understand their actual risk exposure before it becomes a construction problem. That conversation costs nothing. The alternative sometimes costs a great deal.
         </p>
-        <p>
+        <p class="t-body" style="margin-bottom:36px;">
           Leave your email and we will reach out to schedule a brief call. No pitch. No obligation.
         </p>
-        
-          Email address
-          
-          Get in Touch
-        
-        <p>We do not share your information. One email, one conversation.</p>
+        <form class="cta-form" action="#" method="post" aria-label="Contact form">
+          <label for="cta-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+          <input type="email" id="cta-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+          <button type="submit">Get in Touch</button>
+        </form>
+        <p class="cta-disclaimer">We do not share your information. One email, one conversation.</p>
       </div>
+    </section></div>

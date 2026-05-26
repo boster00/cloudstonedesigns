@@ -98,6 +98,24 @@ export default async function StartingYourProjectSatellitePage({
     );
   }
 
+  // CJGEO-sourced articles ship their own centered editorial hero + section chrome
+  // inside the bodyHtml. Render them full-width without ArticleShell.
+  if (bodyHtml && satellite.source === 'cjgeo') {
+    return (
+      <div className="cjgeo-article">
+        <div className="prose-article cjgeo-full" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+        <div className="max-w-7xl mx-auto px-6">
+          <Cta
+            heading="Tell us about your project"
+            body="A 30-minute conversation to explore your vision and constraints — no commitment required."
+            button={{ label: "Start the conversation", href: "/contact" }}
+          />
+          <RelatedArticles articles={related} />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <ArticleShell eyebrow={satellite.pillar} title={satellite.title} sections={sections}>
       {bodyHtml ? (

@@ -95,23 +95,37 @@ export default async function ChoosingAnArchitectSatellitePage({
   }
 
   return (
-    <ArticleShell eyebrow={satellite.pillar} title={satellite.title} sections={sections}>
-      {bodyHtml ? (
-        <div className="prose-article" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+    <>
+      {bodyHtml && satellite.source === 'cjgeo' ? (
+        <div className="cjgeo-article">
+          <div className="prose-article cjgeo-full" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+          <div className="max-w-7xl mx-auto px-6">
+            <Cta
+              heading="Considering Cloudstone for your project?"
+              body="We are happy to answer any of the questions above, and to be candid about where we are and are not the right fit."
+              button={{ label: "Start a Conversation", href: "/contact" }}
+            />
+            <RelatedArticles articles={related} />
+          </div>
+        </div>
       ) : (
-        <>
-          <p>{satellite.teaser}</p>
-          <NativeSatelliteContent />
-        </>
+        <ArticleShell eyebrow={satellite.pillar} title={satellite.title} sections={sections}>
+          {bodyHtml ? (
+            <div className="prose-article" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+          ) : (
+            <>
+              <p>{satellite.teaser}</p>
+              <NativeSatelliteContent />
+            </>
+          )}
+          <Cta
+            heading="Considering Cloudstone for your project?"
+            body="We are happy to answer any of the questions above, and to be candid about where we are and are not the right fit."
+            button={{ label: "Start a Conversation", href: "/contact" }}
+          />
+          <RelatedArticles articles={related} />
+        </ArticleShell>
       )}
-
-      <Cta
-        heading="Considering Cloudstone for your project?"
-        body="We are happy to answer any of the questions above, and to be candid about where we are and are not the right fit."
-        button={{ label: "Start a Conversation", href: "/contact" }}
-      />
-
-      <RelatedArticles articles={related} />
-    </ArticleShell>
+    </>
   );
 }

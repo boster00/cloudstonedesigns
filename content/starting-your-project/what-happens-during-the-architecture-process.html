@@ -2,24 +2,798 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: d9ab626d-ff4c-4b7b-8d60-23fbae5fd4bf
   main_keyword: architecture design process steps
-  adopted_at: 2026-05-26T19:23:16.333Z
+  adopted_at: 2026-05-26T21:20:09.284Z
 -->
-<div class="container">
+<style data-cjgeo-scoped="article-what-happens-during-the-architecture-process">.article-what-happens-during-the-architecture-process /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    * {  box-sizing: border-box; margin: 0; padding: 0;  }
+.article-what-happens-during-the-architecture-process img, .article-what-happens-during-the-architecture-process svg {  display: block; max-width: 100%;  }
+.article-what-happens-during-the-architecture-process a {  color: inherit; text-decoration: none;  }
+.article-what-happens-during-the-architecture-process button {  cursor: pointer; border: none; background: none; font: inherit;  }
+/* ============================================================
+       DESIGN TOKENS  (3-color palette + neutrals)
+       Primary:  #2C2C27  (warm charcoal / near-black)
+       Stone:    #A8956A  (warm gold-stone accent)
+       Linen:    #F2EDE4  (off-white background)
+       Mid:      #7A7166  (warm mid-gray for body text / meta)
+       Border:   #DDD5C5  (subtle warm border)
+    ============================================================ */
+    .article-what-happens-during-the-architecture-process { 
+      --color-bg:        #F2EDE4;
+      --color-surface:   #EAE3D7;
+      --color-border:    #DDD5C5;
+      --color-charcoal:  #2C2C27;
+      --color-mid:       #7A7166;
+      --color-stone:     #A8956A;
+      --color-stone-lt:  #C5B490;
+      --color-white:     #FDFAF5;
+
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans:  'Helvetica Neue', Arial, sans-serif;
+
+      --max-w:     1080px;
+      --gutter:    clamp(1.25rem, 5vw, 3rem);
+      --section-gap: clamp(4rem, 9vw, 7rem);
+     }
+.article-what-happens-during-the-architecture-process { 
+      background-color: var(--color-bg);
+      color: var(--color-charcoal);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       TYPOGRAPHY SCALE
+    ============================================================ */
+    .t-eyebrow { 
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-stone);
+     }
+.article-what-happens-during-the-architecture-process .t-display { 
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      line-height: 1.15;
+      color: var(--color-charcoal);
+      text-wrap: balance;
+     }
+.article-what-happens-during-the-architecture-process .t-title { 
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.25;
+      color: var(--color-charcoal);
+      text-wrap: balance;
+     }
+.article-what-happens-during-the-architecture-process .t-subtitle { 
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.45;
+      color: var(--color-charcoal);
+     }
+.article-what-happens-during-the-architecture-process .t-body { 
+      font-size: 0.9375rem;
+      line-height: 1.72;
+      color: var(--color-mid);
+     }
+.article-what-happens-during-the-architecture-process .t-small { 
+      font-size: 0.8125rem;
+      line-height: 1.55;
+      color: var(--color-mid);
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       LAYOUT UTILITIES
+    ============================================================ */
+    .container { 
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+     }
+.article-what-happens-during-the-architecture-process .section { 
+      padding-block: var(--section-gap);
+     }
+.article-what-happens-during-the-architecture-process .section--alt { 
+      background-color: var(--color-surface);
+     }
+.article-what-happens-during-the-architecture-process .section--dark { 
+      background-color: var(--color-charcoal);
+      color: var(--color-bg);
+     }
+.article-what-happens-during-the-architecture-process .divider { 
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 0;
+     }
+.article-what-happens-during-the-architecture-process .stack {  display: flex; flex-direction: column;  }
+.article-what-happens-during-the-architecture-process .gap-1 {  gap: 0.25rem;  }
+.article-what-happens-during-the-architecture-process .gap-2 {  gap: 0.5rem;  }
+.article-what-happens-during-the-architecture-process .gap-3 {  gap: 0.75rem;  }
+.article-what-happens-during-the-architecture-process .gap-4 {  gap: 1rem;  }
+.article-what-happens-during-the-architecture-process .gap-5 {  gap: 1.25rem;  }
+.article-what-happens-during-the-architecture-process .gap-6 {  gap: 1.5rem;  }
+.article-what-happens-during-the-architecture-process .gap-8 {  gap: 2rem;  }
+.article-what-happens-during-the-architecture-process .gap-10 {  gap: 2.5rem;  }
+.article-what-happens-during-the-architecture-process .gap-12 {  gap: 3rem;  }
+.article-what-happens-during-the-architecture-process .gap-16 {  gap: 4rem;  }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       NAV
+    ============================================================ */
+    .nav { 
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .nav__inner { 
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     }
+.article-what-happens-during-the-architecture-process .nav__logo { 
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+     }
+.article-what-happens-during-the-architecture-process .nav__logo-mark { 
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+     }
+.article-what-happens-during-the-architecture-process .nav__brand { 
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      color: var(--color-charcoal);
+     }
+.article-what-happens-during-the-architecture-process .nav__cta { 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-stone);
+      border-bottom: 1px solid var(--color-stone);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+     }
+.article-what-happens-during-the-architecture-process .nav__cta:hover {  color: var(--color-charcoal); border-color: var(--color-charcoal);  }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       HERO
+    ============================================================ */
+    .hero { 
+      padding-top: clamp(3.5rem, 8vw, 6rem);
+      padding-bottom: clamp(3rem, 7vw, 5rem);
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .hero__inner { 
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: grid;
+      gap: 2rem;
+      align-items: end;
+     }
+@media (min-width: 768px) { .article-what-happens-during-the-architecture-process .hero__inner { 
+        grid-template-columns: 1fr 380px;
+        gap: 4rem;
+       } }
+.article-what-happens-during-the-architecture-process .hero__headline { 
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+      line-height: 1.1;
+      color: var(--color-charcoal);
+      text-wrap: balance;
+     }
+.article-what-happens-during-the-architecture-process .hero__headline em { 
+      font-style: italic;
+      color: var(--color-stone);
+     }
+.article-what-happens-during-the-architecture-process .hero__aside { 
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+     }
+.article-what-happens-during-the-architecture-process .hero__lead { 
+      font-size: clamp(0.9375rem, 1.5vw, 1.05rem);
+      line-height: 1.7;
+      color: var(--color-mid);
+     }
+.article-what-happens-during-the-architecture-process .hero__stat-row { 
+      display: flex;
+      gap: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .hero__stat-value { 
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      color: var(--color-charcoal);
+      line-height: 1;
+     }
+.article-what-happens-during-the-architecture-process .hero__stat-label { 
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-mid);
+      margin-top: 0.25rem;
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       TIMELINE OVERVIEW STRIP
+    ============================================================ */
+    .overview-strip { 
+      background-color: var(--color-charcoal);
+      padding-block: 2rem;
+      overflow-x: auto;
+     }
+.article-what-happens-during-the-architecture-process .overview-strip__inner { 
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: flex;
+      gap: 0;
+      min-width: 560px;
+     }
+.article-what-happens-during-the-architecture-process .overview-phase { 
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 0.5rem;
+      position: relative;
+      text-align: center;
+     }
+.article-what-happens-during-the-architecture-process .overview-phase:not(:last-child)::after { 
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 60%;
+      background-color: rgba(255,255,255,0.12);
+     }
+.article-what-happens-during-the-architecture-process .overview-phase__num { 
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--color-stone-lt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: var(--color-stone-lt);
+      flex-shrink: 0;
+     }
+.article-what-happens-during-the-architecture-process .overview-phase__label { 
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.3;
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       INTRO (How It Works)
+    ============================================================ */
+    .intro__grid { 
+      display: grid;
+      gap: 2.5rem;
+     }
+@media (min-width: 768px) { .article-what-happens-during-the-architecture-process .intro__grid { 
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+       } }
+.article-what-happens-during-the-architecture-process .intro__media { 
+      aspect-ratio: 4 / 3;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+     }
+.article-what-happens-during-the-architecture-process .placeholder-image { 
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--color-stone);
+      background-color: var(--color-surface);
+     }
+.article-what-happens-during-the-architecture-process .placeholder-image__icon { 
+      opacity: 0.5;
+     }
+.article-what-happens-during-the-architecture-process .placeholder-image__caption { 
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-mid);
+      opacity: 0.7;
+     }
+.article-what-happens-during-the-architecture-process .intro__checklist { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+     }
+.article-what-happens-during-the-architecture-process .intro__checklist li { 
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.9rem;
+      color: var(--color-mid);
+      line-height: 1.55;
+     }
+.article-what-happens-during-the-architecture-process .check-icon { 
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--color-stone);
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       PHASE CARDS
+    ============================================================ */
+    .phases { 
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+     }
+.article-what-happens-during-the-architecture-process .phase-card { 
+      border-top: 1px solid var(--color-border);
+      padding-block: clamp(2.5rem, 5vw, 3.5rem);
+     }
+.article-what-happens-during-the-architecture-process .phase-card:last-child { 
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .phase-card__inner { 
+      display: grid;
+      gap: 2rem;
+      align-items: start;
+     }
+@media (min-width: 768px) { .article-what-happens-during-the-architecture-process .phase-card__inner { 
+        grid-template-columns: 80px 1fr 1fr;
+        gap: 2.5rem;
+       } }
+.article-what-happens-during-the-architecture-process .phase-card__num { 
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      color: var(--color-border);
+      line-height: 1;
+      user-select: none;
+     }
+.article-what-happens-during-the-architecture-process .phase-card__left {  display: flex; flex-direction: column; gap: 0.75rem;  }
+.article-what-happens-during-the-architecture-process .phase-card__right {  display: flex; flex-direction: column; gap: 1.25rem;  }
+.article-what-happens-during-the-architecture-process .phase-card__badge-row { 
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+     }
+.article-what-happens-during-the-architecture-process .badge { 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 2px;
+     }
+.article-what-happens-during-the-architecture-process .badge--duration { 
+      background-color: var(--color-charcoal);
+      color: var(--color-bg);
+     }
+.article-what-happens-during-the-architecture-process .badge--stone { 
+      background-color: transparent;
+      border: 1px solid var(--color-stone);
+      color: var(--color-stone);
+     }
+.article-what-happens-during-the-architecture-process .deliverables-box { 
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 1.25rem;
+     }
+.article-what-happens-during-the-architecture-process .deliverables-box__title { 
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--color-stone);
+      margin-bottom: 0.75rem;
+     }
+.article-what-happens-during-the-architecture-process .deliverables-list { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+     }
+.article-what-happens-during-the-architecture-process .deliverables-list li { 
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--color-mid);
+      line-height: 1.5;
+     }
+.article-what-happens-during-the-architecture-process .deliverables-list li::before { 
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--color-stone);
+      margin-top: 7px;
+     }
+.article-what-happens-during-the-architecture-process .client-role-box { 
+      background-color: var(--color-white);
+      border-left: 3px solid var(--color-stone);
+      padding: 1.25rem 1.25rem 1.25rem 1.125rem;
+     }
+.article-what-happens-during-the-architecture-process .client-role-box__title { 
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--color-stone);
+      margin-bottom: 0.6rem;
+     }
+.article-what-happens-during-the-architecture-process .client-role-box p { 
+      font-size: 0.8125rem;
+      color: var(--color-mid);
+      line-height: 1.6;
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       PHASE VISUAL PLACEHOLDER
+    ============================================================ */
+    .phase-media { 
+      aspect-ratio: 16 / 9;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     }
+@media (min-width: 768px) { .article-what-happens-during-the-architecture-process .phase-media { 
+        margin-top: 0;
+       } }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       TOTAL TIMELINE BANNER
+    ============================================================ */
+    .timeline-banner { 
+      background-color: var(--color-charcoal);
+      color: var(--color-bg);
+      padding-block: clamp(3rem, 6vw, 4.5rem);
+     }
+.article-what-happens-during-the-architecture-process .timeline-banner__inner { 
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: grid;
+      gap: 2.5rem;
+     }
+@media (min-width: 640px) { .article-what-happens-during-the-architecture-process .timeline-banner__inner { 
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+       } }
+@media (min-width: 900px) { .article-what-happens-during-the-architecture-process .timeline-banner__inner { 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       } }
+.article-what-happens-during-the-architecture-process .timeline-stat { 
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--color-stone);
+     }
+.article-what-happens-during-the-architecture-process .timeline-stat__value { 
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--color-bg);
+      line-height: 1;
+     }
+.article-what-happens-during-the-architecture-process .timeline-stat__label { 
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(242,237,228,0.5);
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       FAQ ACCORDION
+    ============================================================ */
+    .faq-list { 
+      display: flex;
+      flex-direction: column;
+     }
+.article-what-happens-during-the-architecture-process .faq-item { 
+      border-top: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .faq-item:last-child { 
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .faq-item__trigger { 
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1.25rem;
+      text-align: left;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--color-charcoal);
+      background: none;
+      cursor: pointer;
+      transition: color 0.2s;
+     }
+.article-what-happens-during-the-architecture-process .faq-item__trigger:hover {  color: var(--color-stone);  }
+.article-what-happens-during-the-architecture-process .faq-item__icon { 
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--color-stone);
+      transition: transform 0.25s ease;
+     }
+.article-what-happens-during-the-architecture-process .faq-item[open] .faq-item__icon { 
+      transform: rotate(45deg);
+     }
+.article-what-happens-during-the-architecture-process .faq-item__body { 
+      padding-bottom: 1.5rem;
+      font-size: 0.8875rem;
+      line-height: 1.72;
+      color: var(--color-mid);
+      max-width: 680px;
+     }
+.article-what-happens-during-the-architecture-process details summary {  list-style: none;  }
+.article-what-happens-during-the-architecture-process details summary::-webkit-details-marker {  display: none;  }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       PROOF / TESTIMONIAL STRIP
+    ============================================================ */
+    .proof-grid { 
+      display: grid;
+      gap: 1.5rem;
+     }
+@media (min-width: 640px) { .article-what-happens-during-the-architecture-process .proof-grid {  grid-template-columns: 1fr 1fr;  } }
+@media (min-width: 900px) { .article-what-happens-during-the-architecture-process .proof-grid {  grid-template-columns: 1fr 1fr 1fr;  } }
+.article-what-happens-during-the-architecture-process .proof-card { 
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+     }
+.article-what-happens-during-the-architecture-process .proof-card__quote { 
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-charcoal);
+      font-style: italic;
+     }
+.article-what-happens-during-the-architecture-process .proof-card__meta { 
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .proof-card__name { 
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-charcoal);
+      letter-spacing: 0.04em;
+     }
+.article-what-happens-during-the-architecture-process .proof-card__detail { 
+      font-size: 0.75rem;
+      color: var(--color-mid);
+     }
+.article-what-happens-during-the-architecture-process .stars { 
+      display: flex;
+      gap: 2px;
+      color: var(--color-stone);
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       SOFT CTA SECTION
+    ============================================================ */
+    .cta-section { 
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+     }
+.article-what-happens-during-the-architecture-process .cta-section__inner { 
+      max-width: 680px;
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      padding-block: clamp(4rem, 8vw, 6rem);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+     }
+.article-what-happens-during-the-architecture-process .btn { 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.875rem 1.75rem;
+      transition: background-color 0.2s, color 0.2s;
+     }
+.article-what-happens-during-the-architecture-process .btn--primary { 
+      background-color: var(--color-charcoal);
+      color: var(--color-bg);
+     }
+.article-what-happens-during-the-architecture-process .btn--primary:hover { 
+      background-color: var(--color-stone);
+     }
+.article-what-happens-during-the-architecture-process .btn--outline { 
+      border: 1px solid var(--color-charcoal);
+      color: var(--color-charcoal);
+     }
+.article-what-happens-during-the-architecture-process .btn--outline:hover { 
+      background-color: var(--color-charcoal);
+      color: var(--color-bg);
+     }
+.article-what-happens-during-the-architecture-process .cta-note { 
+      font-size: 0.8125rem;
+      color: var(--color-mid);
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer { 
+      background-color: var(--color-charcoal);
+      color: rgba(242,237,228,0.5);
+      padding-block: 2.5rem;
+     }
+.article-what-happens-during-the-architecture-process .footer__inner { 
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+     }
+@media (min-width: 640px) { .article-what-happens-during-the-architecture-process .footer__inner { 
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+       } }
+.article-what-happens-during-the-architecture-process .footer__brand { 
+      font-family: var(--font-serif);
+      font-size: 0.875rem;
+      color: var(--color-bg);
+      opacity: 0.75;
+     }
+.article-what-happens-during-the-architecture-process .footer__links { 
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+     }
+.article-what-happens-during-the-architecture-process .footer__links a { 
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(242,237,228,0.45);
+      transition: color 0.2s;
+     }
+.article-what-happens-during-the-architecture-process .footer__links a:hover {  color: var(--color-bg);  }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       SECTION HEADER
+    ============================================================ */
+    .section-header { 
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+     }
+.article-what-happens-during-the-architecture-process .section-header--center { 
+      align-items: center;
+      text-align: center;
+      max-width: 640px;
+      margin-inline: auto;
+      margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+     }
+.article-what-happens-during-the-architecture-process .section-header__rule { 
+      width: 36px;
+      height: 2px;
+      background-color: var(--color-stone);
+      margin-top: 0.25rem;
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       PROCESS INTRO VISUAL — 6-node horizontal flow
+    ============================================================ */
+    .flow-diagram { 
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+     }
+.article-what-happens-during-the-architecture-process .flow-node { 
+      flex: 1;
+      min-width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      text-align: center;
+     }
+.article-what-happens-during-the-architecture-process .flow-node__circle { 
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--color-stone);
+      background-color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 0.9375rem;
+      color: var(--color-stone);
+      position: relative;
+      z-index: 1;
+     }
+.article-what-happens-during-the-architecture-process .flow-node__label { 
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--color-mid);
+      line-height: 1.3;
+     }
+.article-what-happens-during-the-architecture-process .flow-arrow { 
+      flex-shrink: 0;
+      width: clamp(16px, 3vw, 32px);
+      color: var(--color-border);
+      margin-bottom: 28px;
+     }
+.article-what-happens-during-the-architecture-process /* ============================================================
+       RESPONSIVE HELPERS
+    ============================================================ */
+    @media (max-width: 767px) { 
+      .hide-mobile { display: none !important; }
+     }</style>
+<div class="article-what-happens-during-the-architecture-process">
+<section class="section" aria-labelledby="intro-heading">
+      <div class="container">
         <div class="section-header">
-          <p>Why it matters</p>
-          <h2 id="design-is-a-sequence-not-a-single-decision">Design is a sequence,not a single decision.</h2>
+          <p class="t-eyebrow">Why it matters</p>
+          <h2 class="t-display" id="intro-heading">Design is a sequence,<br>not a single decision.</h2>
           <div class="section-header__rule"></div>
         </div>
 
         <div class="intro__grid">
           <div class="stack gap-6">
-            <p>
+            <p class="t-body">
               Architecture works in phases for good reason. Each stage builds on the last &mdash; and each one has a natural &ldquo;pause point&rdquo; where you review, respond, and give us the green light to continue. You are never locked in.
             </p>
-            <p>
+            <p class="t-body">
               Understanding what comes next removes the anxiety of the unknown. Below you will find a plain-language breakdown of every phase: what our team is doing, what decisions you need to make, what documents you will hold in your hand, and a realistic time estimate.
             </p>
-            <ul class="intro__checklist">
+            <ul class="intro__checklist" aria-label="What this guide covers">
               <li>
                 <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <circle cx="8" cy="8" r="7" stroke="#A8956A" stroke-width="1.2"/>
@@ -58,7 +832,7 @@
             </ul>
           </div>
 
-          
+          <!-- Visual: process overview diagram placeholder -->
           <div>
             <div class="intro__media">
               <div class="placeholder-image">
@@ -75,8 +849,8 @@
               </div>
             </div>
 
-            
-            <div class="flow-diagram">
+            <!-- Flow diagram -->
+            <div class="flow-diagram" aria-hidden="true">
               <div class="flow-node">
                 <div class="flow-node__circle">01</div>
                 <div class="flow-node__label">Pre-Design</div>
@@ -110,45 +884,47 @@
           </div>
         </div>
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="divider" />
 
-    
-    
+    <!-- ==========================================================
+         SECTION 2: THE SIX PHASES
+    ========================================================== -->
+    <section class="section section--alt" aria-labelledby="phases-heading">
       <div class="container">
         <div class="section-header">
-          <p>The six phases</p>
-          <h2 id="what-happens-and-when">What happens, and when.</h2>
+          <p class="t-eyebrow">The six phases</p>
+          <h2 class="t-display" id="phases-heading">What happens, and when.</h2>
           <div class="section-header__rule"></div>
-          <p>
+          <p class="t-body" style="max-width:560px; margin-top:0.5rem;">
             Each card below covers one phase. Look for the duration badge, the deliverables list, and the &ldquo;Your Role&rdquo; callout &mdash; that last one is the most important for first-time clients.
           </p>
         </div>
 
         <div class="phases">
 
-          
-          
+          <!-- PHASE 01: Pre-Design / Feasibility -->
+          <article class="phase-card" id="phase-01" aria-labelledby="phase-01-title">
             <div class="phase-card__inner">
-              <div class="phase-card__num">01</div>
+              <div class="phase-card__num" aria-hidden="true">01</div>
 
               <div class="phase-card__left">
-                <p>Phase one</p>
-                <h3>Pre-Design &amp; Feasibility</h3>
+                <p class="t-eyebrow">Phase one</p>
+                <h3 class="t-title" id="phase-01-title">Pre-Design &amp; Feasibility</h3>
                 <div class="phase-card__badge-row">
                   <span class="badge badge--duration">2 &ndash; 4 weeks</span>
                   <span class="badge badge--stone">Listening &amp; Learning</span>
                 </div>
-                <p>
+                <p class="t-body">
                   This is where we learn everything about you, your site, and your goals before a single line is drawn. We review site conditions, zoning regulations, setbacks, and any deed restrictions. We also explore your budget range and priorities so there are no surprises down the road.
                 </p>
-                <p>
+                <p class="t-body" style="margin-top:0.5rem;">
                   Many clients are surprised how much ground we can cover before design begins. The pre-design investment saves time and money in every phase that follows.
                 </p>
 
-                
-                <div class="deliverables-box">
+                <!-- Deliverables -->
+                <div class="deliverables-box" style="margin-top:1rem;">
                   <div class="deliverables-box__title">What you receive</div>
                   <ul class="deliverables-list">
                     <li>Feasibility summary memorandum</li>
@@ -161,9 +937,9 @@
               </div>
 
               <div class="phase-card__right">
-                
+                <!-- Visual placeholder -->
                 <div class="phase-media">
-                  <div class="placeholder-image">
+                  <div class="placeholder-image" style="width:100%;height:100%;">
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" opacity="0.5">
                       <rect x="4" y="4" width="36" height="36" rx="2" stroke="#A8956A" stroke-width="1.5"/>
                       <circle cx="22" cy="18" r="6" stroke="#A8956A" stroke-width="1.5"/>
@@ -173,35 +949,35 @@
                   </div>
                 </div>
 
-                
+                <!-- Client role -->
                 <div class="client-role-box">
                   <div class="client-role-box__title">Your role in this phase</div>
                   <p>Share your wish list, your must-haves, and your budget ceiling honestly. Bring photos of spaces you love. Walk the site with us if possible. The more you share now, the more confidently we design later. Your input here shapes every decision that follows.</p>
                 </div>
               </div>
             </div>
-          
+          </article>
 
-          
-          
+          <!-- PHASE 02: Schematic Design -->
+          <article class="phase-card" id="phase-02" aria-labelledby="phase-02-title">
             <div class="phase-card__inner">
-              <div class="phase-card__num">02</div>
+              <div class="phase-card__num" aria-hidden="true">02</div>
 
               <div class="phase-card__left">
-                <p>Phase two</p>
-                <h3>Schematic Design</h3>
+                <p class="t-eyebrow">Phase two</p>
+                <h3 class="t-title" id="phase-02-title">Schematic Design</h3>
                 <div class="phase-card__badge-row">
                   <span class="badge badge--duration">4 &ndash; 8 weeks</span>
                   <span class="badge badge--stone">Big ideas take shape</span>
                 </div>
-                <p>
+                <p class="t-body">
                   This is where the design comes alive for the first time. We explore multiple conceptual directions &mdash; floor plan arrangements, site orientation, massing, and overall character. Drawings at this stage are intentionally loose so options remain easy to modify.
                 </p>
-                <p>
+                <p class="t-body" style="margin-top:0.5rem;">
                   You will see hand sketches or digital diagrams, not finished construction drawings. That is intentional &mdash; we want your gut reaction, not your red pen.
                 </p>
 
-                <div class="deliverables-box">
+                <div class="deliverables-box" style="margin-top:1rem;">
                   <div class="deliverables-box__title">What you receive</div>
                   <ul class="deliverables-list">
                     <li>2&ndash;3 design concept options (floor plans, elevations)</li>
@@ -215,7 +991,7 @@
 
               <div class="phase-card__right">
                 <div class="phase-media">
-                  <div class="placeholder-image">
+                  <div class="placeholder-image" style="width:100%;height:100%;">
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" opacity="0.5">
                       <rect x="4" y="4" width="36" height="36" rx="2" stroke="#A8956A" stroke-width="1.5"/>
                       <rect x="10" y="10" width="10" height="8" stroke="#A8956A" stroke-width="1"/>
@@ -233,28 +1009,28 @@
                 </div>
               </div>
             </div>
-          
+          </article>
 
-          
-          
+          <!-- PHASE 03: Design Development -->
+          <article class="phase-card" id="phase-03" aria-labelledby="phase-03-title">
             <div class="phase-card__inner">
-              <div class="phase-card__num">03</div>
+              <div class="phase-card__num" aria-hidden="true">03</div>
 
               <div class="phase-card__left">
-                <p>Phase three</p>
-                <h3>Design Development</h3>
+                <p class="t-eyebrow">Phase three</p>
+                <h3 class="t-title" id="phase-03-title">Design Development</h3>
                 <div class="phase-card__badge-row">
                   <span class="badge badge--duration">6 &ndash; 10 weeks</span>
                   <span class="badge badge--stone">Details &amp; Systems</span>
                 </div>
-                <p>
+                <p class="t-body">
                   With a single concept approved, we now refine every element. Wall thicknesses become real. Structural systems are coordinated. Mechanical, electrical, and plumbing engineers join the team. You begin making material and finish selections in earnest.
                 </p>
-                <p>
+                <p class="t-body" style="margin-top:0.5rem;">
                   Design development is where the project graduates from &ldquo;idea&rdquo; to &ldquo;buildable thing.&rdquo; Major changes at this stage become expensive &mdash; which is why the earlier phases exist to lock in direction first.
                 </p>
 
-                <div class="deliverables-box">
+                <div class="deliverables-box" style="margin-top:1rem;">
                   <div class="deliverables-box__title">What you receive</div>
                   <ul class="deliverables-list">
                     <li>Fully dimensioned floor plans and elevations</li>
@@ -268,7 +1044,7 @@
 
               <div class="phase-card__right">
                 <div class="phase-media">
-                  <div class="placeholder-image">
+                  <div class="placeholder-image" style="width:100%;height:100%;">
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" opacity="0.5">
                       <rect x="4" y="4" width="36" height="36" rx="2" stroke="#A8956A" stroke-width="1.5"/>
                       <line x1="4" y1="16" x2="40" y2="16" stroke="#A8956A" stroke-width="0.75" opacity="0.35"/>
@@ -288,28 +1064,28 @@
                 </div>
               </div>
             </div>
-          
+          </article>
 
-          
-          
+          <!-- PHASE 04: Construction Documents -->
+          <article class="phase-card" id="phase-04" aria-labelledby="phase-04-title">
             <div class="phase-card__inner">
-              <div class="phase-card__num">04</div>
+              <div class="phase-card__num" aria-hidden="true">04</div>
 
               <div class="phase-card__left">
-                <p>Phase four</p>
-                <h3>Construction Documents</h3>
+                <p class="t-eyebrow">Phase four</p>
+                <h3 class="t-title" id="phase-04-title">Construction Documents</h3>
                 <div class="phase-card__badge-row">
                   <span class="badge badge--duration">8 &ndash; 14 weeks</span>
                   <span class="badge badge--stone">The full instruction set</span>
                 </div>
-                <p>
+                <p class="t-body">
                   Construction documents (CDs) are the complete, legally binding set of drawings and specifications that a contractor uses to build your project. They include every dimension, material, assembly detail, and code compliance note a builder needs.
                 </p>
-                <p>
+                <p class="t-body" style="margin-top:0.5rem;">
                   This is the most technically intensive phase and the one least visible to clients &mdash; but it determines the quality and accuracy of bids and ultimately of construction itself. Good CDs mean fewer change orders on site.
                 </p>
 
-                <div class="deliverables-box">
+                <div class="deliverables-box" style="margin-top:1rem;">
                   <div class="deliverables-box__title">What you receive</div>
                   <ul class="deliverables-list">
                     <li>Full architectural drawing set (stamped by licensed architect)</li>
@@ -323,7 +1099,7 @@
 
               <div class="phase-card__right">
                 <div class="phase-media">
-                  <div class="placeholder-image">
+                  <div class="placeholder-image" style="width:100%;height:100%;">
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" opacity="0.5">
                       <rect x="4" y="6" width="28" height="36" rx="2" stroke="#A8956A" stroke-width="1.5"/>
                       <line x1="10" y1="14" x2="26" y2="14" stroke="#A8956A" stroke-width="1" opacity="0.6"/>
@@ -343,28 +1119,28 @@
                 </div>
               </div>
             </div>
-          
+          </article>
 
-          
-          
+          <!-- PHASE 05: Permitting -->
+          <article class="phase-card" id="phase-05" aria-labelledby="phase-05-title">
             <div class="phase-card__inner">
-              <div class="phase-card__num">05</div>
+              <div class="phase-card__num" aria-hidden="true">05</div>
 
               <div class="phase-card__left">
-                <p>Phase five</p>
-                <h3>Permitting</h3>
+                <p class="t-eyebrow">Phase five</p>
+                <h3 class="t-title" id="phase-05-title">Permitting</h3>
                 <div class="phase-card__badge-row">
                   <span class="badge badge--duration">4 &ndash; 16 weeks</span>
                   <span class="badge badge--stone">Government review</span>
                 </div>
-                <p>
+                <p class="t-body">
                   We submit your construction documents to the local building authority for plan review. The timeline here is largely outside our control &mdash; it depends on the jurisdiction, the review queue, and whether the plan checker has comments. We manage all correspondence and respond to any corrections (plan check comments) on your behalf.
                 </p>
-                <p>
+                <p class="t-body" style="margin-top:0.5rem;">
                   This phase often runs in parallel with the final phases of CD production and contractor bidding, so calendar time is minimized.
                 </p>
 
-                <div class="deliverables-box">
+                <div class="deliverables-box" style="margin-top:1rem;">
                   <div class="deliverables-box__title">What you receive</div>
                   <ul class="deliverables-list">
                     <li>Permit application and all required submissions</li>
@@ -377,7 +1153,7 @@
 
               <div class="phase-card__right">
                 <div class="phase-media">
-                  <div class="placeholder-image">
+                  <div class="placeholder-image" style="width:100%;height:100%;">
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" opacity="0.5">
                       <rect x="6" y="4" width="32" height="36" rx="2" stroke="#A8956A" stroke-width="1.5"/>
                       <circle cx="22" cy="22" r="8" stroke="#A8956A" stroke-width="1.2"/>
@@ -394,28 +1170,28 @@
                 </div>
               </div>
             </div>
-          
+          </article>
 
-          
-          
+          <!-- PHASE 06: Construction Administration -->
+          <article class="phase-card" id="phase-06" aria-labelledby="phase-06-title">
             <div class="phase-card__inner">
-              <div class="phase-card__num">06</div>
+              <div class="phase-card__num" aria-hidden="true">06</div>
 
               <div class="phase-card__left">
-                <p>Phase six</p>
-                <h3>Construction Administration</h3>
+                <p class="t-eyebrow">Phase six</p>
+                <h3 class="t-title" id="phase-06-title">Construction Administration</h3>
                 <div class="phase-card__badge-row">
                   <span class="badge badge--duration">Duration of construction</span>
                   <span class="badge badge--stone">We stay on your side</span>
                 </div>
-                <p>
+                <p class="t-body">
                   Construction administration (CA) is often misunderstood. We do not manage the contractor &mdash; that is the general contractor&rsquo;s role. Our job is to be your independent eyes and ears: reviewing submittals, answering contractor RFIs, visiting the site at key milestones, and ensuring what gets built matches what was designed.
                 </p>
-                <p>
+                <p class="t-body" style="margin-top:0.5rem;">
                   We also review contractor payment applications and advise you on whether to approve them. This protects you from paying for work that has not been completed or done correctly.
                 </p>
 
-                <div class="deliverables-box">
+                <div class="deliverables-box" style="margin-top:1rem;">
                   <div class="deliverables-box__title">What you receive</div>
                   <ul class="deliverables-list">
                     <li>Site observation reports (after each architect visit)</li>
@@ -431,7 +1207,7 @@
 
               <div class="phase-card__right">
                 <div class="phase-media">
-                  <div class="placeholder-image">
+                  <div class="placeholder-image" style="width:100%;height:100%;">
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" opacity="0.5">
                       <path d="M6 36 L6 20 L22 8 L38 20 L38 36 Z" stroke="#A8956A" stroke-width="1.5" stroke-linejoin="round"/>
                       <rect x="16" y="26" width="12" height="10" stroke="#A8956A" stroke-width="1"/>
@@ -448,19 +1224,21 @@
                 </div>
               </div>
             </div>
-          
+          </article>
 
-        </div>
+        </div><!-- /.phases -->
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ==========================================================
+         SECTION 3: TOTAL TIMELINE BANNER
+    ========================================================== -->
+    <section class="timeline-banner" aria-labelledby="timeline-heading">
       <div class="timeline-banner__inner">
-        <div>
-          <p>At a glance</p>
-          <h2 id="typical-total-timeline">Typical total timeline</h2>
-          <p>
+        <div style="grid-column: 1 / -1; margin-bottom: 0.5rem;">
+          <p class="t-eyebrow" style="color: var(--color-stone-lt);">At a glance</p>
+          <h2 class="t-title" style="color: var(--color-bg); margin-top:0.5rem;" id="timeline-heading">Typical total timeline</h2>
+          <p style="font-size:0.8125rem; color:rgba(242,237,228,0.5); margin-top:0.5rem; max-width:460px; line-height:1.6;">
             Timelines vary by project complexity, site conditions, and permit jurisdiction. These ranges reflect our typical residential project experience.
           </p>
         </div>
@@ -488,32 +1266,34 @@
           <div class="timeline-stat__value">Varies</div>
           <div class="timeline-stat__label">Construction Admin</div>
         </div>
-        <div class="timeline-stat">
-          <div class="timeline-stat__value">12&ndash;24 mo</div>
+        <div class="timeline-stat" style="border-left: 2px solid rgba(255,255,255,0.2);">
+          <div class="timeline-stat__value" style="color: var(--color-stone-lt);">12&ndash;24 mo</div>
           <div class="timeline-stat__label">Total (design only)</div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ==========================================================
+         SECTION 4: CLIENT EXPERIENCE / PROOF
+    ========================================================== -->
+    <section class="section" aria-labelledby="proof-heading">
       <div class="container">
         <div class="section-header">
-          <p>First-hand</p>
-          <h2 id="clients-who-have-beenwhere-you-are-now">Clients who have beenwhere you are now.</h2>
+          <p class="t-eyebrow">First-hand</p>
+          <h2 class="t-display" id="proof-heading">Clients who have been<br>where you are now.</h2>
           <div class="section-header__rule"></div>
         </div>
 
         <div class="proof-grid">
           <div class="proof-card">
-            <div class="stars">
+            <div class="stars" aria-label="5 stars">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
             </div>
-            <p>"We had no idea what we were getting into when we started. Cloudstone walked us through every phase before we signed anything. By the time groundbreaking arrived, nothing surprised us."</p>
+            <p class="proof-card__quote">"We had no idea what we were getting into when we started. Cloudstone walked us through every phase before we signed anything. By the time groundbreaking arrived, nothing surprised us."</p>
             <div class="proof-card__meta">
               <div class="proof-card__name">Sarah &amp; Tom R.</div>
               <div class="proof-card__detail">Custom home, 2,800 sq ft &mdash; First-time clients</div>
@@ -521,14 +1301,14 @@
           </div>
 
           <div class="proof-card">
-            <div class="stars">
+            <div class="stars" aria-label="5 stars">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
             </div>
-            <p>"The deliverables breakdown on this page is exactly right. We received everything they listed. The &lsquo;client role&rsquo; sections especially helped me understand I had a real job to do in this process, not just write checks."</p>
+            <p class="proof-card__quote">"The deliverables breakdown on this page is exactly right. We received everything they listed. The &lsquo;client role&rsquo; sections especially helped me understand I had a real job to do in this process, not just write checks."</p>
             <div class="proof-card__meta">
               <div class="proof-card__name">Marcus L.</div>
               <div class="proof-card__detail">Addition &amp; renovation &mdash; Repeat client</div>
@@ -536,14 +1316,14 @@
           </div>
 
           <div class="proof-card">
-            <div class="stars">
+            <div class="stars" aria-label="5 stars">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.81 3.91 10.51l.59-3.44L2 4.635l3.455-.505L7 1z"/></svg>
             </div>
-            <p>"Permitting took longer than we hoped, but Cloudstone managed every single comment response. I never had to call the building department once. That alone was worth the fee."</p>
+            <p class="proof-card__quote">"Permitting took longer than we hoped, but Cloudstone managed every single comment response. I never had to call the building department once. That alone was worth the fee."</p>
             <div class="proof-card__meta">
               <div class="proof-card__name">Jennifer K.</div>
               <div class="proof-card__detail">New construction, hillside lot &mdash; First-time client</div>
@@ -551,20 +1331,22 @@
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ==========================================================
+         SECTION 5: FAQ ACCORDION
+    ========================================================== -->
+    <section class="section section--alt" aria-labelledby="faq-heading">
       <div class="container">
         <div class="section-header">
-          <p>Common questions</p>
-          <h2 id="what-first-time-clientsalways-ask-us">What first-time clientsalways ask us.</h2>
+          <p class="t-eyebrow">Common questions</p>
+          <h2 class="t-display" id="faq-heading">What first-time clients<br>always ask us.</h2>
           <div class="section-header__rule"></div>
         </div>
 
-        <div class="faq-list">
+        <div class="faq-list" style="max-width: 760px;" role="list">
 
-          <details class="faq-item">
+          <details class="faq-item" role="listitem">
             <summary class="faq-item__trigger">
               How much does an architect cost, and when do I pay?
               <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -576,7 +1358,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" role="listitem">
             <summary class="faq-item__trigger">
               Can I skip phases to save money?
               <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -588,7 +1370,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" role="listitem">
             <summary class="faq-item__trigger">
               Do you recommend contractors, or do we find our own?
               <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -600,7 +1382,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" role="listitem">
             <summary class="faq-item__trigger">
               What if I change my mind mid-process?
               <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -612,7 +1394,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" role="listitem">
             <summary class="faq-item__trigger">
               How involved do I need to be during construction?
               <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -624,7 +1406,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" role="listitem">
             <summary class="faq-item__trigger">
               What is a Certificate of Occupancy?
               <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -638,3 +1420,35 @@
 
         </div>
       </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION 6 (SOFT CTA): Start the conversation
+    ========================================================== -->
+    <section class="cta-section" id="start-conversation" aria-labelledby="cta-heading">
+      <div class="cta-section__inner">
+        <!-- Decorative icon -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" stroke="#A8956A" stroke-width="1"/>
+          <path d="M14 24 C14 18.5 18.5 14 24 14 C29.5 14 34 18.5 34 24 C34 29.5 29.5 34 24 34 C21.5 34 19.2 33.1 17.4 31.6 L14 34 L14.8 29.5 C14.3 27.8 14 26 14 24 Z" stroke="#A8956A" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="20" cy="24" r="1.2" fill="#A8956A"/>
+          <circle cx="24" cy="24" r="1.2" fill="#A8956A"/>
+          <circle cx="28" cy="24" r="1.2" fill="#A8956A"/>
+        </svg>
+
+        <p class="t-eyebrow" style="color: var(--color-stone);">Ready when you are</p>
+        <h2 class="t-display" id="cta-heading" style="font-size: clamp(1.8rem, 4vw, 2.75rem);">
+          Have more questions?<br>Let&rsquo;s talk through them.
+        </h2>
+        <p class="t-body" style="max-width: 480px; text-align: center;">
+          A 30-minute introductory conversation costs nothing and commits you to nothing. We will listen to your project goals and tell you honestly whether we are the right fit.
+        </p>
+        <a href="mailto:hello@cloudstonedesigns.com" class="btn btn--primary">
+          Schedule a free conversation
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <p class="cta-note">Or call us at (555) 000-0000 &mdash; we answer.</p>
+      </div>
+    </section></div>

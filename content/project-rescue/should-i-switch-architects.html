@@ -2,18 +2,527 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: 271487de-b169-468a-ac77-1477737b186f
   main_keyword: should I fire my architect
-  adopted_at: 2026-05-26T19:23:29.192Z
+  adopted_at: 2026-05-26T21:20:13.763Z
 -->
-<div class="container">
+<style data-cjgeo-scoped="article-should-i-switch-architects">.article-should-i-switch-architects /* ─── Reset & Base ─────────────────────────────────── */
+    * {  box-sizing: border-box; margin: 0; padding: 0;  }
+/* ─── Design Tokens ────────────────────────────────── */
+    .article-should-i-switch-architects { 
+      --color-stone:     #F5F1EB;   /* warm cream background */
+      --color-parchment: #EDE8DF;   /* slightly darker section bg */
+      --color-ink:       #1C1917;   /* near-black text */
+      --color-slate:     #57534E;   /* secondary text / captions */
+      --color-rule:      #D6CFC4;   /* dividers */
+      --color-accent:    #78716C;   /* muted warm gray accent */
+      --color-highlight: #292524;   /* pull-quote bg, dark strip */
+
+      --font-heading: Georgia, 'Times New Roman', serif;
+      --font-body:    'Helvetica Neue', Arial, sans-serif;
+
+      --max-prose: 720px;
+      --max-wide:  1100px;
+
+      --space-xs:  0.5rem;
+      --space-sm:  1rem;
+      --space-md:  2rem;
+      --space-lg:  4rem;
+      --space-xl:  6rem;
+     }
+/* ─── Typography ───────────────────────────────────── */
+    .article-should-i-switch-architects { 
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: var(--color-ink);
+      background-color: var(--color-stone);
+     }
+.article-should-i-switch-architects h1, .article-should-i-switch-architects h2, .article-should-i-switch-architects h3, .article-should-i-switch-architects h4 { 
+      font-family: var(--font-heading);
+      font-weight: normal;
+      line-height: 1.2;
+      color: var(--color-ink);
+     }
+.article-should-i-switch-architects h1 {  font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.1;  }
+.article-should-i-switch-architects h2 {  font-size: clamp(1.6rem, 3.5vw, 2.4rem);  }
+.article-should-i-switch-architects h3 {  font-size: clamp(1.1rem, 2vw, 1.4rem);  }
+.article-should-i-switch-architects p {  margin-bottom: 1.25rem;  }
+.article-should-i-switch-architects p:last-child {  margin-bottom: 0;  }
+.article-should-i-switch-architects a {  color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px;  }
+.article-should-i-switch-architects a:hover {  color: var(--color-slate);  }
+.article-should-i-switch-architects strong {  font-weight: 600;  }
+.article-should-i-switch-architects /* ─── Layout Utilities ─────────────────────────────── */
+    .container { 
+      width: 100%;
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+     }
+.article-should-i-switch-architects .prose { 
+      max-width: var(--max-prose);
+      margin-left: auto;
+      margin-right: auto;
+     }
+.article-should-i-switch-architects .section {  padding: var(--space-lg) 0;  }
+.article-should-i-switch-architects .section--alt {  background-color: var(--color-parchment);  }
+.article-should-i-switch-architects .section--dark { 
+      background-color: var(--color-highlight);
+      color: #F5F1EB;
+     }
+.article-should-i-switch-architects .rule { 
+      border: none;
+      border-top: 1px solid var(--color-rule);
+      margin: var(--space-md) 0;
+     }
+.article-should-i-switch-architects /* ─── Navigation ───────────────────────────────────── */
+    .nav { 
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--color-stone);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-should-i-switch-architects .nav__inner { 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 1rem var(--space-md);
+     }
+.article-should-i-switch-architects .nav__brand { 
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      color: var(--color-ink);
+     }
+.article-should-i-switch-architects .nav__brand span { 
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      margin-top: 0.1rem;
+     }
+.article-should-i-switch-architects .nav__cta { 
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--color-ink);
+      border: 1px solid var(--color-accent);
+      padding: 0.45rem 1.1rem;
+      transition: background 0.2s, color 0.2s;
+     }
+.article-should-i-switch-architects .nav__cta:hover { 
+      background-color: var(--color-ink);
+      color: var(--color-stone);
+     }
+.article-should-i-switch-architects /* ─── Hero ─────────────────────────────────────────── */
+    .hero { 
+      padding: var(--space-xl) 0 var(--space-lg);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-should-i-switch-architects .hero__eyebrow { 
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      margin-bottom: var(--space-md);
+     }
+.article-should-i-switch-architects .hero__title { 
+      margin-bottom: var(--space-md);
+     }
+.article-should-i-switch-architects .hero__lead { 
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--color-slate);
+      max-width: 600px;
+      margin-bottom: var(--space-lg);
+     }
+.article-should-i-switch-architects .hero__meta { 
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      letter-spacing: 0.04em;
+     }
+.article-should-i-switch-architects .hero__meta-dot { 
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: var(--color-rule);
+      display: inline-block;
+     }
+.article-should-i-switch-architects /* ─── Image Placeholder ─────────────────────────────── */
+    .img-placeholder { 
+      width: 100%;
+      background-color: var(--color-parchment);
+      border: 1px solid var(--color-rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--color-accent);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+     }
+.article-should-i-switch-architects .img-placeholder svg {  opacity: 0.4;  }
+.article-should-i-switch-architects .img-placeholder--hero {  height: 420px; margin-top: var(--space-lg);  }
+.article-should-i-switch-architects .img-placeholder--md {  height: 280px;  }
+.article-should-i-switch-architects .img-placeholder--sm {  height: 180px;  }
+.article-should-i-switch-architects /* ─── Pull Quote ────────────────────────────────────── */
+    .pullquote { 
+      border-left: 3px solid var(--color-accent);
+      padding: var(--space-sm) var(--space-md);
+      margin: var(--space-md) 0;
+     }
+.article-should-i-switch-architects .pullquote__text { 
+      font-family: var(--font-heading);
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      line-height: 1.4;
+      color: var(--color-ink);
+      font-style: italic;
+      margin-bottom: 0;
+     }
+.article-should-i-switch-architects .pullquote__text--light { 
+      color: var(--color-stone);
+     }
+.article-should-i-switch-architects /* ─── Diagnostic Checklist ──────────────────────────── */
+    .checklist { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: var(--space-md) 0;
+     }
+.article-should-i-switch-architects .checklist__item { 
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+     }
+.article-should-i-switch-architects .checklist__icon { 
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+     }
+.article-should-i-switch-architects .checklist__icon--yes {  color: #4A7C6F;  }
+.article-should-i-switch-architects .checklist__icon--no {  color: #9B4B3B;  }
+.article-should-i-switch-architects /* ─── Cost Table ────────────────────────────────────── */
+    .cost-grid { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background-color: var(--color-rule);
+      border: 1px solid var(--color-rule);
+      margin: var(--space-md) 0;
+     }
+.article-should-i-switch-architects .cost-grid__cell { 
+      background-color: var(--color-stone);
+      padding: 1.25rem 1.5rem;
+     }
+.article-should-i-switch-architects .cost-grid__cell--header { 
+      background-color: var(--color-parchment);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      font-family: var(--font-body);
+      font-weight: 600;
+     }
+.article-should-i-switch-architects .cost-grid__label { 
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: 0.35rem;
+     }
+.article-should-i-switch-architects .cost-grid__desc { 
+      font-size: 0.85rem;
+      color: var(--color-slate);
+      line-height: 1.5;
+      margin: 0;
+     }
+@media (max-width: 580px) { .article-should-i-switch-architects .cost-grid {  grid-template-columns: 1fr;  } }
+.article-should-i-switch-architects /* ─── Decision Grid ─────────────────────────────────── */
+    .decision-grid { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin: var(--space-md) 0;
+     }
+.article-should-i-switch-architects .decision-card { 
+      padding: var(--space-md);
+      border: 1px solid var(--color-rule);
+     }
+.article-should-i-switch-architects .decision-card--stay {  border-top: 3px solid #4A7C6F;  }
+.article-should-i-switch-architects .decision-card--leave {  border-top: 3px solid #9B4B3B;  }
+.article-should-i-switch-architects .decision-card__label { 
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-family: var(--font-body);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+     }
+.article-should-i-switch-architects .decision-card--stay  .decision-card__label {  color: #4A7C6F;  }
+.article-should-i-switch-architects .decision-card--leave .decision-card__label {  color: #9B4B3B;  }
+.article-should-i-switch-architects .decision-card ul { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--color-slate);
+      padding: 0;
+     }
+.article-should-i-switch-architects .decision-card li::before { 
+      content: "— ";
+      color: var(--color-accent);
+     }
+@media (max-width: 580px) { .article-should-i-switch-architects .decision-grid {  grid-template-columns: 1fr;  } }
+.article-should-i-switch-architects /* ─── Steps / Timeline ──────────────────────────────── */
+    .steps { 
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: var(--space-md) 0;
+      counter-reset: step-counter;
+     }
+.article-should-i-switch-architects .step { 
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: var(--space-sm);
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-rule);
+      counter-increment: step-counter;
+     }
+.article-should-i-switch-architects .step:last-child {  border-bottom: none;  }
+.article-should-i-switch-architects .step__number { 
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--color-rule);
+      line-height: 1;
+      padding-top: 0.15rem;
+     }
+.article-should-i-switch-architects .step__number::before {  content: counter(step-counter, decimal-leading-zero);  }
+.article-should-i-switch-architects .step__body h3 {  margin-bottom: 0.35rem; font-size: 1.05rem;  }
+.article-should-i-switch-architects .step__body p {  font-size: 0.92rem; color: var(--color-slate); margin: 0;  }
+.article-should-i-switch-architects /* ─── Warning Box ───────────────────────────────────── */
+    .warning-box { 
+      background-color: #FDF8F3;
+      border: 1px solid #D4B896;
+      border-left: 4px solid #C0885C;
+      padding: var(--space-md);
+      margin: var(--space-md) 0;
+     }
+.article-should-i-switch-architects .warning-box__label { 
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #9B6B3A;
+      margin-bottom: 0.5rem;
+     }
+.article-should-i-switch-architects .warning-box p {  font-size: 0.93rem; color: var(--color-slate); margin: 0;  }
+.article-should-i-switch-architects /* ─── CTA Block ─────────────────────────────────────── */
+    .cta-block { 
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      max-width: 600px;
+      margin: 0 auto;
+     }
+.article-should-i-switch-architects .cta-block__eyebrow { 
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+     }
+.article-should-i-switch-architects .cta-block h2 { 
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      margin-bottom: var(--space-sm);
+     }
+.article-should-i-switch-architects .cta-block p {  color: var(--color-slate); margin-bottom: var(--space-md);  }
+.article-should-i-switch-architects .btn { 
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.85rem 2.2rem;
+      border: 1px solid var(--color-ink);
+      color: var(--color-ink);
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+     }
+.article-should-i-switch-architects .btn:hover { 
+      background-color: var(--color-ink);
+      color: var(--color-stone);
+     }
+.article-should-i-switch-architects .btn--ghost { 
+      color: var(--color-slate);
+      border-color: var(--color-accent);
+      font-size: 0.78rem;
+     }
+.article-should-i-switch-architects /* ─── Footer ────────────────────────────────────────── */
+    .footer { 
+      border-top: 1px solid var(--color-rule);
+      padding: var(--space-md) 0;
+      background-color: var(--color-parchment);
+     }
+.article-should-i-switch-architects .footer__inner { 
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+     }
+.article-should-i-switch-architects .footer__brand { 
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--color-ink);
+     }
+.article-should-i-switch-architects .footer__links { 
+      display: flex;
+      gap: var(--space-md);
+      list-style: none;
+     }
+.article-should-i-switch-architects .footer__links a { 
+      font-size: 0.8rem;
+      color: var(--color-slate);
+      text-decoration: none;
+     }
+.article-should-i-switch-architects .footer__links a:hover {  color: var(--color-ink);  }
+.article-should-i-switch-architects .footer__copy { 
+      font-size: 0.75rem;
+      color: var(--color-accent);
+      width: 100%;
+     }
+.article-should-i-switch-architects /* ─── Section Labels ────────────────────────────────── */
+    .section-label { 
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-family: var(--font-body);
+      margin-bottom: 1rem;
+      display: block;
+     }
+.article-should-i-switch-architects /* ─── Inline Icon Helper ─────────────────────────────── */
+    .icon-check {  display: inline-block; width: 18px; height: 18px;  }
+.article-should-i-switch-architects .icon-x {  display: inline-block; width: 18px; height: 18px;  }
+.article-should-i-switch-architects /* ─── Table of Contents ──────────────────────────────── */
+    .toc { 
+      border: 1px solid var(--color-rule);
+      padding: var(--space-md);
+      margin: var(--space-lg) 0;
+     }
+.article-should-i-switch-architects .toc__title { 
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      margin-bottom: var(--space-sm);
+     }
+.article-should-i-switch-architects .toc ol { 
+      list-style: none;
+      counter-reset: toc-counter;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0;
+     }
+.article-should-i-switch-architects .toc li { 
+      counter-increment: toc-counter;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+     }
+.article-should-i-switch-architects .toc li::before { 
+      content: counter(toc-counter, decimal-leading-zero);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      color: var(--color-accent);
+      letter-spacing: 0.05em;
+     }
+.article-should-i-switch-architects .toc a { 
+      text-decoration: none;
+      color: var(--color-ink);
+     }
+.article-should-i-switch-architects .toc a:hover {  text-decoration: underline;  }
+.article-should-i-switch-architects /* ─── Responsive ────────────────────────────────────── */
+    @media (max-width: 768px) { 
+      :host {
+        --space-lg: 3rem;
+        --space-xl: 4rem;
+      }
+      .nav__cta { display: none; }
+     }</style>
+<div class="article-should-i-switch-architects">
+<section class="hero section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="prose">
+          <p class="hero__eyebrow">A guide for clients at a crossroads &mdash; Scenario 2, Stage 4</p>
+          <h1 class="hero__title" id="hero-title">Should You Switch Architects? An Honest Look at What It Actually Costs.</h1>
+          <p class="hero__lead">You&rsquo;ve been patient. The project hasn&rsquo;t improved. Now you&rsquo;re asking a question most clients are afraid to ask out loud.</p>
+          <div class="hero__meta">
+            <span>Cloudstone Designs</span>
+            <span class="hero__meta-dot" aria-hidden="true"></span>
+            <span>Client Advisory Guide</span>
+            <span class="hero__meta-dot" aria-hidden="true"></span>
+            <span>15 min read</span>
+          </div>
+
+          <!-- Table of Contents -->
+          <nav class="toc" aria-label="Article sections">
+            <p class="toc__title">In this guide</p>
+            <ol>
+              <li><a href="#diagnosis">Is the problem fixable?</a></li>
+              <li><a href="#structural">Structural vs. situational breakdown</a></li>
+              <li><a href="#real-costs">The real costs of switching</a></li>
+              <li><a href="#legal">Protecting yourself before you leave</a></li>
+              <li><a href="#transition">What a good transition looks like</a></li>
+              <li><a href="#clear-cases">When staying is clearly the wrong choice</a></li>
+              <li><a href="#contact">A conversation, not a pitch</a></li>
+            </ol>
+          </nav>
+        </div>
+
+        <!-- Hero Visual Placeholder -->
+        <div class="img-placeholder img-placeholder--hero" role="img" aria-label="[Visual placeholder: architectural drawing table with in-progress plans, diffuse natural light — conveys deliberate decision-making, not urgency]">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+          <span>Hero image placeholder &mdash; architectural workspace, considered atmosphere</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Section 2: Is the Problem Fixable? ──────────── -->
+    <section class="section" id="diagnosis" aria-labelledby="diagnosis-title">
+      <div class="container">
         <div class="prose">
           <span class="section-label">01 &mdash; Diagnosis</span>
-          <h2 id="before-you-decide-anything-is-this-problem-fixable">Before You Decide Anything: Is This Problem Fixable?</h2>
-          <hr>
+          <h2 id="diagnosis-title">Before You Decide Anything: Is This Problem Fixable?</h2>
+          <hr class="rule" />
           <p>Most clients who are thinking about switching architects have been thinking about it for a while. They&rsquo;ve raised concerns, seen temporary improvement, and then watched the situation drift back. By the time the question becomes urgent, the emotional cost of staying and the practical cost of leaving feel roughly equivalent — and neither path feels good.</p>
           <p>That&rsquo;s exactly where clear thinking matters most, and where it&rsquo;s hardest to find. This guide won&rsquo;t tell you to switch. It will help you think through whether you should.</p>
 
-          <div class="pullquote">
-            <p>&ldquo;The question isn&rsquo;t whether your current situation is frustrating. It&rsquo;s whether the source of that frustration is something the relationship can actually fix.&rdquo;</p>
+          <div class="pullquote" role="note">
+            <p class="pullquote__text">&ldquo;The question isn&rsquo;t whether your current situation is frustrating. It&rsquo;s whether the source of that frustration is something the relationship can actually fix.&rdquo;</p>
           </div>
 
           <p>Start by separating the problem from the person. Some of the most common complaints — slow responses, design revisions that miss the mark, contractor confusion — can stem from either a fixable process breakdown or an embedded incompatibility in how you and your architect work. The diagnosis determines everything.</p>
@@ -21,39 +530,39 @@
           <h3>Run this diagnostic first</h3>
           <p>For each statement, be honest about whether it describes your situation:</p>
 
-          <ul class="checklist">
+          <ul class="checklist" role="list">
             <li class="checklist__item">
-              <span class="checklist__icon checklist__icon--yes icon-check">
+              <span class="checklist__icon checklist__icon--yes icon-check" aria-hidden="true">
                 <svg viewBox="0 0 18 18" fill="none" stroke="#4A7C6F" stroke-width="2"><circle cx="9" cy="9" r="8"/><path d="M5.5 9l2.5 2.5 4.5-4.5"/></svg>
               </span>
               <span>You have had a direct, explicit conversation about the problem — not just hints or email threads — and the architect acknowledged it.</span>
             </li>
             <li class="checklist__item">
-              <span class="checklist__icon checklist__icon--yes icon-check">
+              <span class="checklist__icon checklist__icon--yes icon-check" aria-hidden="true">
                 <svg viewBox="0 0 18 18" fill="none" stroke="#4A7C6F" stroke-width="2"><circle cx="9" cy="9" r="8"/><path d="M5.5 9l2.5 2.5 4.5-4.5"/></svg>
               </span>
               <span>There was a period &mdash; at project start or at another point &mdash; when the relationship worked and you felt confident in the process.</span>
             </li>
             <li class="checklist__item">
-              <span class="checklist__icon checklist__icon--yes icon-check">
+              <span class="checklist__icon checklist__icon--yes icon-check" aria-hidden="true">
                 <svg viewBox="0 0 18 18" fill="none" stroke="#4A7C6F" stroke-width="2"><circle cx="9" cy="9" r="8"/><path d="M5.5 9l2.5 2.5 4.5-4.5"/></svg>
               </span>
               <span>The problems are specific and describable (missed deadlines, scope not reflected in drawings) rather than a general feeling of unease.</span>
             </li>
             <li class="checklist__item">
-              <span class="checklist__icon checklist__icon--no icon-x">
+              <span class="checklist__icon checklist__icon--no icon-x" aria-hidden="true">
                 <svg viewBox="0 0 18 18" fill="none" stroke="#9B4B3B" stroke-width="2"><circle cx="9" cy="9" r="8"/><path d="M6 6l6 6M12 6l-6 6"/></svg>
               </span>
               <span>The problems have persisted through multiple billing cycles and multiple promises to improve, without meaningful change.</span>
             </li>
             <li class="checklist__item">
-              <span class="checklist__icon checklist__icon--no icon-x">
+              <span class="checklist__icon checklist__icon--no icon-x" aria-hidden="true">
                 <svg viewBox="0 0 18 18" fill="none" stroke="#9B4B3B" stroke-width="2"><circle cx="9" cy="9" r="8"/><path d="M6 6l6 6M12 6l-6 6"/></svg>
               </span>
               <span>You find yourself preparing for conversations with your architect the way you might prepare for a difficult negotiation.</span>
             </li>
             <li class="checklist__item">
-              <span class="checklist__icon checklist__icon--no icon-x">
+              <span class="checklist__icon checklist__icon--no icon-x" aria-hidden="true">
                 <svg viewBox="0 0 18 18" fill="none" stroke="#9B4B3B" stroke-width="2"><circle cx="9" cy="9" r="8"/><path d="M6 6l6 6M12 6l-6 6"/></svg>
               </span>
               <span>The contractor or other consultants have started coming to you directly because they can&rsquo;t get reliable answers from the design team.</span>
@@ -63,19 +572,19 @@
           <p>Green items are signals that something fixable may have broken down. Red items are signals that the problem may be structural. If your list is mostly red, keep reading.</p>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ─── Section 3: Structural vs. Situational ────────── -->
+    <section class="section section--alt" id="structural" aria-labelledby="structural-title">
       <div class="container">
         <div class="prose">
           <span class="section-label">02 &mdash; The Real Question</span>
-          <h2 id="situational-breakdown-vs-structural-mismatch">Situational Breakdown vs. Structural Mismatch</h2>
-          <hr>
+          <h2 id="structural-title">Situational Breakdown vs. Structural Mismatch</h2>
+          <hr class="rule" />
           <p>Not all bad project experiences have the same cause, and the cause determines whether staying — and resetting — is realistic.</p>
 
-          
-          <div class="img-placeholder img-placeholder--md">
+          <!-- Visual Placeholder -->
+          <div class="img-placeholder img-placeholder--md" role="img" aria-label="[Diagram placeholder: two-column comparison — left column: situational breakdown (fixable, communication process, staffing change), right column: structural mismatch (values, scope of service, design philosophy, accountability culture). Simple typographic layout.]">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
             <span>Diagram placeholder &mdash; situational vs. structural breakdown comparison</span>
           </div>
@@ -84,107 +593,107 @@
 
           <p><strong>Structural mismatches</strong> are different. They usually involve a fundamental disconnect in values, working style, or what each party expects from the other. Signs include: your architect consistently defends decisions rather than listening, the design keeps drifting away from what you actually asked for, or there is a persistent gap between what is promised and what is delivered &mdash; regardless of who on their team you deal with.</p>
 
-          <div class="warning-box">
-            <p>Worth noting</p>
+          <div class="warning-box" role="note">
+            <p class="warning-box__label">Worth noting</p>
             <p>A structural mismatch rarely improves after one reset conversation. If you have already had that conversation and are reading this guide, you are likely facing a structural problem &mdash; not a situational one.</p>
           </div>
 
           <p>One honest way to test this: ask yourself whether you trust your architect&rsquo;s judgment on things you can&rsquo;t verify yourself &mdash; structural decisions, code compliance, contractor coordination. If the answer is no, that is a more serious problem than any individual complaint.</p>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ─── Section 4: Real Costs of Switching ───────────── -->
+    <section class="section" id="real-costs" aria-labelledby="costs-title">
       <div class="container">
         <div class="prose">
           <span class="section-label">03 &mdash; Full Cost Accounting</span>
-          <h2 id="the-real-costs-of-switching-don-rsquo-t-minimize-them">The Real Costs of Switching. Don&rsquo;t Minimize Them.</h2>
-          <hr>
+          <h2 id="costs-title">The Real Costs of Switching. Don&rsquo;t Minimize Them.</h2>
+          <hr class="rule" />
           <p>We want to be direct: switching architects mid-project is genuinely disruptive. Any firm that tells you otherwise is overselling the transition. These are the costs you should plan for before you decide anything.</p>
         </div>
 
-        <div class="cost-grid">
-          <div class="cost-grid__cell cost-grid__cell--header">Cost Category</div>
-          <div class="cost-grid__cell cost-grid__cell--header">What It Means in Practice</div>
+        <div class="cost-grid" role="table" aria-label="Switching costs breakdown">
+          <div class="cost-grid__cell cost-grid__cell--header" role="columnheader">Cost Category</div>
+          <div class="cost-grid__cell cost-grid__cell--header" role="columnheader">What It Means in Practice</div>
 
-          <div class="cost-grid__cell">
-            <p>Documentation Handoff</p>
-            <p>Your incoming architect will need to review everything produced so far: drawings, specifications, permit applications, consultant coordination, emails, meeting notes. Gaps in documentation are common and require investigative time to resolve.</p>
+          <div class="cost-grid__cell" role="cell">
+            <p class="cost-grid__label">Documentation Handoff</p>
+            <p class="cost-grid__desc">Your incoming architect will need to review everything produced so far: drawings, specifications, permit applications, consultant coordination, emails, meeting notes. Gaps in documentation are common and require investigative time to resolve.</p>
           </div>
-          <div class="cost-grid__cell">
-            <p>Fee Duplication</p>
-            <p>Expect to pay for work twice in some areas. A new architect cannot simply pick up where another left off without re-examining assumptions. Schematic-level work may need to be redone even if the drawings look complete.</p>
-          </div>
-
-          <div class="cost-grid__cell">
-            <p>Schedule Impact</p>
-            <p>A transition typically adds 6&ndash;14 weeks to a project, depending on phase and complexity. If you are pre-permit, the impact is usually more manageable. Post-permit transitions are significantly more complicated.</p>
-          </div>
-          <div class="cost-grid__cell">
-            <p>Contractor Confusion</p>
-            <p>Contractors working from existing drawings will have questions about intent. A new architect inheriting drawings they didn&rsquo;t produce will need time to understand the design logic before they can answer those questions reliably.</p>
+          <div class="cost-grid__cell" role="cell">
+            <p class="cost-grid__label">Fee Duplication</p>
+            <p class="cost-grid__desc">Expect to pay for work twice in some areas. A new architect cannot simply pick up where another left off without re-examining assumptions. Schematic-level work may need to be redone even if the drawings look complete.</p>
           </div>
 
-          <div class="cost-grid__cell">
-            <p>Consultant Relationships</p>
-            <p>Structural, mechanical, and civil engineers often have working relationships with the original architect. Re-coordinating these relationships, or bringing in new consultants, adds overhead and potential coordination gaps.</p>
+          <div class="cost-grid__cell" role="cell">
+            <p class="cost-grid__label">Schedule Impact</p>
+            <p class="cost-grid__desc">A transition typically adds 6&ndash;14 weeks to a project, depending on phase and complexity. If you are pre-permit, the impact is usually more manageable. Post-permit transitions are significantly more complicated.</p>
           </div>
-          <div class="cost-grid__cell">
-            <p>Psychological Cost</p>
-            <p>Starting over with a new relationship after a difficult one takes energy. You will need to rebuild trust, re-explain your priorities, and re-establish communication norms. This is real work, even when it goes well.</p>
+          <div class="cost-grid__cell" role="cell">
+            <p class="cost-grid__label">Contractor Confusion</p>
+            <p class="cost-grid__desc">Contractors working from existing drawings will have questions about intent. A new architect inheriting drawings they didn&rsquo;t produce will need time to understand the design logic before they can answer those questions reliably.</p>
+          </div>
+
+          <div class="cost-grid__cell" role="cell">
+            <p class="cost-grid__label">Consultant Relationships</p>
+            <p class="cost-grid__desc">Structural, mechanical, and civil engineers often have working relationships with the original architect. Re-coordinating these relationships, or bringing in new consultants, adds overhead and potential coordination gaps.</p>
+          </div>
+          <div class="cost-grid__cell" role="cell">
+            <p class="cost-grid__label">Psychological Cost</p>
+            <p class="cost-grid__desc">Starting over with a new relationship after a difficult one takes energy. You will need to rebuild trust, re-explain your priorities, and re-establish communication norms. This is real work, even when it goes well.</p>
           </div>
         </div>
 
         <div class="prose">
-          <div class="pullquote">
-            <p>&ldquo;The disruption of switching is real. The question is whether it is greater than the cost of staying in a relationship that is not working.&rdquo;</p>
+          <div class="pullquote" role="note">
+            <p class="pullquote__text">&ldquo;The disruption of switching is real. The question is whether it is greater than the cost of staying in a relationship that is not working.&rdquo;</p>
           </div>
           <p>Weigh these costs against what continuing the current relationship is costing you: in delays already incurred, in rework already paid for, and in the compounding risk of a project that is not being properly managed. Sometimes the math favors switching. But do the math honestly.</p>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ─── Section 5: Legal Protection ──────────────────── -->
+    <section class="section section--alt" id="legal" aria-labelledby="legal-title">
       <div class="container">
         <div class="prose">
           <span class="section-label">04 &mdash; Before You Move</span>
-          <h2 id="how-to-protect-yourself-legally-before-you-leave">How to Protect Yourself Legally Before You Leave</h2>
-          <hr>
+          <h2 id="legal-title">How to Protect Yourself Legally Before You Leave</h2>
+          <hr class="rule" />
           <p>If you have decided to make a change, the steps you take before giving notice matter significantly. Acting carelessly in this phase can limit your rights, complicate the transition, and create disputes that follow the project for years.</p>
 
-          <div class="steps">
-            <div class="step">
-              <div class="step__number"></div>
+          <div class="steps" role="list">
+            <div class="step" role="listitem">
+              <div class="step__number" aria-hidden="true"></div>
               <div class="step__body">
                 <h3>Read your contract before you do anything else</h3>
                 <p>Most architectural agreements &mdash; especially AIA contracts &mdash; contain specific provisions about termination for convenience, required notice periods (typically 7&ndash;14 days written notice), and what happens to documents, fees, and intellectual property upon termination. Know what you agreed to before you act on it.</p>
               </div>
             </div>
-            <div class="step">
-              <div class="step__number"></div>
+            <div class="step" role="listitem">
+              <div class="step__number" aria-hidden="true"></div>
               <div class="step__body">
                 <h3>Understand document ownership and licensing</h3>
                 <p>In most standard contracts, the architect retains ownership of the drawings as instruments of professional service. You may have a limited license to use them to complete the project &mdash; but only if you are not in default on fees. Unpaid invoices can complicate your access to your own project documents. Settle outstanding fees, or negotiate their settlement, before terminating.</p>
               </div>
             </div>
-            <div class="step">
-              <div class="step__number"></div>
+            <div class="step" role="listitem">
+              <div class="step__number" aria-hidden="true"></div>
               <div class="step__body">
                 <h3>Gather and secure your records independently</h3>
                 <p>Before giving any notice, gather your own copies of all project correspondence, meeting minutes, permit applications, drawings you have received, and any approvals. Once a relationship turns adversarial, access to records can become contested. Do not rely on the architect&rsquo;s file as your primary record.</p>
               </div>
             </div>
-            <div class="step">
-              <div class="step__number"></div>
+            <div class="step" role="listitem">
+              <div class="step__number" aria-hidden="true"></div>
               <div class="step__body">
                 <h3>Consider a brief legal consultation</h3>
                 <p>If the project involves significant fees, disputes about work quality, or permits that are already issued, a single hour with a construction attorney familiar with architectural contracts can clarify your position and prevent costly mistakes. This is not about litigation &mdash; it is about knowing your rights before you negotiate.</p>
               </div>
             </div>
-            <div class="step">
-              <div class="step__number"></div>
+            <div class="step" role="listitem">
+              <div class="step__number" aria-hidden="true"></div>
               <div class="step__body">
                 <h3>Give formal written notice</h3>
                 <p>Termination should be in writing, should reference the relevant contract clause, and should state the effective date clearly. Do not terminate verbally or by implication. A clean, professional notice protects you legally and sets the right tone for whatever negotiations follow.</p>
@@ -192,54 +701,54 @@
             </div>
           </div>
 
-          <div class="warning-box">
-            <p>Important</p>
+          <div class="warning-box" role="note">
+            <p class="warning-box__label">Important</p>
             <p>We are an architecture firm, not a legal practice. The above is practical guidance, not legal advice. If your project involves disputes over fees, quality of work, or permit complications, consult a licensed attorney before terminating your agreement.</p>
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ─── Section 6: What a Good Transition Looks Like ── -->
+    <section class="section section--dark" id="transition" aria-labelledby="transition-title">
       <div class="container">
         <div class="prose">
-          <span class="section-label">05 &mdash; The Right Way Forward</span>
-          <h2 id="what-a-good-transition-actually-looks-like">What a Good Transition Actually Looks Like</h2>
-          <hr>
-          <p>Most transition problems are caused not by the complexity of the changeover itself, but by doing it reactively — without planning, without proper documentation, and without a clear brief for the incoming architect. A well-managed transition looks different.</p>
+          <span class="section-label" style="color: #9C9189;">05 &mdash; The Right Way Forward</span>
+          <h2 id="transition-title" style="color: #F5F1EB;">What a Good Transition Actually Looks Like</h2>
+          <hr style="border: none; border-top: 1px solid #3D3835; margin: 1.5rem 0;" />
+          <p style="color: #C2BAB1;">Most transition problems are caused not by the complexity of the changeover itself, but by doing it reactively — without planning, without proper documentation, and without a clear brief for the incoming architect. A well-managed transition looks different.</p>
 
-          <div class="pullquote">
-            <p>&ldquo;A good transition is deliberate, documented, and honest about what the incoming architect is inheriting.&rdquo;</p>
+          <div class="pullquote" style="border-left-color: #9C9189;" role="note">
+            <p class="pullquote__text pullquote__text--light">&ldquo;A good transition is deliberate, documented, and honest about what the incoming architect is inheriting.&rdquo;</p>
           </div>
 
-          <p><strong>The incoming architect&rsquo;s first task</strong> should be a thorough review of existing documents &mdash; not to validate them, but to understand them. Any competent architect taking over a project will want to assess: what decisions have been locked in by permits or contractor agreements, what is still open, where the documentation is solid, and where there are gaps or ambiguities.</p>
+          <p style="color: #C2BAB1;"><strong style="color: #F5F1EB;">The incoming architect&rsquo;s first task</strong> should be a thorough review of existing documents &mdash; not to validate them, but to understand them. Any competent architect taking over a project will want to assess: what decisions have been locked in by permits or contractor agreements, what is still open, where the documentation is solid, and where there are gaps or ambiguities.</p>
 
-          <p><strong>A formal project handoff meeting</strong> between the departing and incoming architect is ideal, though not always possible if the relationship has become adversarial. If it is not possible, a written project status summary from the outgoing architect (which you can request as part of termination) is a reasonable substitute.</p>
+          <p style="color: #C2BAB1;"><strong style="color: #F5F1EB;">A formal project handoff meeting</strong> between the departing and incoming architect is ideal, though not always possible if the relationship has become adversarial. If it is not possible, a written project status summary from the outgoing architect (which you can request as part of termination) is a reasonable substitute.</p>
 
-          <p><strong>Contractor communication</strong> needs to be proactive. Your contractor should be informed of the transition in writing before it happens, not after. They should know who their new point of contact is, that existing drawings remain valid unless revised, and how RFIs and submittals will be handled during the transition window.</p>
+          <p style="color: #C2BAB1;"><strong style="color: #F5F1EB;">Contractor communication</strong> needs to be proactive. Your contractor should be informed of the transition in writing before it happens, not after. They should know who their new point of contact is, that existing drawings remain valid unless revised, and how RFIs and submittals will be handled during the transition window.</p>
 
-          
-          <div class="img-placeholder img-placeholder--sm">
+          <!-- Transition Timeline Placeholder -->
+          <div class="img-placeholder img-placeholder--sm" role="img" aria-label="[Diagram placeholder: simple horizontal timeline — Notice Given, Document Gathering, New Architect Onboarding Review, Contractor Notification, First New Drawing Issue. 6–10 week span illustrated.]" style="background-color: #2A2523; border-color: #3D3835; color: #9C9189; margin-top: 1.5rem;">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
             <span>Diagram placeholder &mdash; transition timeline (6&ndash;10 weeks)</span>
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ─── Section 7: When Staying Is Wrong ─────────────── -->
+    <section class="section" id="clear-cases" aria-labelledby="clear-title">
       <div class="container">
         <div class="prose">
           <span class="section-label">06 &mdash; Clear Cases</span>
-          <h2 id="when-staying-is-clearly-the-wrong-choice">When Staying Is Clearly the Wrong Choice</h2>
-          <hr>
+          <h2 id="clear-title">When Staying Is Clearly the Wrong Choice</h2>
+          <hr class="rule" />
           <p>Most situations exist in a gray zone where a thoughtful cost-benefit analysis applies. But some situations are not gray. The following are circumstances where the calculus is clearer &mdash; where staying is likely to compound the problem rather than resolve it.</p>
 
-          <div class="decision-grid">
-            <div class="decision-card decision-card--stay">
-              <p>Signals that staying may be possible</p>
+          <div class="decision-grid" role="list">
+            <div class="decision-card decision-card--stay" role="listitem">
+              <p class="decision-card__label">Signals that staying may be possible</p>
               <ul>
                 <li>The problem is isolated to a specific phase or team member, not the firm as a whole</li>
                 <li>Your architect has taken concrete, verifiable steps to address the issue</li>
@@ -248,8 +757,8 @@
                 <li>A structured reset meeting has not yet been attempted</li>
               </ul>
             </div>
-            <div class="decision-card decision-card--leave">
-              <p>Signals that leaving is likely necessary</p>
+            <div class="decision-card decision-card--leave" role="listitem">
+              <p class="decision-card__label">Signals that leaving is likely necessary</p>
               <ul>
                 <li>There are errors in permitted documents that your architect will not acknowledge or correct</li>
                 <li>The architect has stopped responding to calls, emails, or contractor RFIs without explanation</li>
@@ -263,15 +772,24 @@
 
           <p>The last item on the right column is the most important one. Architecture involves a continuous stream of decisions that you cannot fully evaluate yourself. If you no longer trust the person making them, the cost of staying is not just relational &mdash; it is structural, financial, and potentially legal. Trust, once genuinely lost in a professional relationship, rarely returns.</p>
 
-          <div class="pullquote">
-            <p>&ldquo;If you no longer trust your architect&rsquo;s judgment on things you cannot verify yourself, that is not a communication problem. It is a fundamental problem with the relationship.&rdquo;</p>
+          <div class="pullquote" role="note">
+            <p class="pullquote__text">&ldquo;If you no longer trust your architect&rsquo;s judgment on things you cannot verify yourself, that is not a communication problem. It is a fundamental problem with the relationship.&rdquo;</p>
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ─── Section 8: CTA ────────────────────────────────── -->
+    <section class="section section--alt" id="contact" aria-labelledby="cta-title">
       <div class="container">
-        
+        <div class="cta-block">
+          <p class="cta-block__eyebrow">07 &mdash; Cloudstone Designs</p>
+          <h2 id="cta-title">If you want to think this through with someone, we&rsquo;re here for that conversation.</h2>
+          <p>We have helped clients through transitions from other firms. We are also honest when staying is the better option. If you are at a decision point and would benefit from a frank conversation about your specific situation, we are happy to have it &mdash; without a pitch attached.</p>
+          <p>The first conversation is just a conversation.</p>
+          <a href="mailto:hello@cloudstonedesigns.com" class="btn" aria-label="Contact Cloudstone Designs to schedule a consultation">Schedule a Conversation</a>
+          <br /><br />
+          <p style="font-size: 0.8rem; color: var(--color-accent);">Prefer to read more first? You&rsquo;re welcome to.</p>
+        </div>
       </div>
+    </section></div>

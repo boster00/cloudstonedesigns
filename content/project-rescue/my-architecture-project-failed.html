@@ -2,45 +2,636 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: 149e1822-722c-45b2-ac78-5b08dccff2df
   main_keyword: failed architecture project what to do
-  adopted_at: 2026-05-26T19:23:22.627Z
+  adopted_at: 2026-05-26T21:20:11.618Z
 -->
-<div class="container">
+<style data-cjgeo-scoped="article-my-architecture-project-failed">.article-my-architecture-project-failed /* ── Reset ─────────────────────────────────────────────────────────── */
+    * {  box-sizing: border-box; margin: 0; padding: 0;  }
+/* ── Design Tokens ──────────────────────────────────────────────────── */
+    .article-my-architecture-project-failed { 
+      --color-bg:          #F5F3EF;   /* warm off-white */
+      --color-surface:     #EDEAE4;   /* slightly darker warm surface */
+      --color-border:      #D6D1C8;   /* muted stone border */
+      --color-text:        #1C1917;   /* near-black warm */
+      --color-text-mid:    #57534E;   /* stone-600 */
+      --color-text-muted:  #A8A29E;   /* stone-400 */
+      --color-accent:      #2C3E50;   /* deep slate blue — authority */
+      --color-accent-soft: #E8EDF2;   /* pale slate tint */
+      --color-warn:        #78350F;   /* deep amber for caution callouts */
+      --color-warn-bg:     #FEF3C7;   /* amber-50 */
+
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans:  system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+      --max-w: 720px;
+      --max-w-wide: 1040px;
+
+      --space-xs:  0.5rem;
+      --space-sm:  1rem;
+      --space-md:  1.75rem;
+      --space-lg:  3rem;
+      --space-xl:  5rem;
+      --space-2xl: 8rem;
+
+      --radius: 4px;
+      --radius-lg: 8px;
+     }
+/* ── Base ───────────────────────────────────────────────────────────── */
+    .article-my-architecture-project-failed { 
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+     }
+.article-my-architecture-project-failed h1, .article-my-architecture-project-failed h2, .article-my-architecture-project-failed h3, .article-my-architecture-project-failed h4 { 
+      font-family: var(--font-serif);
+      line-height: 1.2;
+      font-weight: normal;
+      color: var(--color-text);
+     }
+.article-my-architecture-project-failed p {  color: var(--color-text);  }
+.article-my-architecture-project-failed a { 
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+     }
+.article-my-architecture-project-failed a:hover {  opacity: 0.75;  }
+.article-my-architecture-project-failed /* ── Layout ─────────────────────────────────────────────────────────── */
+    .container { 
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+     }
+.article-my-architecture-project-failed .container--wide { 
+      max-width: var(--max-w-wide);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+     }
+.article-my-architecture-project-failed /* ── Utility ────────────────────────────────────────────────────────── */
+    .text-muted {  color: var(--color-text-muted);  }
+.article-my-architecture-project-failed .text-mid {  color: var(--color-text-mid);  }
+.article-my-architecture-project-failed .label { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+     }
+.article-my-architecture-project-failed .divider { 
+      border: none;
+      border-top: 1px solid var(--color-border);
+     }
+.article-my-architecture-project-failed /* ── Navigation ─────────────────────────────────────────────────────── */
+    nav { 
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+     }
+.article-my-architecture-project-failed .nav-inner { 
+      max-width: var(--max-w-wide);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     }
+.article-my-architecture-project-failed .nav-logo { 
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--color-text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+     }
+.article-my-architecture-project-failed .nav-logo span { 
+      color: var(--color-text-mid);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 400;
+      margin-left: 6px;
+     }
+.article-my-architecture-project-failed .nav-cta { 
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      border: 1px solid var(--color-accent);
+      padding: 6px 16px;
+      border-radius: var(--radius);
+      transition: background 0.15s, color 0.15s;
+     }
+.article-my-architecture-project-failed .nav-cta:hover { 
+      background: var(--color-accent);
+      color: #fff;
+      opacity: 1;
+     }
+.article-my-architecture-project-failed /* ── Hero ───────────────────────────────────────────────────────────── */
+    .hero { 
+      padding: var(--space-xl) 0 var(--space-lg);
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-my-architecture-project-failed .hero .label {  margin-bottom: var(--space-sm); display: block;  }
+.article-my-architecture-project-failed .hero h1 { 
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      max-width: 660px;
+      margin-bottom: var(--space-md);
+      color: var(--color-text);
+     }
+.article-my-architecture-project-failed .hero-deck { 
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--color-text-mid);
+      max-width: 580px;
+      margin-bottom: var(--space-lg);
+     }
+.article-my-architecture-project-failed .hero-meta { 
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+     }
+.article-my-architecture-project-failed .hero-meta-dot { 
+      width: 3px;
+      height: 3px;
+      background: var(--color-border);
+      border-radius: 50%;
+     }
+.article-my-architecture-project-failed /* ── Hero Media Placeholder ─────────────────────────────────────────── */
+    .hero-media { 
+      margin-top: var(--space-lg);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--color-text-muted);
+      font-size: 0.82rem;
+      text-align: center;
+     }
+.article-my-architecture-project-failed .hero-media svg {  opacity: 0.35;  }
+.article-my-architecture-project-failed /* ── Table of Contents ──────────────────────────────────────────────── */
+    .toc-section { 
+      padding: var(--space-lg) 0;
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-my-architecture-project-failed .toc-label { 
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-sm);
+      display: block;
+     }
+.article-my-architecture-project-failed .toc-list { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+     }
+.article-my-architecture-project-failed .toc-list li { 
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+     }
+.article-my-architecture-project-failed .toc-num { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      color: var(--color-text-muted);
+      min-width: 20px;
+     }
+.article-my-architecture-project-failed .toc-list a { 
+      font-size: 0.95rem;
+      color: var(--color-text-mid);
+      text-decoration: none;
+     }
+.article-my-architecture-project-failed .toc-list a:hover { 
+      color: var(--color-text);
+      opacity: 1;
+     }
+.article-my-architecture-project-failed /* ── Main content sections ──────────────────────────────────────────── */
+    .content-section { 
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-my-architecture-project-failed .section-header { 
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+     }
+.article-my-architecture-project-failed .section-num { 
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      margin-top: 3px;
+     }
+.article-my-architecture-project-failed .section-header h2 { 
+      font-size: clamp(1.4rem, 3vw, 2rem);
+     }
+.article-my-architecture-project-failed .section-body { 
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+     }
+.article-my-architecture-project-failed .section-body p { 
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--color-text-mid);
+     }
+.article-my-architecture-project-failed .section-body p strong { 
+      color: var(--color-text);
+      font-weight: 600;
+     }
+.article-my-architecture-project-failed /* ── Callout / Alert ────────────────────────────────────────────────── */
+    .callout { 
+      margin: var(--space-md) 0;
+      padding: var(--space-sm) var(--space-md);
+      border-left: 3px solid var(--color-warn);
+      background: var(--color-warn-bg);
+      border-radius: 0 var(--radius) var(--radius) 0;
+     }
+.article-my-architecture-project-failed .callout p { 
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--color-warn) !important;
+     }
+.article-my-architecture-project-failed .callout strong { 
+      color: var(--color-warn) !important;
+     }
+.article-my-architecture-project-failed .callout--neutral { 
+      border-left-color: var(--color-accent);
+      background: var(--color-accent-soft);
+     }
+.article-my-architecture-project-failed .callout--neutral p { 
+      color: var(--color-accent) !important;
+     }
+.article-my-architecture-project-failed .callout--neutral strong { 
+      color: var(--color-accent) !important;
+     }
+.article-my-architecture-project-failed /* ── Failure Mode Cards ──────────────────────────────────────────────── */
+    .cards-grid { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+     }
+@media (max-width: 640px) { .article-my-architecture-project-failed .cards-grid {  grid-template-columns: 1fr;  } }
+.article-my-architecture-project-failed .card { 
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+     }
+.article-my-architecture-project-failed .card-tag { 
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 8px;
+      display: block;
+     }
+.article-my-architecture-project-failed .card h3 { 
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+     }
+.article-my-architecture-project-failed .card p { 
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--color-text-mid);
+     }
+.article-my-architecture-project-failed .card-recover { 
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+     }
+.article-my-architecture-project-failed .recover-dot { 
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+     }
+.article-my-architecture-project-failed .recover-dot--green {  background: #16a34a;  }
+.article-my-architecture-project-failed .recover-dot--yellow {  background: #d97706;  }
+.article-my-architecture-project-failed .recover-dot--red {  background: #dc2626;  }
+.article-my-architecture-project-failed .recover-green {  color: #15803d;  }
+.article-my-architecture-project-failed .recover-yellow {  color: #b45309;  }
+.article-my-architecture-project-failed .recover-red {  color: #b91c1c;  }
+.article-my-architecture-project-failed /* ── Immediate Steps ─────────────────────────────────────────────────── */
+    .steps-list { 
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: var(--space-md);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+     }
+.article-my-architecture-project-failed .step-item { 
+      display: flex;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-bg);
+     }
+.article-my-architecture-project-failed .step-item:last-child {  border-bottom: none;  }
+.article-my-architecture-project-failed .step-num-circle { 
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+     }
+.article-my-architecture-project-failed .step-content h4 { 
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--color-text);
+     }
+.article-my-architecture-project-failed .step-content p { 
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--color-text-mid);
+     }
+.article-my-architecture-project-failed /* ── Assessment Diagram ──────────────────────────────────────────────── */
+    .diagram-placeholder { 
+      margin-top: var(--space-md);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-sm);
+     }
+.article-my-architecture-project-failed .diagram-row { 
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+     }
+.article-my-architecture-project-failed .diagram-box { 
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 10px 18px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-text);
+      text-align: center;
+      min-width: 130px;
+     }
+.article-my-architecture-project-failed .diagram-box--accent { 
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+     }
+.article-my-architecture-project-failed .diagram-arrow { 
+      color: var(--color-text-muted);
+      font-size: 1.2rem;
+     }
+.article-my-architecture-project-failed .diagram-caption { 
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: 8px;
+      text-align: center;
+     }
+.article-my-architecture-project-failed /* ── Viability Checklist ─────────────────────────────────────────────── */
+    .checklist { 
+      margin-top: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+     }
+.article-my-architecture-project-failed .check-item { 
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px var(--space-sm);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+     }
+.article-my-architecture-project-failed .check-icon { 
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 1px;
+     }
+.article-my-architecture-project-failed .check-item p { 
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--color-text-mid);
+     }
+.article-my-architecture-project-failed .check-item p strong {  color: var(--color-text);  }
+.article-my-architecture-project-failed /* ── What to Expect section ──────────────────────────────────────────── */
+    .expect-grid { 
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+     }
+@media (max-width: 640px) { .article-my-architecture-project-failed .expect-grid {  grid-template-columns: 1fr;  } }
+.article-my-architecture-project-failed .expect-item { 
+      padding: var(--space-sm);
+     }
+.article-my-architecture-project-failed .expect-icon { 
+      width: 36px;
+      height: 36px;
+      margin-bottom: 10px;
+      color: var(--color-accent);
+     }
+.article-my-architecture-project-failed .expect-item h4 { 
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--color-text);
+     }
+.article-my-architecture-project-failed .expect-item p { 
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--color-text-mid);
+     }
+.article-my-architecture-project-failed /* ── CTA section ─────────────────────────────────────────────────────── */
+    .cta-section { 
+      padding: var(--space-xl) 0;
+     }
+.article-my-architecture-project-failed .cta-inner { 
+      background: var(--color-accent);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-md);
+     }
+@media (min-width: 768px) { .article-my-architecture-project-failed .cta-inner { 
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+       } }
+.article-my-architecture-project-failed .cta-text h2 { 
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      color: #fff;
+      margin-bottom: 10px;
+     }
+.article-my-architecture-project-failed .cta-text p { 
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.7);
+      max-width: 460px;
+     }
+.article-my-architecture-project-failed .cta-button { 
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--color-accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: opacity 0.15s;
+     }
+.article-my-architecture-project-failed .cta-button:hover {  opacity: 0.88;  }
+.article-my-architecture-project-failed /* ── Footer ─────────────────────────────────────────────────────────── */
+    footer { 
+      border-top: 1px solid var(--color-border);
+      padding: var(--space-lg) 0;
+     }
+.article-my-architecture-project-failed .footer-inner { 
+      max-width: var(--max-w-wide);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+     }
+.article-my-architecture-project-failed .footer-logo { 
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--color-text-mid);
+      text-decoration: none;
+     }
+.article-my-architecture-project-failed .footer-meta { 
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+     }
+.article-my-architecture-project-failed /* ── Responsive tweaks ───────────────────────────────────────────────── */
+    @media (max-width: 768px) { 
+      :host {
+        --space-xl: 3.5rem;
+        --space-2xl: 5rem;
+      }
+      .cta-inner {
+        padding: var(--space-lg) var(--space-md);
+      }
+     }</style>
+<div class="article-my-architecture-project-failed">
+<section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <span class="label">When a project fails</span>
+        <h1 id="hero-heading">What to Do in the First 72 Hours After a Construction Failure</h1>
+        <p class="hero-deck">
+          A contractor walked off. A permit was denied. The money ran out before the walls went up.
+          Whatever happened, this guide covers what to look at first, what it means for your options,
+          and the steps that protect you right now.
+        </p>
+        <div class="hero-meta">
+          <span>Cloudstone Designs</span>
+          <div class="hero-meta-dot" role="presentation"></div>
+          <span>Project Rescue Series</span>
+          <div class="hero-meta-dot" role="presentation"></div>
+          <span>Stage 1: Immediate Response</span>
+        </div>
+
+        <!-- Hero Media Placeholder -->
+        <div class="hero-media" role="img" aria-label="Diagram placeholder: project failure trigger scenarios">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+          <span>Visual placeholder &mdash; Failure scenario overview diagram</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Table of Contents ─────────────────────────────────────────────── -->
+    <section class="toc-section" aria-label="Table of contents">
+      <div class="container">
         <span class="toc-label">In this guide</span>
-        <ol>
+        <ol class="toc-list">
           <li>
-            
+            <span class="toc-num">01</span>
             <a href="#assess">Separating what happened from what appears to have happened</a>
           </li>
           <li>
-            
+            <span class="toc-num">02</span>
             <a href="#failure-modes">The most common failure modes and what they mean</a>
           </li>
           <li>
-            
+            <span class="toc-num">03</span>
             <a href="#immediate-steps">Immediate steps: stop, document, do not sign</a>
           </li>
           <li>
-            
+            <span class="toc-num">04</span>
             <a href="#viability">How to tell whether rescue is viable</a>
           </li>
           <li>
-            
+            <span class="toc-num">05</span>
             <a href="#what-next">What a rescue engagement actually looks like</a>
           </li>
           <li>
-            
+            <span class="toc-num">06</span>
             <a href="#consult">When to ask for outside help</a>
           </li>
         </ol>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ── Section 2: Assessment ─────────────────────────────────────────── -->
+    <section class="content-section" id="assess" aria-labelledby="assess-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-num">01</span>
-          <h2 id="separating-what-actually-happened-from-what-appears-to-have-">Separating What Actually Happened from What Appears to Have Happened</h2>
+          <h2 id="assess-heading">Separating What Actually Happened from What Appears to Have Happened</h2>
         </div>
         <div class="section-body">
           <p>
@@ -50,19 +641,19 @@
             <strong>The proximate cause is not the root cause.</strong> A contractor who stopped showing up may have stopped showing up because they were underpaid, overwhelmed, or technically in over their head. A permit denial may reflect a design flaw, an incomplete application, or a jurisdiction issue that is entirely fixable. The distinction matters because it tells you whether the failure is recoverable, and how.
           </p>
 
-          
-          <div class="diagram-placeholder">
-            <p>
+          <!-- Diagram Placeholder -->
+          <div class="diagram-placeholder" role="img" aria-label="Diagram placeholder: proximate vs root cause assessment flow">
+            <p class="diagram-caption" style="margin-bottom: 16px; font-weight: 600; color: var(--color-text-mid);">
               Assessment framework &mdash; visual diagram placeholder
             </p>
             <div class="diagram-row">
-              <div class="diagram-box">What you see<br><span>Proximate cause</span></div>
-              <span class="diagram-arrow">&#8594;</span>
-              <div class="diagram-box">What drove it<br><span>Root cause</span></div>
-              <span class="diagram-arrow">&#8594;</span>
-              <div class="diagram-box diagram-box--accent">Recovery path<br><span>Decision point</span></div>
+              <div class="diagram-box">What you see<br/><span style="font-weight:400; font-size:0.78rem; color: var(--color-text-mid);">Proximate cause</span></div>
+              <span class="diagram-arrow" aria-hidden="true">&#8594;</span>
+              <div class="diagram-box">What drove it<br/><span style="font-weight:400; font-size:0.78rem; color: var(--color-text-mid);">Root cause</span></div>
+              <span class="diagram-arrow" aria-hidden="true">&#8594;</span>
+              <div class="diagram-box diagram-box--accent">Recovery path<br/><span style="font-weight:400; font-size:0.78rem; color: rgba(255,255,255,0.7);">Decision point</span></div>
             </div>
-            <p>Replace with a custom flow diagram showing failure analysis logic</p>
+            <p class="diagram-caption">Replace with a custom flow diagram showing failure analysis logic</p>
           </div>
 
           <p>
@@ -73,23 +664,23 @@
           </p>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ── Section 3: Failure Modes ──────────────────────────────────────── -->
+    <section class="content-section" id="failure-modes" aria-labelledby="failure-modes-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-num">02</span>
-          <h2 id="the-most-common-failure-modes-and-what-they-mean-for-recover">The Most Common Failure Modes and What They Mean for Recoverability</h2>
+          <h2 id="failure-modes-heading">The Most Common Failure Modes and What They Mean for Recoverability</h2>
         </div>
         <div class="section-body">
           <p>
             Not all failures are equivalent. Some are logistical. Some are contractual. Some expose deeper problems with the project scope, the budget, or the original design. Understanding which type you are dealing with determines the realistic path forward.
           </p>
 
-          <div class="cards-grid">
+          <div class="cards-grid" role="list">
 
-            
+            <article class="card" role="listitem">
               <span class="card-tag">Failure Mode A</span>
               <h3>Contractor Walkoff or Abandonment</h3>
               <p>The contractor stopped work, may or may not have given notice, and is no longer responsive. Work may be partially complete.</p>
@@ -97,12 +688,12 @@
                 <span class="recover-dot recover-dot--green"></span>
                 <span class="recover-green">Often recoverable</span>
               </div>
-              <p>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 6px;">
                 Depends on quality of work completed, whether permits can be transferred, and amount of unpaid lien exposure.
               </p>
-            
+            </article>
 
-            
+            <article class="card" role="listitem">
               <span class="card-tag">Failure Mode B</span>
               <h3>Architect or Designer Termination</h3>
               <p>The design professional relationship ended before documents were complete, or documents were completed but are not usable.</p>
@@ -110,12 +701,12 @@
                 <span class="recover-dot recover-dot--yellow"></span>
                 <span class="recover-yellow">Recoverable with reassessment</span>
               </div>
-              <p>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 6px;">
                 Depends heavily on document completeness, IP ownership in the contract, and whether the underlying design intent is still valid.
               </p>
-            
+            </article>
 
-            
+            <article class="card" role="listitem">
               <span class="card-tag">Failure Mode C</span>
               <h3>Permit Denial or Stop-Work Order</h3>
               <p>A building authority has denied a permit application or issued a stop-work order on an active site.</p>
@@ -123,12 +714,12 @@
                 <span class="recover-dot recover-dot--yellow"></span>
                 <span class="recover-yellow">Often recoverable, with conditions</span>
               </div>
-              <p>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 6px;">
                 Depends on the reason for denial. Design corrections are usually fixable. Zoning conflicts or code violations on completed work are more serious.
               </p>
-            
+            </article>
 
-            
+            <article class="card" role="listitem">
               <span class="card-tag">Failure Mode D</span>
               <h3>Budget Exhausted Before Completion</h3>
               <p>The project ran out of money before reaching a livable or usable state. Work may have stopped mid-phase.</p>
@@ -136,12 +727,12 @@
                 <span class="recover-dot recover-dot--yellow"></span>
                 <span class="recover-yellow">Contextual</span>
               </div>
-              <p>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 6px;">
                 Depends on how far work progressed, whether the structure is weather-tight, and what financing options remain available.
               </p>
-            
+            </article>
 
-            
+            <article class="card" role="listitem">
               <span class="card-tag">Failure Mode E</span>
               <h3>Wrong Scope Built</h3>
               <p>Work was completed but does not match the approved plans, permit, or what the owner actually needed. Corrections are required.</p>
@@ -149,12 +740,12 @@
                 <span class="recover-dot recover-dot--red"></span>
                 <span class="recover-red">Difficult; depends on severity</span>
               </div>
-              <p>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 6px;">
                 Structural deviations may require demolition. Cosmetic deviations are usually correctible. Legal remedies against the contractor are likely necessary.
               </p>
-            
+            </article>
 
-            
+            <article class="card" role="listitem">
               <span class="card-tag">Failure Mode F</span>
               <h3>Combination / Cascading Failure</h3>
               <p>Multiple failures have overlapped: abandoned contractor, unpaid subs, liens filed, incomplete drawings, and partially built structure.</p>
@@ -162,10 +753,10 @@
                 <span class="recover-dot recover-dot--red"></span>
                 <span class="recover-red">Requires full forensic review</span>
               </div>
-              <p>
+              <p style="font-size: 0.82rem; color: var(--color-text-muted); margin-top: 6px;">
                 The most complex scenario. Recovery is often possible but requires systematic triage before any new commitments are made.
               </p>
-            
+            </article>
 
           </div>
 
@@ -174,24 +765,24 @@
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ── Section 4: Immediate Steps ────────────────────────────────────── -->
+    <section class="content-section" id="immediate-steps" aria-labelledby="steps-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-num">03</span>
-          <h2 id="immediate-steps-stop-spending-document-the-damage-do-not-sig">Immediate Steps: Stop Spending, Document the Damage, Do Not Sign Anything New</h2>
+          <h2 id="steps-heading">Immediate Steps: Stop Spending, Document the Damage, Do Not Sign Anything New</h2>
         </div>
         <div class="section-body">
           <p>
             The 72-hour window after a project failure is when most additional damage happens. Not from the failure itself, but from reactive decisions made under pressure. These steps are not complicated, but they require deliberate action.
           </p>
 
-          <div class="steps-list">
+          <div class="steps-list" role="list">
 
-            <div class="step-item">
-              <div class="step-num-circle">1</div>
+            <div class="step-item" role="listitem">
+              <div class="step-num-circle" aria-hidden="true">1</div>
               <div class="step-content">
                 <h4>Stop all discretionary spending on the project</h4>
                 <p>
@@ -200,8 +791,8 @@
               </div>
             </div>
 
-            <div class="step-item">
-              <div class="step-num-circle">2</div>
+            <div class="step-item" role="listitem">
+              <div class="step-num-circle" aria-hidden="true">2</div>
               <div class="step-content">
                 <h4>Photograph and document the current state of the site</h4>
                 <p>
@@ -210,8 +801,8 @@
               </div>
             </div>
 
-            <div class="step-item">
-              <div class="step-num-circle">3</div>
+            <div class="step-item" role="listitem">
+              <div class="step-num-circle" aria-hidden="true">3</div>
               <div class="step-content">
                 <h4>Gather all contracts, change orders, and written communications</h4>
                 <p>
@@ -220,8 +811,8 @@
               </div>
             </div>
 
-            <div class="step-item">
-              <div class="step-num-circle">4</div>
+            <div class="step-item" role="listitem">
+              <div class="step-num-circle" aria-hidden="true">4</div>
               <div class="step-content">
                 <h4>Check for liens against the property</h4>
                 <p>
@@ -230,8 +821,8 @@
               </div>
             </div>
 
-            <div class="step-item">
-              <div class="step-num-circle">5</div>
+            <div class="step-item" role="listitem">
+              <div class="step-num-circle" aria-hidden="true">5</div>
               <div class="step-content">
                 <h4>Do not sign any new agreements under pressure</h4>
                 <p>
@@ -240,8 +831,8 @@
               </div>
             </div>
 
-            <div class="step-item">
-              <div class="step-num-circle">6</div>
+            <div class="step-item" role="listitem">
+              <div class="step-num-circle" aria-hidden="true">6</div>
               <div class="step-content">
                 <h4>Notify your lender if the project is financed</h4>
                 <p>
@@ -257,23 +848,23 @@
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ── Section 5: Rescue Viability ───────────────────────────────────── -->
+    <section class="content-section" id="viability" aria-labelledby="viability-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-num">04</span>
-          <h2 id="how-to-tell-whether-rescue-is-viable">How to Tell Whether Rescue Is Viable</h2>
+          <h2 id="viability-heading">How to Tell Whether Rescue Is Viable</h2>
         </div>
         <div class="section-body">
           <p>
             Not every failed project should be rescued. Some should be completed by a replacement contractor with minimal changes. Some require a design restart. Some should be sold as-is or handed to an attorney before construction continues. The right answer depends on an honest look at four things.
           </p>
 
-          <div class="checklist">
+          <div class="checklist" role="list" aria-label="Rescue viability checklist">
 
-            <div class="check-item">
+            <div class="check-item" role="listitem">
               <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M9 12h6M12 9v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -282,7 +873,7 @@
               </p>
             </div>
 
-            <div class="check-item">
+            <div class="check-item" role="listitem">
               <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M9 12h6M12 9v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -291,7 +882,7 @@
               </p>
             </div>
 
-            <div class="check-item">
+            <div class="check-item" role="listitem">
               <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M9 12h6M12 9v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -300,7 +891,7 @@
               </p>
             </div>
 
-            <div class="check-item">
+            <div class="check-item" role="listitem">
               <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M9 12h6M12 9v6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -311,31 +902,39 @@
 
           </div>
 
-          
-          
+          <!-- Proof Visual Placeholder -->
+          <div class="hero-media" style="height: 200px; margin-top: var(--space-md);" role="img" aria-label="Proof visual placeholder: rescue viability assessment matrix">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            <span>Visual placeholder &mdash; Rescue viability assessment matrix or decision tree</span>
+          </div>
 
           <div class="callout callout--neutral">
             <p><strong>On honest assessment:</strong> The goal at this stage is not to decide whether to rescue the project. It is to understand your actual situation clearly enough to make that decision rationally. That requires information you may not yet have, and it is worth taking the time to get it.</p>
           </div>
         </div>
       </div>
-    
+    </section>
 
-    
-    
+    <!-- ── Section 6: What a Rescue Engagement Looks Like ─────────────────── -->
+    <section class="content-section" id="what-next" aria-labelledby="what-next-heading">
       <div class="container">
         <div class="section-header">
           <span class="section-num">05</span>
-          <h2 id="what-a-rescue-engagement-actually-looks-like">What a Rescue Engagement Actually Looks Like</h2>
+          <h2 id="what-next-heading">What a Rescue Engagement Actually Looks Like</h2>
         </div>
         <div class="section-body">
           <p>
             A rescue engagement is not a second construction project. It begins with forensic work: understanding exactly what you have, what it is worth, and what it would take to finish. Only after that is complete does a recovery plan get made.
           </p>
 
-          <div class="expect-grid">
+          <div class="expect-grid" role="list">
 
-            <div class="expect-item">
+            <div class="expect-item" role="listitem">
               <svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                 <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
               </svg>
@@ -343,7 +942,7 @@
               <p>Site inspection, document review, permit status, lien check, independent structural and code assessment. No commitments made. Clear written summary of findings.</p>
             </div>
 
-            <div class="expect-item">
+            <div class="expect-item" role="listitem">
               <svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                 <path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
               </svg>
@@ -351,7 +950,7 @@
               <p>Based on findings, a written recovery plan: scope of remaining work, revised schedule, budget range, contractor procurement approach, and risk factors.</p>
             </div>
 
-            <div class="expect-item">
+            <div class="expect-item" role="listitem">
               <svg class="expect-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                 <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
               </svg>
@@ -366,3 +965,26 @@
           </p>
         </div>
       </div>
+    </section>
+
+    <!-- ── Section 7: CTA ─────────────────────────────────────────────────── -->
+    <section class="cta-section" id="consult" aria-labelledby="cta-heading">
+      <div class="container--wide">
+        <div class="cta-inner">
+          <div class="cta-text">
+            <h2 id="cta-heading">If your project has failed, the first conversation is free.</h2>
+            <p>
+              We work with owners navigating contractor abandonment, permit failures, and mid-project collapses. 
+              A rescue consultation starts with listening to what happened, not with a proposal.
+              If we can help, we will tell you clearly how. If we cannot, we will tell you that too.
+            </p>
+          </div>
+          <a href="mailto:contact@cloudstonedesigns.com" class="cta-button">
+            Request a Rescue Consultation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section></div>

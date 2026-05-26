@@ -2,53 +2,783 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: ba76a585-fa2d-4972-98b0-6347f8329ebb
   main_keyword: good architect client communication
-  adopted_at: 2026-05-26T19:23:35.994Z
+  adopted_at: 2026-05-26T21:20:16.366Z
 -->
-<div class="container container--prose">
+<style data-cjgeo-scoped="article-what-project-transparency-should-look-like">.article-what-project-transparency-should-look-like /* ─── Reset ─────────────────────────────────────────────── */
+    * {  box-sizing: border-box; margin: 0; padding: 0;  }
+.article-what-project-transparency-should-look-like img {  display: block; max-width: 100%;  }
+/* ─── Design Tokens ─────────────────────────────────────── */
+    .article-what-project-transparency-should-look-like { 
+      --color-bg:          #f7f5f2;       /* warm off-white */
+      --color-surface:     #ffffff;
+      --color-surface-alt: #f0ede8;       /* stone-100 equivalent */
+      --color-border:      #d8d3cc;
+      --color-ink:         #1c1917;       /* near-black warm */
+      --color-ink-muted:   #57534e;       /* stone-600 */
+      --color-ink-faint:   #a8a29e;       /* stone-400 */
+      --color-accent:      #0f4c75;       /* deep slate blue — authority */
+      --color-accent-light:#e8f0f7;
+      --color-rule:        #c5bfb8;
+
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-body:    system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+      --radius-sm:  4px;
+      --radius-md:  8px;
+      --radius-lg:  12px;
+
+      --max-prose:  680px;
+      --max-wide:   1100px;
+      --max-full:   1280px;
+     }
+/* ─── Base ───────────────────────────────────────────────── */
+    .article-what-project-transparency-should-look-like { 
+      background-color: var(--color-bg);
+      color: var(--color-ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+     }
+.article-what-project-transparency-should-look-like /* ─── Typography ─────────────────────────────────────────── */
+    h1, .article-what-project-transparency-should-look-like h2, .article-what-project-transparency-should-look-like h3, .article-what-project-transparency-should-look-like h4 { 
+      font-family: var(--font-heading);
+      line-height: 1.2;
+      color: var(--color-ink);
+      text-wrap: balance;
+     }
+.article-what-project-transparency-should-look-like h1 {  font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 400;  }
+.article-what-project-transparency-should-look-like h2 {  font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 400;  }
+.article-what-project-transparency-should-look-like h3 {  font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 400;  }
+.article-what-project-transparency-should-look-like h4 {  font-size: 0.875rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--color-ink-muted); font-family: var(--font-body);  }
+.article-what-project-transparency-should-look-like p {  color: var(--color-ink-muted); max-width: var(--max-prose);  }
+.article-what-project-transparency-should-look-like a {  color: var(--color-accent); text-decoration: none;  }
+.article-what-project-transparency-should-look-like a:hover {  text-decoration: underline;  }
+.article-what-project-transparency-should-look-like strong {  color: var(--color-ink); font-weight: 600;  }
+.article-what-project-transparency-should-look-like /* ─── Layout Helpers ─────────────────────────────────────── */
+    .container { 
+      width: 100%;
+      max-width: var(--max-wide);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
+     }
+.article-what-project-transparency-should-look-like .container--prose { 
+      max-width: calc(var(--max-prose) + 6rem);
+     }
+.article-what-project-transparency-should-look-like .section { 
+      padding-block: clamp(3.5rem, 7vw, 6rem);
+     }
+.article-what-project-transparency-should-look-like .section--alt { 
+      background-color: var(--color-surface-alt);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-project-transparency-should-look-like .section--white { 
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-project-transparency-should-look-like .rule { 
+      width: 48px;
+      height: 2px;
+      background-color: var(--color-accent);
+      margin-bottom: 1.5rem;
+     }
+.article-what-project-transparency-should-look-like .eyebrow { 
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-family: var(--font-body);
+      display: block;
+      margin-bottom: 0.75rem;
+     }
+.article-what-project-transparency-should-look-like .section-header { 
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
+     }
+.article-what-project-transparency-should-look-like .section-header p { 
+      margin-top: 1rem;
+      font-size: 1.0625rem;
+     }
+.article-what-project-transparency-should-look-like .nav-inner { 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: var(--max-full);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
+     }
+.article-what-project-transparency-should-look-like .nav-logo { 
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--color-ink);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+     }
+.article-what-project-transparency-should-look-like .nav-logo span {  color: var(--color-accent);  }
+.article-what-project-transparency-should-look-like .nav-label { 
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      font-weight: 500;
+     }
+.article-what-project-transparency-should-look-like /* ─── Hero ───────────────────────────────────────────────── */
+    .hero { 
+      background-color: var(--color-ink);
+      color: var(--color-surface);
+      padding-block: clamp(4rem, 9vw, 8rem);
+     }
+.article-what-project-transparency-should-look-like .hero .container {  position: relative;  }
+.article-what-project-transparency-should-look-like .hero h1 {  color: var(--color-surface); max-width: 740px;  }
+.article-what-project-transparency-should-look-like .hero .eyebrow {  color: var(--color-ink-faint); margin-bottom: 1.25rem;  }
+.article-what-project-transparency-should-look-like .hero-desc { 
+      margin-top: 1.5rem;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--color-ink-faint);
+      max-width: 560px;
+     }
+.article-what-project-transparency-should-look-like .hero-meta { 
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+     }
+.article-what-project-transparency-should-look-like .hero-meta-item { 
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+     }
+.article-what-project-transparency-should-look-like .hero-meta-item .label { 
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+     }
+.article-what-project-transparency-should-look-like .hero-meta-item .value { 
+      font-size: 0.875rem;
+      color: #d6d3d1;
+     }
+.article-what-project-transparency-should-look-like .hero-divider { 
+      width: 1px;
+      height: 40px;
+      background-color: #44403c;
+     }
+.article-what-project-transparency-should-look-like /* Hero visual placeholder */
+    .hero-visual { 
+      margin-top: clamp(2.5rem, 5vw, 4rem);
+      background-color: #292524;
+      border: 1px solid #44403c;
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+      position: relative;
+     }
+.article-what-project-transparency-should-look-like .hero-visual-label { 
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #57534e;
+      position: absolute;
+      top: 1rem;
+      left: 1.25rem;
+     }
+.article-what-project-transparency-should-look-like .phase-strip { 
+      display: flex;
+      gap: 0;
+      width: 100%;
+     }
+.article-what-project-transparency-should-look-like .phase-item { 
+      flex: 1;
+      text-align: center;
+      padding: 1rem 0.5rem;
+      border-right: 1px solid #44403c;
+      position: relative;
+     }
+.article-what-project-transparency-should-look-like .phase-item:last-child {  border-right: none;  }
+.article-what-project-transparency-should-look-like .phase-item .phase-name { 
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #78716c;
+      margin-bottom: 0.5rem;
+     }
+.article-what-project-transparency-should-look-like .phase-item .phase-dot { 
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      margin-inline: auto;
+      margin-bottom: 0.5rem;
+     }
+.article-what-project-transparency-should-look-like .phase-item .phase-count { 
+      font-size: 0.75rem;
+      color: #a8a29e;
+     }
+.article-what-project-transparency-should-look-like /* ─── Section 1 – The Standard ─────────────────────────── */
+    .standard-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5px;
+      background-color: var(--color-border);
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+     }
+.article-what-project-transparency-should-look-like .standard-card { 
+      background-color: var(--color-surface);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+     }
+.article-what-project-transparency-should-look-like .standard-card .icon-wrap { 
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background-color: var(--color-accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+     }
+.article-what-project-transparency-should-look-like .standard-card .icon-wrap svg {  width: 18px; height: 18px; color: var(--color-accent);  }
+.article-what-project-transparency-should-look-like .standard-card h3 {  font-size: 1rem; font-family: var(--font-body); font-weight: 600; color: var(--color-ink);  }
+.article-what-project-transparency-should-look-like .standard-card p {  font-size: 0.9rem; margin: 0; max-width: none;  }
+.article-what-project-transparency-should-look-like /* ─── Section 2 – Meeting Cadence ───────────────────────── */
+    .cadence-table { 
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+     }
+.article-what-project-transparency-should-look-like .cadence-table thead tr { 
+      background-color: var(--color-ink);
+      color: var(--color-surface);
+     }
+.article-what-project-transparency-should-look-like .cadence-table thead th { 
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+     }
+.article-what-project-transparency-should-look-like .cadence-table tbody tr { 
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-project-transparency-should-look-like .cadence-table tbody tr:hover { 
+      background-color: var(--color-surface-alt);
+     }
+.article-what-project-transparency-should-look-like .cadence-table tbody td { 
+      padding: 0.875rem 1rem;
+      color: var(--color-ink-muted);
+      vertical-align: top;
+     }
+.article-what-project-transparency-should-look-like .cadence-table tbody td:first-child { 
+      font-weight: 600;
+      color: var(--color-ink);
+      white-space: nowrap;
+     }
+.article-what-project-transparency-should-look-like .badge { 
+      display: inline-block;
+      padding: 0.2em 0.6em;
+      border-radius: 99px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+     }
+.article-what-project-transparency-should-look-like .badge--green {  background-color: #d1fae5; color: #065f46;  }
+.article-what-project-transparency-should-look-like .badge--amber {  background-color: #fef3c7; color: #92400e;  }
+.article-what-project-transparency-should-look-like .badge--blue {  background-color: #dbeafe; color: #1e3a8a;  }
+.article-what-project-transparency-should-look-like .table-wrap { 
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+     }
+.article-what-project-transparency-should-look-like /* ─── Section 3 – Documentation by Phase ────────────────── */
+    .phase-tabs { 
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+     }
+.article-what-project-transparency-should-look-like .phase-tab { 
+      padding: 0.45rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--color-surface);
+      color: var(--color-ink-muted);
+      transition: all 0.15s;
+      font-family: var(--font-body);
+     }
+.article-what-project-transparency-should-look-like .phase-tab:hover, .article-what-project-transparency-should-look-like .phase-tab.active { 
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+     }
+.article-what-project-transparency-should-look-like .phase-panel {  display: none;  }
+.article-what-project-transparency-should-look-like .phase-panel.active {  display: block;  }
+.article-what-project-transparency-should-look-like .doc-checklist { 
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.875rem;
+     }
+.article-what-project-transparency-should-look-like .doc-checklist li { 
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--color-ink-muted);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 0.875rem 1rem;
+     }
+.article-what-project-transparency-should-look-like .doc-checklist li .check-icon { 
+      flex-shrink: 0;
+      margin-top: 1px;
+     }
+.article-what-project-transparency-should-look-like .doc-checklist li .check-icon svg {  width: 16px; height: 16px; color: var(--color-accent);  }
+.article-what-project-transparency-should-look-like .doc-checklist li strong {  color: var(--color-ink); font-size: 0.875rem; display: block; margin-bottom: 0.2rem;  }
+.article-what-project-transparency-should-look-like .panel-note { 
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      background-color: var(--color-accent-light);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.875rem;
+      color: var(--color-accent);
+     }
+.article-what-project-transparency-should-look-like /* ─── Section 4 – Red Flags ─────────────────────────────── */
+    .flag-list { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+     }
+.article-what-project-transparency-should-look-like .flag-item { 
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      background-color: var(--color-surface);
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+     }
+.article-what-project-transparency-should-look-like .flag-item:last-child {  border-bottom: none;  }
+.article-what-project-transparency-should-look-like .flag-num { 
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background-color: #fee2e2;
+      color: #991b1b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 1px;
+     }
+.article-what-project-transparency-should-look-like .flag-content h3 { 
+      font-size: 0.9375rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      color: var(--color-ink);
+      margin-bottom: 0.3rem;
+     }
+.article-what-project-transparency-should-look-like .flag-content p { 
+      font-size: 0.875rem;
+      max-width: none;
+     }
+.article-what-project-transparency-should-look-like /* Visual placeholder for comparison diagram */
+    .compare-visual { 
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+     }
+.article-what-project-transparency-should-look-like .compare-col { 
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+     }
+.article-what-project-transparency-should-look-like .compare-col--good { 
+      background-color: #f0fdf4;
+      border-color: #bbf7d0;
+     }
+.article-what-project-transparency-should-look-like .compare-col--poor { 
+      background-color: #fff7f7;
+      border-color: #fecaca;
+     }
+.article-what-project-transparency-should-look-like .compare-col h4 { 
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 1rem;
+     }
+.article-what-project-transparency-should-look-like .compare-col--good h4 {  color: #166534;  }
+.article-what-project-transparency-should-look-like .compare-col--poor h4 {  color: #991b1b;  }
+.article-what-project-transparency-should-look-like .compare-col ul { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+     }
+.article-what-project-transparency-should-look-like .compare-col ul li { 
+      font-size: 0.85rem;
+      color: var(--color-ink-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+     }
+.article-what-project-transparency-should-look-like .compare-col ul li::before { 
+      content: '';
+      flex-shrink: 0;
+      margin-top: 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+     }
+.article-what-project-transparency-should-look-like .compare-col--good ul li::before {  background-color: #22c55e;  }
+.article-what-project-transparency-should-look-like .compare-col--poor ul li::before {  background-color: #ef4444;  }
+.article-what-project-transparency-should-look-like /* ─── Section 5 – Process Explainer (RFI / CO) ──────────── */
+    .process-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+     }
+.article-what-project-transparency-should-look-like .process-card { 
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+     }
+.article-what-project-transparency-should-look-like .process-card-header { 
+      background-color: var(--color-ink);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+     }
+.article-what-project-transparency-should-look-like .process-card-header svg {  width: 20px; height: 20px; color: var(--color-ink-faint); flex-shrink: 0;  }
+.article-what-project-transparency-should-look-like .process-card-header h3 { 
+      color: var(--color-surface);
+      font-size: 1rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+     }
+.article-what-project-transparency-should-look-like .process-card-header .tag { 
+      margin-left: auto;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      border: 1px solid #44403c;
+      border-radius: 99px;
+      padding: 0.2em 0.6em;
+      white-space: nowrap;
+     }
+.article-what-project-transparency-should-look-like .process-card-body {  padding: 1.5rem;  }
+.article-what-project-transparency-should-look-like .process-card-body p {  font-size: 0.9rem; margin-bottom: 1.25rem; max-width: none;  }
+.article-what-project-transparency-should-look-like .process-steps { 
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+     }
+.article-what-project-transparency-should-look-like .process-steps::before { 
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background-color: var(--color-border);
+     }
+.article-what-project-transparency-should-look-like .process-steps li { 
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+      padding: 0.5rem 0;
+      position: relative;
+     }
+.article-what-project-transparency-should-look-like .step-bubble { 
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+      margin-top: 1px;
+     }
+.article-what-project-transparency-should-look-like .process-steps li span { 
+      font-size: 0.875rem;
+      color: var(--color-ink-muted);
+      padding-top: 3px;
+     }
+.article-what-project-transparency-should-look-like .process-steps li strong {  color: var(--color-ink);  }
+.article-what-project-transparency-should-look-like .warning-note { 
+      margin-top: 1.25rem;
+      padding: 0.875rem 1rem;
+      background-color: #fef9c3;
+      border-left: 3px solid #ca8a04;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.8125rem;
+      color: #713f12;
+     }
+.article-what-project-transparency-should-look-like /* ─── Section 6 – Interview Questions ───────────────────── */
+    .question-accordion { 
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+     }
+.article-what-project-transparency-should-look-like .q-item { 
+      border-bottom: 1px solid var(--color-border);
+      background-color: var(--color-surface);
+     }
+.article-what-project-transparency-should-look-like .q-item:last-child {  border-bottom: none;  }
+.article-what-project-transparency-should-look-like .q-trigger { 
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.125rem 1.5rem;
+      cursor: pointer;
+      text-align: left;
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+     }
+.article-what-project-transparency-should-look-like .q-trigger:hover {  background-color: var(--color-surface-alt);  }
+.article-what-project-transparency-should-look-like .q-num { 
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-top: 2px;
+      min-width: 1.5rem;
+     }
+.article-what-project-transparency-should-look-like .q-text { 
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-ink);
+      flex: 1;
+     }
+.article-what-project-transparency-should-look-like .q-arrow { 
+      flex-shrink: 0;
+      transition: transform 0.2s;
+      margin-top: 2px;
+     }
+.article-what-project-transparency-should-look-like .q-arrow svg {  width: 16px; height: 16px; color: var(--color-ink-faint);  }
+.article-what-project-transparency-should-look-like .q-item.open .q-arrow {  transform: rotate(180deg);  }
+.article-what-project-transparency-should-look-like .q-body { 
+      display: none;
+      padding: 0 1.5rem 1.25rem calc(1.5rem + 1rem + 1.5rem);
+     }
+.article-what-project-transparency-should-look-like .q-item.open .q-body {  display: block;  }
+.article-what-project-transparency-should-look-like .q-body p { 
+      font-size: 0.875rem;
+      max-width: none;
+      margin-bottom: 0.75rem;
+     }
+.article-what-project-transparency-should-look-like .q-body .what-to-hear { 
+      margin-top: 0.875rem;
+      padding: 0.875rem 1rem;
+      background-color: var(--color-accent-light);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.8125rem;
+      color: var(--color-accent);
+     }
+.article-what-project-transparency-should-look-like .q-body .what-to-hear strong { 
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+     }
+.article-what-project-transparency-should-look-like /* ─── Section 7 – Standards Summary ────────────────────── */
+    .summary-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+     }
+.article-what-project-transparency-should-look-like .summary-stat { 
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+     }
+.article-what-project-transparency-should-look-like .summary-stat .stat-value { 
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+     }
+.article-what-project-transparency-should-look-like .summary-stat .stat-label { 
+      font-size: 0.8125rem;
+      color: var(--color-ink-muted);
+      line-height: 1.4;
+     }
+.article-what-project-transparency-should-look-like /* ─── CTA ────────────────────────────────────────────────── */
+    .cta-section { 
+      background-color: var(--color-ink);
+      color: var(--color-surface);
+      padding-block: clamp(3.5rem, 7vw, 5.5rem);
+      text-align: center;
+     }
+.article-what-project-transparency-should-look-like .cta-section .eyebrow {  color: var(--color-ink-faint);  }
+.article-what-project-transparency-should-look-like .cta-section h2 {  color: var(--color-surface); margin-inline: auto; max-width: 560px;  }
+.article-what-project-transparency-should-look-like .cta-section p {  color: var(--color-ink-faint); margin-inline: auto; margin-top: 1rem; max-width: 480px;  }
+.article-what-project-transparency-should-look-like .cta-btn { 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding: 0.75rem 1.75rem;
+      background-color: var(--color-surface);
+      color: var(--color-ink);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: opacity 0.15s;
+     }
+.article-what-project-transparency-should-look-like .cta-btn:hover {  opacity: 0.88; text-decoration: none;  }
+.article-what-project-transparency-should-look-like .cta-btn svg {  width: 14px; height: 14px;  }
+.article-what-project-transparency-should-look-like .cta-secondary { 
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.8125rem;
+      color: var(--color-ink-faint);
+     }
+.article-what-project-transparency-should-look-like .cta-secondary a {  color: var(--color-ink-faint); text-decoration: underline;  }
+.article-what-project-transparency-should-look-like .cta-secondary a:hover {  color: var(--color-surface);  }
+.article-what-project-transparency-should-look-like .footer-inner { 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+     }
+.article-what-project-transparency-should-look-like .footer-logo { 
+      font-family: var(--font-heading);
+      font-size: 0.9375rem;
+      color: var(--color-ink-muted);
+     }
+.article-what-project-transparency-should-look-like .footer-logo span {  color: var(--color-accent);  }
+.article-what-project-transparency-should-look-like .footer-links { 
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+     }
+.article-what-project-transparency-should-look-like .footer-links a {  color: var(--color-ink-faint); text-decoration: none;  }
+.article-what-project-transparency-should-look-like .footer-links a:hover {  color: var(--color-ink-muted);  }
+.article-what-project-transparency-should-look-like /* ─── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 600px) { 
+      .compare-visual { grid-template-columns: 1fr; }
+      .hero-meta .hero-divider { display: none; }
+      .phase-strip { flex-wrap: wrap; }
+      .phase-item { min-width: 33%; }
+      .cadence-table thead { display: none; }
+      .cadence-table, .cadence-table tbody, .cadence-table tr, .cadence-table td { display: block; width: 100%; }
+      .cadence-table tr { margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); overflow: hidden; }
+      .cadence-table td::before {
+        content: attr(data-label);
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-ink-faint);
+        display: block;
+        margin-bottom: 0.2rem;
+      }
+      .cadence-table td:first-child { background-color: var(--color-surface-alt); }
+     }
+@media (max-width: 480px) { .article-what-project-transparency-should-look-like .nav-label {  display: none;  } }
+.article-what-project-transparency-should-look-like /* ─── Scroll-in animation ────────────────────────────────── */
+    .reveal { 
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+     }
+.article-what-project-transparency-should-look-like .reveal.visible { 
+      opacity: 1;
+      transform: translateY(0);
+     }</style>
+<div class="article-what-project-transparency-should-look-like">
+<section class="section" aria-labelledby="why-heading">
+    <div class="container container--prose">
       <div class="section-header reveal">
         <span class="eyebrow">Context</span>
-        <h2 id="most-communication-failures-are-structural-not-personal">Most communication failures are structural, not personal</h2>
+        <h2 id="why-heading">Most communication failures are structural, not personal</h2>
         <p>When a project goes sideways due to miscommunication, the instinct is to blame personalities. But in most cases the problem is the absence of a formal communication system. Good firms build one in from the start. Here is what that system is supposed to include — and what you should be able to expect from any qualified firm you hire.</p>
       </div>
 
       <div class="standard-grid reveal">
         <div class="standard-card">
-          <div class="icon-wrap">
+          <div class="icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
           </div>
           <h3>Meeting cadence</h3>
           <p>A defined schedule of owner-architect meetings tied to project milestones — not ad hoc calls when something goes wrong.</p>
         </div>
         <div class="standard-card">
-          <div class="icon-wrap">
+          <div class="icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
           </div>
           <h3>Written summaries</h3>
           <p>Every meeting should produce a written follow-up that documents what was discussed, what was decided, and who owns each action item.</p>
         </div>
         <div class="standard-card">
-          <div class="icon-wrap">
+          <div class="icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
           </div>
           <h3>Decision log</h3>
           <p>A running record of every material, specification, and scope decision made — with dates and signatures. This is your protection and theirs.</p>
         </div>
         <div class="standard-card">
-          <div class="icon-wrap">
+          <div class="icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
           </div>
           <h3>RFI process</h3>
           <p>Requests for Information from the contractor must follow a defined workflow with documented responses — not a text thread with the project manager.</p>
         </div>
         <div class="standard-card">
-          <div class="icon-wrap">
+          <div class="icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
           <h3>Change order process</h3>
           <p>Every scope or cost change must be documented, priced, and approved in writing before work begins. Verbal approvals are not change orders.</p>
         </div>
         <div class="standard-card">
-          <div class="icon-wrap">
+          <div class="icon-wrap" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
           </div>
           <h3>Phase sign-off</h3>
@@ -56,266 +786,266 @@
         </div>
       </div>
     </div>
-  
+  </section>
 
-  
-  
+  <!-- ─── Section 2: Meeting Cadence ───────────────────────── -->
+  <section class="section section--white" aria-labelledby="cadence-heading">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Standard 01 &mdash; Meeting Rhythm</span>
-        <h2 id="the-communication-calendar-a-project-should-have">The communication calendar a project should have</h2>
+        <h2 id="cadence-heading">The communication calendar a project should have</h2>
         <p>A well-run architecture engagement has a predictable meeting structure. The following is a baseline — your project may warrant more frequent touchpoints during complex phases.</p>
       </div>
       <div class="table-wrap reveal">
         <table class="cadence-table">
           <thead>
             <tr>
-              <th>Meeting type</th>
-              <th>Frequency</th>
-              <th>Who attends</th>
-              <th>What it produces</th>
-              <th>Phase</th>
+              <th scope="col">Meeting type</th>
+              <th scope="col">Frequency</th>
+              <th scope="col">Who attends</th>
+              <th scope="col">What it produces</th>
+              <th scope="col">Phase</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Design progress review</td>
-              <td>Bi-weekly</td>
-              <td>Owner, principal architect, project manager</td>
-              <td>Written meeting minutes, updated decision log</td>
-              <td><span class="badge badge--blue">Design</span></td>
+              <td data-label="Meeting type">Design progress review</td>
+              <td data-label="Frequency">Bi-weekly</td>
+              <td data-label="Who attends">Owner, principal architect, project manager</td>
+              <td data-label="What it produces">Written meeting minutes, updated decision log</td>
+              <td data-label="Phase"><span class="badge badge--blue">Design</span></td>
             </tr>
             <tr>
-              <td>Phase completion review</td>
-              <td>Once per phase</td>
-              <td>Owner, full design team</td>
-              <td>Signed phase approval, written scope summary</td>
-              <td><span class="badge badge--blue">Design</span></td>
+              <td data-label="Meeting type">Phase completion review</td>
+              <td data-label="Frequency">Once per phase</td>
+              <td data-label="Who attends">Owner, full design team</td>
+              <td data-label="What it produces">Signed phase approval, written scope summary</td>
+              <td data-label="Phase"><span class="badge badge--blue">Design</span></td>
             </tr>
             <tr>
-              <td>Pre-construction meeting</td>
-              <td>Once</td>
-              <td>Owner, architect, general contractor, key subs</td>
-              <td>Documented meeting minutes, contact directory, schedule baseline</td>
-              <td><span class="badge badge--green">Construction</span></td>
+              <td data-label="Meeting type">Pre-construction meeting</td>
+              <td data-label="Frequency">Once</td>
+              <td data-label="Who attends">Owner, architect, general contractor, key subs</td>
+              <td data-label="What it produces">Documented meeting minutes, contact directory, schedule baseline</td>
+              <td data-label="Phase"><span class="badge badge--green">Construction</span></td>
             </tr>
             <tr>
-              <td>Site observation visit</td>
-              <td>Weekly (minimum)</td>
-              <td>Architect or project architect</td>
-              <td>Written field report with photos, action items, RFI status</td>
-              <td><span class="badge badge--green">Construction</span></td>
+              <td data-label="Meeting type">Site observation visit</td>
+              <td data-label="Frequency">Weekly (minimum)</td>
+              <td data-label="Who attends">Architect or project architect</td>
+              <td data-label="What it produces">Written field report with photos, action items, RFI status</td>
+              <td data-label="Phase"><span class="badge badge--green">Construction</span></td>
             </tr>
             <tr>
-              <td>OAC meeting</td>
-              <td>Bi-weekly</td>
-              <td>Owner, architect, general contractor</td>
-              <td>Meeting minutes, schedule update, open RFI log, pending change orders</td>
-              <td><span class="badge badge--green">Construction</span></td>
+              <td data-label="Meeting type">OAC meeting</td>
+              <td data-label="Frequency">Bi-weekly</td>
+              <td data-label="Who attends">Owner, architect, general contractor</td>
+              <td data-label="What it produces">Meeting minutes, schedule update, open RFI log, pending change orders</td>
+              <td data-label="Phase"><span class="badge badge--green">Construction</span></td>
             </tr>
             <tr>
-              <td>Substantial completion walkthrough</td>
-              <td>Once</td>
-              <td>Owner, architect, GC</td>
-              <td>Punch list, certificate of substantial completion</td>
-              <td><span class="badge badge--amber">Closeout</span></td>
+              <td data-label="Meeting type">Substantial completion walkthrough</td>
+              <td data-label="Frequency">Once</td>
+              <td data-label="Who attends">Owner, architect, GC</td>
+              <td data-label="What it produces">Punch list, certificate of substantial completion</td>
+              <td data-label="Phase"><span class="badge badge--amber">Closeout</span></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p>
+      <p class="reveal" style="margin-top:1.25rem; font-size:0.8125rem; color: var(--color-ink-faint);">
         Note: An OAC (Owner-Architect-Contractor) meeting is a standard tri-party coordination call. If your firm does not hold them, ask why.
       </p>
     </div>
-  
+  </section>
 
-  
-  
+  <!-- ─── Section 3: Documentation by Phase ────────────────── -->
+  <section class="section section--alt" aria-labelledby="docs-heading">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Standard 02 &mdash; Phase Documentation</span>
-        <h2 id="what-a-good-architect-produces-at-each-project-phase">What a good architect produces at each project phase</h2>
+        <h2 id="docs-heading">What a good architect produces at each project phase</h2>
         <p>The AIA defines five standard phases of architectural services. Each phase should generate a specific set of documents. If your project concluded a phase without these, that is a gap — not a stylistic choice.</p>
       </div>
 
-      <div class="phase-tabs reveal">
-        Schematic Design
-        Design Development
-        Construction Documents
-        Bidding
-        Construction Administration
+      <div class="phase-tabs reveal" role="tablist" aria-label="Project phases">
+        <button class="phase-tab active" role="tab" aria-selected="true" data-panel="sd">Schematic Design</button>
+        <button class="phase-tab" role="tab" aria-selected="false" data-panel="dd">Design Development</button>
+        <button class="phase-tab" role="tab" aria-selected="false" data-panel="cd">Construction Documents</button>
+        <button class="phase-tab" role="tab" aria-selected="false" data-panel="bid">Bidding</button>
+        <button class="phase-tab" role="tab" aria-selected="false" data-panel="ca">Construction Administration</button>
       </div>
 
-      <div class="phase-panel active reveal">
+      <div id="panel-sd" class="phase-panel active reveal" role="tabpanel">
         <ul class="doc-checklist">
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Site analysis memo</strong>Documenting zoning, setbacks, topography, and utility constraints that will shape the design.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Program confirmation document</strong>Written confirmation of the agreed-upon program — room sizes, adjacencies, and functional requirements — before design begins.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Schematic drawings</strong>Floor plans, sections, and a site plan at a scale sufficient to convey the design concept and area calculations.</div>
           </li>
         </ul>
         <div class="panel-note">At SD completion you should receive a written estimate of probable construction cost. If none is provided, ask for it explicitly.</div>
       </div>
 
-      <div class="phase-panel reveal">
+      <div id="panel-dd" class="phase-panel reveal" role="tabpanel">
         <ul class="doc-checklist">
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Updated floor plans &amp; elevations</strong>Further developed drawings resolving structural bay sizes, wall thicknesses, and exterior envelope materials.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Outline specifications</strong>A written document identifying the major material and system selections in each CSI division.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Structural &amp; MEP coordination drawings</strong>Confirming that structural, mechanical, electrical, and plumbing systems are coordinated with the architectural design.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Updated cost estimate</strong>A revised estimate of probable construction cost reflecting all DD decisions.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Owner sign-off memo</strong>Your written confirmation that DD is complete and approved before the team begins construction documents.</div>
           </li>
         </ul>
         <div class="panel-note">DD is the last phase where major scope changes can be made without significant cost. A well-run DD process prevents change orders in the field.</div>
       </div>
 
-      <div class="phase-panel reveal">
+      <div id="panel-cd" class="phase-panel reveal" role="tabpanel">
         <ul class="doc-checklist">
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Full permit document set</strong>Stamped drawings and specifications meeting the requirements of the applicable building department.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Project manual &amp; specifications</strong>A complete written specification of all materials, products, and installation standards organized by CSI division.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Final opinion of probable cost</strong>An updated cost estimate based on the completed CD set, used to evaluate contractor bids.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Permit application tracking log</strong>Documentation of submission dates, comment responses, and permit issuance status.</div>
           </li>
         </ul>
         <div class="panel-note">You are entitled to a copy of the complete CD set. Some firms treat these as proprietary. Understand your contract&#39;s ownership-of-instruments-of-service clause before you sign.</div>
       </div>
 
-      <div class="phase-panel reveal">
+      <div id="panel-bid" class="phase-panel reveal" role="tabpanel">
         <ul class="doc-checklist">
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Bid invitation &amp; instructions</strong>A written document distributed to bidders specifying the scope, bid format, and deadline.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Addenda log</strong>A written record of every clarification or revision issued during the bidding period, distributed to all bidders simultaneously.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Bid tabulation &amp; recommendation</strong>A written comparison of all received bids with the architect&#39;s recommendation, supporting your contractor selection decision.</div>
           </li>
         </ul>
         <div class="panel-note">If addenda are not distributed to all bidders, contractors who did not receive them may submit bids on different scope — making comparison meaningless.</div>
       </div>
 
-      <div class="phase-panel reveal">
+      <div id="panel-ca" class="phase-panel reveal" role="tabpanel">
         <ul class="doc-checklist">
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Weekly field observation reports</strong>Written summaries from each site visit documenting construction status, observations, open items, and photos.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>RFI log</strong>A numbered, dated log of all Requests for Information submitted by the contractor and the architect&#39;s written responses.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Submittal log</strong>A log tracking all contractor submittals — shop drawings, product data, samples — with review dates and disposition.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Change order log</strong>A running log of all proposed and executed change orders, with cost and schedule impact for each.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Pay application reviews</strong>Written certification of each contractor payment application, confirming work in place justifies the amount requested.</div>
           </li>
           <li>
-            <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
+            <span class="check-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg></span>
             <div><strong>Punch list &amp; closeout documents</strong>A formal punch list, certificate of substantial completion, and record of closeout submittals including warranties and as-builts.</div>
           </li>
         </ul>
         <div class="panel-note">The CA phase is where many firms reduce service to cut time. Ask your firm at contract signing how many site visits per month are included and what is in-scope for CA services.</div>
       </div>
     </div>
-  
+  </section>
 
-  
-  
+  <!-- ─── Section 4: Red Flags ──────────────────────────────── -->
+  <section class="section" aria-labelledby="flags-heading">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Standard 03 &mdash; Below-Standard Signals</span>
-        <h2 id="how-to-tell-whether-your-firm-39-s-communication-is-below-st">How to tell whether your firm&#39;s communication is below standard</h2>
+        <h2 id="flags-heading">How to tell whether your firm&#39;s communication is below standard</h2>
         <p>These are not edge cases. They are the most common patterns we see when clients come to us after a difficult experience with another firm.</p>
       </div>
 
       <ul class="flag-list reveal">
         <li class="flag-item">
-          <div class="flag-num">1</div>
+          <div class="flag-num" aria-label="Signal 1">1</div>
           <div class="flag-content">
             <h3>No written follow-up after meetings</h3>
             <p>If meetings produce decisions but no written record, those decisions will later be disputed. "We discussed it in the meeting" is not a substitute for documented minutes. A standard firm sends a summary within 48 hours of every meeting.</p>
           </div>
         </li>
         <li class="flag-item">
-          <div class="flag-num">2</div>
+          <div class="flag-num" aria-label="Signal 2">2</div>
           <div class="flag-content">
             <h3>Change orders presented for signature after work is done</h3>
             <p>A change order is an agreement to perform additional or modified work at a specified price. If you are being asked to sign one after the work is already in the wall, the process broke down. Approval should precede execution.</p>
           </div>
         </li>
         <li class="flag-item">
-          <div class="flag-num">3</div>
+          <div class="flag-num" aria-label="Signal 3">3</div>
           <div class="flag-content">
             <h3>You cannot get a straight answer on where the budget stands</h3>
             <p>At any point during design or construction, you should be able to ask your architect for the current opinion of probable cost and get a written response within a week. Vague answers about "waiting for contractor feedback" are a deflection, not an answer.</p>
           </div>
         </li>
         <li class="flag-item">
-          <div class="flag-num">4</div>
+          <div class="flag-num" aria-label="Signal 4">4</div>
           <div class="flag-content">
             <h3>RFIs are handled by phone or text instead of a written log</h3>
             <p>When a contractor calls with a field question and gets a verbal answer, and no one writes it down, you now have an undocumented interpretation of the construction documents. If it turns out to be wrong, there is no record of who said what.</p>
           </div>
         </li>
         <li class="flag-item">
-          <div class="flag-num">5</div>
+          <div class="flag-num" aria-label="Signal 5">5</div>
           <div class="flag-content">
             <h3>You advanced from one phase to the next without a formal review</h3>
             <p>Phase boundaries exist for a reason: they are the last low-cost opportunity to catch problems before they are locked in. If your project went from Schematic Design to Design Development to CDs without a formal review and sign-off at each stage, decisions were made that should have been yours to make.</p>
           </div>
         </li>
         <li class="flag-item">
-          <div class="flag-num">6</div>
+          <div class="flag-num" aria-label="Signal 6">6</div>
           <div class="flag-content">
             <h3>You do not know who is actually working on your project</h3>
             <p>A principal-in-charge who attends the initial meeting but then delegates entirely to junior staff without telling you is a common source of unmet expectations. You should know your project team by name, role, and seniority from day one.</p>
           </div>
         </li>
         <li class="flag-item">
-          <div class="flag-num">7</div>
+          <div class="flag-num" aria-label="Signal 7">7</div>
           <div class="flag-content">
             <h3>Site visits are infrequent or not documented</h3>
             <p>During construction, architecture is primarily about observing, interpreting, and responding. Weekly visits are standard on active construction. If your architect visits monthly and produces no written report, they are not performing construction administration — they are making an appearance.</p>
@@ -323,8 +1053,8 @@
         </li>
       </ul>
 
-      
-      <div class="compare-visual reveal">
+      <!-- Comparison visual -->
+      <div class="compare-visual reveal" aria-label="Comparison of communication practices">
         <div class="compare-col compare-col--good">
           <h4>What good practice looks like</h4>
           <ul>
@@ -349,19 +1079,19 @@
         </div>
       </div>
     </div>
-  
+  </section>
 
-  
-  
+  <!-- ─── Section 5: RFI & Change Order Process ────────────── -->
+  <section class="section section--white" aria-labelledby="process-heading">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Standard 04 &mdash; Formal Processes</span>
-        <h2 id="how-the-rfi-and-change-order-processes-are-supposed-to-work">How the RFI and change order processes are supposed to work</h2>
+        <h2 id="process-heading">How the RFI and change order processes are supposed to work</h2>
         <p>These two processes are the most commonly mismanaged on construction projects. Understanding how they should work gives you leverage when they do not.</p>
       </div>
 
       <div class="process-grid reveal">
-        
+        <!-- RFI -->
         <div class="process-card">
           <div class="process-card-header">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -394,7 +1124,7 @@
           </div>
         </div>
 
-        
+        <!-- Change Order -->
         <div class="process-card">
           <div class="process-card-header">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
@@ -432,97 +1162,97 @@
         </div>
       </div>
     </div>
-  
+  </section>
 
-  
-  
+  <!-- ─── Section 6: Interview Questions ────────────────────── -->
+  <section class="section section--alt" aria-labelledby="questions-heading">
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Standard 05 &mdash; Evaluation Questions</span>
-        <h2 id="what-to-ask-a-firm-you-are-considering-hiring">What to ask a firm you are considering hiring</h2>
+        <h2 id="questions-heading">What to ask a firm you are considering hiring</h2>
         <p>These questions are designed to surface communication discipline, not personality. A firm with good process will answer them without hesitation. Vague answers are themselves data.</p>
       </div>
 
-      <div class="question-accordion reveal">
+      <div class="question-accordion reveal" role="list">
 
-        <div class="q-item">
-          
+        <div class="q-item" role="listitem">
+          <button class="q-trigger" aria-expanded="false">
             <span class="q-num">01</span>
             <span class="q-text">"Can you walk me through exactly what you send me after every meeting?"</span>
-            <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
-          
+            <span class="q-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
+          </button>
           <div class="q-body">
             <p>This tests whether meeting follow-up is a defined habit or an improvised courtesy. You want to hear a specific format: a written summary with date, attendees, decisions made, open items, and owner-required actions.</p>
             <div class="what-to-hear"><strong>What a good answer sounds like</strong>"We send a written meeting summary within 48 hours. It documents the decisions made, who is responsible for each action item, and any items requiring your approval. We keep a running decision log throughout the project."</div>
           </div>
         </div>
 
-        <div class="q-item">
-          
+        <div class="q-item" role="listitem">
+          <button class="q-trigger" aria-expanded="false">
             <span class="q-num">02</span>
             <span class="q-text">"How do you handle RFIs during construction, and will I have access to the RFI log?"</span>
-            <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
-          
+            <span class="q-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
+          </button>
           <div class="q-body">
             <p>A firm without a defined RFI process will answer this question slowly. You want to understand the submission format, target response time, and whether RFIs that affect scope or cost are flagged to you before a response is issued.</p>
             <div class="what-to-hear"><strong>What a good answer sounds like</strong>"RFIs are submitted in writing through our project management platform. We log every RFI with a number and target response date. Our standard response time is 7 working days. Any RFI that could affect your cost or scope is flagged to you before we respond."</div>
           </div>
         </div>
 
-        <div class="q-item">
-          
+        <div class="q-item" role="listitem">
+          <button class="q-trigger" aria-expanded="false">
             <span class="q-num">03</span>
             <span class="q-text">"What does a change order look like in your process — and at what point do I sign one?"</span>
-            <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
-          
+            <span class="q-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
+          </button>
           <div class="q-body">
             <p>The answer you do not want: "We collect them and send them to you periodically." Change orders should be presented as they occur, with itemized pricing and a recommendation, before work is performed.</p>
             <div class="what-to-hear"><strong>What a good answer sounds like</strong>"When a change is identified, we request itemized pricing from the contractor and review it for reasonableness before presenting it to you with a written recommendation. You sign before the work proceeds. We never present retroactive change orders."</div>
           </div>
         </div>
 
-        <div class="q-item">
-          
+        <div class="q-item" role="listitem">
+          <button class="q-trigger" aria-expanded="false">
             <span class="q-num">04</span>
             <span class="q-text">"How many site visits per month are included in your CA scope, and what is in your field report?"</span>
-            <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
-          
+            <span class="q-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
+          </button>
           <div class="q-body">
             <p>Construction administration is routinely underscoped and underfunded. Ask for a number. Ask to see a sample field report. A field report without photos and open-item tracking is a social visit, not professional oversight.</p>
             <div class="what-to-hear"><strong>What a good answer sounds like</strong>"We include weekly site visits during active construction. Each visit produces a written field report with construction status, photos, any work that does not conform to the documents, and the current status of open RFIs and submittals. You receive a copy."</div>
           </div>
         </div>
 
-        <div class="q-item">
-          
+        <div class="q-item" role="listitem">
+          <button class="q-trigger" aria-expanded="false">
             <span class="q-num">05</span>
             <span class="q-text">"How do you conduct the phase review at the end of Schematic Design and Design Development?"</span>
-            <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
-          
+            <span class="q-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
+          </button>
           <div class="q-body">
             <p>This question checks whether phase gates are real events or calendar fiction. A well-run firm has a defined review meeting, a checklist of deliverables, and a written approval before the team advances.</p>
             <div class="what-to-hear"><strong>What a good answer sounds like</strong>"At the end of each phase we schedule a formal review meeting where we present the complete deliverable package. We give you a written summary of what the phase produced and what decisions were made. We do not advance to the next phase until you have signed the phase completion document."</div>
           </div>
         </div>
 
-        <div class="q-item">
-          
+        <div class="q-item" role="listitem">
+          <button class="q-trigger" aria-expanded="false">
             <span class="q-num">06</span>
             <span class="q-text">"Who will actually be working on my project, and what is their role?"</span>
-            <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
-          
+            <span class="q-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
+          </button>
           <div class="q-body">
             <p>This surfaces the bait-and-switch pattern common in larger firms. You want names, roles, and seniority. Ask specifically how much time the principal will personally spend on your project versus delegating to project staff.</p>
             <div class="what-to-hear"><strong>What a good answer sounds like</strong>"Here is your project team: the principal-in-charge, a licensed project architect, and a project coordinator. I will personally review the design at each phase gate and attend every OAC meeting. Day-to-day coordination is handled by our project architect, whom you will speak with directly."</div>
           </div>
         </div>
 
-        <div class="q-item">
-          
+        <div class="q-item" role="listitem">
+          <button class="q-trigger" aria-expanded="false">
             <span class="q-num">07</span>
             <span class="q-text">"Can I see a sample of your OAC meeting minutes from a current project?"</span>
-            <span class="q-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
-          
+            <span class="q-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"/></svg></span>
+          </button>
           <div class="q-body">
             <p>Asking to see an actual document is the fastest way to evaluate documentation quality. Hesitation to share a redacted sample is itself informative. A firm proud of its process will produce one immediately.</p>
             <div class="what-to-hear"><strong>What a good answer sounds like</strong>"Absolutely — let me pull a redacted copy. Our OAC minutes include the date, attendees, the current schedule update, the status of open RFIs and submittals, pending and approved change orders, and action items with owners and due dates."</div>
@@ -531,14 +1261,14 @@
 
       </div>
     </div>
-  
+  </section>
 
-  
-  
+  <!-- ─── Section 7: Standards Summary Stats ────────────────── -->
+  <section class="section section--white" aria-labelledby="summary-heading">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header reveal" style="text-align:center; max-width: 560px; margin-inline: auto;">
         <span class="eyebrow">By the numbers</span>
-        <h2 id="the-benchmarks-of-a-well-documented-project">The benchmarks of a well-documented project</h2>
+        <h2 id="summary-heading">The benchmarks of a well-documented project</h2>
       </div>
       <div class="summary-grid reveal">
         <div class="summary-stat">
@@ -563,3 +1293,18 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ─── CTA ──────────────────────────────────────────────────── -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <span class="eyebrow">Cloudstone Designs</span>
+      <h2 id="cta-heading">If you want to know how we run our projects, ask us directly</h2>
+      <p>We are happy to walk through our communication process, show you sample deliverables, and answer any of the questions on this page about how we work.</p>
+      <a href="#" class="cta-btn" aria-label="Get in touch with Cloudstone Designs">
+        Get in touch
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+      </a>
+      <span class="cta-secondary">Or review our <a href="#">full services overview</a> and <a href="#">portfolio</a> first.</span>
+    </div>
+  </section></div>

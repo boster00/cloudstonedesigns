@@ -2,9 +2,770 @@
   CJGEO-generated article body (re-adopted via /api/cjgeo-readopt).
   article_id: c72012eb-9ad5-4240-ac30-74073d0f5802
   main_keyword: architecture project failure causes
-  adopted_at: 2026-05-26T19:23:24.662Z
+  adopted_at: 2026-05-26T21:20:12.373Z
 -->
-<div class="container">
+<style data-cjgeo-scoped="article-why-architecture-projects-fail">/* ============================================================
+       DESIGN TOKENS
+    ============================================================ */
+    .article-why-architecture-projects-fail { 
+      --color-bg:          #F5F3EF;   /* warm off-white / parchment */
+      --color-surface:     #ECEAE4;   /* slightly deeper stone for cards */
+      --color-ink:         #1C1B19;   /* near-black, warm tinted */
+      --color-ink-mid:     #4A4845;   /* mid-tone body text */
+      --color-ink-muted:   #8C8A86;   /* captions, labels, rules */
+      --color-rule:        #D4D0C8;   /* hairlines, dividers */
+      --color-accent:      #3B5E4E;   /* deep forest green — anchor / CTA */
+      --color-accent-light:#EBF1EE;   /* tinted bg for callouts */
+
+      --font-heading: Georgia, 'Times New Roman', Times, serif;
+      --font-body:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+      --max-w:        800px;
+      --max-w-wide:   1080px;
+      --gap-section:  80px;
+      --gap-inner:    32px;
+      --radius:       4px;
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    * {  box-sizing: border-box; margin: 0; padding: 0;  }
+.article-why-architecture-projects-fail {  background-color: var(--color-bg);  }
+.article-why-architecture-projects-fail img {  display: block; max-width: 100%;  }
+.article-why-architecture-projects-fail a { 
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+     }
+.article-why-architecture-projects-fail a:hover {  text-decoration: none;  }
+.article-why-architecture-projects-fail /* ============================================================
+       TYPOGRAPHY SCALE
+    ============================================================ */
+    .t-eyebrow { 
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail .t-display { 
+      font-family: var(--font-heading);
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--color-ink);
+     }
+.article-why-architecture-projects-fail .t-headline { 
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-ink);
+     }
+.article-why-architecture-projects-fail .t-subhead { 
+      font-family: var(--font-heading);
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--color-ink);
+     }
+.article-why-architecture-projects-fail .t-body { 
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--color-ink-mid);
+     }
+.article-why-architecture-projects-fail .t-small { 
+      font-family: var(--font-body);
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       LAYOUT UTILITIES
+    ============================================================ */
+    .container { 
+      max-width: var(--max-w);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+     }
+.article-why-architecture-projects-fail .container--wide { 
+      max-width: var(--max-w-wide);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+     }
+.article-why-architecture-projects-fail .section { 
+      padding-top: var(--gap-section);
+      padding-bottom: var(--gap-section);
+     }
+.article-why-architecture-projects-fail .section--tight { 
+      padding-top: 48px;
+      padding-bottom: 48px;
+     }
+.article-why-architecture-projects-fail .rule { 
+      border: none;
+      border-top: 1px solid var(--color-rule);
+      margin: 0;
+     }
+.article-why-architecture-projects-fail .stack > * + * {  margin-top: var(--gap-inner);  }
+.article-why-architecture-projects-fail .stack--sm > * + * {  margin-top: 16px;  }
+.article-why-architecture-projects-fail .stack--lg > * + * {  margin-top: 48px;  }
+.article-why-architecture-projects-fail .site-header__inner { 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 18px;
+      padding-bottom: 18px;
+     }
+.article-why-architecture-projects-fail .site-logo { 
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--color-ink);
+      text-decoration: none;
+     }
+.article-why-architecture-projects-fail .site-logo span { 
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail .btn { 
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease;
+     }
+.article-why-architecture-projects-fail .btn--primary { 
+      background-color: var(--color-accent);
+      color: #fff;
+      border: 1px solid var(--color-accent);
+     }
+.article-why-architecture-projects-fail .btn--primary:hover {  background-color: #2e4a3d; text-decoration: none;  }
+.article-why-architecture-projects-fail .btn--ghost { 
+      background-color: transparent;
+      color: var(--color-accent);
+      border: 1px solid var(--color-accent);
+     }
+.article-why-architecture-projects-fail .btn--ghost:hover {  background-color: var(--color-accent-light); text-decoration: none;  }
+.article-why-architecture-projects-fail /* ============================================================
+       HERO
+    ============================================================ */
+    .hero { 
+      padding-top: 80px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-why-architecture-projects-fail .hero__meta { 
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+     }
+.article-why-architecture-projects-fail .hero__tag { 
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background-color: var(--color-accent-light);
+      color: var(--color-accent);
+      padding: 4px 10px;
+      border-radius: var(--radius);
+     }
+.article-why-architecture-projects-fail .hero__series { 
+      font-size: 12px;
+      color: var(--color-ink-muted);
+      letter-spacing: 0.04em;
+     }
+.article-why-architecture-projects-fail .hero__title { 
+      font-family: var(--font-heading);
+      font-size: clamp(38px, 6vw, 68px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      color: var(--color-ink);
+      max-width: 820px;
+      margin-bottom: 24px;
+     }
+.article-why-architecture-projects-fail .hero__subtitle { 
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--color-ink-mid);
+      max-width: 640px;
+      margin-bottom: 40px;
+     }
+.article-why-architecture-projects-fail .hero__byline { 
+      display: flex;
+      align-items: center;
+      gap: 20px;
+     }
+.article-why-architecture-projects-fail .hero__byline-text { 
+      font-size: 13px;
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail .hero__byline-text strong { 
+      color: var(--color-ink);
+      font-weight: 600;
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       VISUAL PLACEHOLDER
+    ============================================================ */
+    .visual-placeholder { 
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--color-ink-muted);
+      text-align: center;
+      padding: 32px 24px;
+     }
+.article-why-architecture-projects-fail .visual-placeholder svg { 
+      opacity: 0.4;
+     }
+.article-why-architecture-projects-fail .visual-placeholder__label { 
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+     }
+.article-why-architecture-projects-fail .visual-placeholder__sub { 
+      font-size: 13px;
+      max-width: 280px;
+     }
+.article-why-architecture-projects-fail .visual-placeholder--tall { 
+      min-height: 280px;
+     }
+.article-why-architecture-projects-fail .visual-placeholder--short { 
+      min-height: 160px;
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       INTRO / FRAMING
+    ============================================================ */
+    .intro-grid { 
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 64px;
+      align-items: start;
+     }
+@media (max-width: 720px) { .article-why-architecture-projects-fail .intro-grid {  grid-template-columns: 1fr; gap: 40px;  } }
+.article-why-architecture-projects-fail .intro-stat { 
+      border-top: 2px solid var(--color-ink);
+      padding-top: 16px;
+     }
+.article-why-architecture-projects-fail .intro-stat__number { 
+      font-family: var(--font-heading);
+      font-size: 48px;
+      line-height: 1;
+      color: var(--color-ink);
+      margin-bottom: 6px;
+     }
+.article-why-architecture-projects-fail .intro-stat__label { 
+      font-size: 13px;
+      color: var(--color-ink-muted);
+      line-height: 1.4;
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       TAXONOMY TABLE / FAILURE MAP
+    ============================================================ */
+    .taxonomy-table { 
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+     }
+.article-why-architecture-projects-fail .taxonomy-table thead th { 
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      border-bottom: 1px solid var(--color-rule);
+      padding: 10px 16px 10px 0;
+     }
+.article-why-architecture-projects-fail .taxonomy-table thead th:last-child {  padding-right: 0;  }
+.article-why-architecture-projects-fail .taxonomy-table tbody tr { 
+      border-bottom: 1px solid var(--color-rule);
+      transition: background 0.1s;
+     }
+.article-why-architecture-projects-fail .taxonomy-table tbody tr:hover {  background-color: var(--color-surface);  }
+.article-why-architecture-projects-fail .taxonomy-table td { 
+      vertical-align: top;
+      padding: 16px 16px 16px 0;
+      color: var(--color-ink-mid);
+      line-height: 1.5;
+     }
+.article-why-architecture-projects-fail .taxonomy-table td:last-child {  padding-right: 0;  }
+.article-why-architecture-projects-fail .taxonomy-table td:first-child { 
+      font-weight: 600;
+      color: var(--color-ink);
+      font-size: 14px;
+      white-space: nowrap;
+     }
+.article-why-architecture-projects-fail .badge { 
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+     }
+.article-why-architecture-projects-fail .badge--high {  background: #F5E9E9; color: #8B2E2E;  }
+.article-why-architecture-projects-fail .badge--medium {  background: #F5F0E6; color: #7A5C1E;  }
+.article-why-architecture-projects-fail .badge--low {  background: var(--color-accent-light); color: var(--color-accent);  }
+@media (max-width: 600px) { .article-why-architecture-projects-fail .taxonomy-table thead {  display: none;  }
+.article-why-architecture-projects-fail .taxonomy-table tbody tr {  display: block; padding: 16px 0;  }
+.article-why-architecture-projects-fail .taxonomy-table td {  display: block; padding: 4px 0; white-space: normal;  }
+.article-why-architecture-projects-fail .taxonomy-table td:first-child {  font-size: 15px; margin-bottom: 4px;  } }
+.article-why-architecture-projects-fail /* ============================================================
+       FAILURE CAUSE CARDS
+    ============================================================ */
+    .cause-list {  list-style: none;  }
+.article-why-architecture-projects-fail .cause-item { 
+      border-top: 1px solid var(--color-rule);
+      padding-top: 48px;
+      padding-bottom: 48px;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 32px;
+      align-items: start;
+     }
+.article-why-architecture-projects-fail .cause-item:last-child {  border-bottom: 1px solid var(--color-rule);  }
+.article-why-architecture-projects-fail .cause-number { 
+      font-family: var(--font-heading);
+      font-size: 36px;
+      color: var(--color-rule);
+      line-height: 1;
+      padding-top: 6px;
+      user-select: none;
+     }
+.article-why-architecture-projects-fail .cause-content {  }
+.article-why-architecture-projects-fail .cause-title { 
+      font-family: var(--font-heading);
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-ink);
+      margin-bottom: 8px;
+     }
+.article-why-architecture-projects-fail .cause-subtitle { 
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      margin-bottom: 20px;
+     }
+.article-why-architecture-projects-fail .cause-body { 
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--color-ink-mid);
+      margin-bottom: 24px;
+     }
+.article-why-architecture-projects-fail .cause-propagation { 
+      background-color: var(--color-surface);
+      border-left: 3px solid var(--color-accent);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-bottom: 20px;
+     }
+.article-why-architecture-projects-fail .cause-propagation__label { 
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+     }
+.article-why-architecture-projects-fail .cause-propagation__text { 
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--color-ink-mid);
+     }
+.article-why-architecture-projects-fail .cause-indicators { 
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+     }
+.article-why-architecture-projects-fail .indicator-chip { 
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border: 1px solid var(--color-rule);
+      border-radius: 2px;
+      color: var(--color-ink-muted);
+      background: var(--color-bg);
+     }
+@media (max-width: 580px) { .article-why-architecture-projects-fail .cause-item {  grid-template-columns: 1fr; gap: 12px;  }
+.article-why-architecture-projects-fail .cause-number {  font-size: 20px;  } }
+.article-why-architecture-projects-fail /* ============================================================
+       PROPAGATION DIAGRAM SECTION
+    ============================================================ */
+    .propagation-flow { 
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius);
+      overflow: hidden;
+     }
+.article-why-architecture-projects-fail .flow-stage { 
+      padding: 24px 20px;
+      border-right: 1px solid var(--color-rule);
+      position: relative;
+     }
+.article-why-architecture-projects-fail .flow-stage:last-child {  border-right: none;  }
+.article-why-architecture-projects-fail .flow-stage__index { 
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      margin-bottom: 10px;
+     }
+.article-why-architecture-projects-fail .flow-stage__name { 
+      font-family: var(--font-heading);
+      font-size: 16px;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-bottom: 10px;
+     }
+.article-why-architecture-projects-fail .flow-stage__desc { 
+      font-size: 13px;
+      color: var(--color-ink-muted);
+      line-height: 1.5;
+     }
+.article-why-architecture-projects-fail .flow-stage--active {  background-color: var(--color-surface);  }
+@media (max-width: 720px) { .article-why-architecture-projects-fail .propagation-flow {  grid-template-columns: 1fr 1fr;  }
+.article-why-architecture-projects-fail .flow-stage {  border-bottom: 1px solid var(--color-rule); border-right: none;  }
+.article-why-architecture-projects-fail .flow-stage:nth-child(odd) {  border-right: 1px solid var(--color-rule);  } }
+@media (max-width: 440px) { .article-why-architecture-projects-fail .propagation-flow {  grid-template-columns: 1fr;  }
+.article-why-architecture-projects-fail .flow-stage {  border-right: none;  }
+.article-why-architecture-projects-fail .flow-stage:nth-child(odd) {  border-right: none;  } }
+.article-why-architecture-projects-fail /* ============================================================
+       FIXABLE VS UNFIXABLE SECTION
+    ============================================================ */
+    .fixability-grid { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background-color: var(--color-rule);
+     }
+.article-why-architecture-projects-fail .fixability-col { 
+      background-color: var(--color-bg);
+      padding: 32px 28px;
+     }
+.article-why-architecture-projects-fail .fixability-col__header { 
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-why-architecture-projects-fail .fixability-icon { 
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+     }
+.article-why-architecture-projects-fail .fixability-icon--yes {  background: var(--color-accent-light); color: var(--color-accent);  }
+.article-why-architecture-projects-fail .fixability-icon--no {  background: #F5E9E9; color: #8B2E2E;  }
+.article-why-architecture-projects-fail .fixability-col__title { 
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--color-ink);
+     }
+.article-why-architecture-projects-fail .fixability-list { 
+      list-style: none;
+     }
+.article-why-architecture-projects-fail .fixability-list li { 
+      display: flex;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--color-ink-mid);
+      line-height: 1.5;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-why-architecture-projects-fail .fixability-list li:last-child {  border-bottom: none;  }
+.article-why-architecture-projects-fail .fixability-list li::before { 
+      content: '';
+      flex-shrink: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin-top: 8px;
+     }
+.article-why-architecture-projects-fail .fixability-col--yes .fixability-list li::before {  background: var(--color-accent);  }
+.article-why-architecture-projects-fail .fixability-col--no  .fixability-list li::before {  background: #C0392B;  }
+@media (max-width: 600px) { .article-why-architecture-projects-fail .fixability-grid {  grid-template-columns: 1fr;  } }
+.article-why-architecture-projects-fail /* ============================================================
+       DIAGNOSTIC CALLOUT
+    ============================================================ */
+    .diagnostic-box { 
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-rule);
+      border-top: 3px solid var(--color-ink);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+     }
+.article-why-architecture-projects-fail .diagnostic-box__eyebrow { 
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      margin-bottom: 12px;
+     }
+.article-why-architecture-projects-fail .diagnostic-box__headline { 
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3vw, 28px);
+      color: var(--color-ink);
+      line-height: 1.2;
+      margin-bottom: 16px;
+     }
+.article-why-architecture-projects-fail .diagnostic-box__body { 
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-ink-mid);
+      margin-bottom: 28px;
+      max-width: 580px;
+     }
+.article-why-architecture-projects-fail .diagnostic-checklist { 
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 32px;
+      margin-bottom: 32px;
+     }
+@media (max-width: 560px) { .article-why-architecture-projects-fail .diagnostic-checklist {  grid-template-columns: 1fr;  } }
+.article-why-architecture-projects-fail .diagnostic-checklist__item { 
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--color-ink-mid);
+      line-height: 1.45;
+     }
+.article-why-architecture-projects-fail .check-icon { 
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       QUOTE / PULL QUOTE
+    ============================================================ */
+    .pull-quote { 
+      border-left: 3px solid var(--color-ink);
+      padding: 0 0 0 28px;
+      margin: 40px 0;
+     }
+.article-why-architecture-projects-fail .pull-quote__text { 
+      font-family: var(--font-heading);
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-style: italic;
+      line-height: 1.35;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+     }
+.article-why-architecture-projects-fail .pull-quote__source { 
+      font-size: 13px;
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       CTA SECTION
+    ============================================================ */
+    .cta-section { 
+      background-color: var(--color-surface);
+      border-top: 1px solid var(--color-rule);
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-why-architecture-projects-fail .cta-inner { 
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      padding-top: 56px;
+      padding-bottom: 56px;
+     }
+@media (max-width: 600px) { .article-why-architecture-projects-fail .cta-inner {  grid-template-columns: 1fr;  } }
+.article-why-architecture-projects-fail .cta-eyebrow { 
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      margin-bottom: 10px;
+     }
+.article-why-architecture-projects-fail .cta-headline { 
+      font-family: var(--font-heading);
+      font-size: clamp(22px, 3vw, 30px);
+      color: var(--color-ink);
+      line-height: 1.2;
+      margin-bottom: 12px;
+     }
+.article-why-architecture-projects-fail .cta-body { 
+      font-size: 16px;
+      color: var(--color-ink-mid);
+      line-height: 1.55;
+      max-width: 500px;
+     }
+.article-why-architecture-projects-fail .cta-actions { 
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+     }
+.article-why-architecture-projects-fail .site-footer__inner { 
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      flex-wrap: wrap;
+     }
+.article-why-architecture-projects-fail .site-footer__brand { 
+      font-family: var(--font-heading);
+      font-size: 14px;
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail .site-footer__links { 
+      display: flex;
+      gap: 24px;
+     }
+.article-why-architecture-projects-fail .site-footer__links a { 
+      font-size: 13px;
+      color: var(--color-ink-muted);
+      text-decoration: none;
+     }
+.article-why-architecture-projects-fail .site-footer__links a:hover {  color: var(--color-ink);  }
+.article-why-architecture-projects-fail .site-footer__legal { 
+      font-size: 12px;
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       SECTION LABEL (side label for numbered sections)
+    ============================================================ */
+    .section-label { 
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+     }
+.article-why-architecture-projects-fail .section-label__num { 
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-ink-muted);
+      letter-spacing: 0.06em;
+     }
+.article-why-architecture-projects-fail .section-label__rule { 
+      flex: 1;
+      height: 1px;
+      background-color: var(--color-rule);
+     }
+.article-why-architecture-projects-fail .section-label__text { 
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+     }
+.article-why-architecture-projects-fail /* ============================================================
+       TOC NAV
+    ============================================================ */
+    .toc { 
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-rule);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+     }
+.article-why-architecture-projects-fail .toc__title { 
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-muted);
+      margin-bottom: 16px;
+     }
+.article-why-architecture-projects-fail .toc__list { 
+      list-style: none;
+      counter-reset: toc-counter;
+     }
+.article-why-architecture-projects-fail .toc__list li { 
+      counter-increment: toc-counter;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--color-rule);
+     }
+.article-why-architecture-projects-fail .toc__list li:last-child {  border-bottom: none;  }
+.article-why-architecture-projects-fail .toc__list li::before { 
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 11px;
+      color: var(--color-ink-muted);
+      flex-shrink: 0;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+     }
+.article-why-architecture-projects-fail .toc__list a { 
+      font-size: 14px;
+      color: var(--color-ink-mid);
+      text-decoration: none;
+      line-height: 1.4;
+     }
+.article-why-architecture-projects-fail .toc__list a:hover {  color: var(--color-accent);  }
+.article-why-architecture-projects-fail /* ============================================================
+       RESPONSIVE ADJUSTMENTS
+    ============================================================ */
+    @media (max-width: 480px) { 
+      :host { --gap-section: 56px; }
+      .site-nav { gap: 16px; }
+      .diagnostic-box { padding: 24px 20px; }
+     }</style>
+<div class="article-why-architecture-projects-fail">
+<section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__meta">
+          <span class="hero__tag">Diagnosis Guide</span>
+          <span class="hero__series">Failure Analysis Series &mdash; Stage 2</span>
+        </div>
+        <h1 class="hero__title" id="hero-title">Why Projects Fail: A Root Cause Analysis</h1>
+        <p class="hero__subtitle">Most construction and design project failures are not random. They follow recognizable patterns&mdash;systemic breakdowns that begin quietly and accelerate. This guide maps the five most common root causes, how each propagates, and what distinguishes a recoverable situation from one that has crossed a structural threshold.</p>
+        <div class="hero__byline">
+          <div class="hero__byline-text">
+            <strong>Cloudstone Designs</strong> &nbsp;&middot;&nbsp; Technical Reference &nbsp;&middot;&nbsp; 2025
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 02: FRAMING / CONTEXT
+    ============================================================ -->
+    <section class="section" aria-labelledby="framing-title">
+      <div class="container">
         <div class="section-label">
           <span class="section-label__num">01</span>
           <span class="section-label__rule"></span>
@@ -13,17 +774,29 @@
 
         <div class="intro-grid">
           <div class="stack">
-            <h2 id="failures-are-systems-events-not-isolated-mistakes">Failures are systems events, not isolated mistakes</h2>
-            <p>A budget overrun is rarely caused by a single miscalculation. A contractor relationship breakdown rarely starts with a single dispute. What looks like a failure at the point of discovery is almost always the visible expression of a structural problem that took months&mdash;sometimes years&mdash;to develop.</p>
-            <p>Understanding root causes requires distinguishing between the <em>trigger event</em> (what you noticed) and the <em>origin condition</em> (what made the system vulnerable). Most diagnostic conversations collapse these two. The result is solutions aimed at the wrong layer.</p>
-            <p>The five cause categories in this guide account for the vast majority of pattern-matching across project failures in residential and commercial architecture. They are not exhaustive, and they frequently interact&mdash;scope misalignment often creates documentation gaps; documentation gaps create contractor confusion; confusion becomes conflict. The categories are useful precisely because they isolate where in the system a problem originated.</p>
+            <h2 class="t-headline" id="framing-title">Failures are systems events, not isolated mistakes</h2>
+            <p class="t-body">A budget overrun is rarely caused by a single miscalculation. A contractor relationship breakdown rarely starts with a single dispute. What looks like a failure at the point of discovery is almost always the visible expression of a structural problem that took months&mdash;sometimes years&mdash;to develop.</p>
+            <p class="t-body">Understanding root causes requires distinguishing between the <em>trigger event</em> (what you noticed) and the <em>origin condition</em> (what made the system vulnerable). Most diagnostic conversations collapse these two. The result is solutions aimed at the wrong layer.</p>
+            <p class="t-body">The five cause categories in this guide account for the vast majority of pattern-matching across project failures in residential and commercial architecture. They are not exhaustive, and they frequently interact&mdash;scope misalignment often creates documentation gaps; documentation gaps create contractor confusion; confusion becomes conflict. The categories are useful precisely because they isolate where in the system a problem originated.</p>
           </div>
 
           <div class="stack--sm">
-            
-            
+            <!-- TOC -->
+            <nav class="toc" aria-label="Contents">
+              <p class="toc__title">Contents</p>
+              <ul class="toc__list">
+                <li><a href="#cause-1">Misaligned Scope and Budget</a></li>
+                <li><a href="#cause-2">Inadequate Documentation</a></li>
+                <li><a href="#cause-3">Contractor&ndash;Architect Relationship Breakdown</a></li>
+                <li><a href="#cause-4">Design Errors Found in Construction</a></li>
+                <li><a href="#cause-5">Client Communication Failure</a></li>
+                <li><a href="#propagation">How Failures Propagate</a></li>
+                <li><a href="#fixable">Fixable vs. Unfixable</a></li>
+                <li><a href="#diagnostic">Diagnostic Framework</a></li>
+              </ul>
+            </nav>
 
-            
+            <!-- Stats -->
             <div class="stack--sm">
               <div class="intro-stat">
                 <div class="intro-stat__number">73%</div>
@@ -41,41 +814,43 @@
           </div>
         </div>
 
-        
-        <div>
-          <div class="visual-placeholder visual-placeholder--tall">
+        <!-- Visual placeholder: failure taxonomy matrix -->
+        <div style="margin-top: 56px;">
+          <div class="visual-placeholder visual-placeholder--tall" role="img" aria-label="Placeholder for failure taxonomy matrix diagram">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
             </svg>
-            <p>Visual Module</p>
-            <p>Failure taxonomy matrix: five cause categories mapped against project phase, stakeholder, and severity</p>
+            <p class="visual-placeholder__label">Visual Module</p>
+            <p class="visual-placeholder__sub">Failure taxonomy matrix: five cause categories mapped against project phase, stakeholder, and severity</p>
           </div>
         </div>
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="rule" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 03: FAILURE TAXONOMY TABLE
+    ============================================================ -->
+    <section class="section--tight" aria-labelledby="taxonomy-title">
       <div class="container">
         <div class="section-label">
           <span class="section-label__num">02</span>
           <span class="section-label__rule"></span>
           <span class="section-label__text">Cause Overview</span>
         </div>
-        <h2 id="the-five-root-cause-categories-at-a-glance">The five root cause categories at a glance</h2>
+        <h2 class="t-headline stack" id="taxonomy-title" style="margin-bottom: 32px;">The five root cause categories at a glance</h2>
 
-        <div>
-          <table class="taxonomy-table">
-            <caption class="t-small">Summary of root cause categories, typical origin phase, primary stakeholder affected, and recovery complexity</caption>
+        <div style="overflow-x: auto;">
+          <table class="taxonomy-table" role="table">
+            <caption class="t-small" style="text-align:left; margin-bottom: 16px; color: var(--color-ink-muted);">Summary of root cause categories, typical origin phase, primary stakeholder affected, and recovery complexity</caption>
             <thead>
               <tr>
-                <th>Root Cause</th>
-                <th>Origin Phase</th>
-                <th>Primary Stakeholder</th>
-                <th>Recovery Complexity</th>
-                <th>Downstream Risk</th>
+                <th scope="col">Root Cause</th>
+                <th scope="col">Origin Phase</th>
+                <th scope="col">Primary Stakeholder</th>
+                <th scope="col">Recovery Complexity</th>
+                <th scope="col">Downstream Risk</th>
               </tr>
             </thead>
             <tbody>
@@ -118,37 +893,39 @@
           </table>
         </div>
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="rule" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 04: FIVE ROOT CAUSES
+    ============================================================ -->
+    <section class="section" aria-labelledby="causes-title" id="causes">
       <div class="container">
         <div class="section-label">
           <span class="section-label__num">03</span>
           <span class="section-label__rule"></span>
           <span class="section-label__text">Root Cause Analysis</span>
         </div>
-        <h2 id="the-five-causes-examined">The five causes, examined</h2>
+        <h2 class="t-headline" id="causes-title" style="margin-bottom: 48px;">The five causes, examined</h2>
 
         <ul class="cause-list">
 
-          
-          <li class="cause-item">
-            <span class="cause-number">01</span>
+          <!-- CAUSE 1 -->
+          <li class="cause-item" id="cause-1">
+            <span class="cause-number" aria-hidden="true">01</span>
             <div class="cause-content">
-              <h3>Misaligned Scope and Budget</h3>
-              <p>Origin Phase: Pre-design to Schematic Design</p>
-              <p>Scope-budget misalignment is the most upstream failure in the taxonomy. It occurs when the client&rsquo;s program expectations, the architect&rsquo;s design assumptions, and the realistic construction cost of the project are never reconciled into a shared, documented understanding. This does not require anyone to act in bad faith. It requires only that the conversation about money be deferred, approximated, or assumed rather than conducted precisely.</p>
-              <p>The mechanism is typically incremental. Early feasibility conversations establish an implied budget. That figure is never stress-tested against the actual program. Schematic design proceeds against optimistic assumptions. By the time a contractor is engaged, the design has outgrown the budget by 20&ndash;40%, and the options are either significant scope reduction or cost overrun. Neither outcome was anticipated by the client.</p>
+              <h3 class="cause-title">Misaligned Scope and Budget</h3>
+              <p class="cause-subtitle">Origin Phase: Pre-design to Schematic Design</p>
+              <p class="cause-body">Scope-budget misalignment is the most upstream failure in the taxonomy. It occurs when the client&rsquo;s program expectations, the architect&rsquo;s design assumptions, and the realistic construction cost of the project are never reconciled into a shared, documented understanding. This does not require anyone to act in bad faith. It requires only that the conversation about money be deferred, approximated, or assumed rather than conducted precisely.</p>
+              <p class="cause-body">The mechanism is typically incremental. Early feasibility conversations establish an implied budget. That figure is never stress-tested against the actual program. Schematic design proceeds against optimistic assumptions. By the time a contractor is engaged, the design has outgrown the budget by 20&ndash;40%, and the options are either significant scope reduction or cost overrun. Neither outcome was anticipated by the client.</p>
 
               <div class="cause-propagation">
-                <p>How it propagates</p>
-                <p>Scope-budget misalignment creates downstream pressure on every subsequent decision. Contractors are brought in late and asked to value-engineer a design that was never costed. Value engineering under time pressure introduces quality compromises and coordination gaps. Those gaps become field errors and RFIs. The client, who was never told the design exceeded budget, experiences the result as contractor incompetence or architect error.</p>
+                <p class="cause-propagation__label">How it propagates</p>
+                <p class="cause-propagation__text">Scope-budget misalignment creates downstream pressure on every subsequent decision. Contractors are brought in late and asked to value-engineer a design that was never costed. Value engineering under time pressure introduces quality compromises and coordination gaps. Those gaps become field errors and RFIs. The client, who was never told the design exceeded budget, experiences the result as contractor incompetence or architect error.</p>
               </div>
 
-              <p>The diagnostic signal is a significant gap between the design team&rsquo;s expectations and the first contractor bid&mdash;typically 20% or more. If that gap appears, the root cause is rarely the bid. It is the design assumptions that produced the document being bid.</p>
+              <p class="cause-body">The diagnostic signal is a significant gap between the design team&rsquo;s expectations and the first contractor bid&mdash;typically 20% or more. If that gap appears, the root cause is rarely the bid. It is the design assumptions that produced the document being bid.</p>
 
               <div class="cause-indicators">
                 <span class="indicator-chip">No formal cost plan before SD</span>
@@ -159,27 +936,27 @@
             </div>
           </li>
 
-          
-          <li class="cause-item">
-            <span class="cause-number">02</span>
+          <!-- CAUSE 2 -->
+          <li class="cause-item" id="cause-2">
+            <span class="cause-number" aria-hidden="true">02</span>
             <div class="cause-content">
-              <h3>Inadequate Documentation</h3>
-              <p>Origin Phase: Design Development through Construction Documents</p>
-              <p>Construction documents carry the full weight of the project&rsquo;s technical decisions. When they are incomplete, ambiguous, or internally inconsistent, the project does not stop&mdash;it continues, with each trade filling gaps through their own interpretation. The accumulation of interpretations creates a built project that diverges progressively from design intent.</p>
-              <p>Inadequate documentation manifests in several ways: specifications that reference products no longer available, structural details missing dimensions, coordination failures between architectural and mechanical drawings, and addenda issued under time pressure that contradict the base set. Each individually is manageable. In combination, they produce an RFI backlog that consumes construction administration capacity and creates a paper trail of disputed responsibility.</p>
+              <h3 class="cause-title">Inadequate Documentation</h3>
+              <p class="cause-subtitle">Origin Phase: Design Development through Construction Documents</p>
+              <p class="cause-body">Construction documents carry the full weight of the project&rsquo;s technical decisions. When they are incomplete, ambiguous, or internally inconsistent, the project does not stop&mdash;it continues, with each trade filling gaps through their own interpretation. The accumulation of interpretations creates a built project that diverges progressively from design intent.</p>
+              <p class="cause-body">Inadequate documentation manifests in several ways: specifications that reference products no longer available, structural details missing dimensions, coordination failures between architectural and mechanical drawings, and addenda issued under time pressure that contradict the base set. Each individually is manageable. In combination, they produce an RFI backlog that consumes construction administration capacity and creates a paper trail of disputed responsibility.</p>
 
               <div class="cause-propagation">
-                <p>How it propagates</p>
-                <p>Documentation failures compound through the construction administration phase. An unresolved RFI delays a subcontractor, who then works around the issue. The workaround creates a non-conforming condition. The non-conforming condition is discovered during inspection or closeout, requiring remediation. Meanwhile, the original RFI has been pending for six weeks and the responsibility for the resulting cost is disputed. What began as an incomplete detail has become a legal exposure.</p>
+                <p class="cause-propagation__label">How it propagates</p>
+                <p class="cause-propagation__text">Documentation failures compound through the construction administration phase. An unresolved RFI delays a subcontractor, who then works around the issue. The workaround creates a non-conforming condition. The non-conforming condition is discovered during inspection or closeout, requiring remediation. Meanwhile, the original RFI has been pending for six weeks and the responsibility for the resulting cost is disputed. What began as an incomplete detail has become a legal exposure.</p>
               </div>
 
-              
-              <div class="visual-placeholder visual-placeholder--short">
+              <!-- Visual placeholder: document quality spectrum -->
+              <div class="visual-placeholder visual-placeholder--short" role="img" aria-label="Placeholder for documentation quality spectrum diagram" style="margin: 24px 0;">
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/>
                 </svg>
-                <p>Visual Module</p>
-                <p>Documentation completeness spectrum: from adequate coordination to critical gap conditions</p>
+                <p class="visual-placeholder__label">Visual Module</p>
+                <p class="visual-placeholder__sub">Documentation completeness spectrum: from adequate coordination to critical gap conditions</p>
               </div>
 
               <div class="cause-indicators">
@@ -191,18 +968,18 @@
             </div>
           </li>
 
-          
-          <li class="cause-item">
-            <span class="cause-number">03</span>
+          <!-- CAUSE 3 -->
+          <li class="cause-item" id="cause-3">
+            <span class="cause-number" aria-hidden="true">03</span>
             <div class="cause-content">
-              <h3>Contractor&ndash;Architect Relationship Breakdown</h3>
-              <p>Origin Phase: Construction Administration</p>
-              <p>The contractor&ndash;architect relationship is a structural element of project delivery. It is not a personality variable. When it fails, the mechanism is almost always the same: the two parties have different mental models of what the contract documents require, and neither has the authority or incentive to resolve the gap except through formal channels&mdash;which are slow, adversarial, and expensive.</p>
-              <p>The breakdown typically progresses through three stages. First, communication becomes selective: the contractor stops sharing field observations informally; the architect&rsquo;s site visit notes become more formal and protective. Second, disputes about substitutions, changed conditions, or schedule impacts are not resolved at the project level&mdash;they escalate to principals. Third, the project&rsquo;s decision-making velocity collapses, because no minor question can be answered without checking whether the answer creates a precedent in a dispute.</p>
+              <h3 class="cause-title">Contractor&ndash;Architect Relationship Breakdown</h3>
+              <p class="cause-subtitle">Origin Phase: Construction Administration</p>
+              <p class="cause-body">The contractor&ndash;architect relationship is a structural element of project delivery. It is not a personality variable. When it fails, the mechanism is almost always the same: the two parties have different mental models of what the contract documents require, and neither has the authority or incentive to resolve the gap except through formal channels&mdash;which are slow, adversarial, and expensive.</p>
+              <p class="cause-body">The breakdown typically progresses through three stages. First, communication becomes selective: the contractor stops sharing field observations informally; the architect&rsquo;s site visit notes become more formal and protective. Second, disputes about substitutions, changed conditions, or schedule impacts are not resolved at the project level&mdash;they escalate to principals. Third, the project&rsquo;s decision-making velocity collapses, because no minor question can be answered without checking whether the answer creates a precedent in a dispute.</p>
 
               <div class="cause-propagation">
-                <p>How it propagates</p>
-                <p>When the working relationship fails, every remaining decision in the project becomes a negotiation. The cost is not only the direct friction&mdash;it is the opportunity cost of decisions that are not made, designs that are not refined in the field, and problems that are not caught because no one is looking at the whole picture. The project closes out with a punchlist that is contested rather than remediated, and the client is left holding the resulting quality deficit.</p>
+                <p class="cause-propagation__label">How it propagates</p>
+                <p class="cause-propagation__text">When the working relationship fails, every remaining decision in the project becomes a negotiation. The cost is not only the direct friction&mdash;it is the opportunity cost of decisions that are not made, designs that are not refined in the field, and problems that are not caught because no one is looking at the whole picture. The project closes out with a punchlist that is contested rather than remediated, and the client is left holding the resulting quality deficit.</p>
               </div>
 
               <div class="cause-indicators">
@@ -214,27 +991,27 @@
             </div>
           </li>
 
-          
-          <li class="cause-item">
-            <span class="cause-number">04</span>
+          <!-- CAUSE 4 -->
+          <li class="cause-item" id="cause-4">
+            <span class="cause-number" aria-hidden="true">04</span>
             <div class="cause-content">
-              <h3>Design Errors Discovered During Construction</h3>
-              <p>Origin Phase: Framing, MEP Rough-in, Enclosure</p>
-              <p>Design errors discovered during construction are the most operationally disruptive failure category, because they require stopping work that is already in progress. A structural detail that cannot be built as drawn, a mechanical clearance that conflicts with a structural element, a window that cannot be flashed to the specified spec&mdash;each forces a design decision under field conditions, with a contractor standing idle and a schedule ticking.</p>
-              <p>The distinction between a design error and a documentation gap is meaningful. A documentation gap is incomplete information; a design error is information that, when complete, still cannot be built as described&mdash;because it violates a physical, structural, or code constraint. Both produce RFIs. Only design errors require design revision, which requires engineering review, which takes time the schedule does not have.</p>
+              <h3 class="cause-title">Design Errors Discovered During Construction</h3>
+              <p class="cause-subtitle">Origin Phase: Framing, MEP Rough-in, Enclosure</p>
+              <p class="cause-body">Design errors discovered during construction are the most operationally disruptive failure category, because they require stopping work that is already in progress. A structural detail that cannot be built as drawn, a mechanical clearance that conflicts with a structural element, a window that cannot be flashed to the specified spec&mdash;each forces a design decision under field conditions, with a contractor standing idle and a schedule ticking.</p>
+              <p class="cause-body">The distinction between a design error and a documentation gap is meaningful. A documentation gap is incomplete information; a design error is information that, when complete, still cannot be built as described&mdash;because it violates a physical, structural, or code constraint. Both produce RFIs. Only design errors require design revision, which requires engineering review, which takes time the schedule does not have.</p>
 
               <div class="cause-propagation">
-                <p>How it propagates</p>
-                <p>A significant design error discovered in framing typically costs 3&ndash;8x what the same error would have cost to resolve in design development. The direct cost includes rework labor and materials. The indirect cost includes schedule extension, carrying costs for the client, subcontractor remobilization, and the downstream coordination impacts of the revised design. If the error involves a structural element, engineering fees and permit re-review add further delay. The compounding effect is why late-discovered errors can turn a 10% budget variance into a 30% one.</p>
+                <p class="cause-propagation__label">How it propagates</p>
+                <p class="cause-propagation__text">A significant design error discovered in framing typically costs 3&ndash;8x what the same error would have cost to resolve in design development. The direct cost includes rework labor and materials. The indirect cost includes schedule extension, carrying costs for the client, subcontractor remobilization, and the downstream coordination impacts of the revised design. If the error involves a structural element, engineering fees and permit re-review add further delay. The compounding effect is why late-discovered errors can turn a 10% budget variance into a 30% one.</p>
               </div>
 
-              
-              <div class="visual-placeholder visual-placeholder--short">
+              <!-- Visual placeholder: cost-of-errors-by-phase diagram -->
+              <div class="visual-placeholder visual-placeholder--short" role="img" aria-label="Placeholder for cost multiplication by discovery phase chart" style="margin: 24px 0;">
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                 </svg>
-                <p>Visual Module</p>
-                <p>Cost-of-error multiplier by discovery phase: Schematic Design through Closeout</p>
+                <p class="visual-placeholder__label">Visual Module</p>
+                <p class="visual-placeholder__sub">Cost-of-error multiplier by discovery phase: Schematic Design through Closeout</p>
               </div>
 
               <div class="cause-indicators">
@@ -246,18 +1023,18 @@
             </div>
           </li>
 
-          
-          <li class="cause-item">
-            <span class="cause-number">05</span>
+          <!-- CAUSE 5 -->
+          <li class="cause-item" id="cause-5">
+            <span class="cause-number" aria-hidden="true">05</span>
             <div class="cause-content">
-              <h3>Client Communication Failure</h3>
-              <p>Origin Phase: All phases; amplifies other causes</p>
-              <p>Client communication failure is distinct from the other four causes in that it is a condition rather than an event. It describes a state in which the client&rsquo;s understanding of the project&mdash;its status, its decisions, its risks&mdash;has diverged from actual project conditions. This divergence is not caused by dishonesty. It is caused by the design and construction industry&rsquo;s tendency to use technical language, compressed reporting formats, and optimistic framing in all client-facing communications.</p>
-              <p>The result is a client who believes the project is proceeding normally while the project team has been managing a growing set of problems for months. The gap surfaces at a review meeting, a budget reconciliation, or a site visit&mdash;and the client&rsquo;s experience of that moment is one of sudden discovery. That experience, rather than the underlying problem, often drives the most destructive decisions: firing the contractor mid-project, terminating the architect, demanding immediate remediation of issues that require methodical resolution.</p>
+              <h3 class="cause-title">Client Communication Failure</h3>
+              <p class="cause-subtitle">Origin Phase: All phases; amplifies other causes</p>
+              <p class="cause-body">Client communication failure is distinct from the other four causes in that it is a condition rather than an event. It describes a state in which the client&rsquo;s understanding of the project&mdash;its status, its decisions, its risks&mdash;has diverged from actual project conditions. This divergence is not caused by dishonesty. It is caused by the design and construction industry&rsquo;s tendency to use technical language, compressed reporting formats, and optimistic framing in all client-facing communications.</p>
+              <p class="cause-body">The result is a client who believes the project is proceeding normally while the project team has been managing a growing set of problems for months. The gap surfaces at a review meeting, a budget reconciliation, or a site visit&mdash;and the client&rsquo;s experience of that moment is one of sudden discovery. That experience, rather than the underlying problem, often drives the most destructive decisions: firing the contractor mid-project, terminating the architect, demanding immediate remediation of issues that require methodical resolution.</p>
 
               <div class="cause-propagation">
-                <p>How it propagates</p>
-                <p>Communication failure amplifies every other cause category. A client who is well-informed about a budget variance has the option to make a considered decision about scope. A client who discovers the same variance during a walkthrough, framed as a surprise, has lost that option. The reactive decisions that follow&mdash;scope cuts under pressure, contractor replacements mid-construction, last-minute design changes&mdash;introduce the very disruptions that transform manageable problems into structural failures.</p>
+                <p class="cause-propagation__label">How it propagates</p>
+                <p class="cause-propagation__text">Communication failure amplifies every other cause category. A client who is well-informed about a budget variance has the option to make a considered decision about scope. A client who discovers the same variance during a walkthrough, framed as a surprise, has lost that option. The reactive decisions that follow&mdash;scope cuts under pressure, contractor replacements mid-construction, last-minute design changes&mdash;introduce the very disruptions that transform manageable problems into structural failures.</p>
               </div>
 
               <div class="cause-indicators">
@@ -271,12 +1048,14 @@
 
         </ul>
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="rule" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 05: PROPAGATION MECHANICS
+    ============================================================ -->
+    <section class="section" aria-labelledby="propagation-title" id="propagation">
       <div class="container">
         <div class="section-label">
           <span class="section-label__num">04</span>
@@ -286,49 +1065,49 @@
 
         <div class="stack stack--lg">
           <div>
-            <h2 id="how-failures-move-through-a-project">How failures move through a project</h2>
-            <p>Root causes do not produce failures immediately. They create structural vulnerabilities that are activated by downstream conditions. Understanding propagation&mdash;the path from origin condition to visible failure&mdash;is what separates diagnostic work from symptom treatment.</p>
+            <h2 class="t-headline" id="propagation-title" style="margin-bottom: 20px;">How failures move through a project</h2>
+            <p class="t-body">Root causes do not produce failures immediately. They create structural vulnerabilities that are activated by downstream conditions. Understanding propagation&mdash;the path from origin condition to visible failure&mdash;is what separates diagnostic work from symptom treatment.</p>
           </div>
 
-          <div class="propagation-flow">
+          <div class="propagation-flow" role="img" aria-label="Failure propagation flow: from origin condition through amplification to surface event and cascade">
             <div class="flow-stage">
-              <p>Stage 1</p>
-              <p>Origin Condition</p>
-              <p>A structural vulnerability is established&mdash;often in early project phases&mdash;but remains latent. No visible failure yet.</p>
+              <p class="flow-stage__index">Stage 1</p>
+              <p class="flow-stage__name">Origin Condition</p>
+              <p class="flow-stage__desc">A structural vulnerability is established&mdash;often in early project phases&mdash;but remains latent. No visible failure yet.</p>
             </div>
             <div class="flow-stage flow-stage--active">
-              <p>Stage 2</p>
-              <p>Silent Amplification</p>
-              <p>The condition interacts with project complexity. Related decisions are made without awareness of the underlying problem.</p>
+              <p class="flow-stage__index">Stage 2</p>
+              <p class="flow-stage__name">Silent Amplification</p>
+              <p class="flow-stage__desc">The condition interacts with project complexity. Related decisions are made without awareness of the underlying problem.</p>
             </div>
             <div class="flow-stage">
-              <p>Stage 3</p>
-              <p>Surface Event</p>
-              <p>A visible trigger&mdash;bid overage, RFI dispute, client complaint&mdash;makes the problem legible. This is rarely the origin.</p>
+              <p class="flow-stage__index">Stage 3</p>
+              <p class="flow-stage__name">Surface Event</p>
+              <p class="flow-stage__desc">A visible trigger&mdash;bid overage, RFI dispute, client complaint&mdash;makes the problem legible. This is rarely the origin.</p>
             </div>
             <div class="flow-stage flow-stage--active">
-              <p>Stage 4</p>
-              <p>Cascade or Recovery</p>
-              <p>The response to the surface event determines whether the failure compounds or is contained. The speed and clarity of diagnosis is the decisive variable.</p>
+              <p class="flow-stage__index">Stage 4</p>
+              <p class="flow-stage__name">Cascade or Recovery</p>
+              <p class="flow-stage__desc">The response to the surface event determines whether the failure compounds or is contained. The speed and clarity of diagnosis is the decisive variable.</p>
             </div>
           </div>
 
           <div class="pull-quote">
-            <p>&ldquo;The project team was solving the right problem&mdash;for three months after the origin had already moved on. The failure that appeared in construction had been decided in schematic design.&rdquo;</p>
-            <p>Common pattern in post-project diagnostic reviews</p>
+            <p class="pull-quote__text">&ldquo;The project team was solving the right problem&mdash;for three months after the origin had already moved on. The failure that appeared in construction had been decided in schematic design.&rdquo;</p>
+            <p class="pull-quote__source">Common pattern in post-project diagnostic reviews</p>
           </div>
 
           <div class="stack--sm">
-            <h3>Cross-cause interactions</h3>
-            <p>Failure causes rarely operate in isolation. The most severe project failures typically involve two or three causes operating simultaneously, each amplifying the others. The most common interactions observed:</p>
+            <h3 class="t-subhead">Cross-cause interactions</h3>
+            <p class="t-body">Failure causes rarely operate in isolation. The most severe project failures typically involve two or three causes operating simultaneously, each amplifying the others. The most common interactions observed:</p>
 
-            <table class="taxonomy-table">
-              <caption class="t-small">Common cause combinations and their compounding effects</caption>
+            <table class="taxonomy-table" style="margin-top: 16px;" role="table">
+              <caption class="t-small" style="text-align:left; margin-bottom: 12px; color: var(--color-ink-muted);">Common cause combinations and their compounding effects</caption>
               <thead>
                 <tr>
-                  <th>Primary Cause</th>
-                  <th>Interacts With</th>
-                  <th>Combined Effect</th>
+                  <th scope="col">Primary Cause</th>
+                  <th scope="col">Interacts With</th>
+                  <th scope="col">Combined Effect</th>
                 </tr>
               </thead>
               <tbody>
@@ -352,12 +1131,14 @@
           </div>
         </div>
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="rule" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 06: FIXABLE VS UNFIXABLE
+    ============================================================ -->
+    <section class="section" aria-labelledby="fixable-title" id="fixable">
       <div class="container">
         <div class="section-label">
           <span class="section-label__num">05</span>
@@ -367,17 +1148,17 @@
 
         <div class="stack">
           <div>
-            <h2 id="distinguishing-fixable-problems-from-unfixable-ones">Distinguishing fixable problems from unfixable ones</h2>
-            <p>Not all project failures have the same recovery trajectory. Some problems, discovered at the right moment, can be corrected with limited cost impact. Others have passed a structural threshold beyond which the cost of correction exceeds the cost of proceeding with a known deficit. The distinction is not primarily about severity&mdash;it is about timing, reversibility, and the degree to which downstream decisions have been built on top of the problem.</p>
+            <h2 class="t-headline" id="fixable-title" style="margin-bottom: 16px;">Distinguishing fixable problems from unfixable ones</h2>
+            <p class="t-body">Not all project failures have the same recovery trajectory. Some problems, discovered at the right moment, can be corrected with limited cost impact. Others have passed a structural threshold beyond which the cost of correction exceeds the cost of proceeding with a known deficit. The distinction is not primarily about severity&mdash;it is about timing, reversibility, and the degree to which downstream decisions have been built on top of the problem.</p>
           </div>
 
           <div class="fixability-grid">
             <div class="fixability-col fixability-col--yes">
               <div class="fixability-col__header">
-                <div class="fixability-icon fixability-icon--yes">
+                <div class="fixability-icon fixability-icon--yes" aria-hidden="true">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <h3>Generally recoverable</h3>
+                <h3 class="fixability-col__title">Generally recoverable</h3>
               </div>
               <ul class="fixability-list">
                 <li>Scope-budget misalignment identified before design development begins&mdash;program can be adjusted before construction documents are complete</li>
@@ -391,10 +1172,10 @@
 
             <div class="fixability-col fixability-col--no">
               <div class="fixability-col__header">
-                <div class="fixability-icon fixability-icon--no">
+                <div class="fixability-icon fixability-icon--no" aria-hidden="true">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 </div>
-                <h3>At or beyond structural threshold</h3>
+                <h3 class="fixability-col__title">At or beyond structural threshold</h3>
               </div>
               <ul class="fixability-list">
                 <li>Structural design errors discovered after framing is complete&mdash;remediation requires demolition and re-engineering at significant cost</li>
@@ -406,15 +1187,17 @@
             </div>
           </div>
 
-          <p>The line between these categories is not always clear, and it moves as projects proceed. The most consequential diagnostic question is not &ldquo;what went wrong&rdquo; but &ldquo;has the problem compounded to the point where the cost of recovery exceeds the cost of managed continuation with a known deficit.&rdquo; That is a question that requires current project data, not only historical analysis.</p>
+          <p class="t-body" style="margin-top: 8px;">The line between these categories is not always clear, and it moves as projects proceed. The most consequential diagnostic question is not &ldquo;what went wrong&rdquo; but &ldquo;has the problem compounded to the point where the cost of recovery exceeds the cost of managed continuation with a known deficit.&rdquo; That is a question that requires current project data, not only historical analysis.</p>
         </div>
       </div>
-    
+    </section>
 
-    <hr>
+    <hr class="rule" />
 
-    
-    
+    <!-- ============================================================
+         SECTION 07: DIAGNOSTIC FRAMEWORK
+    ============================================================ -->
+    <section class="section" aria-labelledby="diagnostic-title" id="diagnostic">
       <div class="container">
         <div class="section-label">
           <span class="section-label__num">06</span>
@@ -423,9 +1206,9 @@
         </div>
 
         <div class="diagnostic-box">
-          <p>For Teams Currently in a Problem Situation</p>
-          <h2 id="a-structured-approach-to-root-cause-identification">A structured approach to root cause identification</h2>
-          <p>Root cause diagnosis is most effective when it follows a structured sequence rather than addressing the most visible symptom first. The questions below are organized by cause category. They are intended to be worked through in sequence, because later causes are frequently activated by earlier ones.</p>
+          <p class="diagnostic-box__eyebrow">For Teams Currently in a Problem Situation</p>
+          <h2 class="diagnostic-box__headline" id="diagnostic-title">A structured approach to root cause identification</h2>
+          <p class="diagnostic-box__body">Root cause diagnosis is most effective when it follows a structured sequence rather than addressing the most visible symptom first. The questions below are organized by cause category. They are intended to be worked through in sequence, because later causes are frequently activated by earlier ones.</p>
 
           <div class="diagnostic-checklist">
             <div class="diagnostic-checklist__item">
@@ -462,6 +1245,26 @@
             </div>
           </div>
 
-          <p>A &ldquo;no&rdquo; or &ldquo;uncertain&rdquo; answer to any of these questions indicates a potential root cause area. Multiple &ldquo;no&rdquo; answers in consecutive categories suggest cause interaction and require a more structured review before any remediation is attempted.</p>
+          <p class="t-body" style="margin-bottom: 0; color: var(--color-ink-mid);">A &ldquo;no&rdquo; or &ldquo;uncertain&rdquo; answer to any of these questions indicates a potential root cause area. Multiple &ldquo;no&rdquo; answers in consecutive categories suggest cause interaction and require a more structured review before any remediation is attempted.</p>
         </div>
       </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 08: CTA
+    ============================================================ -->
+    <section class="cta-section" id="contact" aria-labelledby="cta-title">
+      <div class="container--wide">
+        <div class="cta-inner">
+          <div>
+            <p class="cta-eyebrow">Cloudstone Designs &mdash; Project Review</p>
+            <h2 class="cta-headline" id="cta-title">If you are working through a project problem, a diagnostic conversation costs nothing</h2>
+            <p class="cta-body">We conduct structured root cause reviews for projects at any phase&mdash;pre-construction, mid-construction, or post-completion. The goal is accurate diagnosis, not a sales process. If what you need is an independent read of the situation, that is where we start.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="#" class="btn btn--primary">Request a Diagnostic Review</a>
+            <a href="#" class="btn btn--ghost">Download the Full Guide</a>
+          </div>
+        </div>
+      </div>
+    </section></div>
