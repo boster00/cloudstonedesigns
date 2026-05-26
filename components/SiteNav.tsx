@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type Journey = {
   label: string;
@@ -52,6 +52,15 @@ export default function SiteNav() {
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const openMega = () => {
+    if (closeTimer.current) { clearTimeout(closeTimer.current); closeTimer.current = null; }
+    setMenuOpen(true);
+  };
+  const scheduleCloseMega = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setMenuOpen(false), 150);
+  };
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[var(--color-bg)] border-b border-[var(--color-surface)]">
@@ -83,8 +92,8 @@ export default function SiteNav() {
           {/* Where to Start mega-menu trigger */}
           <div
             className="relative"
-            onMouseEnter={() => setMenuOpen(true)}
-            onMouseLeave={() => setMenuOpen(false)}
+            onMouseEnter={openMega}
+            onMouseLeave={scheduleCloseMega}
           >
             <button
               type="button"
@@ -107,7 +116,15 @@ export default function SiteNav() {
               <div
                 className="fixed left-0 right-0 top-16 bg-[var(--color-bg)] border-b border-[var(--color-neutral-mid)] shadow-sm"
                 data-mega-menu="open"
+                onMouseEnter={openMega}
+                onMouseLeave={scheduleCloseMega}
               >
+                {/* Invisible bridge spans the gap between the nav-row bottom and the panel */}
+                <div
+                  aria-hidden
+                  className="absolute left-0 right-0"
+                  style={{ top: "-12px", height: "12px" }}
+                />
                 <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-3 gap-12">
                   {journeys.map((j) => (
                     <div key={j.pillarHref}>
