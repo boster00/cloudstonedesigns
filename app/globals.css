@@ -138,6 +138,39 @@ body {
   color: inherit;
 }
 
+/* Trustbar — horizontal stat strip, NOT bordered card grid. Override the BEM __item
+   card treatment for this specific container. */
+.prose-article .trustbar__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5em 0;
+  border-top: 1px solid var(--pa-border, #C9BFB0);
+  border-bottom: 1px solid var(--pa-border, #C9BFB0);
+  margin-block: 2em;
+}
+.prose-article .trustbar__item {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left;
+}
+.prose-article .trustbar__num {
+  font-family: var(--font-serif, Cormorant, Georgia, serif);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--pa-ink, #2A2622);
+  margin-bottom: 0.3em;
+  font-weight: 400;
+}
+.prose-article .trustbar__desc {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--pa-muted, #6B6257);
+}
+
 /* Orphan section-label paragraphs (CJGEO emits short labels like "Introduction"
    before an h2; sanitizer drops their wrapping <header class="section__header">,
    so they render as bare <p>. Style as a small eyebrow). Broadened 2026-05-26. */
