@@ -173,7 +173,11 @@ body {
 
 /* Orphan section-label paragraphs (CJGEO emits short labels like "Introduction"
    before an h2; sanitizer drops their wrapping <header class="section__header">,
-   so they render as bare <p>. Style as a small eyebrow). Broadened 2026-05-26. */
+   so they render as bare <p>/<span>. Style as a small eyebrow). Broadened 2026-05-26 — span too. */
+/* Section-label eyebrows — span/p that immediately precedes an h2.
+   Catches both first-child orphans ("Introduction") AND mid-flow option labels ("Option A/B"). */
+.prose-article span:has(+ h2),
+.prose-article p:first-of-type:has(+ h2),
 .prose-article p:first-child:has(+ h2) {
   font-size: 0.72rem;
   text-transform: uppercase;
