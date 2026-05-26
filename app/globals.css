@@ -435,6 +435,29 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+/* Prose-flow grids: narrative + small sidebar. Keep narrative wide; don't split early. */
+.prose-article .intro-grid,
+.prose-article .prose-layout,
+.prose-article .verify-layout,
+.prose-article .texas-layout,
+.prose-article .questions-layout {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 760px) {
+  .prose-article .intro-grid,
+  .prose-article .prose-layout,
+  .prose-article .verify-layout,
+  .prose-article .texas-layout,
+  .prose-article .questions-layout {
+    grid-template-columns: 1fr;
+  }
+}
+/* When intro-grid has only ONE child, stack full-width */
+.prose-article .intro-grid:has(> :only-child) {
+  grid-template-columns: 1fr;
+}
+
 .prose-article .two-col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
 .prose-article .card-header,
