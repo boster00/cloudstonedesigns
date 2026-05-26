@@ -178,10 +178,15 @@ body {
    so they render as bare <p>/<span>. Style as a small eyebrow). Broadened 2026-05-26 — span too. */
 /* Section-label eyebrows — span/p that immediately precedes an h2/h3/h4.
    Catches first-child orphans ("Introduction"), mid-flow option labels ("Option A/B"),
-   and phase-card labels ("Phase one" before h3). */
+   and phase-card labels ("Phase one" before h3). Plus generic class-based label patterns. */
 .prose-article span:is(:has(+ h2), :has(+ h3), :has(+ h4)),
 .prose-article p:first-of-type:is(:has(+ h2), :has(+ h3), :has(+ h4)),
-.prose-article p:first-child:is(:has(+ h2), :has(+ h3), :has(+ h4)) {
+.prose-article p:first-child:is(:has(+ h2), :has(+ h3), :has(+ h4)),
+.prose-article .toc-label,
+.prose-article .section-label,
+.prose-article .eyebrow,
+.prose-article .article-section__eyebrow,
+.prose-article .t-label {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
