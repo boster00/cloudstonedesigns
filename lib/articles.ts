@@ -276,9 +276,9 @@ export const pillars: Pillar[] = [
         teaser:
           'Proposals are marketing documents. Comparing them at face value rewards persuasive writing, not project delivery capability.',
         source: 'cjgeo',
-        cjgeoArticleId: 'bc655993-cfc4-459d-a76b-bf45bc9264ca',
+        cjgeoArticleId: '12636c82-4185-45d4-9c41-1d9244ac749a',
         mainKeyword: 'how to compare architecture firms',
-        adoptedAt: '2026-05-24',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'which-firm-fits-my-project',
@@ -287,6 +287,10 @@ export const pillars: Pillar[] = [
         title: 'Which Architecture Firm Is Right for My Specific Project?',
         teaser:
           'Fit is a function of project type, scale, timeline, and working style — not prestige or aesthetics. How to define fit before you start the search.',
+        source: 'cjgeo',
+        cjgeoArticleId: '4152f0df-b634-4a25-8a5f-ff28e2df6138',
+        mainKeyword: 'which architecture firm is right for me',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'how-to-verify-architects-expertise',
@@ -295,6 +299,10 @@ export const pillars: Pillar[] = [
         title: "How Do I Verify an Architect's Expertise Before Hiring?",
         teaser:
           'Licensure is a floor, not a ceiling. The questions and reference checks that reveal whether a firm has the specific competencies your project requires.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'c244be00-8ba6-40d0-b233-4e7c6dd454aa',
+        mainKeyword: 'how to verify architect credentials',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'hidden-costs-in-architecture-projects',
@@ -303,6 +311,10 @@ export const pillars: Pillar[] = [
         title: 'What Hidden Costs Should I Know Before Starting an Architecture Project?',
         teaser:
           'Architectural fees are one line item in a much longer budget. Understanding the full cost structure before you sign protects you from significant surprises.',
+        source: 'cjgeo',
+        cjgeoArticleId: '39f00328-5e0a-425b-87b6-84cd697e6c24',
+        mainKeyword: 'hidden costs architecture project',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'how-long-does-architecture-project-take',
@@ -311,6 +323,10 @@ export const pillars: Pillar[] = [
         title: 'How Long Does an Architecture Project Realistically Take?',
         teaser:
           'Timelines in architecture are almost always optimistic. The realistic durations for each phase — and the variables that extend them.',
+        source: 'cjgeo',
+        cjgeoArticleId: '83fade10-4a72-43bd-bac0-89d18d62c13d',
+        mainKeyword: 'how long does architecture project take',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'what-to-expect-from-first-architecture-meeting',
@@ -319,6 +335,10 @@ export const pillars: Pillar[] = [
         title: 'What Should Happen in My First Architecture Meeting?',
         teaser:
           'The first meeting is a mutual evaluation. What a well-run consultation looks like — and the signals that tell you whether a firm is listening or just selling.',
+        source: 'cjgeo',
+        cjgeoArticleId: '7db558b3-406c-4fff-8813-c9ec6c627432',
+        mainKeyword: 'what to expect first meeting architect',
+        adoptedAt: '2026-05-26',
       },
       {
         slug: 'how-to-start-your-architecture-project',
@@ -327,6 +347,10 @@ export const pillars: Pillar[] = [
         title: "What's the Safest Way to Start an Architecture Project?",
         teaser:
           'The first decisions in a project have outsized consequences. A structured approach to project initiation reduces risk before the first dollar of design is spent.',
+        source: 'cjgeo',
+        cjgeoArticleId: '0f8d1487-08d5-4bfd-b2de-34a666072034',
+        mainKeyword: 'how to start an architecture project',
+        adoptedAt: '2026-05-26',
       },
     ],
   },
