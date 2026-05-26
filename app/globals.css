@@ -159,15 +159,22 @@ body {
   margin: 0 !important;
   text-align: left;
 }
-.prose-article .trustbar__num {
+.prose-article .trustbar__num,
+.prose-article .intro-stat__number,
+.prose-article .stat__number,
+.prose-article [class$="__number"]:not(.feasibility-card__number):not(.why-card__number) {
   font-family: var(--font-serif, Cormorant, Georgia, serif);
   font-size: 2.2rem;
   line-height: 1;
   color: var(--pa-ink, #2A2622);
   margin-bottom: 0.3em;
   font-weight: 400;
+  display: block;
 }
-.prose-article .trustbar__desc {
+.prose-article .trustbar__desc,
+.prose-article .intro-stat__label,
+.prose-article .stat__label,
+.prose-article [class$="__desc"]:not(.barrier-item__desc):not(.cause-item__desc) {
   font-size: 0.85rem;
   line-height: 1.4;
   color: var(--pa-muted, #6B6257);
