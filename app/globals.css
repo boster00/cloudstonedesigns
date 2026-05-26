@@ -90,6 +90,9 @@ body {
   color: var(--color-accent);
 }
 
+/* SVG default sizing — CJGEO emits unsized inline SVGs; browsers inflate them to fill container */
+.prose-article svg { width: 1.5rem; height: 1.5rem; }
+
 /* Drop-cap opt-out for nested components */
 .prose-article .callout p:first-of-type::first-letter,
 .prose-article .bucket p:first-of-type::first-letter,
