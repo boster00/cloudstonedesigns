@@ -140,9 +140,8 @@ body {
 
 /* Orphan section-label paragraphs (CJGEO emits short labels like "Introduction"
    before an h2; sanitizer drops their wrapping <header class="section__header">,
-   so they render as bare <p>. Style as a small eyebrow). */
-.prose-article .prose > p:first-child:has(+ h2),
-.prose-article > p:first-child:has(+ h2) {
+   so they render as bare <p>. Style as a small eyebrow). Broadened 2026-05-26. */
+.prose-article p:first-child:has(+ h2) {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
