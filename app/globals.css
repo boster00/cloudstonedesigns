@@ -78,8 +78,9 @@ body {
   color: #4a4845;
 }
 
-/* Drop cap — first paragraph only */
-.prose-article p:first-of-type::first-letter {
+/* Drop cap — first paragraph of top-level .prose blocks only */
+.prose-article > .prose > p:first-of-type::first-letter,
+.prose-article > p:first-of-type::first-letter {
   font-family: var(--font-serif);
   font-size: 4rem;
   font-weight: 600;
@@ -98,7 +99,33 @@ body {
 .prose-article .bucket p:first-of-type::first-letter,
 .prose-article .stat-card p:first-of-type::first-letter,
 .prose-article .takeaway p:first-of-type::first-letter,
-.prose-article .not-prose p:first-of-type::first-letter {
+.prose-article .not-prose p:first-of-type::first-letter,
+.prose-article .mistake p:first-of-type::first-letter,
+.prose-article .mistake__head-text p:first-of-type::first-letter,
+.prose-article .mistake__content p:first-of-type::first-letter,
+.prose-article .card p:first-of-type::first-letter,
+.prose-article .card-recover p:first-of-type::first-letter,
+.prose-article .cta-band p:first-of-type::first-letter,
+.prose-article .cta-section p:first-of-type::first-letter,
+.prose-article .faq-item p:first-of-type::first-letter,
+.prose-article .faq__item p:first-of-type::first-letter,
+.prose-article .q-item p:first-of-type::first-letter,
+.prose-article .question-item p:first-of-type::first-letter,
+.prose-article .flag-item p:first-of-type::first-letter,
+.prose-article .checklist-card p:first-of-type::first-letter,
+.prose-article .diagnostic-box p:first-of-type::first-letter,
+.prose-article .barrier-item p:first-of-type::first-letter,
+.prose-article .cause-item p:first-of-type::first-letter,
+.prose-article .feasibility-card p:first-of-type::first-letter,
+.prose-article .signal-card p:first-of-type::first-letter,
+.prose-article .proof-card p:first-of-type::first-letter,
+.prose-article .summary-stat p:first-of-type::first-letter,
+.prose-article .risk-index-item p:first-of-type::first-letter,
+.prose-article .fixability-col p:first-of-type::first-letter,
+.prose-article .article-hero p:first-of-type::first-letter,
+.prose-article .article-section p:first-of-type::first-letter,
+.prose-article .mistake__head-text::first-letter,
+.prose-article .article-hero__deck::first-letter {
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -124,3 +151,817 @@ body {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* =========================================================================
+   CJGEO structural component styles (adopted from CJGEO design system).
+   All rules scoped under .prose-article so they only apply inside adopted
+   article bodies. CJGEO tokens are MAPPED onto cloudstonedesigns tokens
+   (parchment -> --color-bg, sandstone -> --color-accent, charcoal ->
+   --color-primary) to keep brand identity consistent.
+   ========================================================================= */
+
+.prose-article {
+  /* Scoped CJGEO-compat tokens (mapped to CSD palette) */
+  --pa-bg: var(--color-bg);
+  --pa-surface: var(--color-surface);
+  --pa-surface-2: var(--color-accent-tint);
+  --pa-border: #D8D3C8;
+  --pa-rule: #D8D3C8;
+  --pa-ink: var(--color-primary);
+  --pa-muted: #6B6760;
+  --pa-accent: var(--color-accent);
+  --pa-accent-lt: var(--color-accent-tint);
+  --pa-ok: #4A7C59;
+  --pa-warn: #B8732C;
+  --pa-bad: #B5483A;
+  --pa-info: #2F5369;
+  --pa-radius-sm: 4px;
+  --pa-radius: 8px;
+  --pa-radius-lg: 14px;
+}
+
+/* ---- Generic surfaces ---- */
+.prose-article .container,
+.prose-article .container--wide,
+.prose-article .u-container,
+.prose-article .content-section,
+.prose-article .article-section {
+  display: block;
+  margin-block: 1.5em;
+}
+
+.prose-article .not-prose,
+.prose-article .sans { font-family: var(--font-sans); }
+
+/* ---- Eyebrows / section labels / section headers ---- */
+.prose-article .eyebrow,
+.prose-article .article-hero__eyebrow,
+.prose-article .cta-eyebrow,
+.prose-article .cta-section__eyebrow,
+.prose-article .section-label,
+.prose-article .mistake__tag,
+.prose-article .card-tag,
+.prose-article [class*="__eyebrow"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pa-accent);
+  margin-bottom: 0.75em;
+}
+
+.prose-article .eyebrow-line::before,
+.prose-article .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1.5px;
+  background: var(--pa-accent);
+}
+
+.prose-article .section-header,
+.prose-article .article-section__header,
+.prose-article .section-title-block {
+  margin-block: 2.25em 1.25em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--pa-rule);
+}
+
+.prose-article .section-header__num,
+.prose-article .section-number,
+.prose-article .section-label__num,
+.prose-article .num,
+.prose-article .q-num,
+.prose-article .mistake__num,
+.prose-article .flow-num,
+.prose-article .cause-number,
+.prose-article .feasibility-card__number,
+.prose-article .risk-index-item__number,
+.prose-article .process-step__num,
+.prose-article .process__step-num,
+.prose-article .step__num,
+.prose-article .question-item__num,
+.prose-article .flag-num {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--pa-accent);
+  line-height: 1;
+  margin-right: 0.4em;
+}
+
+/* ---- Callouts (info / warn / neutral) ---- */
+.prose-article .callout,
+.prose-article .callout-info,
+.prose-article .callout--neutral,
+.prose-article .callout-warn,
+.prose-article .takeaway,
+.prose-article .caution,
+.prose-article .mistake__callout,
+.prose-article .client-role-box,
+.prose-article .deliverables-box,
+.prose-article .checklist-card,
+.prose-article .diagnostic-box,
+.prose-article .cta-box,
+.prose-article .figure-body {
+  background: var(--pa-surface);
+  border: 1px solid var(--pa-border);
+  border-left: 4px solid var(--pa-accent);
+  border-radius: var(--pa-radius);
+  padding: 1.25em 1.5em;
+  margin-block: 1.75em;
+}
+
+.prose-article .callout-warn,
+.prose-article .caution,
+.prose-article .warning {
+  border-left-color: var(--pa-warn);
+  background: #FBF3E7;
+}
+
+.prose-article .callout-info {
+  border-left-color: var(--pa-info);
+  background: #EBF1F5;
+}
+
+.prose-article .takeaway {
+  border-left-color: var(--pa-ok);
+  background: #EEF4EF;
+}
+
+.prose-article .callout-title,
+.prose-article .client-role-box__title,
+.prose-article .deliverables-box__title,
+.prose-article .checklist-group__title,
+.prose-article .diagnostic-box__headline {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.5em;
+  color: var(--pa-ink);
+}
+
+/* ---- Badges / pills / tags ---- */
+.prose-article .badge,
+.prose-article .pill,
+.prose-article .tag,
+.prose-article .indicator-chip,
+.prose-article .brand,
+.prose-article .mistake__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.2em 0.7em;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: var(--pa-surface);
+  color: var(--pa-ink);
+  border: 1px solid var(--pa-border);
+  line-height: 1.4;
+}
+
+.prose-article .badge--accent,
+.prose-article .badge--stone,
+.prose-article .pill--accent,
+.prose-article .tag--accent {
+  background: var(--pa-accent);
+  color: #fff;
+  border-color: var(--pa-accent);
+}
+
+.prose-article .badge--high,
+.prose-article .badge-bad,
+.prose-article .badge-red,
+.prose-article .pill--high,
+.prose-article .tag--risk,
+.prose-article .tag-risk {
+  background: #FBEBE7;
+  color: var(--pa-bad);
+  border-color: #EFC7BF;
+}
+
+.prose-article .badge--med,
+.prose-article .badge--medium,
+.prose-article .badge-warn,
+.prose-article .badge-yellow,
+.prose-article .pill--med {
+  background: #FBF3E0;
+  color: var(--pa-warn);
+  border-color: #ECD9A8;
+}
+
+.prose-article .badge--low,
+.prose-article .badge-good,
+.prose-article .badge-green,
+.prose-article .pill--low,
+.prose-article .tag--ok {
+  background: #E8F1EA;
+  color: var(--pa-ok);
+  border-color: #C2DCC8;
+}
+
+.prose-article .badge-blue,
+.prose-article .badge--duration {
+  background: #E8EFF4;
+  color: var(--pa-info);
+  border-color: #BFD3E0;
+}
+
+.prose-article .badge--neutral {
+  background: var(--pa-surface);
+  color: var(--pa-muted);
+}
+
+/* ---- Cards & grids ---- */
+.prose-article .card,
+.prose-article .stat-card,
+.prose-article .signal-card,
+.prose-article .proof-card,
+.prose-article .feasibility-card,
+.prose-article .decision-card,
+.prose-article .checklist-card,
+.prose-article .card-recover,
+.prose-article .fee-tier,
+.prose-article .summary-stat,
+.prose-article .barrier-item,
+.prose-article .cause-item,
+.prose-article .flow-node,
+.prose-article .risk-index-item,
+.prose-article .complexity__item,
+.prose-article .step-bubble,
+.prose-article .mistake,
+.prose-article .question-item,
+.prose-article .flag-item,
+.prose-article .faq__item,
+.prose-article .q-item {
+  background: var(--pa-bg);
+  border: 1px solid var(--pa-border);
+  border-radius: var(--pa-radius);
+  padding: 1.25em 1.4em;
+  margin-block: 1em;
+}
+
+.prose-article [class$="-grid"],
+.prose-article [class$="-layout"],
+.prose-article .two-col,
+.prose-article .three-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-block: 1.5em;
+}
+
+/* Specific grid-column overrides for known density patterns. */
+.prose-article .risk-index-grid,
+.prose-article .cards-grid,
+.prose-article .card-grid,
+.prose-article .feasibility-grid,
+.prose-article .pillars-grid,
+.prose-article .scenario-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.prose-article .summary-grid,
+.prose-article .stats-grid,
+.prose-article .score-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.prose-article .two-col { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+.prose-article .card-header,
+.prose-article .feasibility-card__title,
+.prose-article .decision-card__icon + *,
+.prose-article .cause-title,
+.prose-article .risk-index-item__name,
+.prose-article .barrier-item__title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.4em;
+  color: var(--pa-ink);
+}
+
+.prose-article .card-header-blue { color: var(--pa-info); }
+.prose-article .card-header-red  { color: var(--pa-bad); }
+
+/* ---- Stat / metric blocks ---- */
+.prose-article .stat-card,
+.prose-article .summary-stat,
+.prose-article .feasibility-card {
+  text-align: center;
+}
+
+.prose-article .stat-label,
+.prose-article .meta-item__label,
+.prose-article .bar-row__label,
+.prose-article .phase-name,
+.prose-article .text-label {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pa-muted);
+}
+
+.prose-article .meta-item__val,
+.prose-article .bar-row__value {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--pa-ink);
+}
+
+/* ---- Bar rows / phase tracks / gantt ---- */
+.prose-article .bar-rows,
+.prose-article .phase-bar-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-block: 1.5em;
+}
+
+.prose-article .bar-row,
+.prose-article .phase-bar-row,
+.prose-article .gantt-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 25%) 1fr auto;
+  align-items: center;
+  gap: 0.75em;
+  padding: 0.4em 0;
+}
+
+.prose-article .bar-row__track,
+.prose-article .phase-track,
+.prose-article .gantt-track {
+  position: relative;
+  height: 10px;
+  background: var(--pa-surface);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.prose-article .bar-row__fill,
+.prose-article .phase-fill,
+.prose-article .gantt-bar,
+.prose-article .gantt-range {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--pa-accent);
+  border-radius: 999px;
+}
+
+.prose-article .fill--cm  { background: #7A5C3A; }
+.prose-article .fill--db  { background: #4A7C59; }
+.prose-article .fill--dbb { background: #2F5369; }
+
+.prose-article .phase-note,
+.prose-article .gantt-label,
+.prose-article .note-cell,
+.prose-article .cell-note {
+  font-size: 0.85em;
+  color: var(--pa-muted);
+}
+
+/* ---- Checklists / check items ---- */
+.prose-article .check-list,
+.prose-article .checklist,
+.prose-article .checklist-group,
+.prose-article .fixability-list,
+.prose-article .deliverables-list,
+.prose-article .diagnostic-checklist,
+.prose-article .scope-list,
+.prose-article .q-list {
+  list-style: none;
+  padding-left: 0;
+  margin-block: 1.25em;
+}
+
+.prose-article .check-item,
+.prose-article .checklist-item,
+.prose-article .check-list__item,
+.prose-article .diagnostic-checklist__item,
+.prose-article .q-list__item,
+.prose-article .checklist__item,
+.prose-article .fixability-list li,
+.prose-article .deliverables-list li {
+  position: relative;
+  padding-left: 1.75em;
+  margin-block: 0.5em;
+  line-height: 1.55;
+}
+
+.prose-article .check-icon,
+.prose-article .check-list__icon,
+.prose-article .checklist__icon,
+.prose-article .checklist-icon,
+.prose-article .icon-check,
+.prose-article .scope-list__icon,
+.prose-article .q-list__icon,
+.prose-article .checklist__dot,
+.prose-article .fixability-icon--yes {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 999px;
+  background: var(--pa-ok);
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.prose-article .check-icon::before,
+.prose-article .checklist__icon::before,
+.prose-article .icon-check::before {
+  content: "✓";
+}
+
+.prose-article .cross-icon,
+.prose-article .fixability-icon--no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 999px;
+  background: var(--pa-bad);
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 700;
+}
+.prose-article .cross-icon::before { content: "×"; }
+
+/* ---- Process / flow / steps ---- */
+.prose-article .process,
+.prose-article .process-steps,
+.prose-article .flow-diagram,
+.prose-article .flow-stage,
+.prose-article .timeline-content {
+  margin-block: 2em;
+}
+
+.prose-article .process-step,
+.prose-article .process__step,
+.prose-article .flow-step,
+.prose-article .step,
+.prose-article .step__body,
+.prose-article .timeline-content > * {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  align-items: start;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--pa-rule);
+}
+
+.prose-article .process-step:last-child,
+.prose-article .flow-step:last-child { border-bottom: 0; }
+
+.prose-article .process-step__num,
+.prose-article .process__step-num,
+.prose-article .step__num,
+.prose-article .flow-node__circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 999px;
+  background: var(--pa-accent);
+  color: #fff;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 0;
+}
+
+/* ---- Mistake blocks ---- */
+.prose-article .mistake { padding: 1.5em; }
+.prose-article .mistake__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  margin-bottom: 0.75em;
+}
+.prose-article .mistake__head-text,
+.prose-article .mistake__num + * {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.prose-article .mistake__cost-box {
+  display: inline-block;
+  background: #FBEBE7;
+  color: var(--pa-bad);
+  padding: 0.3em 0.7em;
+  border-radius: var(--pa-radius-sm);
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+/* ---- Q&A / FAQ ---- */
+.prose-article .faq-list,
+.prose-article .faq,
+.prose-article .q-list {
+  margin-block: 1.5em;
+}
+
+.prose-article .faq-item,
+.prose-article .faq__item {
+  border-top: 1px solid var(--pa-rule);
+  padding: 1em 0;
+}
+.prose-article .faq-item:last-child { border-bottom: 1px solid var(--pa-rule); }
+
+.prose-article .faq-item__trigger,
+.prose-article .faq__trigger,
+.prose-article .q-text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--pa-ink);
+}
+
+.prose-article .faq-item__body,
+.prose-article .faq__body,
+.prose-article .q-body {
+  margin-top: 0.5em;
+  color: var(--pa-ink);
+}
+
+.prose-article .faq__icon,
+.prose-article .faq-item__icon,
+.prose-article .q-arrow { color: var(--pa-accent); }
+
+/* ---- Comparison / cost tables ---- */
+.prose-article .comparison-table,
+.prose-article .cost-table,
+.prose-article .factors-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 1.5em;
+  font-family: var(--font-sans);
+  font-size: 0.95em;
+}
+
+.prose-article .comparison-table th,
+.prose-article .cost-table th,
+.prose-article .factors-table th {
+  background: var(--pa-surface);
+  text-align: left;
+  padding: 0.75em 1em;
+  border-bottom: 2px solid var(--pa-border);
+  font-weight: 600;
+  font-family: var(--font-serif);
+  color: var(--pa-ink);
+}
+
+.prose-article .comparison-table td,
+.prose-article .cost-table td,
+.prose-article .factors-table td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid var(--pa-rule);
+  vertical-align: top;
+}
+
+.prose-article .comparison-table tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+
+/* ---- CTA bands ---- */
+.prose-article .cta-band,
+.prose-article .cta-section,
+.prose-article .cta-box {
+  background: var(--pa-ink);
+  color: var(--pa-bg);
+  border-radius: var(--pa-radius-lg);
+  padding: 2em 2.25em;
+  margin-block: 2em;
+  border: 0;
+  border-left: 0;
+}
+.prose-article .cta-band .eyebrow,
+.prose-article .cta-section__eyebrow,
+.prose-article .cta-eyebrow { color: var(--color-accent-tint); }
+
+.prose-article .cta-headline,
+.prose-article .cta-section__heading {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0.25em 0 0.5em;
+  color: inherit;
+}
+
+.prose-article .cta-btn,
+.prose-article .cta-button,
+.prose-article .btn,
+.prose-article .btn--primary,
+.prose-article .btn-primary,
+.prose-article .btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.7em 1.25em;
+  background: var(--pa-accent);
+  color: #fff;
+  border-radius: var(--pa-radius-sm);
+  font-weight: 600;
+  font-size: 0.95em;
+  text-decoration: none;
+  border: 1px solid var(--pa-accent);
+}
+.prose-article .btn--outline,
+.prose-article .btn-outline-white,
+.prose-article .btn--ghost,
+.prose-article .btn-ghost {
+  background: transparent;
+  color: var(--pa-accent);
+}
+.prose-article .cta-band .cta-btn,
+.prose-article .cta-band .btn,
+.prose-article .cta-section .btn {
+  background: var(--pa-bg);
+  color: var(--pa-ink);
+  border-color: var(--pa-bg);
+}
+
+/* ---- Dividers ---- */
+.prose-article .divider {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-block: 2.5em;
+}
+.prose-article .divider__line,
+.prose-article .divider:not(:has(*))::before {
+  flex: 1;
+  height: 1px;
+  background: var(--pa-rule);
+  content: "";
+}
+.prose-article .divider__diamond {
+  width: 8px;
+  height: 8px;
+  background: var(--pa-accent);
+  transform: rotate(45deg);
+  flex: 0 0 auto;
+}
+
+/* ---- Diagram placeholders / figures ---- */
+.prose-article .diagram-placeholder,
+.prose-article .visual-placeholder,
+.prose-article figure {
+  background: var(--pa-surface);
+  border: 1px dashed var(--pa-border);
+  border-radius: var(--pa-radius);
+  padding: 1.5em;
+  margin-block: 1.5em;
+  text-align: center;
+}
+.prose-article .diagram-placeholder__label,
+.prose-article .figure-caption,
+.prose-article figcaption,
+.prose-article .caption {
+  font-size: 0.85em;
+  color: var(--pa-muted);
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+/* ---- Hero / article-hero ---- */
+.prose-article .article-hero {
+  margin-bottom: 2.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--pa-rule);
+}
+.prose-article .article-hero__title,
+.prose-article .article-hero__headline {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0.25em 0;
+  color: var(--pa-ink);
+}
+.prose-article .article-hero__deck,
+.prose-article .article-hero__subtitle,
+.prose-article .deck {
+  font-size: 1.1rem;
+  color: var(--pa-muted);
+  line-height: 1.55;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+.prose-article .article-hero__meta,
+.prose-article .article-hero__byline {
+  font-size: 0.85em;
+  color: var(--pa-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ---- Fixability columns (yes/no split) ---- */
+.prose-article .fixability-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.prose-article .fixability-col {
+  background: var(--pa-bg);
+  border: 1px solid var(--pa-border);
+  border-radius: var(--pa-radius);
+  padding: 1.25em 1.4em;
+}
+.prose-article .fixability-col--yes { border-top: 3px solid var(--pa-ok); }
+.prose-article .fixability-col--no  { border-top: 3px solid var(--pa-bad); }
+.prose-article .fixability-col__title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+}
+
+/* ---- Index / risk bars ---- */
+.prose-article .index-bar,
+.prose-article .index-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.4em 0;
+}
+
+/* ---- Misc utilities seen in CJGEO markup ---- */
+.prose-article .spacer-sm { height: 0.75em; }
+.prose-article .rule-top  { border-top: 1px solid var(--pa-rule); padding-top: 1em; }
+.prose-article .body-text { font-size: 1rem; line-height: 1.7; }
+.prose-article .reveal    { opacity: 1; } /* CJGEO uses for JS-driven fade; render visible */
+.prose-article .breadcrumb { font-size: 0.85em; color: var(--pa-muted); margin-bottom: 1em; }
+
+/* ---- Section label row (label + hr divider, used between sections) ---- */
+.prose-article .section-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-block: 2em 1.25em;
+}
+.prose-article .section-label-row .t-label,
+.prose-article .section-label-row span,
+.prose-article .t-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pa-accent);
+  white-space: nowrap;
+}
+.prose-article .section-label-row hr,
+.prose-article hr {
+  flex: 1;
+  border: 0;
+  border-top: 1px solid var(--pa-rule);
+  margin: 0;
+}
+
+/* ---- Mistake head text (override generic ::first-letter, supply heading styles) ---- */
+.prose-article .mistake__head-text {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--pa-ink);
+}
+.prose-article .mistake__head-text .mistake__name {
+  display: block;
+}
+.prose-article .mistake__head-text .mistake__subtitle,
+.prose-article .mistake__head-text small {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--pa-muted);
+  margin-top: 0.25em;
+}
+
+/* ---- Prose wrapper from CJGEO content blocks ---- */
+.prose-article .prose {
+  /* CJGEO uses .prose as a paragraph container. No special styling needed; inherits. */
+}
+
+/* Inline icon defaults already preserved by the .prose-article svg rule above. */
+
