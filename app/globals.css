@@ -401,12 +401,39 @@ body {
 .prose-article .question-item,
 .prose-article .flag-item,
 .prose-article .faq__item,
-.prose-article .q-item {
+.prose-article .q-item,
+/* BEM __item containers — generic card treatment so they don't render as bare paragraphs */
+.prose-article .problem__item,
+.prose-article .proof__item,
+.prose-article .signal-bar__item,
+.prose-article .checklist__item,
+.prose-article .numbered-list__item,
+.prose-article .flag-list__item,
+.prose-article .flags__item,
+.prose-article .covers__item,
+.prose-article .cred-strip__item,
+.prose-article .q-list__item,
+.prose-article .trustbar__item,
+.prose-article .diagnostic-checklist__item {
   background: var(--pa-bg);
   border: 1px solid var(--pa-border);
   border-radius: var(--pa-radius);
   padding: 1.25em 1.4em;
   margin-block: 1em;
+}
+
+/* BEM __item-num style: numbered eyebrow inside cards */
+.prose-article [class$="__item-num"],
+.prose-article [class*="__item-num "],
+.prose-article .problem__item-num,
+.prose-article .proof__item-num,
+.prose-article .numbered-list__item-num {
+  font-family: var(--font-serif);
+  color: var(--pa-accent);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
 }
 
 .prose-article [class$="-grid"],
