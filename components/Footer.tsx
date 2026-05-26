@@ -80,6 +80,9 @@ export default function Footer() {
             <Link href="/privacy" className="hover:text-[var(--color-accent)] transition-colors">
               Privacy
             </Link>
+            <Link href="/design-guide" className="hover:text-[var(--color-accent)] transition-colors">
+              Design Guide
+            </Link>
             <span>© {year}</span>
           </div>
         </div>
