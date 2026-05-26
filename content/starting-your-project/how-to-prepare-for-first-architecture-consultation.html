@@ -3,1029 +3,7 @@
   article_id: d307c60c-b1e8-4ffa-b629-c231da67dcdf
   main_keyword: preparing for first architecture meeting
   adopted_at: 2026-05-26T21:20:10.893Z
--->
-<style data-cjgeo-scoped="article-how-to-prepare-for-first-architecture-consultation">.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       RESET & BASE
-    ============================================================ */
-    * {  box-sizing: border-box; margin: 0; padding: 0;  }
-.article-how-to-prepare-for-first-architecture-consultation img {  display: block; max-width: 100%;  }
-.article-how-to-prepare-for-first-architecture-consultation a {  color: inherit; text-decoration: none;  }
-.article-how-to-prepare-for-first-architecture-consultation ul, .article-how-to-prepare-for-first-architecture-consultation ol {  list-style: none;  }
-.article-how-to-prepare-for-first-architecture-consultation button {  cursor: pointer; border: none; background: none; font: inherit;  }
-/* ============================================================
-       DESIGN TOKENS / COLOR SYSTEM
-       Primary:   #2C3728  (deep forest green)
-       Neutral 1: #F5F0E8  (warm cream)
-       Neutral 2: #E8E0D0  (warm stone)
-       Neutral 3: #7A7165  (warm taupe text)
-       Accent:    #8B6F47  (warm bronze/terracotta)
-    ============================================================ */
-
-    /* ============================================================
-       TYPOGRAPHY — system serif + sans stack (fully offline)
-    ============================================================ */
-    .article-how-to-prepare-for-first-architecture-consultation { 
-      --color-bg:       #F5F0E8;
-      --color-surface:  #EDEAE2;
-      --color-stone:    #E8E0D0;
-      --color-forest:   #2C3728;
-      --color-taupe:    #7A7165;
-      --color-bronze:   #8B6F47;
-      --color-white:    #FDFCF9;
-
-      --font-serif: Georgia, 'Times New Roman', Times, serif;
-      --font-sans:  'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
-
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 16px;
-
-      --max-w: 1120px;
-      --section-px: clamp(1.25rem, 5vw, 4rem);
-      --section-py: clamp(3.5rem, 8vw, 7rem);
-     }
-.article-how-to-prepare-for-first-architecture-consultation { 
-      background-color: var(--color-bg);
-      color: var(--color-forest);
-      font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SHARED UTILITIES
-    ============================================================ */
-    .container { 
-      max-width: var(--max-w);
-      margin-inline: auto;
-      padding-inline: var(--section-px);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .section-py {  padding-block: var(--section-py);  }
-.article-how-to-prepare-for-first-architecture-consultation .section-py-sm {  padding-block: clamp(2rem, 5vw, 4rem);  }
-.article-how-to-prepare-for-first-architecture-consultation .label-tag { 
-      display: inline-block;
-      font-family: var(--font-sans);
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-bronze);
-      padding: 0.3rem 0.75rem;
-      border: 1px solid var(--color-bronze);
-      border-radius: 2rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .section-eyebrow { 
-      font-family: var(--font-sans);
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-taupe);
-      margin-bottom: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .serif-display { 
-      font-family: var(--font-serif);
-      font-weight: 400;
-      line-height: 1.15;
-      color: var(--color-forest);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .body-text { 
-      color: var(--color-taupe);
-      line-height: 1.75;
-      font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .divider { 
-      border: none;
-      border-top: 1px solid var(--color-stone);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-inner { 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-block: 1.125rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-logo { 
-      display: flex;
-      align-items: center;
-      gap: 0.625rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-logo-mark { 
-      width: 32px;
-      height: 32px;
-      flex-shrink: 0;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-logo-text { 
-      font-family: var(--font-serif);
-      font-size: 1.0625rem;
-      color: var(--color-forest);
-      line-height: 1.2;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-logo-text span { 
-      display: block;
-      font-family: var(--font-sans);
-      font-size: 0.5625rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-taupe);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-cta { 
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--color-forest);
-      color: var(--color-bg);
-      font-family: var(--font-sans);
-      font-size: 0.8125rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.625rem 1.25rem;
-      border-radius: 2rem;
-      transition: background-color 0.2s ease, color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-cta:hover { 
-      background-color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .nav-cta svg {  flex-shrink: 0;  }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       HERO SECTION
-    ============================================================ */
-    .hero { 
-      background-color: var(--color-forest);
-      color: var(--color-bg);
-      position: relative;
-      overflow: hidden;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-inner { 
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      padding-block: clamp(4rem, 10vw, 8rem);
-     }
-@media (min-width: 800px) { .article-how-to-prepare-for-first-architecture-consultation .hero-inner { 
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 5rem;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .hero-eyebrow { 
-      font-family: var(--font-sans);
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-bronze);
-      margin-bottom: 1.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-headline { 
-      font-family: var(--font-serif);
-      font-size: clamp(2.25rem, 5.5vw, 4rem);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--color-bg);
-      margin-bottom: 1.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-headline em { 
-      font-style: italic;
-      color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-subtext { 
-      color: #b8b0a4;
-      font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
-      line-height: 1.75;
-      margin-bottom: 2.5rem;
-      max-width: 42ch;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-actions { 
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .btn-primary { 
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--color-bronze);
-      color: var(--color-white);
-      font-family: var(--font-sans);
-      font-size: 0.875rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.875rem 1.75rem;
-      border-radius: 2rem;
-      transition: background-color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .btn-primary:hover {  background-color: #a07d56;  }
-.article-how-to-prepare-for-first-architecture-consultation .btn-ghost { 
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #b8b0a4;
-      font-family: var(--font-sans);
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      border-bottom: 1px solid #b8b0a4;
-      padding-bottom: 2px;
-      transition: color 0.2s ease, border-color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .btn-ghost:hover {  color: var(--color-bg); border-color: var(--color-bg);  }
-.article-how-to-prepare-for-first-architecture-consultation /* Hero visual placeholder */
-    .hero-visual { 
-      background-color: #3d4e38;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-visual-label { 
-      position: absolute;
-      bottom: 1.25rem;
-      left: 1.25rem;
-      background-color: rgba(0,0,0,0.45);
-      color: #ccc;
-      font-size: 0.6875rem;
-      font-family: var(--font-sans);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.375rem 0.75rem;
-      border-radius: 2rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* Architectural line drawing SVG inside hero */
-    .hero-drawing { 
-      width: 70%;
-      opacity: 0.55;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* Stat row inside hero */
-    .hero-stats { 
-      display: flex;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-      margin-top: 2.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255,255,255,0.12);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-stat-num { 
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      color: var(--color-bg);
-      line-height: 1;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .hero-stat-label { 
-      font-size: 0.75rem;
-      color: #9a9288;
-      letter-spacing: 0.06em;
-      margin-top: 0.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 2: WHY PREPARE
-    ============================================================ */
-    .why-prepare { 
-      background-color: var(--color-white);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .why-grid { 
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-     }
-@media (min-width: 800px) { .article-how-to-prepare-for-first-architecture-consultation .why-grid { 
-        grid-template-columns: 5fr 7fr;
-        gap: 6rem;
-        align-items: start;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .why-sticky { 
-      position: sticky;
-      top: 6rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .why-headline { 
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      margin-bottom: 1.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .why-cards { 
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .why-card { 
-      display: flex;
-      gap: 1.125rem;
-      align-items: flex-start;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .why-card-icon { 
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      background-color: var(--color-surface);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .why-card-title { 
-      font-family: var(--font-serif);
-      font-size: 1.0625rem;
-      margin-bottom: 0.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .why-card-text { 
-      font-size: 0.9rem;
-      color: var(--color-taupe);
-      line-height: 1.65;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 3: CHECKLIST — INFORMATION TO GATHER
-    ============================================================ */
-    .checklist-section { 
-      background-color: var(--color-bg);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .checklist-header { 
-      text-align: center;
-      margin-bottom: 3.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .checklist-header .section-eyebrow {  margin-bottom: 0.75rem;  }
-.article-how-to-prepare-for-first-architecture-consultation .checklist-headline { 
-      font-size: clamp(1.875rem, 4vw, 3rem);
-      max-width: 18ch;
-      margin-inline: auto;
-      margin-bottom: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .checklist-intro {  max-width: 52ch; margin-inline: auto;  }
-.article-how-to-prepare-for-first-architecture-consultation .checklist-grid { 
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-     }
-@media (min-width: 620px) { .article-how-to-prepare-for-first-architecture-consultation .checklist-grid {  grid-template-columns: 1fr 1fr;  } }
-@media (min-width: 960px) { .article-how-to-prepare-for-first-architecture-consultation .checklist-grid {  grid-template-columns: repeat(3, 1fr);  } }
-.article-how-to-prepare-for-first-architecture-consultation .checklist-card { 
-      background-color: var(--color-white);
-      border: 1px solid var(--color-stone);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .checklist-card:hover { 
-      box-shadow: 0 8px 24px rgba(44,55,40,0.08);
-      transform: translateY(-2px);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .card-num { 
-      font-family: var(--font-serif);
-      font-size: 2.5rem;
-      color: var(--color-stone);
-      line-height: 1;
-      margin-bottom: 0.75rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .card-title { 
-      font-family: var(--font-serif);
-      font-size: 1.125rem;
-      margin-bottom: 0.75rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .card-list { 
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .card-list-item { 
-      display: flex;
-      align-items: flex-start;
-      gap: 0.625rem;
-      font-size: 0.875rem;
-      color: var(--color-taupe);
-      line-height: 1.5;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .card-list-item-check { 
-      flex-shrink: 0;
-      margin-top: 3px;
-      width: 14px;
-      height: 14px;
-      color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 4: DOCUMENTS TO BRING
-    ============================================================ */
-    .documents-section { 
-      background-color: var(--color-forest);
-      color: var(--color-bg);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .documents-inner { 
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-     }
-@media (min-width: 800px) { .article-how-to-prepare-for-first-architecture-consultation .documents-inner { 
-        grid-template-columns: 1fr 1fr;
-        gap: 5rem;
-        align-items: center;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .documents-eyebrow { 
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-bronze);
-      margin-bottom: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .documents-headline { 
-      font-size: clamp(1.75rem, 3.5vw, 2.625rem);
-      color: var(--color-bg);
-      margin-bottom: 1.25rem;
-      line-height: 1.15;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .documents-body { 
-      color: #b8b0a4;
-      line-height: 1.75;
-      margin-bottom: 2rem;
-      font-size: 0.9875rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-list { 
-      display: flex;
-      flex-direction: column;
-      gap: 1.125rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-item { 
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-icon { 
-      flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      background-color: rgba(255,255,255,0.08);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-title { 
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      color: var(--color-bg);
-      margin-bottom: 0.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-desc { 
-      font-size: 0.85rem;
-      color: #9a9288;
-      line-height: 1.55;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* Document visual placeholder */
-    .doc-visual { 
-      background-color: #3d4e38;
-      border-radius: var(--radius-lg);
-      aspect-ratio: 3/4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-visual-inner { 
-      width: 80%;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-visual-sheet { 
-      background-color: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem 1.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-visual-sheet-label { 
-      font-size: 0.625rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--color-bronze);
-      margin-bottom: 0.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-visual-line { 
-      height: 2px;
-      border-radius: 1px;
-      background-color: rgba(255,255,255,0.15);
-      margin-bottom: 0.4rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .doc-visual-line.short {  width: 60%;  }
-.article-how-to-prepare-for-first-architecture-consultation .doc-visual-caption { 
-      position: absolute;
-      bottom: 1.25rem;
-      right: 1.25rem;
-      font-size: 0.625rem;
-      color: #7a7165;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 5: QUESTIONS TO PREPARE
-    ============================================================ */
-    .questions-section { 
-      background-color: var(--color-white);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .questions-inner { 
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-     }
-@media (min-width: 800px) { .article-how-to-prepare-for-first-architecture-consultation .questions-inner { 
-        grid-template-columns: 5fr 7fr;
-        gap: 5rem;
-        align-items: start;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .questions-headline { 
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      margin-bottom: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .questions-body {  max-width: 38ch;  }
-.article-how-to-prepare-for-first-architecture-consultation .accordion { 
-      display: flex;
-      flex-direction: column;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-item { 
-      border-bottom: 1px solid var(--color-stone);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-item:first-child {  border-top: 1px solid var(--color-stone);  }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-trigger { 
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding-block: 1.25rem;
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      color: var(--color-forest);
-      text-align: left;
-      transition: color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-trigger:hover {  color: var(--color-bronze);  }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-trigger svg { 
-      flex-shrink: 0;
-      color: var(--color-bronze);
-      transition: transform 0.25s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-trigger[aria-expanded="true"] svg { 
-      transform: rotate(45deg);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-body { 
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.25s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-body.open { 
-      max-height: 400px;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .accordion-body-inner { 
-      padding-bottom: 1.25rem;
-      font-size: 0.9rem;
-      color: var(--color-taupe);
-      line-height: 1.7;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 6: WHAT A GOOD FIRST MEETING LOOKS LIKE
-    ============================================================ */
-    .good-meeting { 
-      background-color: var(--color-bg);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .good-meeting-header { 
-      text-align: center;
-      margin-bottom: 3.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .good-meeting-headline { 
-      font-size: clamp(1.875rem, 4vw, 3rem);
-      max-width: 20ch;
-      margin-inline: auto;
-      margin-bottom: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .timeline { 
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-      max-width: 720px;
-      margin-inline: auto;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .timeline::before { 
-      content: '';
-      position: absolute;
-      left: 1.375rem;
-      top: 0.5rem;
-      bottom: 0.5rem;
-      width: 2px;
-      background-color: var(--color-stone);
-     }
-@media (min-width: 600px) { .article-how-to-prepare-for-first-architecture-consultation .timeline::before {  left: 50%; transform: translateX(-50%);  } }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-item { 
-      display: flex;
-      gap: 1.5rem;
-      padding-bottom: 2.5rem;
-      position: relative;
-     }
-@media (min-width: 600px) { .article-how-to-prepare-for-first-architecture-consultation .timeline-item { 
-        width: 50%;
-        padding-right: 2.5rem;
-        flex-direction: row-reverse;
-       }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-item:nth-child(even) { 
-        align-self: flex-end;
-        margin-left: 50%;
-        padding-right: 0;
-        padding-left: 2.5rem;
-        flex-direction: row;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-dot { 
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background-color: var(--color-white);
-      border: 2px solid var(--color-bronze);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-     }
-@media (min-width: 600px) { .article-how-to-prepare-for-first-architecture-consultation .timeline-dot { 
-        position: absolute;
-        right: -14px;
-        top: 0;
-       }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-item:nth-child(even) .timeline-dot { 
-        right: auto;
-        left: -14px;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-dot-num { 
-      font-family: var(--font-serif);
-      font-size: 0.75rem;
-      color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-content { 
-      background-color: var(--color-white);
-      border: 1px solid var(--color-stone);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      flex: 1;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-time { 
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-bronze);
-      margin-bottom: 0.375rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-title { 
-      font-family: var(--font-serif);
-      font-size: 1.0625rem;
-      margin-bottom: 0.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .timeline-desc { 
-      font-size: 0.875rem;
-      color: var(--color-taupe);
-      line-height: 1.65;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 7: WHAT TO EXPECT — CLOUDSTONE CONSULTATION
-    ============================================================ */
-    .expect-section { 
-      background-color: var(--color-surface);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-inner { 
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-     }
-@media (min-width: 800px) { .article-how-to-prepare-for-first-architecture-consultation .expect-inner { 
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .expect-visual { 
-      background-color: var(--color-white);
-      border: 1px solid var(--color-stone);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-visual-header { 
-      display: flex;
-      align-items: center;
-      gap: 0.875rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid var(--color-stone);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-logo-mark { 
-      width: 40px;
-      height: 40px;
-      background-color: var(--color-forest);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-visual-title { 
-      font-family: var(--font-serif);
-      font-size: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-visual-sub { 
-      font-size: 0.75rem;
-      color: var(--color-taupe);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-row { 
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-row-icon { 
-      flex-shrink: 0;
-      width: 36px;
-      height: 36px;
-      background-color: var(--color-surface);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-row-title { 
-      font-size: 0.9375rem;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-      color: var(--color-forest);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-row-text { 
-      font-size: 0.85rem;
-      color: var(--color-taupe);
-      line-height: 1.6;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-headline { 
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      margin-bottom: 1.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-body { 
-      margin-bottom: 1.75rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-promise-list { 
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-promise { 
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.9375rem;
-      color: var(--color-taupe);
-      line-height: 1.6;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .expect-promise-icon { 
-      flex-shrink: 0;
-      margin-top: 2px;
-      color: var(--color-bronze);
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 8: SOCIAL PROOF / TESTIMONIAL
-    ============================================================ */
-    .testimonial-section { 
-      background-color: var(--color-white);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-inner { 
-      max-width: 760px;
-      margin-inline: auto;
-      text-align: center;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-quote-mark { 
-      font-family: var(--font-serif);
-      font-size: 5rem;
-      color: var(--color-stone);
-      line-height: 0.5;
-      margin-bottom: 1.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-text { 
-      font-family: var(--font-serif);
-      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-      line-height: 1.45;
-      color: var(--color-forest);
-      font-style: italic;
-      margin-bottom: 2rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-attribution { 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-avatar { 
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: var(--color-stone);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-avatar-label { 
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      color: var(--color-taupe);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-name { 
-      font-weight: 700;
-      font-size: 0.9375rem;
-      color: var(--color-forest);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-role { 
-      font-size: 0.8125rem;
-      color: var(--color-taupe);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .testimonial-project-tag { 
-      display: inline-block;
-      margin-left: 0.5rem;
-      background-color: var(--color-surface);
-      color: var(--color-taupe);
-      font-size: 0.6875rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.6rem;
-      border-radius: 2rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       SECTION 9: CTA BANNER
-    ============================================================ */
-    .cta-section { 
-      background-color: var(--color-bronze);
-      color: var(--color-white);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .cta-inner { 
-      text-align: center;
-      max-width: 680px;
-      margin-inline: auto;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .cta-eyebrow { 
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .cta-headline { 
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      color: var(--color-white);
-      margin-bottom: 1.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .cta-subtext { 
-      color: rgba(255,255,255,0.8);
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .cta-actions { 
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      align-items: center;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .btn-cta-primary { 
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--color-white);
-      color: var(--color-bronze);
-      font-family: var(--font-sans);
-      font-size: 0.875rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.9rem 2rem;
-      border-radius: 2rem;
-      transition: background-color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .btn-cta-primary:hover {  background-color: var(--color-bg);  }
-.article-how-to-prepare-for-first-architecture-consultation .btn-cta-ghost { 
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: rgba(255,255,255,0.85);
-      font-family: var(--font-sans);
-      font-size: 0.875rem;
-      font-weight: 600;
-      border-bottom: 1px solid rgba(255,255,255,0.5);
-      padding-bottom: 2px;
-      transition: color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .btn-cta-ghost:hover {  color: var(--color-white);  }
-.article-how-to-prepare-for-first-architecture-consultation .cta-note { 
-      margin-top: 1.75rem;
-      font-size: 0.8125rem;
-      color: rgba(255,255,255,0.55);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-inner { 
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      padding-block: 4rem;
-     }
-@media (min-width: 700px) { .article-how-to-prepare-for-first-architecture-consultation .footer-inner { 
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 4rem;
-       } }
-.article-how-to-prepare-for-first-architecture-consultation .footer-brand-logo { 
-      display: flex;
-      align-items: center;
-      gap: 0.625rem;
-      margin-bottom: 1rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-brand-name { 
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      color: var(--color-bg);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-brand-name span { 
-      display: block;
-      font-family: var(--font-sans);
-      font-size: 0.5625rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-taupe);
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-tagline { 
-      font-size: 0.875rem;
-      line-height: 1.65;
-      max-width: 30ch;
-      margin-bottom: 1.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-contact-link { 
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--color-bronze);
-      font-weight: 600;
-      transition: color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-contact-link:hover {  color: var(--color-bg);  }
-.article-how-to-prepare-for-first-architecture-consultation .footer-col-title { 
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-bg);
-      margin-bottom: 1.25rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-links { 
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-links a { 
-      font-size: 0.875rem;
-      color: #9a9288;
-      transition: color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-links a:hover {  color: var(--color-bg);  }
-.article-how-to-prepare-for-first-architecture-consultation .footer-bottom { 
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-block: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-      justify-content: space-between;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-bottom-copy { 
-      font-size: 0.8125rem;
-      color: #6a6259;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-bottom-links { 
-      display: flex;
-      gap: 1.5rem;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-bottom-links a { 
-      font-size: 0.8125rem;
-      color: #6a6259;
-      transition: color 0.2s ease;
-     }
-.article-how-to-prepare-for-first-architecture-consultation .footer-bottom-links a:hover {  color: var(--color-bg);  }
-.article-how-to-prepare-for-first-architecture-consultation /* ============================================================
-       MOBILE ADJUSTMENTS
-    ============================================================ */
-    @media (max-width: 599px) { 
-      .timeline::before { display: none; }
-      .timeline-item { gap: 1rem; }
-      .timeline-dot { display: none; }
-     }</style>
-<div class="article-how-to-prepare-for-first-architecture-consultation">
+--><html><body><div class="article-how-to-prepare-for-first-architecture-consultation">
 <section class="hero" aria-labelledby="hero-headline">
       <div class="container">
         <div class="hero-inner">
@@ -1037,16 +15,16 @@
               Your vision deserves the <em>right</em> start.
             </h1>
             <p class="hero-subtext">
-              You&apos;ve decided to work with an architect. Congratulations. Now, let&apos;s make sure your first meeting with Cloudstone Designs is as productive, comfortable, and energizing as possible. This guide shows you exactly what to prepare.
+              You've decided to work with an architect. Congratulations. Now, let's make sure your first meeting with Cloudstone Designs is as productive, comfortable, and energizing as possible. This guide shows you exactly what to prepare.
             </p>
             <div class="hero-actions">
               <a href="#schedule" class="btn-primary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                 Schedule Your Consultation
               </a>
               <a href="#checklist" class="btn-ghost">
                 See the Checklist
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
 
@@ -1067,32 +45,7 @@
           </div>
 
           <!-- Right: Visual Placeholder -->
-          <div class="hero-visual" role="img" aria-label="Architectural line drawing placeholder">
-            <svg class="hero-drawing" viewBox="0 0 320 240" fill="none" aria-hidden="true">
-              <!-- Simplified house section/elevation drawing -->
-              <rect x="40" y="160" width="240" height="60" stroke="#8B6F47" stroke-width="1.5"/>
-              <polyline points="40,160 160,80 280,160" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
-              <line x1="130" y1="160" x2="130" y2="220" stroke="#8B6F47" stroke-width="1"/>
-              <line x1="190" y1="160" x2="190" y2="220" stroke="#8B6F47" stroke-width="1"/>
-              <rect x="130" y="160" width="60" height="60" stroke="#8B6F47" stroke-width="1"/>
-              <!-- windows -->
-              <rect x="58" y="175" width="30" height="25" stroke="#F5F0E8" stroke-width="1"/>
-              <line x1="73" y1="175" x2="73" y2="200" stroke="#F5F0E8" stroke-width="0.75"/>
-              <line x1="58" y1="187" x2="88" y2="187" stroke="#F5F0E8" stroke-width="0.75"/>
-              <rect x="232" y="175" width="30" height="25" stroke="#F5F0E8" stroke-width="1"/>
-              <line x1="247" y1="175" x2="247" y2="200" stroke="#F5F0E8" stroke-width="0.75"/>
-              <line x1="232" y1="187" x2="262" y2="187" stroke="#F5F0E8" stroke-width="0.75"/>
-              <!-- dimension lines -->
-              <line x1="40" y1="230" x2="280" y2="230" stroke="#7A7165" stroke-width="0.75" stroke-dasharray="4,4"/>
-              <line x1="40" y1="226" x2="40" y2="234" stroke="#7A7165" stroke-width="0.75"/>
-              <line x1="280" y1="226" x2="280" y2="234" stroke="#7A7165" stroke-width="0.75"/>
-              <text x="155" y="238" font-size="8" fill="#7A7165" text-anchor="middle" font-family="serif">FRONT ELEVATION</text>
-              <!-- ridge line -->
-              <line x1="160" y1="80" x2="160" y2="60" stroke="#7A7165" stroke-width="0.75" stroke-dasharray="3,3"/>
-              <text x="165" y="58" font-size="7" fill="#7A7165" font-family="serif">RIDGE HT.</text>
-            </svg>
-            <div class="hero-visual-label">Visual Placeholder &mdash; Architecture Media</div>
-          </div>
+          <img src="/diagrams/how-to-prepare-for-first-architecture-consultation-1.png" alt="Architectural line drawing placeholder" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;margin:1.5rem auto;">
 
         </div>
       </div>
@@ -1121,41 +74,41 @@
 
             <div class="why-card">
               <div class="why-card-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               </div>
               <div>
                 <div class="why-card-title serif-display">Make Every Minute Count</div>
-                <p class="why-card-text">A focused meeting means we spend time exploring your vision &mdash; not gathering basic facts. You leave with clarity, not more questions.</p>
+                <p class="why-card-text">A focused meeting means we spend time exploring your vision — not gathering basic facts. You leave with clarity, not more questions.</p>
               </div>
             </div>
 
             <div class="why-card">
               <div class="why-card-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               </div>
               <div>
                 <div class="why-card-title serif-display">Build Real Rapport</div>
-                <p class="why-card-text">When you&apos;ve thought through what you want &mdash; and what you&apos;re not sure about &mdash; we can engage at the level of design thinking, not intake forms.</p>
+                <p class="why-card-text">When you've thought through what you want — and what you're not sure about — we can engage at the level of design thinking, not intake forms.</p>
               </div>
             </div>
 
             <div class="why-card">
               <div class="why-card-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
               </div>
               <div>
                 <div class="why-card-title serif-display">Sharpen Budget Honesty</div>
-                <p class="why-card-text">Knowing your range &mdash; even roughly &mdash; lets us give you an honest picture of scope and priority from the very first conversation.</p>
+                <p class="why-card-text">Knowing your range — even roughly — lets us give you an honest picture of scope and priority from the very first conversation.</p>
               </div>
             </div>
 
             <div class="why-card">
               <div class="why-card-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
               </div>
               <div>
                 <div class="why-card-title serif-display">Ground Ideas in Reality</div>
-                <p class="why-card-text">Site specifics &mdash; location, conditions, access &mdash; shape everything. Sharing what you know helps us identify opportunities and constraints early.</p>
+                <p class="why-card-text">Site specifics — location, conditions, access — shape everything. Sharing what you know helps us identify opportunities and constraints early.</p>
               </div>
             </div>
 
@@ -1164,7 +117,7 @@
       </div>
     </section>
 
-    <hr class="divider" />
+    <hr class="divider">
 
     <!-- ============================================================
          SECTION 3: CHECKLIST — INFORMATION TO GATHER
@@ -1178,7 +131,7 @@
             Five things to think through before you arrive.
           </h2>
           <p class="body-text checklist-intro">
-            You don&apos;t need all the answers &mdash; in fact, some of the best design conversations start from uncertainty. But having considered these five areas will make your consultation far more productive.
+            You don't need all the answers — in fact, some of the best design conversations start from uncertainty. But having considered these five areas will make your consultation far more productive.
           </p>
         </div>
 
@@ -1190,23 +143,23 @@
             <h3 class="card-title serif-display">Site Details</h3>
             <ul class="card-list" role="list">
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Property address and legal description
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Lot size and approximate dimensions
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Zoning district (if known)
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Notable site features: slope, trees, views, access
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Known easements, setbacks, or restrictions
               </li>
             </ul>
@@ -1218,23 +171,23 @@
             <h3 class="card-title serif-display">Program &amp; Wish List</h3>
             <ul class="card-list" role="list">
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Number and types of spaces needed
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Approximate square footage or area goals
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Special functions (studio, garage, ADU, etc.)
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Lifestyle priorities and must-haves
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Aesthetic references (images, words, precedents)
               </li>
             </ul>
@@ -1246,19 +199,19 @@
             <h3 class="card-title serif-display">Budget Range</h3>
             <ul class="card-list" role="list">
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Overall construction budget (high &mdash; low range is fine)
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Overall construction budget (high — low range is fine)
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Sense of financing vs. cash purchase
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Priorities if scope needs trimming
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Contingency comfort level
               </li>
             </ul>
@@ -1270,19 +223,19 @@
             <h3 class="card-title serif-display">Timeline &amp; Drivers</h3>
             <ul class="card-list" role="list">
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Desired move-in or occupancy date
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Hard deadlines (lease end, life events)
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Flexibility in phases or staging
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Permitting jurisdiction awareness
               </li>
             </ul>
@@ -1294,19 +247,19 @@
             <h3 class="card-title serif-display">Existing Conditions</h3>
             <ul class="card-list" role="list">
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Current use of the property or building
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Known structural or mechanical issues
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 History of prior permits or improvements
               </li>
               <li class="card-list-item">
-                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="card-list-item-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Utility connections (water, sewer, gas, electric)
               </li>
             </ul>
@@ -1333,35 +286,7 @@
         <div class="documents-inner">
 
           <!-- Left: Visual Placeholder -->
-          <div class="doc-visual" role="img" aria-label="Document stack visual placeholder">
-            <div class="doc-visual-inner">
-              <div class="doc-visual-sheet">
-                <div class="doc-visual-sheet-label">Site Survey</div>
-                <div class="doc-visual-line"></div>
-                <div class="doc-visual-line short"></div>
-                <div class="doc-visual-line"></div>
-                <!-- Mini site plan SVG -->
-                <svg viewBox="0 0 120 80" fill="none" style="width:100%; margin-top:8px; opacity:0.6;" aria-hidden="true">
-                  <rect x="10" y="10" width="100" height="60" stroke="#8B6F47" stroke-width="1" stroke-dasharray="4,3"/>
-                  <rect x="30" y="25" width="50" height="30" stroke="#F5F0E8" stroke-width="1"/>
-                  <circle cx="95" cy="65" r="5" stroke="#8B6F47" stroke-width="1"/>
-                  <line x1="10" y1="70" x2="30" y2="70" stroke="#7A7165" stroke-width="0.75"/>
-                  <text x="60" y="78" font-size="6" fill="#7A7165" text-anchor="middle" font-family="serif">PARCEL BOUNDARY</text>
-                </svg>
-              </div>
-              <div class="doc-visual-sheet">
-                <div class="doc-visual-sheet-label">Title Report</div>
-                <div class="doc-visual-line"></div>
-                <div class="doc-visual-line short"></div>
-              </div>
-              <div class="doc-visual-sheet">
-                <div class="doc-visual-sheet-label">Existing Floor Plans</div>
-                <div class="doc-visual-line"></div>
-                <div class="doc-visual-line short"></div>
-              </div>
-            </div>
-            <div class="doc-visual-caption">Document Placeholders</div>
-          </div>
+          <img src="/diagrams/how-to-prepare-for-first-architecture-consultation-2.png" alt="Document stack visual placeholder" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;margin:1.5rem auto;">
 
           <!-- Right: Content -->
           <div>
@@ -1370,13 +295,13 @@
               Helpful documents that give us a head start.
             </h2>
             <p class="documents-body">
-              These are not requirements &mdash; your consultation will be valuable whether or not you have any of them. But if you do have these documents, bringing them allows us to move quickly from conversation into analysis.
+              These are not requirements — your consultation will be valuable whether or not you have any of them. But if you do have these documents, bringing them allows us to move quickly from conversation into analysis.
             </p>
             <ul class="doc-list" role="list">
 
               <li class="doc-item">
                 <div class="doc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
                 </div>
                 <div>
                   <div class="doc-title">Boundary Survey</div>
@@ -1386,41 +311,41 @@
 
               <li class="doc-item">
                 <div class="doc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                 </div>
                 <div>
                   <div class="doc-title">Preliminary Title Report</div>
-                  <p class="doc-desc">Reveals encumbrances, easements, and restrictions on the property that may affect what can be built &mdash; important context for design.</p>
+                  <p class="doc-desc">Reveals encumbrances, easements, and restrictions on the property that may affect what can be built — important context for design.</p>
                 </div>
               </li>
 
               <li class="doc-item">
                 <div class="doc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 </div>
                 <div>
                   <div class="doc-title">Existing Floor Plans or As-Builts</div>
-                  <p class="doc-desc">Any drawings of the current structure &mdash; even rough sketches or builder plans. Renovation projects benefit enormously from having this baseline.</p>
+                  <p class="doc-desc">Any drawings of the current structure — even rough sketches or builder plans. Renovation projects benefit enormously from having this baseline.</p>
                 </div>
               </li>
 
               <li class="doc-item">
                 <div class="doc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                 </div>
                 <div>
                   <div class="doc-title">Site Photos or Video</div>
-                  <p class="doc-desc">Photos of the site, existing structure, views, neighboring context &mdash; even taken on your phone. These are invaluable for a remote or early meeting.</p>
+                  <p class="doc-desc">Photos of the site, existing structure, views, neighboring context — even taken on your phone. These are invaluable for a remote or early meeting.</p>
                 </div>
               </li>
 
               <li class="doc-item">
                 <div class="doc-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
                 </div>
                 <div>
                   <div class="doc-title">Inspiration Images</div>
-                  <p class="doc-desc">Screenshots, magazine clippings, a shared folder &mdash; whatever has caught your eye. There&apos;s no wrong aesthetic reference, and it speeds up the design alignment process greatly.</p>
+                  <p class="doc-desc">Screenshots, magazine clippings, a shared folder — whatever has caught your eye. There's no wrong aesthetic reference, and it speeds up the design alignment process greatly.</p>
                 </div>
               </li>
 
@@ -1445,7 +370,7 @@
               Good questions to bring to your architect.
             </h2>
             <p class="body-text questions-body">
-              There are no silly questions in a first consultation. But these are the ones that tend to open the most productive conversations &mdash; and that Cloudstone Designs is ready to answer clearly and honestly.
+              There are no silly questions in a first consultation. But these are the ones that tend to open the most productive conversations — and that Cloudstone Designs is ready to answer clearly and honestly.
             </p>
           </div>
 
@@ -1455,11 +380,11 @@
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="true" aria-controls="q1-body" id="q1-trigger">
                 How does your fee structure work, and what does the design process look like?
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
               </button>
               <div class="accordion-body open" id="q1-body" aria-labelledby="q1-trigger">
                 <div class="accordion-body-inner">
-                  At Cloudstone Designs, we offer a transparent fee structure typically based on a percentage of construction cost or a negotiated fixed fee, depending on project type. We will walk you through our full process &mdash; from schematic design through construction administration &mdash; so you know exactly what to expect at each phase and what you&apos;re investing in.
+                  At Cloudstone Designs, we offer a transparent fee structure typically based on a percentage of construction cost or a negotiated fixed fee, depending on project type. We will walk you through our full process — from schematic design through construction administration — so you know exactly what to expect at each phase and what you're investing in.
                 </div>
               </div>
             </div>
@@ -1467,11 +392,11 @@
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="q2-body" id="q2-trigger">
                 Have you worked on projects similar to mine in scope and setting?
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
               </button>
               <div class="accordion-body" id="q2-body" aria-labelledby="q2-trigger">
                 <div class="accordion-body-inner">
-                  Bring a brief description of your project and ask about comparable work in our portfolio. We will share relevant precedents and be candid about areas where your project may present unfamiliar terrain &mdash; and how we approach that as a studio.
+                  Bring a brief description of your project and ask about comparable work in our portfolio. We will share relevant precedents and be candid about areas where your project may present unfamiliar terrain — and how we approach that as a studio.
                 </div>
               </div>
             </div>
@@ -1479,11 +404,11 @@
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="q3-body" id="q3-trigger">
                 What is a realistic timeline from design to occupancy?
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
               </button>
               <div class="accordion-body" id="q3-body" aria-labelledby="q3-trigger">
                 <div class="accordion-body-inner">
-                  Project timelines vary significantly based on scope, permitting jurisdiction, and contractor availability. We will give you an honest, phased breakdown &mdash; not just an optimistic guess &mdash; with the key milestones and decision points that affect schedule.
+                  Project timelines vary significantly based on scope, permitting jurisdiction, and contractor availability. We will give you an honest, phased breakdown — not just an optimistic guess — with the key milestones and decision points that affect schedule.
                 </div>
               </div>
             </div>
@@ -1491,11 +416,11 @@
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="q4-body" id="q4-trigger">
                 What is the biggest risk I should know about for this type of project?
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
               </button>
               <div class="accordion-body" id="q4-body" aria-labelledby="q4-trigger">
                 <div class="accordion-body-inner">
-                  We believe in surfacing risks early, not late. In a first meeting, we can typically identify the top one or two category risks for your project type &mdash; whether permitting complexity, soil conditions, budget stretch, or program ambiguity &mdash; and discuss how they&apos;re typically managed.
+                  We believe in surfacing risks early, not late. In a first meeting, we can typically identify the top one or two category risks for your project type — whether permitting complexity, soil conditions, budget stretch, or program ambiguity — and discuss how they're typically managed.
                 </div>
               </div>
             </div>
@@ -1503,7 +428,7 @@
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="q5-body" id="q5-trigger">
                 How do we communicate and make decisions throughout the project?
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
               </button>
               <div class="accordion-body" id="q5-body" aria-labelledby="q5-trigger">
                 <div class="accordion-body-inner">
@@ -1514,12 +439,12 @@
 
             <div class="accordion-item" role="listitem">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="q6-body" id="q6-trigger">
-                What happens if my budget and my wish list don&apos;t align?
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                What happens if my budget and my wish list don't align?
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
               </button>
               <div class="accordion-body" id="q6-body" aria-labelledby="q6-trigger">
                 <div class="accordion-body-inner">
-                  This is one of the most important conversations in architecture, and we approach it without judgment. We will help you understand scope-to-budget ratios for your project type and explore phasing, value-engineering strategies, or program adjustments that let you build the right project for now &mdash; with a clear path toward future goals.
+                  This is one of the most important conversations in architecture, and we approach it without judgment. We will help you understand scope-to-budget ratios for your project type and explore phasing, value-engineering strategies, or program adjustments that let you build the right project for now — with a clear path toward future goals.
                 </div>
               </div>
             </div>
@@ -1530,7 +455,7 @@
       </div>
     </section>
 
-    <hr class="divider" />
+    <hr class="divider">
 
     <!-- ============================================================
          SECTION 6: WHAT A GOOD FIRST MEETING LOOKS LIKE
@@ -1544,7 +469,7 @@
             What a great first meeting looks like.
           </h2>
           <p class="body-text" style="max-width:50ch; margin-inline:auto;">
-            Your initial consultation with Cloudstone Designs is structured, but never rigid. Here is a typical arc for our 60-minute meeting &mdash; whether in person or virtual.
+            Your initial consultation with Cloudstone Designs is structured, but never rigid. Here is a typical arc for our 60-minute meeting — whether in person or virtual.
           </p>
         </div>
 
@@ -1553,43 +478,43 @@
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-num">1</span></div>
             <div class="timeline-content">
-              <div class="timeline-time">0&ndash;10 min</div>
+              <div class="timeline-time">0–10 min</div>
               <h3 class="timeline-title serif-display">Introductions &amp; Context</h3>
-              <p class="timeline-desc">We get to know you, your household, and your life situation. No presentation decks &mdash; just an open conversation about where you are and where you want to go.</p>
+              <p class="timeline-desc">We get to know you, your household, and your life situation. No presentation decks — just an open conversation about where you are and where you want to go.</p>
             </div>
           </article>
 
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-num">2</span></div>
             <div class="timeline-content">
-              <div class="timeline-time">10&ndash;25 min</div>
+              <div class="timeline-time">10–25 min</div>
               <h3 class="timeline-title serif-display">Project Vision &amp; Goals</h3>
-              <p class="timeline-desc">We explore your wish list, priorities, and the story behind the project. We listen for the values underneath the program &mdash; what really matters most to you.</p>
+              <p class="timeline-desc">We explore your wish list, priorities, and the story behind the project. We listen for the values underneath the program — what really matters most to you.</p>
             </div>
           </article>
 
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-num">3</span></div>
             <div class="timeline-content">
-              <div class="timeline-time">25&ndash;40 min</div>
+              <div class="timeline-time">25–40 min</div>
               <h3 class="timeline-title serif-display">Site &amp; Feasibility Review</h3>
-              <p class="timeline-desc">We look at the site together &mdash; documents, photos, or a walk-around &mdash; and begin discussing what is possible, what might be constrained, and where the design opportunities live.</p>
+              <p class="timeline-desc">We look at the site together — documents, photos, or a walk-around — and begin discussing what is possible, what might be constrained, and where the design opportunities live.</p>
             </div>
           </article>
 
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-num">4</span></div>
             <div class="timeline-content">
-              <div class="timeline-time">40&ndash;55 min</div>
+              <div class="timeline-time">40–55 min</div>
               <h3 class="timeline-title serif-display">Budget &amp; Timeline Calibration</h3>
-              <p class="timeline-desc">We share honest benchmarks for projects like yours. We ask about your budget comfort and talk through what that means for scope, quality, and timeline &mdash; no pressure, just clarity.</p>
+              <p class="timeline-desc">We share honest benchmarks for projects like yours. We ask about your budget comfort and talk through what that means for scope, quality, and timeline — no pressure, just clarity.</p>
             </div>
           </article>
 
           <article class="timeline-item" role="listitem">
             <div class="timeline-dot" aria-hidden="true"><span class="timeline-dot-num">5</span></div>
             <div class="timeline-content">
-              <div class="timeline-time">55&ndash;60 min</div>
+              <div class="timeline-time">55–60 min</div>
               <h3 class="timeline-title serif-display">Clear Next Steps</h3>
               <p class="timeline-desc">You leave knowing what happens next. Whether we move forward together or you need time to reflect, we will outline the process, the proposal timeline, and what a working relationship with Cloudstone Designs looks like.</p>
             </div>
@@ -1611,19 +536,19 @@
             <div class="expect-visual-header">
               <div class="expect-logo-mark" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                  <path d="M6 24 L16 8 L26 24" stroke="#8B6F47" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                  <path d="M10 24 L16 14 L22 24" stroke="#F5F0E8" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                  <path d="M6 24 L16 8 L26 24" stroke="#8B6F47" stroke-width="2" fill="none" stroke-linejoin="round"></path>
+                  <path d="M10 24 L16 14 L22 24" stroke="#F5F0E8" stroke-width="1.5" fill="none" stroke-linejoin="round"></path>
                 </svg>
               </div>
               <div>
                 <div class="expect-visual-title">Initial Consultation</div>
-                <div class="expect-visual-sub">Cloudstone Designs &mdash; 60 minutes</div>
+                <div class="expect-visual-sub">Cloudstone Designs — 60 minutes</div>
               </div>
             </div>
 
             <div class="expect-row">
               <div class="expect-row-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               </div>
               <div>
                 <div class="expect-row-title">Complimentary &amp; No-Pressure</div>
@@ -1633,27 +558,27 @@
 
             <div class="expect-row">
               <div class="expect-row-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               </div>
               <div>
                 <div class="expect-row-title">Principal-Led, Every Time</div>
-                <p class="expect-row-text">You will meet directly with a principal architect &mdash; not a project manager or junior staff. Your first conversation is with the person who will lead your project.</p>
+                <p class="expect-row-text">You will meet directly with a principal architect — not a project manager or junior staff. Your first conversation is with the person who will lead your project.</p>
               </div>
             </div>
 
             <div class="expect-row">
               <div class="expect-row-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
               </div>
               <div>
                 <div class="expect-row-title">A Written Summary Follows</div>
-                <p class="expect-row-text">Within 48 hours, you will receive a brief written summary of our conversation, key takeaways, and proposed next steps &mdash; so nothing is lost.</p>
+                <p class="expect-row-text">Within 48 hours, you will receive a brief written summary of our conversation, key takeaways, and proposed next steps — so nothing is lost.</p>
               </div>
             </div>
 
             <div class="expect-row">
               <div class="expect-row-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               </div>
               <div>
                 <div class="expect-row-title">Honest Fit Assessment</div>
@@ -1670,31 +595,31 @@
               What you can count on from Cloudstone Designs.
             </h2>
             <p class="body-text expect-body">
-              We have structured our initial consultation to be genuinely useful to you &mdash; regardless of whether we work together. You will leave with a clearer picture of your project, your options, and the path forward.
+              We have structured our initial consultation to be genuinely useful to you — regardless of whether we work together. You will leave with a clearer picture of your project, your options, and the path forward.
             </p>
             <ul class="expect-promise-list" role="list">
               <li class="expect-promise">
-                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Honest budget benchmarking, not optimistic guesses
               </li>
               <li class="expect-promise">
-                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Clear explanation of the full design-to-construction process
               </li>
               <li class="expect-promise">
-                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Substantive design thinking, not a sales pitch
               </li>
               <li class="expect-promise">
-                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Candor about constraints, risks, and realistic outcomes
               </li>
               <li class="expect-promise">
-                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Respect for your time, your goals, and your budget
               </li>
               <li class="expect-promise">
-                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg class="expect-promise-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 A follow-up proposal within five business days
               </li>
             </ul>
@@ -1711,10 +636,10 @@
       <div class="container">
         <div class="testimonial-inner">
           <p id="testimonial-label" class="section-eyebrow" style="margin-bottom:1rem;">Client Experience</p>
-          <div class="testimonial-quote-mark" aria-hidden="true">&ldquo;</div>
+          <div class="testimonial-quote-mark" aria-hidden="true">“</div>
           <blockquote>
             <p class="testimonial-text">
-              I was nervous about our first meeting &mdash; I had no drawings, a vague budget, and a lot of half-formed ideas. Within an hour, I had a clear sense of what was actually feasible and felt completely at ease about the process ahead. It was the most valuable 60 minutes of the whole project.
+              I was nervous about our first meeting — I had no drawings, a vague budget, and a lot of half-formed ideas. Within an hour, I had a clear sense of what was actually feasible and felt completely at ease about the process ahead. It was the most valuable 60 minutes of the whole project.
             </p>
             <footer class="testimonial-attribution">
               <div class="testimonial-avatar" aria-hidden="true">
@@ -1741,22 +666,22 @@
         <div class="cta-inner">
           <p class="cta-eyebrow">Ready When You Are</p>
           <h2 class="serif-display cta-headline" id="cta-headline">
-            Let&apos;s meet. No pressure, no obligation.
+            Let's meet. No pressure, no obligation.
           </h2>
           <p class="cta-subtext">
-            Your first consultation with Cloudstone Designs is complimentary. Schedule a 60-minute session and bring whatever you have &mdash; even if it&apos;s just a conversation. Every great project starts with a first conversation.
+            Your first consultation with Cloudstone Designs is complimentary. Schedule a 60-minute session and bring whatever you have — even if it's just a conversation. Every great project starts with a first conversation.
           </p>
           <div class="cta-actions">
             <a href="mailto:hello@cloudstonesigns.com?subject=Initial%20Consultation%20Request" class="btn-cta-primary">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
               Book Your Consultation
             </a>
             <a href="tel:+15555550100" class="btn-cta-ghost">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.06 6.06l1.19-1.19a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.06 6.06l1.19-1.19a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               Or call us directly
             </a>
           </div>
-          <p class="cta-note">Typically available within 1&ndash;2 weeks &middot; In-person or virtual &middot; No preparation required</p>
+          <p class="cta-note">Typically available within 1–2 weeks · In-person or virtual · No preparation required</p>
         </div>
       </div>
-    </section></div>
+    </section></div></body></html>

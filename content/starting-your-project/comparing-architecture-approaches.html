@@ -3,909 +3,13 @@
   article_id: fe50e5e9-0555-49e1-9ff5-856b5327ab6e
   main_keyword: architecture firm vs design build
   adopted_at: 2026-05-26T21:20:07.534Z
--->
-<style data-cjgeo-scoped="article-comparing-architecture-approaches">.article-comparing-architecture-approaches /* =============================================
-       TOKENS & RESET
-    ============================================= */
-    * {  box-sizing: border-box; margin: 0; padding: 0;  }
-.article-comparing-architecture-approaches { 
-      /* Colors */
-      --color-canvas:      #F5F2ED;
-      --color-surface:     #FFFFFF;
-      --color-ink:         #1A1A18;
-      --color-ink-muted:   #5A5A54;
-      --color-rule:        #D9D5CC;
-      --color-accent:      #2C4A3E;
-      --color-accent-warm: #8B6F47;
-      --color-tag-bg:      #EAE5DC;
-
-      /* Typography */
-      --font-serif: Georgia, 'Times New Roman', Times, serif;
-      --font-sans:  'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-      /* Spacing scale */
-      --space-1:  4px;
-      --space-2:  8px;
-      --space-3:  12px;
-      --space-4:  16px;
-      --space-5:  24px;
-      --space-6:  32px;
-      --space-7:  48px;
-      --space-8:  64px;
-      --space-9:  96px;
-      --space-10: 128px;
-
-      /* Max widths */
-      --max-content: 800px;
-      --max-wide:    1100px;
-     }
-.article-comparing-architecture-approaches { 
-      font-family: var(--font-sans);
-      font-size: 17px;
-      line-height: 1.65;
-      color: var(--color-ink);
-      background-color: var(--color-canvas);
-      -webkit-font-smoothing: antialiased;
-     }
-.article-comparing-architecture-approaches img {  display: block; max-width: 100%;  }
-.article-comparing-architecture-approaches a {  color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px;  }
-.article-comparing-architecture-approaches a:hover {  color: var(--color-ink);  }
-.article-comparing-architecture-approaches /* =============================================
-       UTILITY
-    ============================================= */
-    .u-container { 
-      width: 100%;
-      max-width: var(--max-wide);
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: var(--space-6);
-      padding-right: var(--space-6);
-     }
-.article-comparing-architecture-approaches .u-container--narrow { 
-      max-width: var(--max-content);
-     }
-.article-comparing-architecture-approaches .u-rule { 
-      border: none;
-      border-top: 1px solid var(--color-rule);
-     }
-.article-comparing-architecture-approaches .u-eyebrow { 
-      font-family: var(--font-sans);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches .u-serif {  font-family: var(--font-serif);  }
-.article-comparing-architecture-approaches .site-header__inner { 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-     }
-.article-comparing-architecture-approaches .site-header__logo { 
-      font-family: var(--font-sans);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--color-ink);
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-     }
-.article-comparing-architecture-approaches .site-header__logo-mark { 
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-     }
-.article-comparing-architecture-approaches .site-header__nav { 
-      display: flex;
-      align-items: center;
-      gap: var(--space-6);
-      list-style: none;
-     }
-.article-comparing-architecture-approaches .site-header__nav a { 
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--color-ink-muted);
-      text-decoration: none;
-     }
-.article-comparing-architecture-approaches .site-header__nav a:hover {  color: var(--color-ink);  }
-.article-comparing-architecture-approaches .site-header__cta { 
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--color-accent);
-      text-decoration: none;
-      border: 1px solid var(--color-accent);
-      padding: var(--space-2) var(--space-4);
-      transition: background-color 0.2s, color 0.2s;
-     }
-.article-comparing-architecture-approaches .site-header__cta:hover { 
-      background-color: var(--color-accent);
-      color: var(--color-surface);
-     }
-@media (max-width: 680px) { .article-comparing-architecture-approaches .site-header__nav {  display: none;  } }
-.article-comparing-architecture-approaches /* =============================================
-       SECTION SPACING
-    ============================================= */
-    .section {  padding-top: var(--space-9); padding-bottom: var(--space-9);  }
-.article-comparing-architecture-approaches .section--sm {  padding-top: var(--space-7); padding-bottom: var(--space-7);  }
-.article-comparing-architecture-approaches .section--flush-top {  padding-top: 0;  }
-.article-comparing-architecture-approaches .section--canvas {  background-color: var(--color-canvas);  }
-.article-comparing-architecture-approaches .section--surface {  background-color: var(--color-surface);  }
-.article-comparing-architecture-approaches .section--ink {  background-color: var(--color-ink); color: var(--color-surface);  }
-.article-comparing-architecture-approaches /* =============================================
-       HERO
-    ============================================= */
-    .hero { 
-      padding-top: var(--space-10);
-      padding-bottom: var(--space-9);
-      border-bottom: 1px solid var(--color-rule);
-     }
-.article-comparing-architecture-approaches .hero__kicker { 
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      margin-bottom: var(--space-5);
-     }
-.article-comparing-architecture-approaches .hero__kicker-line { 
-      display: block;
-      width: 28px;
-      height: 1px;
-      background-color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches .hero__heading { 
-      font-family: var(--font-serif);
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-      color: var(--color-ink);
-      max-width: 780px;
-      margin-bottom: var(--space-6);
-     }
-.article-comparing-architecture-approaches .hero__subhead { 
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--color-ink-muted);
-      max-width: 580px;
-      margin-bottom: var(--space-7);
-     }
-.article-comparing-architecture-approaches .hero__meta { 
-      display: flex;
-      align-items: center;
-      gap: var(--space-5);
-      flex-wrap: wrap;
-     }
-.article-comparing-architecture-approaches .hero__meta-item { 
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-      font-size: 13px;
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches .hero__meta-dot { 
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: var(--color-rule);
-     }
-.article-comparing-architecture-approaches /* Hero placeholder image */
-    .hero__media { 
-      margin-top: var(--space-8);
-      width: 100%;
-      height: 380px;
-      background-color: var(--color-tag-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--color-rule);
-      overflow: hidden;
-      position: relative;
-     }
-.article-comparing-architecture-approaches .hero__media-label { 
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches /* Decorative grid lines in hero image placeholder */
-    .hero__media::before { 
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(var(--color-rule) 1px, transparent 1px),
-        linear-gradient(90deg, var(--color-rule) 1px, transparent 1px);
-      background-size: 60px 60px;
-      opacity: 0.4;
-     }
-.article-comparing-architecture-approaches /* =============================================
-       TABLE OF CONTENTS
-    ============================================= */
-    .toc { 
-      border: 1px solid var(--color-rule);
-      background-color: var(--color-surface);
-      padding: var(--space-6);
-     }
-.article-comparing-architecture-approaches .toc__title { 
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-      margin-bottom: var(--space-4);
-     }
-.article-comparing-architecture-approaches .toc__list { 
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-      counter-reset: toc-counter;
-     }
-.article-comparing-architecture-approaches .toc__list li { 
-      counter-increment: toc-counter;
-      display: flex;
-      align-items: baseline;
-      gap: var(--space-3);
-     }
-.article-comparing-architecture-approaches .toc__list li::before { 
-      content: counter(toc-counter, decimal-leading-zero);
-      font-size: 11px;
-      color: var(--color-ink-muted);
-      flex-shrink: 0;
-      font-family: var(--font-sans);
-     }
-.article-comparing-architecture-approaches .toc__list a { 
-      font-size: 15px;
-      color: var(--color-ink);
-      text-decoration: none;
-      line-height: 1.4;
-     }
-.article-comparing-architecture-approaches .toc__list a:hover {  color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px;  }
-.article-comparing-architecture-approaches /* =============================================
-       SECTION HEADER (reusable)
-    ============================================= */
-    .section-header { 
-      margin-bottom: var(--space-7);
-     }
-.article-comparing-architecture-approaches .section-header__number { 
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-      margin-bottom: var(--space-3);
-     }
-.article-comparing-architecture-approaches .section-header__heading { 
-      font-family: var(--font-serif);
-      font-size: clamp(26px, 3.5vw, 40px);
-      font-weight: 400;
-      line-height: 1.15;
-      color: var(--color-ink);
-      margin-bottom: var(--space-4);
-     }
-.article-comparing-architecture-approaches .section-header__subhead { 
-      font-size: 17px;
-      color: var(--color-ink-muted);
-      line-height: 1.6;
-      max-width: 620px;
-     }
-.article-comparing-architecture-approaches /* =============================================
-       OPTION CARDS (Section 2)
-    ============================================= */
-    .option-cards { 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-4);
-     }
-@media (max-width: 820px) { .article-comparing-architecture-approaches .option-cards {  grid-template-columns: 1fr;  } }
-.article-comparing-architecture-approaches .option-card { 
-      border: 1px solid var(--color-rule);
-      background-color: var(--color-surface);
-      padding: var(--space-6);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-4);
-     }
-.article-comparing-architecture-approaches .option-card__label { 
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-accent);
-     }
-.article-comparing-architecture-approaches .option-card__title { 
-      font-family: var(--font-serif);
-      font-size: 22px;
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .option-card__desc { 
-      font-size: 15px;
-      color: var(--color-ink-muted);
-      line-height: 1.6;
-      flex-grow: 1;
-     }
-.article-comparing-architecture-approaches .option-card__rule { 
-      height: 1px;
-      background-color: var(--color-rule);
-     }
-.article-comparing-architecture-approaches .option-card__tags { 
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-     }
-.article-comparing-architecture-approaches .tag { 
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      padding: 3px 8px;
-      background-color: var(--color-tag-bg);
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches .tag--green { 
-      background-color: #D6EAE0;
-      color: #1F5C40;
-     }
-.article-comparing-architecture-approaches .tag--amber { 
-      background-color: #F2E9D6;
-      color: #7A5020;
-     }
-.article-comparing-architecture-approaches .tag--neutral { 
-      background-color: var(--color-tag-bg);
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches /* =============================================
-       COMPARISON TABLE (Section 3)
-    ============================================= */
-    .comparison-table-wrap { 
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-     }
-.article-comparing-architecture-approaches .comparison-table { 
-      width: 100%;
-      min-width: 640px;
-      border-collapse: collapse;
-      font-size: 15px;
-     }
-.article-comparing-architecture-approaches .comparison-table thead th { 
-      text-align: left;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-      padding: var(--space-4) var(--space-5);
-      border-bottom: 2px solid var(--color-ink);
-      background-color: var(--color-canvas);
-     }
-.article-comparing-architecture-approaches .comparison-table thead th:first-child { 
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .comparison-table tbody tr { 
-      border-bottom: 1px solid var(--color-rule);
-     }
-.article-comparing-architecture-approaches .comparison-table tbody tr:last-child {  border-bottom: none;  }
-.article-comparing-architecture-approaches .comparison-table tbody tr:hover td {  background-color: var(--color-tag-bg);  }
-.article-comparing-architecture-approaches .comparison-table td { 
-      padding: var(--space-4) var(--space-5);
-      vertical-align: top;
-      line-height: 1.5;
-      transition: background-color 0.15s;
-     }
-.article-comparing-architecture-approaches .comparison-table td:first-child { 
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--color-ink);
-      white-space: nowrap;
-     }
-.article-comparing-architecture-approaches .comparison-table td .cell-note { 
-      display: block;
-      font-size: 12px;
-      color: var(--color-ink-muted);
-      margin-top: 2px;
-      font-weight: 400;
-     }
-.article-comparing-architecture-approaches .icon-check, .article-comparing-architecture-approaches .icon-dash, .article-comparing-architecture-approaches .icon-warn { 
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-     }
-.article-comparing-architecture-approaches .icon-check {  color: #1F5C40;  }
-.article-comparing-architecture-approaches .icon-dash {  color: var(--color-ink-muted);  }
-.article-comparing-architecture-approaches .icon-warn {  color: #7A5020;  }
-.article-comparing-architecture-approaches /* =============================================
-       TRADEOFF ROWS (Section 4)
-    ============================================= */
-    .tradeoff-list { 
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-     }
-.article-comparing-architecture-approaches .tradeoff-item { 
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: var(--space-6);
-      padding: var(--space-6) 0;
-      border-bottom: 1px solid var(--color-rule);
-      align-items: start;
-     }
-.article-comparing-architecture-approaches .tradeoff-item:first-child {  border-top: 1px solid var(--color-rule);  }
-@media (max-width: 680px) { .article-comparing-architecture-approaches .tradeoff-item {  grid-template-columns: 1fr; gap: var(--space-3);  } }
-.article-comparing-architecture-approaches .tradeoff-item__label { 
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-      padding-top: 3px;
-     }
-.article-comparing-architecture-approaches .tradeoff-item__content { 
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-3);
-     }
-.article-comparing-architecture-approaches .tradeoff-item__heading { 
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 400;
-      color: var(--color-ink);
-      line-height: 1.25;
-     }
-.article-comparing-architecture-approaches .tradeoff-item__body { 
-      font-size: 16px;
-      color: var(--color-ink-muted);
-      line-height: 1.65;
-     }
-.article-comparing-architecture-approaches .tradeoff-item__pills { 
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      margin-top: var(--space-1);
-     }
-.article-comparing-architecture-approaches .pill { 
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border: 1px solid var(--color-rule);
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches .pill--a {  border-color: #B0CFC0; color: #1F5C40; background-color: #F0F8F3;  }
-.article-comparing-architecture-approaches .pill--b {  border-color: #D4C0A0; color: #7A5020; background-color: #FDF6EC;  }
-.article-comparing-architecture-approaches .pill--c {  border-color: var(--color-rule); color: var(--color-ink-muted); background-color: var(--color-canvas);  }
-.article-comparing-architecture-approaches /* =============================================
-       WHEN EACH IS RIGHT (Section 5) — scenario cards
-    ============================================= */
-    .scenario-grid { 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-4);
-     }
-@media (max-width: 820px) { .article-comparing-architecture-approaches .scenario-grid {  grid-template-columns: 1fr;  } }
-.article-comparing-architecture-approaches .scenario-card { 
-      background-color: var(--color-surface);
-      border: 1px solid var(--color-rule);
-      padding: var(--space-6);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-4);
-     }
-.article-comparing-architecture-approaches .scenario-card--accent { 
-      border-color: var(--color-accent);
-      background-color: var(--color-accent);
-      color: var(--color-surface);
-     }
-.article-comparing-architecture-approaches .scenario-card--accent .scenario-card__title {  color: var(--color-surface);  }
-.article-comparing-architecture-approaches .scenario-card--accent .scenario-card__desc {  color: rgba(255,255,255,0.75);  }
-.article-comparing-architecture-approaches .scenario-card--accent .scenario-list li {  color: rgba(255,255,255,0.85);  }
-.article-comparing-architecture-approaches .scenario-card--accent .scenario-list li::before {  color: rgba(255,255,255,0.5);  }
-.article-comparing-architecture-approaches .scenario-card__icon { 
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-     }
-.article-comparing-architecture-approaches .scenario-card__option-label { 
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-     }
-.article-comparing-architecture-approaches .scenario-card__title { 
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .scenario-card__desc { 
-      font-size: 14px;
-      color: var(--color-ink-muted);
-      line-height: 1.55;
-      flex-grow: 1;
-     }
-.article-comparing-architecture-approaches .scenario-list { 
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-     }
-.article-comparing-architecture-approaches .scenario-list li { 
-      font-size: 14px;
-      color: var(--color-ink-muted);
-      padding-left: var(--space-4);
-      position: relative;
-      line-height: 1.5;
-     }
-.article-comparing-architecture-approaches .scenario-list li::before { 
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 6px;
-      height: 1px;
-      background-color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches /* =============================================
-       QUESTIONS TO ASK (Section 6) — two-column list
-    ============================================= */
-    .question-grid { 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-4) var(--space-8);
-     }
-@media (max-width: 680px) { .article-comparing-architecture-approaches .question-grid {  grid-template-columns: 1fr;  } }
-.article-comparing-architecture-approaches .question-item { 
-      display: flex;
-      gap: var(--space-3);
-      padding: var(--space-4) 0;
-      border-bottom: 1px solid var(--color-rule);
-      align-items: start;
-     }
-.article-comparing-architecture-approaches .question-item__num { 
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--color-ink-muted);
-      flex-shrink: 0;
-      width: 24px;
-      padding-top: 2px;
-     }
-.article-comparing-architecture-approaches .question-item__text { 
-      font-size: 15px;
-      color: var(--color-ink);
-      line-height: 1.5;
-     }
-.article-comparing-architecture-approaches /* =============================================
-       RED FLAGS (Section 7)
-    ============================================= */
-    .red-flag-list { 
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-3);
-      list-style: none;
-     }
-.article-comparing-architecture-approaches .red-flag-item { 
-      display: flex;
-      gap: var(--space-4);
-      padding: var(--space-4) var(--space-5);
-      background-color: var(--color-surface);
-      border: 1px solid var(--color-rule);
-      align-items: start;
-     }
-.article-comparing-architecture-approaches .red-flag-item__icon { 
-      flex-shrink: 0;
-      margin-top: 2px;
-     }
-.article-comparing-architecture-approaches .red-flag-item__text { 
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-     }
-.article-comparing-architecture-approaches .red-flag-item__heading { 
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .red-flag-item__sub { 
-      font-size: 14px;
-      color: var(--color-ink-muted);
-      line-height: 1.5;
-     }
-.article-comparing-architecture-approaches /* =============================================
-       COST REALITY (Section 8) — horizontal bar chart
-    ============================================= */
-    .cost-bars { 
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-5);
-      margin-top: var(--space-6);
-     }
-.article-comparing-architecture-approaches .cost-bar-row { 
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-     }
-.article-comparing-architecture-approaches .cost-bar-row__label { 
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-     }
-.article-comparing-architecture-approaches .cost-bar-row__title { 
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .cost-bar-row__range { 
-      font-size: 13px;
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches .cost-bar-track { 
-      height: 8px;
-      background-color: var(--color-rule);
-      position: relative;
-     }
-.article-comparing-architecture-approaches .cost-bar-fill { 
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      background-color: var(--color-accent);
-      transition: width 0.4s;
-     }
-.article-comparing-architecture-approaches .cost-bar-fill--muted {  background-color: var(--color-accent-warm);  }
-.article-comparing-architecture-approaches .cost-bar-fill--light {  background-color: var(--color-rule);  }
-.article-comparing-architecture-approaches .cost-note { 
-      font-size: 13px;
-      color: var(--color-ink-muted);
-      margin-top: var(--space-5);
-      padding-top: var(--space-4);
-      border-top: 1px solid var(--color-rule);
-      line-height: 1.6;
-     }
-.article-comparing-architecture-approaches /* =============================================
-       PROCESS DIAGRAM PLACEHOLDER (Section 9)
-    ============================================= */
-    .process-steps { 
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-      margin-top: var(--space-6);
-      position: relative;
-     }
-@media (max-width: 820px) { .article-comparing-architecture-approaches .process-steps {  grid-template-columns: 1fr;  } }
-.article-comparing-architecture-approaches .process-steps::before { 
-      content: '';
-      position: absolute;
-      top: 28px;
-      left: 10%;
-      right: 10%;
-      height: 1px;
-      background-color: var(--color-rule);
-     }
-@media (max-width: 820px) { .article-comparing-architecture-approaches .process-steps::before {  display: none;  } }
-.article-comparing-architecture-approaches .process-step { 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 0 var(--space-3);
-      gap: var(--space-3);
-      position: relative;
-     }
-.article-comparing-architecture-approaches .process-step__num { 
-      width: 56px;
-      height: 56px;
-      border: 1px solid var(--color-rule);
-      background-color: var(--color-surface);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-serif);
-      font-size: 18px;
-      color: var(--color-ink);
-      flex-shrink: 0;
-      z-index: 1;
-     }
-.article-comparing-architecture-approaches .process-step--active .process-step__num { 
-      background-color: var(--color-accent);
-      color: var(--color-surface);
-      border-color: var(--color-accent);
-     }
-.article-comparing-architecture-approaches .process-step__title { 
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .process-step__sub { 
-      font-size: 12px;
-      color: var(--color-ink-muted);
-      line-height: 1.4;
-     }
-.article-comparing-architecture-approaches /* =============================================
-       CTA / CLOSE (Section 10)
-    ============================================= */
-    .cta-section { 
-      background-color: var(--color-ink);
-      color: var(--color-surface);
-      padding: var(--space-10) 0;
-     }
-.article-comparing-architecture-approaches .cta-inner { 
-      max-width: 640px;
-     }
-.article-comparing-architecture-approaches .cta-section .u-eyebrow {  color: rgba(255,255,255,0.5);  }
-.article-comparing-architecture-approaches .cta-heading { 
-      font-family: var(--font-serif);
-      font-size: clamp(30px, 4vw, 50px);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--color-surface);
-      margin: var(--space-4) 0 var(--space-5);
-     }
-.article-comparing-architecture-approaches .cta-body { 
-      font-size: 17px;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.6;
-      margin-bottom: var(--space-7);
-      max-width: 520px;
-     }
-.article-comparing-architecture-approaches .cta-actions { 
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-4);
-      align-items: center;
-     }
-.article-comparing-architecture-approaches .btn { 
-      display: inline-block;
-      font-family: var(--font-sans);
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      padding: var(--space-3) var(--space-6);
-      cursor: pointer;
-      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-     }
-.article-comparing-architecture-approaches .btn--primary { 
-      background-color: var(--color-surface);
-      color: var(--color-ink);
-      border: 1px solid var(--color-surface);
-     }
-.article-comparing-architecture-approaches .btn--primary:hover { 
-      background-color: var(--color-canvas);
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .btn--ghost-light { 
-      background-color: transparent;
-      color: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.25);
-     }
-.article-comparing-architecture-approaches .btn--ghost-light:hover { 
-      color: var(--color-surface);
-      border-color: rgba(255,255,255,0.6);
-     }
-.article-comparing-architecture-approaches .cta-disclaimer { 
-      margin-top: var(--space-5);
-      font-size: 13px;
-      color: rgba(255,255,255,0.35);
-      line-height: 1.5;
-     }
-.article-comparing-architecture-approaches /* =============================================
-       CALLOUT / PULLQUOTE
-    ============================================= */
-    .callout { 
-      border-left: 3px solid var(--color-accent);
-      padding: var(--space-5) var(--space-6);
-      background-color: var(--color-surface);
-      margin: var(--space-7) 0;
-     }
-.article-comparing-architecture-approaches .callout p { 
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.5;
-      color: var(--color-ink);
-     }
-.article-comparing-architecture-approaches .callout cite { 
-      display: block;
-      margin-top: var(--space-3);
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches /* =============================================
-       NOTICE BOX
-    ============================================= */
-    .notice { 
-      display: flex;
-      gap: var(--space-4);
-      padding: var(--space-5);
-      border: 1px solid var(--color-rule);
-      background-color: var(--color-surface);
-      margin: var(--space-6) 0;
-     }
-.article-comparing-architecture-approaches .notice--amber { 
-      border-color: #D4C0A0;
-      background-color: #FDF6EC;
-     }
-.article-comparing-architecture-approaches .notice__icon {  flex-shrink: 0; margin-top: 2px;  }
-.article-comparing-architecture-approaches .notice__body {  font-size: 15px; color: var(--color-ink); line-height: 1.6;  }
-.article-comparing-architecture-approaches .notice__body strong {  font-weight: 700;  }
-.article-comparing-architecture-approaches .site-footer__inner { 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: var(--space-4);
-     }
-.article-comparing-architecture-approaches .site-footer__brand { 
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches .site-footer__links { 
-      display: flex;
-      gap: var(--space-5);
-      list-style: none;
-     }
-.article-comparing-architecture-approaches .site-footer__links a { 
-      font-size: 13px;
-      color: var(--color-ink-muted);
-      text-decoration: none;
-     }
-.article-comparing-architecture-approaches .site-footer__links a:hover {  color: var(--color-ink);  }
-.article-comparing-architecture-approaches .site-footer__copy { 
-      font-size: 12px;
-      color: var(--color-ink-muted);
-     }
-.article-comparing-architecture-approaches /* =============================================
-       MISC
-    ============================================= */
-    .two-col { 
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-8);
-      align-items: start;
-     }
-@media (max-width: 820px) { .article-comparing-architecture-approaches .two-col {  grid-template-columns: 1fr;  } }
-.article-comparing-architecture-approaches .prose p {  font-size: 16px; color: var(--color-ink-muted); line-height: 1.7; margin-bottom: var(--space-4);  }
-.article-comparing-architecture-approaches .prose p:last-child {  margin-bottom: 0;  }
-.article-comparing-architecture-approaches .prose strong {  color: var(--color-ink); font-weight: 600;  }
-.article-comparing-architecture-approaches /* Skip link */
-    .skip-link { 
-      position: absolute;
-      top: -100%;
-      left: var(--space-4);
-      font-size: 13px;
-      padding: var(--space-2) var(--space-4);
-      background: var(--color-accent);
-      color: var(--color-surface);
-      z-index: 200;
-      text-decoration: none;
-     }
-.article-comparing-architecture-approaches .skip-link:focus {  top: var(--space-4);  }</style>
-<div class="article-comparing-architecture-approaches">
+--><html><body><div class="article-comparing-architecture-approaches">
 <section class="hero section--canvas" aria-labelledby="hero-heading">
       <div class="u-container">
 
         <div class="hero__kicker">
           <span class="hero__kicker-line" aria-hidden="true"></span>
-          <span class="u-eyebrow">Buyer&rsquo;s Guide &mdash; Cloudstone Designs</span>
+          <span class="u-eyebrow">Buyer’s Guide — Cloudstone Designs</span>
         </div>
 
         <h1 class="hero__heading u-serif" id="hero-heading">
@@ -913,22 +17,22 @@
         </h1>
 
         <p class="hero__subhead">
-          An objective comparison of three common engagement models &mdash; who owns what decisions, real cost differences, and when each path actually serves you best.
+          An objective comparison of three common engagement models — who owns what decisions, real cost differences, and when each path actually serves you best.
         </p>
 
         <div class="hero__meta" role="list" aria-label="Article metadata">
           <div class="hero__meta-item" role="listitem">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="2" width="14" height="13" rx="1" stroke="#5A5A54" stroke-width="1.2"/>
-              <path d="M5 1v2M11 1v2M1 6h14" stroke="#5A5A54" stroke-width="1.2"/>
+              <rect x="1" y="2" width="14" height="13" rx="1" stroke="#5A5A54" stroke-width="1.2"></rect>
+              <path d="M5 1v2M11 1v2M1 6h14" stroke="#5A5A54" stroke-width="1.2"></path>
             </svg>
-            12&ndash;15 min read
+            12–15 min read
           </div>
           <div class="hero__meta-dot" aria-hidden="true"></div>
           <div class="hero__meta-item" role="listitem">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="8" cy="8" r="6.5" stroke="#5A5A54" stroke-width="1.2"/>
-              <path d="M8 4.5V8.25l2.5 1.5" stroke="#5A5A54" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="8" cy="8" r="6.5" stroke="#5A5A54" stroke-width="1.2"></circle>
+              <path d="M8 4.5V8.25l2.5 1.5" stroke="#5A5A54" stroke-width="1.2" stroke-linecap="round"></path>
             </svg>
             Decision Stage: Comparing Options
           </div>
@@ -937,9 +41,7 @@
         </div>
 
         <!-- Hero placeholder media -->
-        <div class="hero__media" role="img" aria-label="Visual placeholder: site plan, elevation drawing, and design-build rendering side by side">
-          <span class="hero__media-label">[ Hero visual: Architectural drawings &mdash; site plan / elevation / rendering ]</span>
-        </div>
+        <img src="/diagrams/comparing-architecture-approaches-1.png" alt="site plan, elevation drawing, and design-build rendering side by side" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;margin:1.5rem auto;">
 
       </div>
     </section>
@@ -968,10 +70,10 @@
     <section class="section section--canvas" id="overview" aria-labelledby="overview-heading">
       <div class="u-container">
         <header class="section-header">
-          <p class="section-header__number u-eyebrow">01 &mdash; Overview</p>
+          <p class="section-header__number u-eyebrow">01 — Overview</p>
           <h2 class="section-header__heading" id="overview-heading">What Each Model Actually Is</h2>
           <p class="section-header__subhead">
-            The labels vary by market, but the structural differences between these three paths are consistent and significant. Here is what each one covers &mdash; and what it does not.
+            The labels vary by market, but the structural differences between these three paths are consistent and significant. Here is what each one covers — and what it does not.
           </p>
         </header>
 
@@ -986,8 +88,8 @@
             </p>
             <div class="option-card__rule" aria-hidden="true"></div>
             <div class="option-card__tags">
-              <span class="tag tag--green">Phases 1&ndash;5</span>
-              <span class="tag tag--green">Owner&rsquo;s advocate</span>
+              <span class="tag tag--green">Phases 1–5</span>
+              <span class="tag tag--green">Owner’s advocate</span>
               <span class="tag tag--green">Contractor independent</span>
             </div>
           </article>
@@ -997,7 +99,7 @@
             <span class="option-card__label">Option B</span>
             <h3 class="option-card__title u-serif" id="option-b-title">Design-Build Firm</h3>
             <p class="option-card__desc">
-              A single entity that handles both design and construction under one contract. Faster to break ground and often easier to manage, but the designer ultimately answers to the contractor &mdash; not to you. Good for streamlined delivery; harder to verify design quality independently.
+              A single entity that handles both design and construction under one contract. Faster to break ground and often easier to manage, but the designer ultimately answers to the contractor — not to you. Good for streamlined delivery; harder to verify design quality independently.
             </p>
             <div class="option-card__rule" aria-hidden="true"></div>
             <div class="option-card__tags">
@@ -1012,7 +114,7 @@
             <span class="option-card__label">Option C</span>
             <h3 class="option-card__title u-serif" id="option-c-title">Permit Drawings Only</h3>
             <p class="option-card__desc">
-              An architect or draftsperson provides stamped construction documents sufficient for permit approval and basic bidding. No design development, no site visits, no construction oversight. You manage the rest &mdash; or hire separately for each piece.
+              An architect or draftsperson provides stamped construction documents sufficient for permit approval and basic bidding. No design development, no site visits, no construction oversight. You manage the rest — or hire separately for each piece.
             </p>
             <div class="option-card__rule" aria-hidden="true"></div>
             <div class="option-card__tags">
@@ -1026,7 +128,7 @@
 
         <div class="callout">
           <p>"Design-build is not inherently inferior. For a straightforward volume build or a time-constrained developer project, it is frequently the right answer. The question is whether the complexity and stakes of your specific project warrant independent design oversight."</p>
-          <cite>&mdash; Cloudstone Designs</cite>
+          <cite>— Cloudstone Designs</cite>
         </div>
 
       </div>
@@ -1036,7 +138,7 @@
     <section class="section section--surface" id="comparison" aria-labelledby="comparison-heading">
       <div class="u-container">
         <header class="section-header">
-          <p class="section-header__number u-eyebrow">02 &mdash; Comparison</p>
+          <p class="section-header__number u-eyebrow">02 — Comparison</p>
           <h2 class="section-header__heading" id="comparison-heading">Side-by-Side Comparison</h2>
           <p class="section-header__subhead">
             How the three models stack up across the dimensions that matter most to owners and developers at the decision stage.
@@ -1060,19 +162,19 @@
                 </td>
                 <td>
                   <span class="icon-check" aria-label="Advantage">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#1F5C40" stroke-width="1.2"/><path d="M4 7l2 2 4-4" stroke="#1F5C40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#1F5C40" stroke-width="1.2"></circle><path d="M4 7l2 2 4-4" stroke="#1F5C40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     You, the owner
                   </span>
                 </td>
                 <td>
                   <span class="icon-warn" aria-label="Caution">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1.5L1 12.5h12L7 1.5z" stroke="#7A5020" stroke-width="1.2"/><line x1="7" y1="5.5" x2="7" y2="8.5" stroke="#7A5020" stroke-width="1.4" stroke-linecap="round"/><circle cx="7" cy="10.5" r="0.7" fill="#7A5020"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1.5L1 12.5h12L7 1.5z" stroke="#7A5020" stroke-width="1.2"></path><line x1="7" y1="5.5" x2="7" y2="8.5" stroke="#7A5020" stroke-width="1.4" stroke-linecap="round"></line><circle cx="7" cy="10.5" r="0.7" fill="#7A5020"></circle></svg>
                     The contractor
                   </span>
                 </td>
                 <td>
                   <span class="icon-dash" aria-label="Neutral">
-                    <svg width="12" height="2" viewBox="0 0 12 2" aria-hidden="true"><line x1="0" y1="1" x2="12" y2="1" stroke="#5A5A54" stroke-width="1.5"/></svg>
+                    <svg width="12" height="2" viewBox="0 0 12 2" aria-hidden="true"><line x1="0" y1="1" x2="12" y2="1" stroke="#5A5A54" stroke-width="1.5"></line></svg>
                     Limited scope, not retained
                   </span>
                 </td>
@@ -1081,9 +183,9 @@
                 <td>Design customization
                   <span class="cell-note">Depth of creative control</span>
                 </td>
-                <td>High &mdash; iterative design development</td>
-                <td>Moderate &mdash; within firm&rsquo;s standard palette</td>
-                <td>Low &mdash; code-minimum documentation</td>
+                <td>High — iterative design development</td>
+                <td>Moderate — within firm’s standard palette</td>
+                <td>Low — code-minimum documentation</td>
               </tr>
               <tr>
                 <td>Construction oversight
@@ -1091,14 +193,14 @@
                 </td>
                 <td>
                   <span class="icon-check">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#1F5C40" stroke-width="1.2"/><path d="M4 7l2 2 4-4" stroke="#1F5C40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#1F5C40" stroke-width="1.2"></circle><path d="M4 7l2 2 4-4" stroke="#1F5C40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     Full CA services
                   </span>
                 </td>
-                <td>Internal review only &mdash; no independent eye</td>
+                <td>Internal review only — no independent eye</td>
                 <td>
                   <span class="icon-dash">
-                    <svg width="12" height="2" viewBox="0 0 12 2" aria-hidden="true"><line x1="0" y1="1" x2="12" y2="1" stroke="#5A5A54" stroke-width="1.5"/></svg>
+                    <svg width="12" height="2" viewBox="0 0 12 2" aria-hidden="true"><line x1="0" y1="1" x2="12" y2="1" stroke="#5A5A54" stroke-width="1.5"></line></svg>
                     None included
                   </span>
                 </td>
@@ -1107,9 +209,9 @@
                 <td>Schedule to break ground
                   <span class="cell-note">Typical range after contract</span>
                 </td>
-                <td>4&ndash;10 months (design + permits)</td>
-                <td>2&ndash;5 months (streamlined DD/CDs)</td>
-                <td>6&ndash;14 weeks (documents only)</td>
+                <td>4–10 months (design + permits)</td>
+                <td>2–5 months (streamlined DD/CDs)</td>
+                <td>6–14 weeks (documents only)</td>
               </tr>
               <tr>
                 <td>Fee structure
@@ -1125,20 +227,20 @@
                 </td>
                 <td>
                   <span class="icon-check">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#1F5C40" stroke-width="1.2"/><path d="M4 7l2 2 4-4" stroke="#1F5C40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6" stroke="#1F5C40" stroke-width="1.2"></circle><path d="M4 7l2 2 4-4" stroke="#1F5C40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                     Owner controls with architect guidance
                   </span>
                 </td>
-                <td>Fixed &mdash; you cannot competitively bid</td>
+                <td>Fixed — you cannot competitively bid</td>
                 <td>Owner controls, without guidance</td>
               </tr>
               <tr>
                 <td>Cost transparency
                   <span class="cell-note">Ability to see where money goes</span>
                 </td>
-                <td>High &mdash; open-book contractor bids</td>
-                <td>Lower &mdash; lump-sum contract obscures margin</td>
-                <td>Full &mdash; but owner must manage GC directly</td>
+                <td>High — open-book contractor bids</td>
+                <td>Lower — lump-sum contract obscures margin</td>
+                <td>Full — but owner must manage GC directly</td>
               </tr>
               <tr>
                 <td>Suitable project complexity
@@ -1153,7 +255,7 @@
                   <span class="cell-note">Who is accountable for design errors</span>
                 </td>
                 <td>Architect carries E&amp;O insurance independently</td>
-                <td>Contractor &mdash; design errors may be absorbed quietly</td>
+                <td>Contractor — design errors may be absorbed quietly</td>
                 <td>Architect for documents; owner for execution</td>
               </tr>
             </tbody>
@@ -1167,10 +269,10 @@
     <section class="section section--canvas" id="tradeoffs" aria-labelledby="tradeoffs-heading">
       <div class="u-container u-container--narrow">
         <header class="section-header">
-          <p class="section-header__number u-eyebrow">03 &mdash; Tradeoffs</p>
+          <p class="section-header__number u-eyebrow">03 — Tradeoffs</p>
           <h2 class="section-header__heading" id="tradeoffs-heading">The Real Tradeoffs</h2>
           <p class="section-header__subhead">
-            Beyond the table. What the decision actually costs you in practice &mdash; in money, time, quality, and control.
+            Beyond the table. What the decision actually costs you in practice — in money, time, quality, and control.
           </p>
         </header>
 
@@ -1182,7 +284,7 @@
             <div class="tradeoff-item__content">
               <h3 class="tradeoff-item__heading">The cheapest fee upfront is rarely the cheapest total cost.</h3>
               <div class="tradeoff-item__body">
-                <p>Permit-only drawings carry the lowest architectural fee, but that cost shifts to the owner in the form of time, contractor management, and expensive field-level design decisions. Design-build bundles design cost into the construction contract, where margins are harder to interrogate. A full-service fee of 8&ndash;15% of construction cost includes every phase of work; the question is whether those services would be purchased separately anyway &mdash; and at what premium.</p>
+                <p>Permit-only drawings carry the lowest architectural fee, but that cost shifts to the owner in the form of time, contractor management, and expensive field-level design decisions. Design-build bundles design cost into the construction contract, where margins are harder to interrogate. A full-service fee of 8–15% of construction cost includes every phase of work; the question is whether those services would be purchased separately anyway — and at what premium.</p>
               </div>
               <div class="tradeoff-item__pills">
                 <span class="pill pill--a">Full-Service: predictable fee, competitive bids</span>
@@ -1198,10 +300,10 @@
             <div class="tradeoff-item__content">
               <h3 class="tradeoff-item__heading">Control over design is inseparable from who the designer answers to.</h3>
               <div class="tradeoff-item__body">
-                <p>In a design-build model, the architect or designer is an employee or subcontractor of the builder. When design decisions conflict with cost efficiency, the contractor&rsquo;s interest typically wins. In a full-service engagement, the architect has a direct obligation to you &mdash; they review substitutions, flag scope creep, and push back on contractor value-engineering that compromises your intent. With permit drawings only, there is no advocate in the field at all.</p>
+                <p>In a design-build model, the architect or designer is an employee or subcontractor of the builder. When design decisions conflict with cost efficiency, the contractor’s interest typically wins. In a full-service engagement, the architect has a direct obligation to you — they review substitutions, flag scope creep, and push back on contractor value-engineering that compromises your intent. With permit drawings only, there is no advocate in the field at all.</p>
               </div>
               <div class="tradeoff-item__pills">
-                <span class="pill pill--a">Full-Service: architect as owner&rsquo;s agent</span>
+                <span class="pill pill--a">Full-Service: architect as owner’s agent</span>
                 <span class="pill pill--b">Design-Build: contractor mediates all decisions</span>
                 <span class="pill pill--c">Permit-Only: owner manages directly</span>
               </div>
@@ -1219,9 +321,9 @@
               <div class="notice notice--amber">
                 <div class="notice__icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 2L1.5 15.5h15L9 2z" stroke="#7A5020" stroke-width="1.2"/>
-                    <line x1="9" y1="7" x2="9" y2="11" stroke="#7A5020" stroke-width="1.4" stroke-linecap="round"/>
-                    <circle cx="9" cy="13" r="0.8" fill="#7A5020"/>
+                    <path d="M9 2L1.5 15.5h15L9 2z" stroke="#7A5020" stroke-width="1.2"></path>
+                    <line x1="9" y1="7" x2="9" y2="11" stroke="#7A5020" stroke-width="1.4" stroke-linecap="round"></line>
+                    <circle cx="9" cy="13" r="0.8" fill="#7A5020"></circle>
                   </svg>
                 </div>
                 <div class="notice__body">
@@ -1253,7 +355,7 @@
             <div class="tradeoff-item__content">
               <h3 class="tradeoff-item__heading">The most consequential decisions happen in the field, not the design meeting.</h3>
               <div class="tradeoff-item__body">
-                <p>Every project generates hundreds of small decisions during construction &mdash; a window rough-opening that misses by two inches, a structural beam that needs re-routing, a specified tile that is discontinued. In a full-service engagement, the architect of record makes those calls with full knowledge of your design intent. In design-build, the contractor makes them with full knowledge of their margin. In a permit-only arrangement, you receive a phone call from a framer expecting an answer within the hour.</p>
+                <p>Every project generates hundreds of small decisions during construction — a window rough-opening that misses by two inches, a structural beam that needs re-routing, a specified tile that is discontinued. In a full-service engagement, the architect of record makes those calls with full knowledge of your design intent. In design-build, the contractor makes them with full knowledge of their margin. In a permit-only arrangement, you receive a phone call from a framer expecting an answer within the hour.</p>
               </div>
             </div>
           </div>
@@ -1266,7 +368,7 @@
     <section class="section section--surface" id="right-fit" aria-labelledby="right-fit-heading">
       <div class="u-container">
         <header class="section-header">
-          <p class="section-header__number u-eyebrow">04 &mdash; Right Fit</p>
+          <p class="section-header__number u-eyebrow">04 — Right Fit</p>
           <h2 class="section-header__heading" id="right-fit-heading">When Each Model Is the Right Choice</h2>
           <p class="section-header__subhead">
             Honest signal matching. If your project fits the design-build column, it should be design-build.
@@ -1279,9 +381,9 @@
           <article class="scenario-card" aria-labelledby="fit-a-title">
             <div class="scenario-card__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="6" width="26" height="20" rx="1" stroke="#2C4A3E" stroke-width="1.4"/>
-                <path d="M3 11h26M9 6v5M23 6v5" stroke="#2C4A3E" stroke-width="1.2"/>
-                <rect x="8" y="15" width="6" height="6" rx="0.5" stroke="#2C4A3E" stroke-width="1.1"/>
+                <rect x="3" y="6" width="26" height="20" rx="1" stroke="#2C4A3E" stroke-width="1.4"></rect>
+                <path d="M3 11h26M9 6v5M23 6v5" stroke="#2C4A3E" stroke-width="1.2"></path>
+                <rect x="8" y="15" width="6" height="6" rx="0.5" stroke="#2C4A3E" stroke-width="1.1"></rect>
               </svg>
             </div>
             <span class="scenario-card__option-label u-eyebrow" style="color: var(--color-accent);">Full-Service Architecture</span>
@@ -1301,9 +403,9 @@
           <article class="scenario-card scenario-card--accent" aria-labelledby="fit-b-title">
             <div class="scenario-card__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="8" width="24" height="18" rx="1" stroke="white" stroke-width="1.4"/>
-                <path d="M4 14h24M4 20h24" stroke="white" stroke-width="1.2" opacity="0.5"/>
-                <path d="M16 4l4 4H12l4-4z" fill="white" opacity="0.7"/>
+                <rect x="4" y="8" width="24" height="18" rx="1" stroke="white" stroke-width="1.4"></rect>
+                <path d="M4 14h24M4 20h24" stroke="white" stroke-width="1.2" opacity="0.5"></path>
+                <path d="M16 4l4 4H12l4-4z" fill="white" opacity="0.7"></path>
               </svg>
             </div>
             <span class="scenario-card__option-label u-eyebrow" style="color: rgba(255,255,255,0.6);">Design-Build</span>
@@ -1322,8 +424,8 @@
           <article class="scenario-card" aria-labelledby="fit-c-title">
             <div class="scenario-card__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="7" y="4" width="18" height="24" rx="1" stroke="#5A5A54" stroke-width="1.4"/>
-                <path d="M11 11h10M11 15h10M11 19h6" stroke="#5A5A54" stroke-width="1.2" stroke-linecap="round"/>
+                <rect x="7" y="4" width="18" height="24" rx="1" stroke="#5A5A54" stroke-width="1.4"></rect>
+                <path d="M11 11h10M11 15h10M11 19h6" stroke="#5A5A54" stroke-width="1.2" stroke-linecap="round"></path>
               </svg>
             </div>
             <span class="scenario-card__option-label u-eyebrow">Permit Drawings Only</span>
@@ -1346,7 +448,7 @@
     <section class="section section--canvas" id="questions" aria-labelledby="questions-heading">
       <div class="u-container">
         <header class="section-header">
-          <p class="section-header__number u-eyebrow">05 &mdash; Due Diligence</p>
+          <p class="section-header__number u-eyebrow">05 — Due Diligence</p>
           <h2 class="section-header__heading" id="questions-heading">Questions to Ask Before You Decide</h2>
           <p class="section-header__subhead">
             Use these in every interview. The answers matter less than how quickly and specifically each firm provides them.
@@ -1368,7 +470,7 @@
           </div>
           <div class="question-item" role="listitem">
             <span class="question-item__num">04</span>
-            <p class="question-item__text">Can I see examples of your construction documents &mdash; not renderings?</p>
+            <p class="question-item__text">Can I see examples of your construction documents — not renderings?</p>
           </div>
           <div class="question-item" role="listitem">
             <span class="question-item__num">05</span>
@@ -1402,7 +504,7 @@
     <section class="section section--surface" id="red-flags" aria-labelledby="red-flags-heading">
       <div class="u-container u-container--narrow">
         <header class="section-header">
-          <p class="section-header__number u-eyebrow">06 &mdash; Warning Signs</p>
+          <p class="section-header__number u-eyebrow">06 — Warning Signs</p>
           <h2 class="section-header__heading" id="red-flags-heading">Red Flags to Watch For</h2>
           <p class="section-header__subhead">
             In any engagement model. These are signals worth pausing on regardless of how well the design presentation went.
@@ -1413,22 +515,22 @@
           <li class="red-flag-item">
             <div class="red-flag-item__icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"/>
-                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
+                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"></circle>
+                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
+                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
               </svg>
             </div>
             <div class="red-flag-item__text">
               <span class="red-flag-item__heading">No written scope of services in the contract</span>
-              <span class="red-flag-item__sub">Vague scope language is the primary cause of fee disputes and service gaps. Every item in this guide &mdash; CA, permitting, contractor coordination &mdash; should appear explicitly.</span>
+              <span class="red-flag-item__sub">Vague scope language is the primary cause of fee disputes and service gaps. Every item in this guide — CA, permitting, contractor coordination — should appear explicitly.</span>
             </div>
           </li>
           <li class="red-flag-item">
             <div class="red-flag-item__icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"/>
-                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
+                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"></circle>
+                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
+                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
               </svg>
             </div>
             <div class="red-flag-item__text">
@@ -1439,22 +541,22 @@
           <li class="red-flag-item">
             <div class="red-flag-item__icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"/>
-                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
+                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"></circle>
+                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
+                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
               </svg>
             </div>
             <div class="red-flag-item__text">
-              <span class="red-flag-item__heading">Construction administration described as &ldquo;optional&rdquo; on complex projects</span>
+              <span class="red-flag-item__heading">Construction administration described as “optional” on complex projects</span>
               <span class="red-flag-item__sub">On straightforward projects, it may genuinely be optional. On custom new construction or technically complex renovations, this framing suggests the firm may not have the capacity or interest to provide it.</span>
             </div>
           </li>
           <li class="red-flag-item">
             <div class="red-flag-item__icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"/>
-                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
+                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"></circle>
+                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
+                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
               </svg>
             </div>
             <div class="red-flag-item__text">
@@ -1465,9 +567,9 @@
           <li class="red-flag-item">
             <div class="red-flag-item__icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"/>
-                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
-                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"/>
+                <circle cx="10" cy="10" r="8.5" stroke="#C0392B" stroke-width="1.3"></circle>
+                <line x1="7" y1="7" x2="13" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
+                <line x1="13" y1="7" x2="7" y2="13" stroke="#C0392B" stroke-width="1.4" stroke-linecap="round"></line>
               </svg>
             </div>
             <div class="red-flag-item__text">
@@ -1486,16 +588,16 @@
         <div class="two-col">
           <div>
             <header class="section-header">
-              <p class="section-header__number u-eyebrow">07 &mdash; Fees &amp; Cost</p>
+              <p class="section-header__number u-eyebrow">07 — Fees &amp; Cost</p>
               <h2 class="section-header__heading" id="cost-heading">A Realistic Look at Fees and Total Cost</h2>
               <p class="section-header__subhead">
-                Benchmarks for a $1&ndash;2M residential or light commercial project in a mid-to-high-cost market.
+                Benchmarks for a $1–2M residential or light commercial project in a mid-to-high-cost market.
               </p>
             </header>
 
             <div class="prose">
               <p>These ranges are illustrative. Fee structures vary significantly by region, firm size, project complexity, and what is included. Use them as a starting point for conversations, not a budget line.</p>
-              <p>The critical question is not &ldquo;which has the lower fee?&rdquo; but &ldquo;what does each fee buy in terms of service, accountability, and risk transfer?&rdquo;</p>
+              <p>The critical question is not “which has the lower fee?” but “what does each fee buy in terms of service, accountability, and risk transfer?”</p>
             </div>
           </div>
 
@@ -1505,7 +607,7 @@
               <div class="cost-bar-row" role="listitem">
                 <div class="cost-bar-row__label">
                   <span class="cost-bar-row__title">Full-Service Architecture</span>
-                  <span class="cost-bar-row__range">8&ndash;15% of construction cost</span>
+                  <span class="cost-bar-row__range">8–15% of construction cost</span>
                 </div>
                 <div class="cost-bar-track" aria-hidden="true">
                   <div class="cost-bar-fill" style="width: 85%;"></div>
@@ -1515,7 +617,7 @@
               <div class="cost-bar-row" role="listitem">
                 <div class="cost-bar-row__label">
                   <span class="cost-bar-row__title">Design-Build (design portion)</span>
-                  <span class="cost-bar-row__range">4&ndash;8% embedded in contract</span>
+                  <span class="cost-bar-row__range">4–8% embedded in contract</span>
                 </div>
                 <div class="cost-bar-track" aria-hidden="true">
                   <div class="cost-bar-fill cost-bar-fill--muted" style="width: 55%;"></div>
@@ -1525,7 +627,7 @@
               <div class="cost-bar-row" role="listitem">
                 <div class="cost-bar-row__label">
                   <span class="cost-bar-row__title">Permit Drawings Only</span>
-                  <span class="cost-bar-row__range">$8,000&ndash;$40,000 flat</span>
+                  <span class="cost-bar-row__range">$8,000–$40,000 flat</span>
                 </div>
                 <div class="cost-bar-track" aria-hidden="true">
                   <div class="cost-bar-fill cost-bar-fill--light" style="width: 25%; background-color: var(--color-ink-muted);"></div>
@@ -1535,7 +637,7 @@
               <div class="cost-bar-row" role="listitem">
                 <div class="cost-bar-row__label">
                   <span class="cost-bar-row__title">Typical change order cost (Design-Build)</span>
-                  <span class="cost-bar-row__range">5&ndash;15% of contract additional</span>
+                  <span class="cost-bar-row__range">5–15% of contract additional</span>
                 </div>
                 <div class="cost-bar-track" aria-hidden="true">
                   <div class="cost-bar-fill cost-bar-fill--muted" style="width: 45%; background-color: #C0392B; opacity: 0.5;"></div>
@@ -1545,7 +647,7 @@
             </div>
 
             <p class="cost-note">
-              <strong>Note:</strong> Design-build firms report change order rates averaging 5&ndash;12% of original contract in residential construction. Full-service architecture with complete CDs typically sees 2&ndash;5%. The fee differential often partially or fully closes over the course of a project.
+              <strong>Note:</strong> Design-build firms report change order rates averaging 5–12% of original contract in residential construction. Full-service architecture with complete CDs typically sees 2–5%. The fee differential often partially or fully closes over the course of a project.
             </p>
           </div>
         </div>
@@ -1556,7 +658,7 @@
     <section class="section section--surface" id="process" aria-labelledby="process-heading">
       <div class="u-container">
         <header class="section-header">
-          <p class="section-header__number u-eyebrow">08 &mdash; Process</p>
+          <p class="section-header__number u-eyebrow">08 — Process</p>
           <h2 class="section-header__heading" id="process-heading">How a Full-Service Engagement Unfolds</h2>
           <p class="section-header__subhead">
             For reference: the five standard phases of architectural services, and where each engagement model enters and exits.
@@ -1565,8 +667,8 @@
 
         <!-- Process visual placeholder -->
         <div style="background: var(--color-canvas); border: 1px solid var(--color-rule); padding: var(--space-4) var(--space-5); margin-bottom: var(--space-6); font-size: 13px; color: var(--color-ink-muted); display: flex; align-items: center; gap: var(--space-3);" role="note" aria-label="Visual placeholder">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="1" stroke="#5A5A54" stroke-width="1.2"/><path d="M5 8h6M8 5v6" stroke="#5A5A54" stroke-width="1.2" stroke-linecap="round"/></svg>
-          [ Visual placeholder: Phase coverage diagram showing which services each model includes across Phases 1&ndash;5 ]
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="1" stroke="#5A5A54" stroke-width="1.2"></rect><path d="M5 8h6M8 5v6" stroke="#5A5A54" stroke-width="1.2" stroke-linecap="round"></path></svg>
+          <img src="/diagrams/comparing-architecture-approaches-2.png" alt="Visual placeholder: Phase coverage diagram showing which services each model includes across Phases 1–5" loading="lazy" style="width:100%;height:auto;border-radius:4px;display:block;margin:1.5rem auto;">
         </div>
 
         <div class="process-steps" role="list" aria-label="Five phases of architectural services">
@@ -1628,10 +730,10 @@
     <section class="cta-section" id="talk" aria-labelledby="cta-heading">
       <div class="u-container">
         <div class="cta-inner">
-          <p class="u-eyebrow">09 &mdash; Cloudstone Designs</p>
+          <p class="u-eyebrow">09 — Cloudstone Designs</p>
           <h2 class="cta-heading" id="cta-heading">Not sure which model fits your project?</h2>
           <p class="cta-body">
-            We offer a no-obligation scoping call to help you understand which engagement structure &mdash; including design-build, if that is the honest answer &mdash; makes sense given your timeline, complexity, and budget. No sales pitch.
+            We offer a no-obligation scoping call to help you understand which engagement structure — including design-build, if that is the honest answer — makes sense given your timeline, complexity, and budget. No sales pitch.
           </p>
           <div class="cta-actions">
             <a href="#" class="btn btn--primary">Schedule a Scoping Call</a>
@@ -1640,4 +742,4 @@
           <p class="cta-disclaimer">Cloudstone Designs is a licensed architecture firm. This guide represents our perspective informed by practice experience, not legal or financial advice.</p>
         </div>
       </div>
-    </section></div>
+    </section></div></body></html>
