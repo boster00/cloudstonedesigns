@@ -14,7 +14,12 @@ type ContactPayload = {
   [key: string]: string | undefined;
 };
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy-instantiate so missing env at build-time doesn't crash page-data collection.
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) throw new Error("RESEND_API_KEY not configured");
+  return new Resend(key);
+}
 
 export async function POST(req: NextRequest) {
   const body = (await req.json()) as ContactPayload;
@@ -45,6 +50,7 @@ export async function POST(req: NextRequest) {
     .join("\n");
 
   try {
+    const resend = getResend();
     await resend.emails.send({
       from: "Cloudstone Contact <onboarding@resend.dev>",
       to: "studio@cloudstonedesigns.com",
