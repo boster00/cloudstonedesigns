@@ -148,10 +148,10 @@ async function runFullAuto(articleId, type, keyword, fallbackKeyword) {
 }
 
 async function pollDraft(articleId) {
-  const MAX_POLLS = 8;
+  const MAX_POLLS = 20;
   for (let i = 0; i < MAX_POLLS; i++) {
-    console.log(`  Poll ${i + 1}/${MAX_POLLS} — sleeping 5 min...`);
-    await sleep(5 * 60 * 1000);
+    if (i > 0) await sleep(90 * 1000);
+    console.log(`  Poll ${i + 1}/${MAX_POLLS} (${i * 90}s elapsed)...`);
     const res = await api('POST', `${BASE}/api/articles/${articleId}/edit-draft`, { action: 'pull_status' });
     const status = res?.status ?? res?.draft_status;
     console.log(`  draft status: ${status}`);

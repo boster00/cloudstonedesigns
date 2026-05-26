@@ -1,3 +1,4 @@
+import Image from "next/image";
 import MarqueeText from "@/components/MarqueeText";
 import ContactForm from "@/components/ContactForm";
 
@@ -30,7 +31,7 @@ export default function ContactPage() {
             We respond to every inquiry within two business days. The more context you can share
             about your project, the better we can calibrate our response.
           </p>
-          <div className="text-sm text-[var(--color-neutral-mid)] space-y-2">
+          <div className="text-sm text-[var(--color-neutral-mid)] space-y-2 mb-10">
             <p className="font-medium text-[var(--color-primary)]">Cloudstone Designs</p>
             <p>123 Market Street, Suite 400</p>
             <p>San Francisco, CA 94105</p>
@@ -42,6 +43,20 @@ export default function ContactPage() {
                 studio@cloudstonedesigns.com
               </a>
             </p>
+          </div>
+
+          <div className="flex items-center gap-4 pt-8 border-t border-[var(--color-surface)]">
+            <Image
+              src="/dong-zhang.jpg"
+              alt="Dong Zhang"
+              width={56}
+              height={56}
+              className="rounded-full object-cover flex-shrink-0"
+            />
+            <div>
+              <p className="text-sm font-medium text-[var(--color-primary)]">Dong Zhang</p>
+              <p className="text-xs text-[var(--color-neutral-mid)]">Principal · Responds within 2 business days</p>
+            </div>
           </div>
         </div>
 

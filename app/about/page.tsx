@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "About",
   description: "The story and values of Cloudstone Designs architecture studio.",
@@ -53,6 +55,42 @@ export default function AboutPage() {
             respective competencies we have tested on real projects over time. We bring those
             relationships to every engagement.
           </p>
+        </div>
+      </div>
+
+      {/* Principal */}
+      <div className="border-t border-[var(--color-surface)] pt-16 mb-16">
+        <h2
+          className="text-3xl font-light text-[var(--color-primary)] mb-10"
+          style={{ fontFamily: "var(--font-serif)" }}
+        >
+          Principal
+        </h2>
+        <div className="flex items-start gap-8">
+          <Image
+            src="/dong-zhang.jpg"
+            alt="Dong Zhang"
+            width={120}
+            height={120}
+            className="rounded-full object-cover flex-shrink-0"
+          />
+          <div>
+            <h3
+              className="text-xl font-medium text-[var(--color-primary)] mb-1"
+              style={{ fontFamily: "var(--font-serif)" }}
+            >
+              Dong Zhang
+            </h3>
+            <p className="text-sm text-[var(--color-accent)] tracking-wide mb-4">
+              Principal, Project Manager
+            </p>
+            <p className="text-sm text-[var(--color-neutral-mid)] leading-relaxed max-w-lg">
+              Dong leads every Cloudstone project from initial brief through construction
+              administration. With a background at Lowney Architecture and deep experience
+              across residential and commercial typologies in the Bay Area, he brings
+              both technical rigor and clear design judgment to every engagement.
+            </p>
+          </div>
         </div>
       </div>
 
