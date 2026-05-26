@@ -79,8 +79,10 @@ body {
 }
 
 /* Drop cap — first paragraph of top-level .prose blocks only */
-.prose-article > .prose > p:first-of-type::first-letter,
-.prose-article > p:first-of-type::first-letter {
+/* Drop-cap fires ONLY inside a .prose intro wrapper. CJGEO sometimes uses other
+   intro wrappers (.intro-block__inner, .article-intro, etc.) and we don't want
+   drop-cap leaking onto mid-content orphan paragraphs. */
+.prose-article > .prose > p:first-of-type::first-letter {
   font-family: var(--font-serif);
   font-size: 4rem;
   font-weight: 600;
