@@ -125,7 +125,10 @@ body {
 .prose-article .article-hero p:first-of-type::first-letter,
 .prose-article .article-section p:first-of-type::first-letter,
 .prose-article .mistake__head-text::first-letter,
-.prose-article .article-hero__deck::first-letter {
+.prose-article .article-hero__deck::first-letter,
+/* Orphan section-label paragraphs (e.g. "Introduction" / "The Detail" right before an h2) — don't drop-cap */
+.prose-article .prose > p:first-child:has(+ h2)::first-letter,
+.prose-article > p:first-child:has(+ h2)::first-letter {
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -133,6 +136,19 @@ body {
   line-height: inherit;
   margin: 0;
   color: inherit;
+}
+
+/* Orphan section-label paragraphs (CJGEO emits short labels like "Introduction"
+   before an h2; sanitizer drops their wrapping <header class="section__header">,
+   so they render as bare <p>. Style as a small eyebrow). */
+.prose-article .prose > p:first-child:has(+ h2),
+.prose-article > p:first-child:has(+ h2) {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent, #8B7355);
+  margin-bottom: 0.5em;
+  font-family: var(--font-sans, inherit);
 }
 
 /* ── Marquee ────────────────────────────────────────────────── */
