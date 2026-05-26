@@ -275,6 +275,10 @@ export const pillars: Pillar[] = [
         title: 'How Do I Compare Architecture Firms Without Being Misled?',
         teaser:
           'Proposals are marketing documents. Comparing them at face value rewards persuasive writing, not project delivery capability.',
+        source: 'cjgeo',
+        cjgeoArticleId: 'bc655993-cfc4-459d-a76b-bf45bc9264ca',
+        mainKeyword: 'how to compare architecture firms',
+        adoptedAt: '2026-05-24',
       },
       {
         slug: 'which-firm-fits-my-project',
