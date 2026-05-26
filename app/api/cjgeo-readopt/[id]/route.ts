@@ -11,7 +11,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
 import { pillars } from "@/lib/articles";
-// @ts-expect-error — sanitize-cjgeo is .mjs without types
+// @ts-ignore — sanitize-cjgeo is .mjs without types
 import { sanitizeCJGEO } from "@/lib/sanitize-cjgeo.mjs";
 
 const CJGEO_BASE = "https://cjgeoai.com";
