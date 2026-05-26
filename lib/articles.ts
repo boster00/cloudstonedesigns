@@ -300,8 +300,8 @@ export const pillars: Pillar[] = [
         teaser:
           'Licensure is a floor, not a ceiling. The questions and reference checks that reveal whether a firm has the specific competencies your project requires.',
         source: 'cjgeo',
-        cjgeoArticleId: 'c244be00-8ba6-40d0-b233-4e7c6dd454aa',
-        mainKeyword: 'how to verify architect credentials',
+        cjgeoArticleId: '97a862fc-10f2-478d-8581-6722eeb6c5a2',
+        mainKeyword: 'how to verify architect expertise before hiring',
         adoptedAt: '2026-05-26',
       },
       {
