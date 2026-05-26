@@ -80,7 +80,7 @@ export default function SiteNav() {
             About <span className="text-[var(--color-neutral-mid)]">(Draft Outline)</span>
           </Link>
 
-          {/* JOURNEYS mega-menu trigger */}
+          {/* Where to Start mega-menu trigger */}
           <div
             className="relative"
             onMouseEnter={() => setMenuOpen(true)}
@@ -93,7 +93,7 @@ export default function SiteNav() {
               aria-haspopup="true"
               className="text-sm tracking-widest uppercase text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors flex items-center gap-1"
             >
-              Journeys
+              Where to Start
               <span
                 aria-hidden
                 className="inline-block transition-transform"
@@ -202,13 +202,13 @@ export default function SiteNav() {
               About <span className="text-base text-[var(--color-neutral-mid)]">(Draft Outline)</span>
             </Link>
 
-            {/* Journeys expandable */}
+            {/* Where to Start expandable */}
             <div className="border-t border-b border-[var(--color-surface)] py-2">
               <p
                 className="font-serif text-3xl text-[var(--color-primary)] py-3"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
-                Journeys
+                Where to Start
               </p>
               {journeys.map((j) => {
                 const isOpen = expandedMobile === j.pillarHref;
