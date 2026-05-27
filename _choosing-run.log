@@ -1,0 +1,83 @@
+State: 1 already completed: how-people-choose-architects
+Skipping: how-people-choose-architects
+
+============================================================
+SATELLITE: how-to-compare-architecture-firms-fairly
+============================================================
+Step 1: Create article
+  article_id: bc655993-cfc4-459d-a76b-bf45bc9264ca
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "comparing architecture firms objectively"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=10
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 54058
+Step 10: sanitize + write
+  word count: 2654
+  1. The Problem with Comparing Design Firms
+  2. Building a Fair Comparison Framework
+  3. How to Read a Proposal — and What It Hides
+  4. Decoding Fee Structures
+  5. Evaluating Process Documentation
+  6. Conducting Reference Checks That Actually Differentiate
+  7. The Questions That Actually Differentiate Firms
+  8. Moving from Analysis to Decision
+  9. We wrote this guide because we are willing to be evaluated by it.
+
+SAVED state after: how-to-compare-architecture-firms-fairly
+
+============================================================
+SATELLITE: which-firm-fits-my-project
+============================================================
+Step 1: Create article
+  article_id: 323023fc-1586-4a8f-827d-60237bfeb5e7
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "finding right architect for project type"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=0
+  kept=0, retrying with fallback: "finding right architect for project type"
+  kept after fallback=0
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 50148
+Step 10: sanitize + write
+  word count: 1902
+  1. The Four Dimensions of Firm-Project Fit
+  2. Project Type and Scale: Why Category Experience Is Not Optional
+  3. Process Compatibility: The Hidden Factor Most Clients Skip
+  4. Evaluating Aesthetic Range: Looking Beyond the Signature Style
+  5. Communication Style: The Dimension That Determines Day-to-Day Experience
+  6. Why the Lowest-Fee Firm Is Often the Worst Fit
+  7. Red Flags and Green Lights: Patterns That Predict Outcomes
+  8. Making the Decision: A Framework for the Final Call
+
+SAVED state after: which-firm-fits-my-project
+
+============================================================
+SATELLITE: how-to-verify-architects-expertise
+============================================================
+Step 1: Create article
+  article_id: 9089a930-f59e-4108-8690-aa543fc45546
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "checking architect license and experience"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=10
+Step 6: generateDraft

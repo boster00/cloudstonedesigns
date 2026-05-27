@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 type Journey = {
   label: string;
@@ -43,116 +43,123 @@ const journeys: Journey[] = [
 ];
 
 const simpleLinks = [
-  { label: "Work (Draft Outline)", href: "/portfolio" },
-  { label: "About (Draft Outline)", href: "/about" },
-  { label: "Contact (Draft Outline)", href: "/contact" },
+  { label: "Work", href: "/portfolio", draft: false },
+  { label: "About", href: "/about", draft: true },
+  { label: "Contact", href: "/contact", draft: true },
+];
+
+const socials = [
+  {
+    label: "Instagram",
+    href: "https://instagram.com/cloudstonedesigns",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+      </svg>
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/cloudstonedesigns",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+  {
+    label: "Vimeo",
+    href: "https://vimeo.com/cloudstonedesigns",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 4.5c-.4 4.6-3.7 10.8-7.7 12.7-2.4 1.1-3-1.3-4.3-4.9C9.3 9.4 9 6.6 7.4 6.6c-1 0-2 .8-2.8 1.6L3 6.5c.8-.7 2.6-2.4 4.4-2.6 3-.3 4 2 4.5 5.4.4 2.6.7 5.1 1.6 5.1 1 0 3.5-3.7 3.6-5 .2-1.3-.9-1.3-1.8-1 1.4-4.4 7.9-3.6 6.7 1.6z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function SiteNav() {
   const [open, setOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [expandedMobile, setExpandedMobile] = useState<string | null>(null);
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const openMega = () => {
-    if (closeTimer.current) { clearTimeout(closeTimer.current); closeTimer.current = null; }
-    setMenuOpen(true);
-  };
-  const scheduleCloseMega = () => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    closeTimer.current = setTimeout(() => setMenuOpen(false), 150);
-  };
+  const [whereOpen, setWhereOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-[var(--color-bg)] border-b border-[var(--color-surface)]">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="font-serif text-xl text-[var(--color-accent)] tracking-wide"
-          style={{ fontFamily: "var(--font-serif)" }}
-        >
-          Cloudstone Designs
-        </Link>
-
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-10">
+    <>
+      <header className="fixed top-0 inset-x-0 z-50 bg-white">
+        <div className="px-6 h-16 flex items-center justify-between">
+          {/* Logo top-left, bold uppercase sans */}
           <Link
-            href="/portfolio"
-            className="text-sm tracking-widest uppercase text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
+            href="/"
+            onClick={() => setOpen(false)}
+            className="text-[15px] font-bold tracking-[0.08em] text-black uppercase"
+            style={{ fontFamily: "var(--font-sans-display)" }}
           >
-            Work <span className="text-[var(--color-neutral-mid)]">(Draft Outline)</span>
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm tracking-widest uppercase text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
-          >
-            About <span className="text-[var(--color-neutral-mid)]">(Draft Outline)</span>
+            CLOUDSTONE
           </Link>
 
-          {/* Where to Start mega-menu trigger */}
-          <div
-            className="relative"
-            onMouseEnter={openMega}
-            onMouseLeave={scheduleCloseMega}
+          {/* Plus / Close icon top-right */}
+          <button
+            type="button"
+            onClick={() => {
+              setOpen((v) => !v);
+              setWhereOpen(false);
+            }}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            className="relative w-8 h-8 flex items-center justify-center text-black hover:opacity-70 transition-opacity z-[60]"
           >
-            <button
-              type="button"
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-expanded={menuOpen}
-              aria-haspopup="true"
-              className="text-sm tracking-widest uppercase text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors flex items-center gap-1"
-            >
-              Where to Start
-              <span
-                aria-hidden
-                className="inline-block transition-transform"
-                style={{ transform: menuOpen ? "rotate(180deg)" : "none" }}
-              >
-                ▾
-              </span>
-            </button>
+            <span
+              className="absolute inline-block w-5 h-px bg-current transition-transform duration-300"
+              style={{ transform: open ? "rotate(45deg)" : "rotate(0deg)" }}
+            />
+            <span
+              className="absolute inline-block w-5 h-px bg-current transition-transform duration-300"
+              style={{ transform: open ? "rotate(-45deg)" : "rotate(90deg)" }}
+            />
+          </button>
+        </div>
+      </header>
 
-            {menuOpen && (
-              <div
-                className="fixed left-0 right-0 top-16 bg-[var(--color-bg)] border-b border-[var(--color-neutral-mid)] shadow-sm"
-                data-mega-menu="open"
-                onMouseEnter={openMega}
-                onMouseLeave={scheduleCloseMega}
-              >
-                {/* Invisible bridge spans the gap between the nav-row bottom and the panel */}
-                <div
-                  aria-hidden
-                  className="absolute left-0 right-0"
-                  style={{ top: "-12px", height: "12px" }}
-                />
-                <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-3 gap-12">
+      {/* Full-screen overlay menu */}
+      {open && (
+        <div className="fixed inset-0 bg-white z-40 overflow-y-auto">
+          <div className="min-h-screen w-full pt-24 pb-12 px-6 md:px-12 flex flex-col">
+            {/* Top region: the inline "Where to Start" expansion when active */}
+            {whereOpen && (
+              <div className="mb-12 mt-2">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
                   {journeys.map((j) => (
                     <div key={j.pillarHref}>
                       <p
-                        className="font-serif text-xl text-[var(--color-accent)] mb-5 border-b border-[var(--color-surface)] pb-3"
-                        style={{ fontFamily: "var(--font-serif)" }}
+                        className="text-[11px] font-semibold tracking-[0.18em] uppercase text-black mb-5"
+                        style={{ fontFamily: "var(--font-sans-display)" }}
                       >
                         {j.label}
                       </p>
-                      <ul className="flex flex-col gap-3">
+                      <ul className="flex flex-col gap-2.5">
                         {j.links.map((l) => (
                           <li key={l.href}>
                             <Link
                               href={l.href}
-                              onClick={() => setMenuOpen(false)}
-                              className="text-[0.95rem] text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors leading-snug block"
+                              onClick={() => setOpen(false)}
+                              className="text-[15px] text-[#333] hover:text-black transition-colors leading-snug block"
+                              style={{ fontFamily: "var(--font-sans)" }}
                             >
                               {l.label}
                             </Link>
                           </li>
                         ))}
-                        <li className="pt-3 mt-1 border-t border-[var(--color-surface)]">
+                        <li className="pt-2 mt-1">
                           <Link
                             href={j.pillarHref}
-                            onClick={() => setMenuOpen(false)}
-                            className="text-sm italic text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
+                            onClick={() => setOpen(false)}
+                            className="text-[11px] tracking-[0.18em] uppercase text-black font-semibold hover:opacity-70 transition-opacity"
+                            style={{ fontFamily: "var(--font-sans-display)" }}
                           >
-                            View all questions <span className="text-[var(--color-neutral-mid)] not-italic">(draft outline)</span> →
+                            View all questions →
                           </Link>
                         </li>
                       </ul>
@@ -161,137 +168,58 @@ export default function SiteNav() {
                 </div>
               </div>
             )}
-          </div>
 
-          <Link
-            href="/contact"
-            className="text-sm tracking-widest uppercase text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
-          >
-            Contact <span className="text-[var(--color-neutral-mid)]">(Draft Outline)</span>
-          </Link>
-        </nav>
+            {/* Bottom-left big menu items + bottom-right socials */}
+            <div className="mt-auto flex items-end justify-between gap-8 flex-wrap">
+              <nav className="flex flex-col gap-1 md:gap-2">
+                <button
+                  type="button"
+                  onClick={() => setWhereOpen((v) => !v)}
+                  className="text-left text-[44px] md:text-[68px] lg:text-[80px] font-bold leading-[1.02] tracking-[-0.02em] text-black hover:opacity-70 transition-opacity flex items-baseline gap-3"
+                  style={{ fontFamily: "var(--font-sans-display)" }}
+                  aria-expanded={whereOpen}
+                >
+                  Where to Start
+                  <span
+                    aria-hidden
+                    className="text-2xl md:text-3xl font-light transition-transform"
+                    style={{ transform: whereOpen ? "rotate(180deg)" : "none" }}
+                  >
+                    ▾
+                  </span>
+                </button>
+                {simpleLinks.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setOpen(false)}
+                    className="text-[44px] md:text-[68px] lg:text-[80px] font-bold leading-[1.02] tracking-[-0.02em] text-black hover:opacity-70 transition-opacity"
+                    style={{ fontFamily: "var(--font-sans-display)" }}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-        >
-          <span className="block w-6 h-px bg-[var(--color-primary)]" />
-          <span className="block w-6 h-px bg-[var(--color-primary)]" />
-          <span className="block w-4 h-px bg-[var(--color-primary)]" />
-        </button>
-      </div>
-
-      {/* Mobile full-screen overlay */}
-      {open && (
-        <div className="fixed inset-0 bg-[var(--color-bg)] z-40 flex flex-col md:hidden overflow-y-auto">
-          {/* Close button */}
-          <div className="flex justify-end px-6 pt-5">
-            <button
-              onClick={() => setOpen(false)}
-              aria-label="Close menu"
-              className="p-2 text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-                <line x1="18" y1="6" x2="6" y2="18"/>
-                <line x1="6" y1="6" x2="18" y2="18"/>
-              </svg>
-            </button>
-          </div>
-
-          {/* Nav links */}
-          <nav className="flex flex-col items-stretch px-8 pt-6 pb-12 gap-6">
-            <Link
-              href="/portfolio"
-              onClick={() => setOpen(false)}
-              className="font-serif text-3xl text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
-              style={{ fontFamily: "var(--font-serif)" }}
-            >
-              Work <span className="text-base text-[var(--color-neutral-mid)]">(Draft Outline)</span>
-            </Link>
-            <Link
-              href="/about"
-              onClick={() => setOpen(false)}
-              className="font-serif text-3xl text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
-              style={{ fontFamily: "var(--font-serif)" }}
-            >
-              About <span className="text-base text-[var(--color-neutral-mid)]">(Draft Outline)</span>
-            </Link>
-
-            {/* Where to Start expandable */}
-            <div className="border-t border-b border-[var(--color-surface)] py-2">
-              <p
-                className="font-serif text-3xl text-[var(--color-primary)] py-3"
-                style={{ fontFamily: "var(--font-serif)" }}
-              >
-                Where to Start
-              </p>
-              {journeys.map((j) => {
-                const isOpen = expandedMobile === j.pillarHref;
-                return (
-                  <div key={j.pillarHref} className="border-t border-[var(--color-surface)]">
-                    <button
-                      type="button"
-                      onClick={() => setExpandedMobile(isOpen ? null : j.pillarHref)}
-                      className="w-full flex items-center justify-between py-4 text-left"
-                      aria-expanded={isOpen}
-                    >
-                      <span
-                        className="font-serif text-xl text-[var(--color-accent)]"
-                        style={{ fontFamily: "var(--font-serif)" }}
-                      >
-                        {j.label}
-                      </span>
-                      <span aria-hidden className="text-[var(--color-neutral-mid)]">
-                        {isOpen ? "−" : "+"}
-                      </span>
-                    </button>
-                    {isOpen && (
-                      <ul className="flex flex-col gap-3 pb-4 pl-1">
-                        {j.links.map((l) => (
-                          <li key={l.href}>
-                            <Link
-                              href={l.href}
-                              onClick={() => setOpen(false)}
-                              className="text-base text-[var(--color-primary)] hover:text-[var(--color-accent)]"
-                            >
-                              {l.label}
-                            </Link>
-                          </li>
-                        ))}
-                        <li>
-                          <Link
-                            href={j.pillarHref}
-                            onClick={() => setOpen(false)}
-                            className="text-sm italic text-[var(--color-accent)]"
-                          >
-                            View all questions <span className="text-[var(--color-neutral-mid)] not-italic">(draft outline)</span> →
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
-                  </div>
-                );
-              })}
+              {/* Socials bottom-right */}
+              <div className="flex flex-col items-end gap-5 text-black">
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="hover:opacity-60 transition-opacity"
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
-
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="font-serif text-3xl text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
-              style={{ fontFamily: "var(--font-serif)" }}
-            >
-              Contact <span className="text-base text-[var(--color-neutral-mid)]">(Draft Outline)</span>
-            </Link>
-          </nav>
-
-          {/* Footer hint */}
-          <p className="text-center text-xs tracking-widest uppercase text-[var(--color-neutral-mid)] pb-10 mt-auto">
-            studio@cloudstonedesigns.com
-          </p>
+          </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

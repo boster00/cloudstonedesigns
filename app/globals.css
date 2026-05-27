@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0D0D0C;
+  /* Native site chrome (STL-inspired minimal). Pure white + near-black. */
+  --color-primary: #0a0a0a;
+  --color-bg: #FFFFFF;
+  --color-surface: #F5F5F5;
+  --color-neutral-mid: #666666;
+  /* Warm-stone accent kept ONLY for CJGEO-scoped article chrome (.prose-article).
+     Do NOT use in native chrome. */
   --color-accent: #8B7355;
-  --color-bg: #FAFAF8;
-  --color-surface: #F0EDE8;
-  --color-neutral-mid: #A8A6A1;
   --color-accent-tint: #EDE5DA;
-  --font-sans: "DM Sans", sans-serif;
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans-display: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-serif: "Cormorant Garamond", serif;
 }
 
@@ -15,6 +19,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-primary);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── Prose article ─────────────────────────────────────────── */
@@ -1105,6 +1110,28 @@ body {
   border-bottom: 0;
   padding-bottom: 0;
   font-weight: 400;
+}
+
+/* Unset global .prose-article badge/pill/tag chrome inside CJGEO articles —
+   the article's own scoped CSS dictates chip shape/case. Keep .badge in
+   factors-table styled by the .cjgeo-full overrides above. */
+.prose-article.cjgeo-full .tag,
+.prose-article.cjgeo-full .pill,
+.prose-article.cjgeo-full .indicator-chip,
+.prose-article.cjgeo-full .brand,
+.prose-article.cjgeo-full .mistake__tag {
+  display: inline-block;
+  padding: 3px 8px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  border-radius: 0;
+  background: inherit;
+  color: inherit;
+  border: 0;
+  line-height: inherit;
 }
 
 /* Override the generic article-section margin-block so CJGEO's

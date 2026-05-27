@@ -1,0 +1,228 @@
+State: 1 already completed: how-people-choose-architects
+Skipping: how-people-choose-architects
+
+============================================================
+SATELLITE: how-to-compare-architecture-firms-fairly
+============================================================
+Step 1: Create article
+  article_id: 12636c82-4185-45d4-9c41-1d9244ac749a
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "comparing architecture firms objectively"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=10
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: not_ready
+  Poll 2/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 79354
+Step 10: sanitize + write
+  word count: 3078
+  1. Why Comparing Firms Fairly Is Harder Than It Looks
+  2. How to Read a Proposal&mdash;and What to Demand in One
+  3. Fee Structure Transparency: What the Number Actually Means
+  4. Process Documentation: Described vs. Evidenced
+  5. What Firms Show vs. What They Hide
+  6. Questions That Produce the Most Useful Differentiating Answers
+  7. Reference Checks: What to Ask and Who to Find
+  8. Evaluating Relevant Experience: Proximity to Your Problem
+  9. We make our process easy to evaluate.
+
+SAVED state after: how-to-compare-architecture-firms-fairly
+
+============================================================
+SATELLITE: which-firm-fits-my-project
+============================================================
+Step 1: Create article
+  article_id: 4152f0df-b634-4a25-8a5f-ff28e2df6138
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "finding right architect for project type"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=0
+  kept=0, retrying with fallback: "finding right architect for project type"
+  kept after fallback=0
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 62182
+Step 10: sanitize + write
+  word count: 2011
+  1. Quality Is Table Stakes. Fit Is What Actually Determines the Outcome.
+  2. Four Variables That Determine Whether a Firm Is the Right Fit
+  3. Project Type Experience and Scale: What to Actually Ask
+  4. Process and Communication: The Variables Most Homeowners Skip
+  5. Does the Firm's Aesthetic Range Cover Your Vision &mdash; or Just Part of It?
+  6. Why the Lowest-Fee Firm Is Often the Worst Fit
+  7. A Practical Checklist for Your Final Evaluation
+  8. How Cloudstone Designs Evaluates Fit Before Accepting a Project
+
+SAVED state after: which-firm-fits-my-project
+
+============================================================
+SATELLITE: how-to-verify-architects-expertise
+============================================================
+Step 1: Create article
+  article_id: c244be00-8ba6-40d0-b233-4e7c6dd454aa
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "checking architect license and experience"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=6
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 20651
+Step 10: sanitize + write
+  word count: 1
+
+SAVED state after: how-to-verify-architects-expertise
+
+============================================================
+SATELLITE: hidden-costs-in-architecture-projects
+============================================================
+Step 1: Create article
+  article_id: 39f00328-5e0a-425b-87b6-84cd697e6c24
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "architecture project budget surprises"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=6
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 47145
+Step 10: sanitize + write
+  word count: 1729
+  1. The Cost Iceberg: What the Quote Doesn't Include
+  2. Consultant Fees Nobody Budgets For
+  3. Permits, Plan Check, and Government Fees
+  4. Testing, Inspections, and Third-Party Oversight
+  5. FF&amp;E: The Furnishings Budget That Gets Forgotten
+  6. Contingency, Owner&apos;s Rep, and Project Management
+  7. How to Read a Fee Proposal for Hidden Exclusions
+  8. What Changes Cost During Construction
+
+SAVED state after: hidden-costs-in-architecture-projects
+
+============================================================
+SATELLITE: how-long-does-architecture-project-take
+============================================================
+Step 1: Create article
+  article_id: 83fade10-4a72-43bd-bac0-89d18d62c13d
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "architecture project timeline"
+  kept after fallback=7
+Step 4: topicFullAuto
+  kept=10
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 42209
+Step 10: sanitize + write
+  word count: 1477
+  1. Why Timelines Vary So Much
+  2. Phase Durations by Project Type
+  3. What Causes Slippage &mdash; and How to Mitigate It
+  4. Architect-Controlled vs. Contractor-Controlled Time
+  5. What &ldquo;Fast-Track&rdquo; Actually Costs
+  6. Planning Around a Hard Date
+  7. How We Manage Your Schedule
+
+SAVED state after: how-long-does-architecture-project-take
+
+============================================================
+SATELLITE: what-to-expect-from-first-architecture-meeting
+============================================================
+Step 1: Create article
+  article_id: 7db558b3-406c-4fff-8813-c9ec6c627432
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=0
+  kept=0, retrying with fallback: "first architecture consultation what happens"
+  kept after fallback=0
+Step 4: topicFullAuto
+  kept=8
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 54765
+Step 10: sanitize + write
+  word count: 1761
+  1. A first meeting is a conversation, not an audition.
+  2. What a good first meeting covers
+  3. What you should walk away with
+  4. What a poor first meeting looks like
+  5. How Cloudstone Designs structures its initial project conversation
+  6. A good first meeting vs. a poor one
+  7. What clients said about their first Cloudstone conversation
+  8. Things people usually want to know before calling us
+
+SAVED state after: what-to-expect-from-first-architecture-meeting
+
+============================================================
+SATELLITE: how-to-start-your-architecture-project
+============================================================
+Step 1: Create article
+  article_id: 0f8d1487-08d5-4bfd-b2de-34a666072034
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  kept=3
+Step 4: topicFullAuto
+  kept=5
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+Step 9: get_html
+  raw html length: 55836
+Step 10: sanitize + write
+  word count: 1380
+  1. Most people hesitate because the stakes feel too high, too fast.
+  2. Choose the engagement that answers your most urgent question.
+  3. From first conversation to clear next step — here is what good onboarding looks like.
+  4. Eight things that should be true of every good architectural onboarding.
+  5. Every part of our intake is designed to protect your interests first.
+  6. If you are hesitating, you are probably asking one of these.
+
+SAVED state after: how-to-start-your-architecture-project
+
+All 8 choosing-an-architect satellites done!
+  how-people-choose-architects: 8110a4fb-cc26-47a1-8817-b26ad8f769b0
+  how-to-compare-architecture-firms-fairly: 12636c82-4185-45d4-9c41-1d9244ac749a
+  which-firm-fits-my-project: 4152f0df-b634-4a25-8a5f-ff28e2df6138
+  how-to-verify-architects-expertise: c244be00-8ba6-40d0-b233-4e7c6dd454aa
+  hidden-costs-in-architecture-projects: 39f00328-5e0a-425b-87b6-84cd697e6c24
+  how-long-does-architecture-project-take: 83fade10-4a72-43bd-bac0-89d18d62c13d
+  what-to-expect-from-first-architecture-meeting: 7db558b3-406c-4fff-8813-c9ec6c627432
+  how-to-start-your-architecture-project: 0f8d1487-08d5-4bfd-b2de-34a666072034

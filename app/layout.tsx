@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { DM_Sans, Cormorant_Garamond } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -34,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${cormorant.variable} bg-[var(--color-bg)] antialiased`}
+      className={`${inter.variable} ${cormorant.variable} bg-[var(--color-bg)] antialiased`}
     >
       <body className="min-h-screen flex flex-col">
         <SiteNav />

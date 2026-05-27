@@ -14,25 +14,24 @@ const team = [
   {
     name: "Daniel Voss",
     role: "Associate — Design",
-    bio: "Daniel joined the studio in 2019 after completing graduate work at the Southern California Institute of Architecture. His focus is the intersection of structural expression and spatial sequence — a preoccupation that runs through every project he leads. He brings particular expertise in adaptive reuse and envelope performance.",
+    bio: "Daniel joined the studio in 2019 after completing graduate work at the Southern California Institute of Architecture. His focus is the intersection of structural expression and spatial sequence — a preoccupation that runs through every project he leads.",
   },
   {
     name: "Priya Nair",
     role: "Associate — Project Delivery",
-    bio: "Priya manages the construction administration process across the studio's active projects. She came to architecture from a background in construction management, and the combination gives her an unusually practical fluency in the gap between design intent and field condition. Clients consistently cite her responsiveness and clarity as decisive factors in their experience of the process.",
+    bio: "Priya manages the construction administration process across the studio's active projects. She came to architecture from a background in construction management, and the combination gives her unusually practical fluency in the gap between design intent and field condition.",
   },
 ];
 
 export default function PeoplePage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-20">
-      <div className="mb-16">
-        <p className="text-xs tracking-widest uppercase text-[var(--color-accent)] mb-3">Team</p>
+    <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="flex items-baseline justify-between mb-12 border-b border-[#eee] pb-4">
         <h1
-          className="text-5xl font-light text-[var(--color-primary)]"
-          style={{ fontFamily: "var(--font-serif)" }}
+          className="text-[13px] font-bold tracking-[0.18em] uppercase text-black"
+          style={{ fontFamily: "var(--font-sans-display)" }}
         >
-          The People Behind the Work
+          People
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

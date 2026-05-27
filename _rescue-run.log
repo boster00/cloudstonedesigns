@@ -1,0 +1,275 @@
+State: 2 already completed: my-architecture-project-failed, why-architecture-projects-fail
+Skipping already-done: my-architecture-project-failed
+Skipping already-done: why-architecture-projects-fail
+
+============================================================
+SATELLITE: can-my-stalled-project-be-saved
+============================================================
+Step 1: Create article
+  article_id: 16d1d5fc-624b-4168-b18c-56a3640a94f4
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  keywordFullAuto with keyword: "stalled architecture project rescue"
+  kept=0
+  kept=0, retrying with fallback keyword: "architecture project stalled can it be saved"
+  kept after fallback=0
+Step 4: topicFullAuto
+  topicFullAuto with keyword: "stalled architecture project rescue"
+  kept=9
+Step 5: gate check (get_assets)
+  main_keyword: architecture project stalled can it be saved, keywords: 0, topics: 9
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+  adopted.
+Step 9: get_html
+  raw html length: 47504
+Step 10: sanitize + write
+  word count: 1389
+  1. [stopped-is-not-the-same-as-failed] Stopped is not the same as failed
+  2. [how-to-assess-whether-your-project-can-be-rescued] How to assess whether your project can be rescued
+  3. [rescue-or-restart-what-drives-the-choice] Rescue or restart: what drives the choice
+  4. [what-a-rescue-architect-asks-first] What a rescue architect asks first
+  5. [what-ldquo-feasible-rdquo-actually-means] What &ldquo;feasible&rdquo; actually means
+  6. [projects-that-found-a-path-forward] Projects that found a path forward
+  Written: C:\Users\xsj70\cloudstonedesigns\content\project-rescue\can-my-stalled-project-be-saved.html
+
+SAVED state after: can-my-stalled-project-be-saved
+
+============================================================
+SATELLITE: should-i-switch-architects
+============================================================
+Step 1: Create article
+  article_id: 271487de-b169-468a-ac77-1477737b186f
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  keywordFullAuto with keyword: "switching architects mid project"
+  kept=0
+  kept=0, retrying with fallback keyword: "should I fire my architect"
+  kept after fallback=0
+Step 4: topicFullAuto
+  topicFullAuto with keyword: "switching architects mid project"
+  kept=5
+Step 5: gate check (get_assets)
+  main_keyword: should I fire my architect, keywords: 0, topics: 5
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+  adopted.
+Step 9: get_html
+  raw html length: 39639
+Step 10: sanitize + write
+  word count: 1773
+  1. [before-you-decide-anything-is-this-problem-fixable] Before You Decide Anything: Is This Problem Fixable?
+  2. [situational-breakdown-vs-structural-mismatch] Situational Breakdown vs. Structural Mismatch
+  3. [the-real-costs-of-switching-don-rsquo-t-minimize-them] The Real Costs of Switching. Don&rsquo;t Minimize Them.
+  4. [how-to-protect-yourself-legally-before-you-leave] How to Protect Yourself Legally Before You Leave
+  5. [what-a-good-transition-actually-looks-like] What a Good Transition Actually Looks Like
+  6. [when-staying-is-clearly-the-wrong-choice] When Staying Is Clearly the Wrong Choice
+  Written: C:\Users\xsj70\cloudstonedesigns\content\project-rescue\should-i-switch-architects.html
+
+SAVED state after: should-i-switch-architects
+
+============================================================
+SATELLITE: finding-trustworthy-architect-after-bad-experience
+============================================================
+Step 1: Create article
+  article_id: 59d4315d-29ec-46bd-b5dc-cd8883ed3360
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  keywordFullAuto with keyword: "find trustworthy architect after bad experience"
+  kept=0
+  kept=0, retrying with fallback keyword: "hiring new architect after project failure"
+  kept after fallback=0
+Step 4: topicFullAuto
+  topicFullAuto with keyword: "find trustworthy architect after bad experience"
+  kept=10
+Step 5: gate check (get_assets)
+  main_keyword: hiring new architect after project failure, keywords: 0, topics: 10
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+  adopted.
+Step 9: get_html
+  raw html length: 50802
+Step 10: sanitize + write
+  word count: 2108
+  1. [being-burned-sharpens-some-instinctsand-distorts-others] Being Burned Sharpens Some Instinctsand Distorts Others
+  2. [what-a-genuinely-trustworthy-firm-looks-likevs-one-that-just] What a Genuinely Trustworthy Firm Looks Likevs. One That Just Markets Trust Well
+  3. [the-questions-that-expose-whether-a-firmhas-learned-from-pas] The Questions That Expose Whether a FirmHas Learned From Past Client Problems
+  4. [red-flags-in-the-first-meetingthat-should-make-you-pause] Red Flags in the First MeetingThat Should Make You Pause
+  5. [how-to-structure-a-limited-scope-engagementto-test-fit-befor] How to Structure a Limited-Scope Engagementto Test Fit Before Full Commitment
+  6. [what-re-engagement-actually-felt-like] What Re-engagement Actually Felt Like
+  7. [what-cloudstone-designs-looks-likeheld-to-this-standard] What Cloudstone Designs Looks LikeHeld to This Standard
+  Written: C:\Users\xsj70\cloudstonedesigns\content\project-rescue\finding-trustworthy-architect-after-bad-experience.html
+
+SAVED state after: finding-trustworthy-architect-after-bad-experience
+
+============================================================
+SATELLITE: expensive-mistakes-in-architecture-projects
+============================================================
+Step 1: Create article
+  article_id: a6a84853-3d2c-4203-853c-0f98cd23ca50
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  keywordFullAuto with keyword: "expensive architecture project mistakes"
+  kept=0
+  kept=0, retrying with fallback keyword: "costly mistakes architecture project"
+  kept after fallback=0
+Step 4: topicFullAuto
+  topicFullAuto with keyword: "expensive architecture project mistakes"
+  kept=10
+Step 5: gate check (get_assets)
+  main_keyword: costly mistakes architecture project, keywords: 0, topics: 10
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+  adopted.
+Step 9: get_html
+  raw html length: 61402
+Step 10: sanitize + write
+  word count: 2722
+  1. [the-8-high-damage-zones] The 8 High-Damage Zones
+  2. [each-mistake-examined] Each mistake examined
+  3. [these-risks-compound-they-do-not-simply-add] These risks compound, they do not simply add
+  4. [two-readings-of-this-list] Two readings of this list
+  5. [three-consistent-findings-across-project-types] Three consistent findings across project types
+  6. [if-one-of-these-sounds-like-your-project-it-is-worth-a-conve] If one of these sounds like your project, it is worth a conversation
+  Written: C:\Users\xsj70\cloudstonedesigns\content\project-rescue\expensive-mistakes-in-architecture-projects.html
+
+SAVED state after: expensive-mistakes-in-architecture-projects
+
+============================================================
+SATELLITE: what-project-transparency-should-look-like
+============================================================
+Step 1: Create article
+  article_id: ba76a585-fa2d-4972-98b0-6347f8329ebb
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  keywordFullAuto with keyword: "architecture project communication transparency"
+  kept=0
+  kept=0, retrying with fallback keyword: "good architect client communication"
+  kept after fallback=0
+Step 4: topicFullAuto
+  topicFullAuto with keyword: "architecture project communication transparency"
+  kept=10
+Step 5: gate check (get_assets)
+  main_keyword: good architect client communication, keywords: 0, topics: 10
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+  adopted.
+Step 9: get_html
+  raw html length: 64244
+Step 10: sanitize + write
+  word count: 2563
+  1. [most-communication-failures-are-structural-not-personal] Most communication failures are structural, not personal
+  2. [the-communication-calendar-a-project-should-have] The communication calendar a project should have
+  3. [what-a-good-architect-produces-at-each-project-phase] What a good architect produces at each project phase
+  4. [how-to-tell-whether-your-firm-39-s-communication-is-below-st] How to tell whether your firm&#39;s communication is below standard
+  5. [how-the-rfi-and-change-order-processes-are-supposed-to-work] How the RFI and change order processes are supposed to work
+  6. [what-to-ask-a-firm-you-are-considering-hiring] What to ask a firm you are considering hiring
+  7. [the-benchmarks-of-a-well-documented-project] The benchmarks of a well-documented project
+  Written: C:\Users\xsj70\cloudstonedesigns\content\project-rescue\what-project-transparency-should-look-like.html
+
+SAVED state after: what-project-transparency-should-look-like
+
+============================================================
+SATELLITE: comparing-architecture-firms-after-bad-experience
+============================================================
+Step 1: Create article
+  article_id: 4cb832bc-85c4-4d5f-a89c-26de1ab61faa
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  keywordFullAuto with keyword: "compare architecture firms skeptical client"
+  kept=0
+  kept=0, retrying with fallback keyword: "evaluating architecture firms after bad experience"
+  kept after fallback=0
+Step 4: topicFullAuto
+  topicFullAuto with keyword: "compare architecture firms skeptical client"
+  kept=0
+  kept=0, retrying with fallback keyword: "evaluating architecture firms after bad experience"
+  kept after fallback=0
+Step 5: gate check (get_assets)
+  main_keyword: evaluating architecture firms after bad experience, keywords: 0, topics: 0
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+  adopted.
+Step 9: get_html
+  raw html length: 59145
+Step 10: sanitize + write
+  word count: 1723
+  1. [why-your-instincts-may-be-miscalibrated] Why Your Instincts May Be Miscalibrated
+  2. [the-comparison-framework] The Comparison Framework
+  3. [evaluating-process-documentation-quality] Evaluating Process Documentation Quality
+  4. [how-to-use-references-effectively] How to Use References Effectively
+  5. [questions-that-reveal-character-under-pressure] Questions That Reveal Character Under Pressure
+  6. [learned-vs-managed-reading-the-signals] Learned vs. Managed: Reading the Signals
+  7. [onboarding-structure-and-communication-systems] Onboarding Structure and Communication Systems
+  8. [making-the-decision] Making the Decision
+  Written: C:\Users\xsj70\cloudstonedesigns\content\project-rescue\comparing-architecture-firms-after-bad-experience.html
+
+SAVED state after: comparing-architecture-firms-after-bad-experience
+
+============================================================
+SATELLITE: getting-second-opinion-on-architecture-project
+============================================================
+Step 1: Create article
+  article_id: 321c3d39-63b9-4a96-b64e-513419b518f5
+Step 2: Set main keyword
+Step 3: keywordFullAuto
+  keywordFullAuto with keyword: "second opinion architecture project"
+  kept=0
+  kept=0, retrying with fallback keyword: "architecture project review second opinion"
+  kept after fallback=0
+Step 4: topicFullAuto
+  topicFullAuto with keyword: "second opinion architecture project"
+  kept=4
+Step 5: gate check (get_assets)
+  main_keyword: architecture project review second opinion, keywords: 0, topics: 4
+Step 6: generateDraft
+Step 7: pollDraft
+  Poll 1/8 — sleeping 5 min...
+  draft status: ready
+Step 8: adoptDraft
+  adopted.
+Step 9: get_html
+  raw html length: 64742
+Step 10: sanitize + write
+  word count: 1432
+  1. [an-independent-read-on-a-project-that-has-you-worried] An independent read on a project that has you worried.
+  2. [three-ways-we-look-at-your-project] Three ways we look at your project
+  3. [what-a-second-opinion-can-and-cannot-tell-you] What a second opinion can — and cannot — tell you
+  4. [how-to-find-a-firm-that-will-give-you-an-honest-review-not-a] How to find a firm that will give you an honest review — not a sales pitch.
+  5. [what-to-do-with-the-findings] What to do with the findings
+  6. [how-to-share-findings-with-your-current-team-without-trigger] How to share findings with your current team without triggering an immediate breakdown.
+  7. [what-owners-say-after-the-engagement] What owners say after the engagement
+  Written: C:\Users\xsj70\cloudstonedesigns\content\project-rescue\getting-second-opinion-on-architecture-project.html
+
+SAVED state after: getting-second-opinion-on-architecture-project
+
+
+All 8 satellites done!
+Results:
+  my-architecture-project-failed: 149e1822-722c-45b2-ac78-5b08dccff2df (failed architecture project what to do)
+  why-architecture-projects-fail: c72012eb-9ad5-4240-ac30-74073d0f5802 (architecture project failure causes)
+  can-my-stalled-project-be-saved: 16d1d5fc-624b-4168-b18c-56a3640a94f4 (architecture project stalled can it be saved)
+  should-i-switch-architects: 271487de-b169-468a-ac77-1477737b186f (should I fire my architect)
+  finding-trustworthy-architect-after-bad-experience: 59d4315d-29ec-46bd-b5dc-cd8883ed3360 (hiring new architect after project failure)
+  expensive-mistakes-in-architecture-projects: a6a84853-3d2c-4203-853c-0f98cd23ca50 (costly mistakes architecture project)
+  what-project-transparency-should-look-like: ba76a585-fa2d-4972-98b0-6347f8329ebb (good architect client communication)
+  comparing-architecture-firms-after-bad-experience: 4cb832bc-85c4-4d5f-a89c-26de1ab61faa (evaluating architecture firms after bad experience)
+  getting-second-opinion-on-architecture-project: 321c3d39-63b9-4a96-b64e-513419b518f5 (architecture project review second opinion)

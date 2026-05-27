@@ -8,16 +8,20 @@ type PeopleCardProps = {
 export default function PeopleCard({ name, role, bio }: PeopleCardProps) {
   return (
     <div className="flex flex-col">
-      {/* Placeholder portrait */}
-      <div className="w-full aspect-[3/4] bg-[var(--color-surface)] mb-5" />
-      <p className="text-xs tracking-widest uppercase text-[var(--color-accent)] mb-1">{role}</p>
+      <div className="w-full aspect-[4/5] bg-[#f2f2f2] mb-5" />
+      <p
+        className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#666] mb-1.5"
+        style={{ fontFamily: "var(--font-sans-display)" }}
+      >
+        {role}
+      </p>
       <h3
-        className="text-xl font-light mb-3"
-        style={{ fontFamily: "var(--font-serif)" }}
+        className="text-[18px] font-bold tracking-[-0.01em] text-black mb-3"
+        style={{ fontFamily: "var(--font-sans-display)" }}
       >
         {name}
       </h3>
-      <p className="text-sm text-[var(--color-neutral-mid)] leading-relaxed">{bio}</p>
+      <p className="text-[14px] leading-[1.7] text-[#555]">{bio}</p>
     </div>
   );
 }

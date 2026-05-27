@@ -1,0 +1,45 @@
+{
+  "completed": [
+    {
+      "slug": "how-people-choose-architects",
+      "articleId": "8110a4fb-cc26-47a1-8817-b26ad8f769b0",
+      "mainKeyword": "how to choose an architect"
+    },
+    {
+      "slug": "how-to-compare-architecture-firms-fairly",
+      "articleId": "12636c82-4185-45d4-9c41-1d9244ac749a",
+      "mainKeyword": "how to compare architecture firms"
+    },
+    {
+      "slug": "which-firm-fits-my-project",
+      "articleId": "4152f0df-b634-4a25-8a5f-ff28e2df6138",
+      "mainKeyword": "which architecture firm is right for me"
+    },
+    {
+      "slug": "how-to-verify-architects-expertise",
+      "articleId": "c244be00-8ba6-40d0-b233-4e7c6dd454aa",
+      "mainKeyword": "how to verify architect credentials"
+    },
+    {
+      "slug": "hidden-costs-in-architecture-projects",
+      "articleId": "39f00328-5e0a-425b-87b6-84cd697e6c24",
+      "mainKeyword": "hidden costs architecture project"
+    },
+    {
+      "slug": "how-long-does-architecture-project-take",
+      "articleId": "83fade10-4a72-43bd-bac0-89d18d62c13d",
+      "mainKeyword": "how long does architecture project take"
+    },
+    {
+      "slug": "what-to-expect-from-first-architecture-meeting",
+      "articleId": "7db558b3-406c-4fff-8813-c9ec6c627432",
+      "mainKeyword": "what to expect first meeting architect"
+    },
+    {
+      "slug": "how-to-start-your-architecture-project",
+      "articleId": "0f8d1487-08d5-4bfd-b2de-34a666072034",
+      "mainKeyword": "how to start an architecture project"
+    }
+  ],
+  "inProgress": null
+}
